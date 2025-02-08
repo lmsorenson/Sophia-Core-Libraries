@@ -7,5 +7,3 @@ add_subdirectory(examples)
 add_subdirectory(include)
 add_subdirectory(src)
 add_subdirectory(tests)
-
-add_library(Sophia_Core_Libraries STATIC src/library.cpp)
