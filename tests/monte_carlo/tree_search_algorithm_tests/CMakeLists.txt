@@ -9,8 +9,11 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # Now simply link against gtest or gtest_main as needed. Eg
-add_executable(sophia_monte_carlo_library_tests hello_tests.cpp)
-target_link_libraries(sophia_monte_carlo_library_tests gtest_main sophia_monte_carlo)
-target_include_directories(sophia_monte_carlo_library_tests PUBLIC ../../include)
+add_executable(sophia_monte_carlo_tree_search_algorithm_tests
+        tree_search_algorithm_tests.cpp
+        mock_node.h
+        mock_action.h)
+target_link_libraries(sophia_monte_carlo_tree_search_algorithm_tests gtest gtest_main gmock gmock_main sophia_monte_carlo)
+target_include_directories(sophia_monte_carlo_tree_search_algorithm_tests PUBLIC ../../../include)
 
 add_test(NAME sophia.library_tests.hello_world_test COMMAND sophia_monte_carlo_library_tests)

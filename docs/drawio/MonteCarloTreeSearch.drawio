@@ -137,20 +137,21 @@
             <mxPoint x="180" y="210" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WhOPVjGFQnV452_eeHkL-5" value="Is Current a Leaf Node" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="WhOPVjGFQnV452_eeHkL-5" value="Is &#39;current&#39; a Leaf Node" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="103.75" y="250" width="122.5" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="WhOPVjGFQnV452_eeHkL-6" value="no" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="WhOPVjGFQnV452_eeHkL-5" parent="1" target="WhOPVjGFQnV452_eeHkL-18">
+        <mxCell id="WhOPVjGFQnV452_eeHkL-6" value="yes" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="WhOPVjGFQnV452_eeHkL-5" parent="1" target="WhOPVjGFQnV452_eeHkL-18">
           <mxGeometry x="-1" relative="1" as="geometry">
             <mxPoint x="320" y="300" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WhOPVjGFQnV452_eeHkL-7" value="yes" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="WhOPVjGFQnV452_eeHkL-5" parent="1" target="WhOPVjGFQnV452_eeHkL-8">
+        <mxCell id="WhOPVjGFQnV452_eeHkL-7" value="no" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="WhOPVjGFQnV452_eeHkL-5" parent="1" target="WhOPVjGFQnV452_eeHkL-8">
           <mxGeometry x="-1" relative="1" as="geometry">
             <mxPoint x="165" y="410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WhOPVjGFQnV452_eeHkL-8" value="Set the current node to the child node of current that maximizes UCB1(S&lt;sub&gt;i&lt;/sub&gt;)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="WhOPVjGFQnV452_eeHkL-8" value="Set the &#39;current&#39; node to the child node of current that maximizes UCB1(S&lt;sub&gt;i&lt;/sub&gt;)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="57.5" y="420" width="215" height="40" as="geometry" />
         </mxCell>
         <mxCell id="WhOPVjGFQnV452_eeHkL-9" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="WhOPVjGFQnV452_eeHkL-8" parent="1" target="WhOPVjGFQnV452_eeHkL-5">
@@ -192,7 +193,7 @@
         <mxCell id="WhOPVjGFQnV452_eeHkL-21" value="Rollout" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="340" y="160" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="WhOPVjGFQnV452_eeHkL-23" value="For each available action from current add a state to the tree" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="WhOPVjGFQnV452_eeHkL-23" value="For each available action from &#39;current&#39; add a state to the tree" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="320" y="405" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="WhOPVjGFQnV452_eeHkL-24" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="WhOPVjGFQnV452_eeHkL-23" parent="1" target="WhOPVjGFQnV452_eeHkL-25">
@@ -200,7 +201,7 @@
             <mxPoint x="520" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WhOPVjGFQnV452_eeHkL-25" value="Set current to the first new child node" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
+        <mxCell id="WhOPVjGFQnV452_eeHkL-25" value="Set &#39;current&#39; to the first new child node" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="340" y="510" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="WhOPVjGFQnV452_eeHkL-26" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="WhOPVjGFQnV452_eeHkL-25" parent="1" target="WhOPVjGFQnV452_eeHkL-27">

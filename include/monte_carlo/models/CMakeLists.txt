@@ -1,0 +1,1 @@
+install(DIRECTORY monte_carlo/models/ DESTINATION include/monte_carlo/models)
