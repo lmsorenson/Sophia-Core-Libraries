@@ -30,11 +30,11 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests {
         shared_ptr<MockNode> s5 = make_shared<MockNode>("s5", action_select_strategy);
         shared_ptr<MockNode> s6 = make_shared<MockNode>("s6", action_select_strategy);
 
-        s0->Mock({ s1, s2 });
-        s1->Mock({ s3, s4 }, 20);
-        s2->Mock({ s5, s6 }, 10);
-        s3->Mock({  }, 0);
-        s5->Mock({  }, 14);
+        s0->Setup({ s1, s2 });
+        s1->Setup({ s3, s4 }, 20);
+        s2->Setup({ s5, s6 }, 10);
+        s3->Setup({  }, 0);
+        s5->Setup({  }, 14);
 
         // the tree starts with two actions?
         s0->Expand();

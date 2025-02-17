@@ -30,13 +30,13 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
         MOCK_METHOD(bool, IsTerminalState, (), (const, override));
         MOCK_METHOD(double, Value, (), (const, override));
 
-        void Mock( vector<shared_ptr<Node>> node_expansion )
+        void Setup( vector<shared_ptr<Node>> node_expansion )
         {
             EXPECT_CALL(*this, GetAvailableActions())
                 .WillOnce(Return(std::move(node_expansion)));
         }
 
-        void Mock( vector<shared_ptr<Node>> node_expansion, const double value )
+        void Setup( vector<shared_ptr<Node>> node_expansion, const double value )
         {
             shared_ptr<MockNode> st = make_shared<MockNode>("terminal", m_action_select_strategy_);
             vector<shared_ptr<Node>> t_nodes = { st };

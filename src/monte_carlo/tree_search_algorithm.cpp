@@ -37,7 +37,11 @@ shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Nod
         if (current->HasBeenSampled())
         {
             std::cout << "Yes, expand it." << std::endl;
-            current = current->Expand();
+            auto first_expansion_node= current->Expand();
+            if (first_expansion_node == nullptr)
+                continue;
+
+            current = first_expansion_node;
         }
         else
         {
