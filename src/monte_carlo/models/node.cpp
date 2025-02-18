@@ -9,17 +9,16 @@ using sophia::monte_carlo::models::Action;
 using std::string;
 using std::shared_ptr;
 using std::vector;
-using std::move;
 
 Node::Node(std::string name, shared_ptr<ActionSelectStrategyInterface> action_select_strategy)
     : m_name_(std::move(name))
-    , m_action_select_strategy_(move(action_select_strategy))
+    , m_action_select_strategy_(std::move(action_select_strategy))
 {
 }
 
 void Node::SetParent(std::shared_ptr<Action> action)
 {
-    m_parent_action_ = move(action);
+    m_parent_action_ = std::move(action);
 }
 
 
