@@ -49,10 +49,6 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
                 .Times(::testing::AnyNumber())
                 .WillRepeatedly(Return(value));
         }
-
-        void ClearSetup() {
-            ::testing::Mock::VerifyAndClearExpectations(this);
-        }
     };
 }
 

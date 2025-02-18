@@ -43,9 +43,6 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests {
         shared_ptr<Node> best_decision = tree_search_algorithm(s0, 4);
 
         EXPECT_EQ(best_decision->Name(), "s2");
-
-        s0->ClearSetup();
-        s0.reset();
     }
 }
 
