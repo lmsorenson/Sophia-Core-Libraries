@@ -18,17 +18,15 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests {
         using std::shared_ptr;
         using std::make_shared;
         using std::vector;
-        using ::testing::Return;
-        using ::testing::_;
 
-        shared_ptr<MockActionSelectStrategy> action_select_strategy = make_shared<MockActionSelectStrategy>();
-        shared_ptr<MockNode> s0 = make_shared<MockNode>("s0", action_select_strategy);
-        shared_ptr<MockNode> s1 = make_shared<MockNode>("s1", action_select_strategy);
-        shared_ptr<MockNode> s2 = make_shared<MockNode>("s2", action_select_strategy);
-        shared_ptr<MockNode> s3 = make_shared<MockNode>("s3", action_select_strategy);
-        shared_ptr<MockNode> s4 = make_shared<MockNode>("s4", action_select_strategy);
-        shared_ptr<MockNode> s5 = make_shared<MockNode>("s5", action_select_strategy);
-        shared_ptr<MockNode> s6 = make_shared<MockNode>("s6", action_select_strategy);
+        auto action_select_strategy = make_shared<MockActionSelectStrategy>();
+        const auto s0 = make_shared<MockNode>("s0", action_select_strategy);
+        auto s1 = make_shared<MockNode>("s1", action_select_strategy);
+        auto s2 = make_shared<MockNode>("s2", action_select_strategy);
+        auto s3 = make_shared<MockNode>("s3", action_select_strategy);
+        auto s4 = make_shared<MockNode>("s4", action_select_strategy);
+        auto s5 = make_shared<MockNode>("s5", action_select_strategy);
+        auto s6 = make_shared<MockNode>("s6", action_select_strategy);
 
         s0->Setup({ s1, s2 });
         s1->Setup({ s3, s4 });

@@ -15,17 +15,16 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
     using std::vector;
     using std::make_shared;
     using std::shared_ptr;
-    using std::move;
     using ::testing::Return;
 
     class MockNode : public Node
     {
     public:
         explicit MockNode(string name, shared_ptr<ActionSelectStrategyInterface> interface)
-            : Node(move(name), move(interface))
+            : Node(std::move(name), std::move(interface))
         {
         }
-        virtual ~MockNode() = default;
+        ~MockNode() override = default;
 
         MOCK_METHOD(vector<shared_ptr<Node>>, GetAvailableActions, (), (const, override));
         MOCK_METHOD(bool, IsTerminalState, (), (const, override));
