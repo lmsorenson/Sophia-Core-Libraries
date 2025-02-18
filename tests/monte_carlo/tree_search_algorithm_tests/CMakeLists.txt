@@ -16,4 +16,4 @@ add_executable(sophia_monte_carlo_tree_search_algorithm_tests
 target_link_libraries(sophia_monte_carlo_tree_search_algorithm_tests gtest gtest_main gmock gmock_main sophia_monte_carlo)
 target_include_directories(sophia_monte_carlo_tree_search_algorithm_tests PUBLIC ../../../include)
 
-add_test(NAME sophia.library_tests.tree_search_algorithm_test COMMAND sophia_monte_carlo_library_tests)
+add_test(NAME tree_search_algorithm_test COMMAND sophia_monte_carlo_library_tests)
