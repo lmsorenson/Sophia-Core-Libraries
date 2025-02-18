@@ -1,6 +1,8 @@
 #ifndef ACTION_H
 #define ACTION_H
+#include <iostream>
 #include <memory>
+#include <ostream>
 
 namespace sophia::monte_carlo::models
 {
@@ -17,8 +19,8 @@ namespace sophia::monte_carlo::models
         [[nodiscard]] std::shared_ptr<Node> Target() const;
 
     private:
-        std::shared_ptr<Node> m_source_node_;
-        std::shared_ptr<Node> m_target_node_;
+        std::weak_ptr<Node> m_source_node_;
+        std::weak_ptr<Node> m_target_node_;
     };
 }
 

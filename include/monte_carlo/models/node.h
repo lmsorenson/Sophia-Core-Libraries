@@ -3,7 +3,8 @@
 
 #include "action_select_strategy_interface.h"
 #include <vector>
-#include <functional>
+#include <iostream>
+#include <ostream>
 
 namespace sophia::monte_carlo::models
 {

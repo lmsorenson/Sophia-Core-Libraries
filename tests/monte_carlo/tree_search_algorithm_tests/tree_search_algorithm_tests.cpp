@@ -31,16 +31,21 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests {
         shared_ptr<MockNode> s6 = make_shared<MockNode>("s6", action_select_strategy);
 
         s0->Setup({ s1, s2 });
-        s1->Setup({ s3, s4 }, 20);
-        s2->Setup({ s5, s6 }, 10);
-        s3->Setup({  }, 0);
-        s5->Setup({  }, 14);
+        s1->Setup({ s3, s4 });
+        s1->Setup(20);
+        s2->Setup({ s5, s6 });
+        s2->Setup(10);
+        s3->Setup(0);
+        s5->Setup(14);
 
         // the tree starts with two actions?
         s0->Expand();
         shared_ptr<Node> best_decision = tree_search_algorithm(s0, 4);
 
         EXPECT_EQ(best_decision->Name(), "s2");
+
+        s0->ClearSetup();
+        s0.reset();
     }
 }
 

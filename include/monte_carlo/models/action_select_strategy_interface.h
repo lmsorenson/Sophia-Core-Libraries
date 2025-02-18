@@ -1,6 +1,8 @@
 #ifndef ACTION_SELECTION_STRATEGY_INTERFACE_H
 #define ACTION_SELECTION_STRATEGY_INTERFACE_H
+#include <iostream>
 #include <memory>
+#include <ostream>
 #include <vector>
 
 namespace sophia::monte_carlo::models

@@ -13,17 +13,22 @@ Action::Action(std::shared_ptr<Node> source, std::shared_ptr<Node> target)
 
 std::shared_ptr<Node> Action::Source() const
 {
-    return m_source_node_;
+    return m_source_node_.lock();
 }
 
 std::shared_ptr<Node> Action::Target() const
 {
-    return m_target_node_;
+    return m_target_node_.lock();
 }
 
 double Action::UpperConfidenceBound() const
 {
-    return m_target_node_->UpperConfidenceBound();
+    if (auto sp = m_target_node_.lock())
+    {
+        return sp->UpperConfidenceBound();
+    }
+
+    return 0.0;
 }
 
 

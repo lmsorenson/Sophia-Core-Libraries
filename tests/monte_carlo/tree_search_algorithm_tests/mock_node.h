@@ -25,6 +25,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
             : Node(move(name), move(interface))
         {
         }
+        virtual ~MockNode() = default;
 
         MOCK_METHOD(vector<shared_ptr<Node>>, GetAvailableActions, (), (const, override));
         MOCK_METHOD(bool, IsTerminalState, (), (const, override));
@@ -33,21 +34,24 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
         void Setup( vector<shared_ptr<Node>> node_expansion )
         {
             EXPECT_CALL(*this, GetAvailableActions())
+                .Times(::testing::AnyNumber())
                 .WillOnce(Return(std::move(node_expansion)));
         }
 
-        void Setup( vector<shared_ptr<Node>> node_expansion, const double value )
+        void Setup( const double value )
         {
-            shared_ptr<MockNode> st = make_shared<MockNode>("terminal", m_action_select_strategy_);
-            vector<shared_ptr<Node>> t_nodes = { st };
-
-            EXPECT_CALL(*this, GetAvailableActions())
-                .WillOnce(Return(std::move(node_expansion)));
             EXPECT_CALL(*this, IsTerminalState())
                         // The first time fake the terminal state.
+                        .Times(::testing::AnyNumber())
                         .WillOnce(Return(true))
                         .WillOnce(Return(false));
-            EXPECT_CALL(*this, Value()).WillRepeatedly(Return(value));
+            EXPECT_CALL(*this, Value())
+                .Times(::testing::AnyNumber())
+                .WillRepeatedly(Return(value));
+        }
+
+        void ClearSetup() {
+            ::testing::Mock::VerifyAndClearExpectations(this);
         }
     };
 }
