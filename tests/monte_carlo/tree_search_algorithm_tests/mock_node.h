@@ -3,6 +3,7 @@
 #include <gmock/gmock.h>
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
+#include <monte_carlo/factories/tree_factory.h>
 
 #include <utility>
 
@@ -20,7 +21,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
     class MockNode : public Node
     {
     public:
-        explicit MockNode(string name, shared_ptr<ActionSelectStrategyInterface> interface)
+        explicit MockNode(string name, shared_ptr<const factories::ITreeFactory> interface)
             : Node(std::move(name), std::move(interface))
         {
         }

@@ -1,10 +1,13 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include "action_select_strategy_interface.h"
 #include <vector>
-#include <iostream>
 #include <ostream>
+
+namespace sophia::monte_carlo::factories
+{
+    class ITreeFactory;
+}
 
 namespace sophia::monte_carlo::models
 {
@@ -13,7 +16,7 @@ namespace sophia::monte_carlo::models
     class Node : public std::enable_shared_from_this<Node>
     {
     public:
-        explicit Node(std::string name, std::shared_ptr<ActionSelectStrategyInterface> action_select_strategy);
+        explicit Node(std::string name, std::shared_ptr<const factories::ITreeFactory> factory);
         virtual ~Node() = default;
 
         void SetParent(std::shared_ptr<Action> action);
@@ -36,7 +39,7 @@ namespace sophia::monte_carlo::models
         [[nodiscard]] int TotalReward() const;
 
     protected:
-        std::shared_ptr<ActionSelectStrategyInterface> m_action_select_strategy_;
+        std::shared_ptr<const factories::ITreeFactory> m_factory_;
 
     private:
         std::string m_name_;

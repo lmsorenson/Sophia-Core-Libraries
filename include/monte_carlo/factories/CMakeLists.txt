@@ -1,0 +1,1 @@
+install(DIRECTORY monte_carlo/factories/ DESTINATION include/monte_carlo/factories)

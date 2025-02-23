@@ -3,8 +3,6 @@
 #include "monte_carlo/models/action.h"
 #include <iostream>
 
-
-
 using sophia::monte_carlo::tree_search_algorithm;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;

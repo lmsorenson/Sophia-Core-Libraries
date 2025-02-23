@@ -1,18 +1,20 @@
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
+#include <monte_carlo/factories/tree_factory.h>
 #include <cmath>
 #include <utility>
 #include <iostream>
 
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
+using sophia::monte_carlo::factories::ITreeFactory;
 using std::string;
 using std::shared_ptr;
 using std::vector;
 
-Node::Node(std::string name, shared_ptr<ActionSelectStrategyInterface> action_select_strategy)
+Node::Node(string name, shared_ptr<const ITreeFactory> factory)
     : m_name_(std::move(name))
-    , m_action_select_strategy_(std::move(action_select_strategy))
+    , m_factory_(std::move(factory))
 {
 }
 
@@ -114,7 +116,9 @@ double Node::Rollout()
     << "Rollout " << Name() << " is NOT terminal state."
     << std::endl;
 
-    const auto selected_action = m_action_select_strategy_->select_action(m_child_action_);
+    auto select_strategy = m_factory_->CreateStrategy();
+
+    const auto selected_action = select_strategy->select_action(m_child_action_);
 
     const auto new_node = selected_action->Target();
 

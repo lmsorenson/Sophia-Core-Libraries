@@ -1,5 +1,6 @@
 add_library(sophia_monte_carlo_models
-        node.h
-        action.h)
+        action.cpp
+        node.cpp
+        random_action_strategy.cpp)
 
 target_include_directories(sophia_monte_carlo_models PUBLIC ../../../include)
