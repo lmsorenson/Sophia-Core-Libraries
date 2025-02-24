@@ -4,7 +4,7 @@
 #include <monte_carlo/models/action.h>
 #include <monte_carlo/models/action_select_strategy_interface.h>
 
-namespace sophia::monte_carlo::tree_search_algorithm_tests
+namespace sophia::monte_carlo::mocks
 {
     using models::ActionSelectStrategyInterface;
     using models::Action;
@@ -14,13 +14,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
     class MockActionSelectStrategy : public ActionSelectStrategyInterface
     {
     public:
-        [[nodiscard]] shared_ptr<Action> select_action(std::vector<std::shared_ptr<Action>> actions) const override
-        {
-            if (!actions.empty())
-                return actions.front();
-
-            return nullptr;
-        }
+        [[nodiscard]] shared_ptr<Action> select_action(std::vector<std::shared_ptr<Action>> actions) const override;
     };
 }
 

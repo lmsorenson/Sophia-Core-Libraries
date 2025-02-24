@@ -1,2 +1,3 @@
+add_subdirectory(mocks)
 add_subdirectory(tree_search_algorithm_tests)
 add_subdirectory(model_tests)

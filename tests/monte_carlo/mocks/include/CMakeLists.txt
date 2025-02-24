@@ -1,0 +1,1 @@
+install(DIRECTORY monte_carlo/mocks/ DESTINATION include/monte_carlo/mocks)

@@ -10,12 +10,12 @@ FetchContent_MakeAvailable(googletest)
 
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(sophia_monte_carlo_tree_search_algorithm_tests
-        tree_search_algorithm_tests.cpp
-        mock_node.h
-        mock_action.h
-        mock_tree_factory.h)
-target_link_libraries(sophia_monte_carlo_tree_search_algorithm_tests gtest gtest_main gmock gmock_main
-        sophia_monte_carlo)
+        tree_search_algorithm_tests.cpp)
+target_link_libraries(sophia_monte_carlo_tree_search_algorithm_tests
+        gtest gtest_main
+        gmock gmock_main
+        sophia_monte_carlo
+        sophia_monte_carlo_mocks)
 target_include_directories(sophia_monte_carlo_tree_search_algorithm_tests PUBLIC ../../../include)
 
 add_test(NAME tree_search_algorithm_test COMMAND sophia_monte_carlo_tree_search_algorithm_tests)
