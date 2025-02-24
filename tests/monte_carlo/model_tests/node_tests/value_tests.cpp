@@ -6,7 +6,7 @@ namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockNode;
 
-    TEST_F(MonteCarloModelsFixture, value_test)
+    TEST_F(MonteCarloModelsFixture, node_value_test)
     {
         const auto n = MockNode("name 1", nullptr);
 

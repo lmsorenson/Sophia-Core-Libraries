@@ -29,6 +29,8 @@ namespace sophia::monte_carlo::mocks
 
         void Setup( vector<shared_ptr<Node>> node_expansion );
         void Setup(double value ) const;
+
+        std::shared_ptr<const Action> GetParent() const;
     };
 }
 

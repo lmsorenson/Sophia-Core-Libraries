@@ -15,7 +15,7 @@ namespace sophia::monte_carlo::model_tests
         EXPECT_EQ(total_reward, 0);
     }
 
-    TEST_F(MonteCarloModelsFixture, visit_count_backpropagated_test)
+    TEST_F(MonteCarloModelsFixture, node_visit_count_backpropagated_test)
     {
         auto n = MockNode("name 1", nullptr);
 

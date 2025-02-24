@@ -4,6 +4,7 @@
 
 using sophia::monte_carlo::mocks::MockNode;
 using sophia::monte_carlo::models::Node;
+using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::factories::ITreeFactory;
 using std::vector;
 using std::shared_ptr;
@@ -32,3 +33,9 @@ void MockNode::Setup( const double value ) const
         .Times(::testing::AnyNumber())
         .WillRepeatedly(Return(value));
 }
+
+std::shared_ptr<const Action> MockNode::GetParent() const
+{
+    return m_parent_action_;
+}
+
