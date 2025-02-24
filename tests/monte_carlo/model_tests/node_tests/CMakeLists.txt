@@ -21,4 +21,9 @@ target_link_libraries(sophia_monte_carlo_model_tests
         sophia_monte_carlo_mocks)
 target_include_directories(sophia_monte_carlo_model_tests PUBLIC ../../../../include)
 
-add_test(NAME NodeTests COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME name_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME total_reward_0_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME total_reward_backpropagated_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME value_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME visit_count_0_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME visit_count_backpropagated_test COMMAND sophia_monte_carlo_model_tests)
