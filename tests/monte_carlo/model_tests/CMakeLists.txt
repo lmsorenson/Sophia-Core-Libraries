@@ -18,4 +18,4 @@ target_link_libraries(sophia_monte_carlo_model_tests
         sophia_monte_carlo_mocks)
 target_include_directories(sophia_monte_carlo_model_tests PUBLIC ../../../include)
 
-add_test(NAME test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME name_test COMMAND sophia_monte_carlo_model_tests)
