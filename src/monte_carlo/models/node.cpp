@@ -131,11 +131,7 @@ void Node::Backpropagate(const double reward)
 {
     m_total_reward_ += reward;
     m_visit_count_++;
-    std::cout
-    << Name()
-    << ", t=" << m_total_reward_
-    << ", n=" << m_visit_count_
-    << std::endl;
+    std::cout << Name() << ", t=" << m_total_reward_ << ", n=" << m_visit_count_ << std::endl;
 
     std::shared_ptr<Node> node = nullptr;
     if (m_parent_action_ != nullptr)
