@@ -39,3 +39,15 @@ std::shared_ptr<const Action> MockNode::GetParent() const
     return m_parent_action_;
 }
 
+void MockNode::SetVisitCount(const int newCount)
+{
+    m_visit_count_ = newCount;
+}
+
+void MockNode::SetTotalReward(const double newTotalReward)
+{
+    m_total_reward_ = newTotalReward;
+}
+
+
+

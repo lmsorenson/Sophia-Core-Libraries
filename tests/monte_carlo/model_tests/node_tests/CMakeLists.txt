@@ -24,8 +24,8 @@ target_include_directories(sophia_monte_carlo_model_tests PUBLIC ../../../../inc
 
 add_test(NAME node_name_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_set_parent_test COMMAND sophia_monte_carlo_model_tests)
-add_test(NAME node_total_reward_0_test COMMAND sophia_monte_carlo_model_tests)
-add_test(NAME node_total_reward_backpropagated_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_total_reward_default_value_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_total_reward_with_non_default_value_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_value_test COMMAND sophia_monte_carlo_model_tests)
-add_test(NAME node_visit_count_0_test COMMAND sophia_monte_carlo_model_tests)
-add_test(NAME node_visit_count_backpropagated_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_visit_count_default_value_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_visit_count_with_non_default_value_test COMMAND sophia_monte_carlo_model_tests)

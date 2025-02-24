@@ -31,6 +31,8 @@ namespace sophia::monte_carlo::mocks
         void Setup(double value ) const;
 
         std::shared_ptr<const Action> GetParent() const;
+        void SetVisitCount(int newVisitCount);
+        void SetTotalReward(double newTotalReward);
     };
 }
 
