@@ -33,7 +33,6 @@ namespace sophia::monte_carlo::models
         double Rollout();
         void Backpropagate(double reward);
 
-
         [[nodiscard]] std::string Name() const;
         [[nodiscard]] int VisitCount() const;
         [[nodiscard]] int TotalReward() const;
