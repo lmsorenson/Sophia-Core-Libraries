@@ -10,8 +10,9 @@ namespace sophia::monte_carlo::factories
     public:
         ~TreeFactory() override = default;
 
-        [[nodiscard]] std::shared_ptr<models::Node> CreateNode(std::string name) const override;
-        [[nodiscard]] std::shared_ptr<models::ActionSelectStrategyInterface> CreateStrategy() const override;
+        [[nodiscard]] SharedNode CreateNode(std::string name) const override;
+        [[nodiscard]] SharedAction CreateAction(SharedNode parent, SharedNode child) const override;
+        [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
     };
 }
 

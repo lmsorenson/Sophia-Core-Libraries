@@ -5,10 +5,10 @@
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 
-Action::Action(std::shared_ptr<Node> source, std::shared_ptr<Node> target)
+Action::Action(const std::shared_ptr<Node>& source, const std::shared_ptr<Node>& target)
 {
-    m_source_node_ = std::move(source);
-    m_target_node_ = std::move(target);
+    m_source_node_ = source;
+    m_target_node_ = target;
 }
 
 std::shared_ptr<Node> Action::Source() const

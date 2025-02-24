@@ -8,10 +8,10 @@ namespace sophia::monte_carlo::models
 {
     class Node;
 
-    class Action
+    class Action : public std::enable_shared_from_this<Action>
     {
     public:
-        Action(std::shared_ptr<Node> source, std::shared_ptr<Node> target);
+        Action(const std::shared_ptr<Node>& source, const std::shared_ptr<Node>& target);
         virtual ~Action() = default;
 
         [[nodiscard]] double UpperConfidenceBound() const;

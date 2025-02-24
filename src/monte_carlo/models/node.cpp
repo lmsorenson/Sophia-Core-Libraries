@@ -90,13 +90,15 @@ shared_ptr<Node> Node::Expand()
     for(const auto& child : child_nodes)
     {
         std::cout << Name() << " adding child " << child->Name() << std::endl;
-        auto action = std::make_shared<Action>(shared_from_this(), child);
+        auto action = m_factory_->CreateAction(shared_from_this(), child);
         m_child_action_.push_back(action);
         child->SetParent(action);
     }
 
     if (m_child_action_.empty())
+    {
         return nullptr;
+    }
 
     const auto front = m_child_action_.front();
     return front->Target();

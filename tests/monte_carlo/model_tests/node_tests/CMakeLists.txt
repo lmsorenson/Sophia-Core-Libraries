@@ -11,6 +11,7 @@ FetchContent_MakeAvailable(googletest)
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(sophia_monte_carlo_model_tests
         name_tests.cpp
+        set_parent_tests.cpp
         total_reward_tests.cpp
         value_tests.cpp
         visit_count_tests.cpp)
@@ -22,6 +23,7 @@ target_link_libraries(sophia_monte_carlo_model_tests
 target_include_directories(sophia_monte_carlo_model_tests PUBLIC ../../../../include)
 
 add_test(NAME name_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME set_parent_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME total_reward_0_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME total_reward_backpropagated_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME value_test COMMAND sophia_monte_carlo_model_tests)

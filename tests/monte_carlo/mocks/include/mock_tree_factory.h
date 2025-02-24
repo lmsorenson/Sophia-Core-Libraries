@@ -18,8 +18,9 @@ namespace sophia::monte_carlo::mocks
     public:
         ~MockTreeFactory() override = default;
 
-        [[nodiscard]] std::shared_ptr<Node> CreateNode(std::string name) const override;
-        [[nodiscard]] std::shared_ptr<ActionSelectStrategyInterface> CreateStrategy() const override;
+        [[nodiscard]] SharedNode CreateNode(std::string name) const override;
+        [[nodiscard]] SharedAction CreateAction(SharedNode parent, SharedNode child) const override;
+        [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
     };
 }
 
