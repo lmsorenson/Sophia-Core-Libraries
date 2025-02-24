@@ -6,13 +6,26 @@ namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockNode;
 
-    TEST_F(MonteCarloModelsFixture, total_reward_test)
+    TEST_F(MonteCarloModelsFixture, total_reward_0_test)
     {
         const auto n = MockNode("name 1", nullptr);
 
-        const auto name = n.TotalReward();
+        const auto total_reward = n.TotalReward();
 
-        EXPECT_EQ(name, 0);
+        EXPECT_EQ(total_reward, 0);
+    }
+
+    TEST_F(MonteCarloModelsFixture, total_reward_backpropogated_test)
+    {
+        auto n = MockNode("name 1", nullptr);
+
+        n.Backpropagate(10);
+        n.Backpropagate(10);
+        n.Backpropagate(10);
+
+        const auto total_reward = n.TotalReward();
+
+        EXPECT_EQ(total_reward, 30);
     }
 }
 

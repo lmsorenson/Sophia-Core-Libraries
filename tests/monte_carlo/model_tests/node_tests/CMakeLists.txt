@@ -12,7 +12,8 @@ FetchContent_MakeAvailable(googletest)
 add_executable(sophia_monte_carlo_model_tests
         name_tests.cpp
         total_reward_tests.cpp
-        value_tests.cpp)
+        value_tests.cpp
+        visit_count_tests.cpp)
 target_link_libraries(sophia_monte_carlo_model_tests
         gtest gtest_main
         gmock gmock_main
@@ -20,6 +21,4 @@ target_link_libraries(sophia_monte_carlo_model_tests
         sophia_monte_carlo_mocks)
 target_include_directories(sophia_monte_carlo_model_tests PUBLIC ../../../../include)
 
-add_test(NAME name_test COMMAND sophia_monte_carlo_model_tests)
-add_test(NAME total_reward_test COMMAND sophia_monte_carlo_model_tests)
-add_test(NAME value_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME NodeTests COMMAND sophia_monte_carlo_model_tests)
