@@ -109,22 +109,24 @@ double Node::Rollout()
     if (this->IsTerminalState())
     {
         std::cout
-        << "Rollout " << Name() << " is terminal state. value: " << this->Value()
+        << "Rollout " << Name()
+        << " is terminal state. value: " << this->Value()
         << std::endl;
         return this->Value();
     }
 
-    std::cout
-    << "Rollout " << Name() << " is NOT terminal state."
-    << std::endl;
+    std::cout << "Rollout " << Name() << " is NOT terminal state." << std::endl;
 
     auto select_strategy = m_factory_->CreateStrategy();
 
-    const auto selected_action = select_strategy->select_action(m_child_action_);
+    if (const auto selected_action = select_strategy->select_action(m_child_action_))
+    {
+        const auto new_node = selected_action->Target();
 
-    const auto new_node = selected_action->Target();
+        return new_node->Rollout();
+    }
 
-    return new_node->Rollout();
+    return -1;
 }
 
 void Node::Backpropagate(const double reward)

@@ -15,7 +15,8 @@ add_executable(sophia_monte_carlo_model_tests
         total_reward_tests.cpp
         value_tests.cpp
         visit_count_tests.cpp
-        backpropagate_tests.cpp)
+        backpropagate_tests.cpp
+        rollout_tests.cpp)
 target_link_libraries(sophia_monte_carlo_model_tests
         gtest gtest_main
         gmock gmock_main
@@ -25,6 +26,8 @@ target_include_directories(sophia_monte_carlo_model_tests PUBLIC ../../../../inc
 
 add_test(NAME node_backpropagate_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_name_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_rollout_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_rollout_2_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_set_parent_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_total_reward_default_value_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_total_reward_with_non_default_value_test COMMAND sophia_monte_carlo_model_tests)
