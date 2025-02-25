@@ -19,7 +19,8 @@ add_executable(sophia_monte_carlo_model_tests
         rollout_tests.cpp
         expand_tests.cpp
         is_leaf_node_tests.cpp
-        has_been_sampled_tests.cpp)
+        has_been_sampled_tests.cpp
+        select_best_action_tests.cpp)
 target_link_libraries(sophia_monte_carlo_model_tests
         gtest gtest_main
         gmock gmock_main
@@ -36,6 +37,9 @@ add_test(NAME node_is_leaf_node_true_test COMMAND sophia_monte_carlo_model_tests
 add_test(NAME node_name_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_rollout_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_rollout_2_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_select_best_action_no_scores_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_select_best_action_choose_node_with_no_scores_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_select_best_action_choose_node_with_best_scores_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_set_parent_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_total_reward_default_value_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_total_reward_with_non_default_value_test COMMAND sophia_monte_carlo_model_tests)
