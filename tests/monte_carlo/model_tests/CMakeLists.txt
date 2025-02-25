@@ -1,1 +1,2 @@
 add_subdirectory(node_tests)
+add_subdirectory(action_tests)

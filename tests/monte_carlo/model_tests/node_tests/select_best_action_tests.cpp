@@ -1,4 +1,4 @@
-#include "monte_carlo_models_fixture.h"
+#include "monte_carlo_nodes_fixture.h"
 #include <gtest/gtest.h>
 #include <mock_node.h>
 #include <mock_tree_factory.h>
