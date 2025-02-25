@@ -16,7 +16,10 @@ add_executable(sophia_monte_carlo_model_tests
         value_tests.cpp
         visit_count_tests.cpp
         backpropagate_tests.cpp
-        rollout_tests.cpp)
+        rollout_tests.cpp
+        expand_tests.cpp
+        is_leaf_node_tests.cpp
+        has_been_sampled_tests.cpp)
 target_link_libraries(sophia_monte_carlo_model_tests
         gtest gtest_main
         gmock gmock_main
@@ -25,6 +28,11 @@ target_link_libraries(sophia_monte_carlo_model_tests
 target_include_directories(sophia_monte_carlo_model_tests PUBLIC ../../../../include)
 
 add_test(NAME node_backpropagate_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_expand_with_no_available_actions_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_expand_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_has_been_sampled_false_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_is_leaf_node_false_test COMMAND sophia_monte_carlo_model_tests)
+add_test(NAME node_is_leaf_node_true_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_name_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_rollout_test COMMAND sophia_monte_carlo_model_tests)
 add_test(NAME node_rollout_2_test COMMAND sophia_monte_carlo_model_tests)

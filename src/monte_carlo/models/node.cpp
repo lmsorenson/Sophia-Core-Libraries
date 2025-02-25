@@ -53,7 +53,7 @@ bool Node::IsLeafNode() const
 
 bool Node::HasBeenSampled() const
 {
-    return m_visit_count_ != 0;
+    return m_visit_count_ > 0;
 }
 
 std::shared_ptr<Action> Node::SelectBestAction() const
