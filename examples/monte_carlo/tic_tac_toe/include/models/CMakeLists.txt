@@ -1,0 +1,1 @@
+install(DIRECTORY examples/monte_carlo/tic_tac_toe/models DESTINATION include/examples/monte_carlo/tic_tac_toe/models)

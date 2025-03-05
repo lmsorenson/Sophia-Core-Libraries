@@ -1,5 +1,6 @@
-#include <mock_node.h>
 #include <mock_tree_factory.h>
+#include <mock_node.h>
+#include <memory>
 
 using sophia::monte_carlo::mocks::MockTreeFactory;
 using sophia::monte_carlo::models::Node;
