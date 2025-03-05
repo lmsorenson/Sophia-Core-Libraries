@@ -86,13 +86,14 @@ std::shared_ptr<Action> Node::SelectBestAction() const
 
 shared_ptr<Node> Node::Expand()
 {
-    vector<shared_ptr<Node>> child_nodes = GetAvailableActions();
+    const vector<shared_ptr<Action>> child_nodes = GetAvailableActions();
     for(const auto& child : child_nodes)
     {
-        std::cout << Name() << " adding child " << child->Name() << std::endl;
-        auto action = m_factory_->CreateAction(shared_from_this(), child);
+        auto target = child->Target();
+        std::cout << Name() << " adding child " << target->Name() << std::endl;
+        auto action = m_factory_->CreateAction(shared_from_this(), target);
         m_child_action_.push_back(action);
-        child->SetParent(action);
+        target->SetParent(action);
     }
 
     if (m_child_action_.empty())

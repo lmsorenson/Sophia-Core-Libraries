@@ -23,11 +23,11 @@ namespace sophia::monte_carlo::mocks
         explicit MockNode(const string& name, const shared_ptr<const ITreeFactory>& interface);
         ~MockNode() override = default;
 
-        MOCK_METHOD(vector<shared_ptr<Node>>, GetAvailableActions, (), (const, override));
+        MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (const, override));
         MOCK_METHOD(bool, IsTerminalState, (), (const, override));
         MOCK_METHOD(double, Value, (), (const, override));
 
-        void Setup( vector<shared_ptr<Node>> node_expansion );
+        void Setup(const vector<shared_ptr<Node>> &node_expansion );
         void Setup(double value ) const;
 
         std::shared_ptr<const Action> GetParent() const;

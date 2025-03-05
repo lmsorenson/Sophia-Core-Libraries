@@ -16,11 +16,19 @@ MockNode::MockNode(const string& name, const shared_ptr<const ITreeFactory>& int
 {
 }
 
-void MockNode::Setup( vector<shared_ptr<Node>> node_expansion )
+void MockNode::Setup(const vector<shared_ptr<Node>> &node_expansion )
 {
+    vector<shared_ptr<Action>> actions = {};
+    actions.reserve(node_expansion.size());
+
+    for(const auto& node : node_expansion)
+    {
+        actions.push_back(m_factory_->CreateAction(shared_from_this(), node));
+    }
+
     EXPECT_CALL(*this, GetAvailableActions())
         .Times(::testing::AnyNumber())
-        .WillOnce(Return(std::move(node_expansion)));
+        .WillOnce(Return(actions));
 }
 
 void MockNode::Setup( const double value ) const

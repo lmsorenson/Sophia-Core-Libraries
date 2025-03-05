@@ -2,6 +2,7 @@
 
 using sophia::examples::tic_tac_toe::models::State;
 using sophia::monte_carlo::models::Node;
+using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 using std::vector;
 using std::string;
@@ -11,8 +12,10 @@ State::State(const string &name, const shared_ptr<const ITreeFactory> &interface
 {
 }
 
-vector<shared_ptr<Node>> State::GetAvailableActions() const
+vector<shared_ptr<Action>> State::GetAvailableActions() const
 {
+    auto open_positions = m_board_.GetOpenPositions();
+
     return {};
 }
 
