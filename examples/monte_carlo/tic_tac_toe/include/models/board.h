@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <models/position.h>
+#include <memory>
 
 namespace sophia::examples::tic_tac_toe::models
 {
