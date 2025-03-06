@@ -8,6 +8,7 @@ namespace sophia::monte_carlo::models
 {
     class Node;
 
+    template<typename TChange>
     class Action : public std::enable_shared_from_this<Action>
     {
     public:
@@ -20,6 +21,7 @@ namespace sophia::monte_carlo::models
 
     private:
         std::weak_ptr<Node> m_source_node_;
+        std::shared_ptr<Node> m_target_state_;
     };
 }
 
