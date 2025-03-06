@@ -21,7 +21,7 @@ namespace sophia::monte_carlo::models
         [[nodiscard]] bool IsLeafNode() const;
         [[nodiscard]] bool HasBeenSampled() const;
 
-        [[nodiscard]] virtual std::vector<std::shared_ptr<Action>> GetAvailableActions() const = 0;
+        [[nodiscard]] virtual std::vector<std::shared_ptr<Action>> GetAvailableActions() = 0;
         [[nodiscard]] virtual bool IsTerminalState() const = 0;
         [[nodiscard]] virtual double Value() const = 0;
 

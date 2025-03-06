@@ -28,7 +28,7 @@ namespace sophia::monte_carlo::mocks
         explicit MockNode(const string& name, const shared_ptr<const ITreeFactory<int>>& interface);
         ~MockNode() override = default;
 
-        MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (const, override));
+        MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (override));
         MOCK_METHOD(bool, IsTerminalState, (), (const, override));
         MOCK_METHOD(double, Value, (), (const, override));
 

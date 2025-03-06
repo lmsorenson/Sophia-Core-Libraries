@@ -9,12 +9,12 @@ namespace sophia::examples::tic_tac_toe::models
     using monte_carlo::factories::ITreeFactory;
     using monte_carlo::models::Action;
 
-    class State : public monte_carlo::models::NodeBase<Position>
+    class State : public NodeBase<Position>
     {
     public:
         explicit State(const std::string& name, const std::shared_ptr<const ITreeFactory<Position>>& interface);
 
-        [[nodiscard]] std::vector<std::shared_ptr<Action>> GetAvailableActions() const override;
+        [[nodiscard]] std::vector<std::shared_ptr<Action>> GetAvailableActions() override;
 
         [[nodiscard]] bool IsTerminalState() const override;
 

@@ -13,17 +13,19 @@ State::State(const string &name, const shared_ptr<const ITreeFactory<Position>> 
 {
 }
 
-vector<shared_ptr<Action>> State::GetAvailableActions() const
+vector<shared_ptr<Action>> State::GetAvailableActions()
 {
+    vector<shared_ptr<Action>> actions;
+
     auto open_positions = m_board_.GetOpenPositions();
 
-    // todo - essentially you want to create a list of actions from these position moves,
-    // todo - but these positions are specific to tic_tac_toe so we don't want the factory
-    // todo - to have knowledge of tic tac toe positions.
     for(const auto& position : open_positions)
-        auto action = m_factory_->CreateAction(nullptr, *position);
+    {
+        auto action = m_factory_->CreateAction(shared_from_this(), *position);
+        actions.push_back(action);
+    }
 
-    return {};
+    return actions;
 }
 
 bool State::IsTerminalState() const
