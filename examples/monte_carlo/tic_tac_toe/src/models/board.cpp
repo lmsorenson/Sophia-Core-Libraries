@@ -13,18 +13,18 @@ using std::vector;
 
 Board::Board()
 {
-    // for(int row = 0; row < 3; row++)
-    // {
-    //     vector<Position> row_positions;
-    //
-    //     for (int col = 0; col < 3; col++)
-    //     {
-    //         auto new_position = Position({row, col}, TileState::E);
-    //         row_positions.push_back(new_position);
-    //     }
-    //
-    //     m_tiles_.push_back(row_positions);
-    // }
+    for(int row = 0; row < 3; row++)
+    {
+        vector<shared_ptr<const Position>> row_positions;
+
+        for (int col = 0; col < 3; col++)
+        {
+            auto new_position = make_shared<Position>(std::pair(row, col), TileState::E);
+            row_positions.push_back(new_position);
+        }
+
+        m_tiles_.push_back(row_positions);
+    }
 }
 
 Board::Board(const Board &other)
@@ -69,7 +69,7 @@ void Board::SetPosition(const Position &new_position)
         throw std::invalid_argument("Position already taken.");
     }
 
-    m_tiles_[row][column] = make_shared<Position>((std::pair<int, int>){ row, column }, new_position.State());
+    m_tiles_[row][column] = make_shared<Position>(std::pair( row, column ), new_position.State());
 }
 
 vector<shared_ptr<const Position>> Board::GetOpenPositions() const
