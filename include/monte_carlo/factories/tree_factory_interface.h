@@ -2,6 +2,7 @@
 #define TREE_FACTORY_INTERFACE_H
 
 #include <memory>
+#include <string>
 
 namespace sophia::monte_carlo::models
 {
