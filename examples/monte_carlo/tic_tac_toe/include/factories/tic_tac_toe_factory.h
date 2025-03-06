@@ -5,6 +5,7 @@
 
 namespace sophia::examples::tic_tac_toe::factories
 {
+    template<typename TChange>
     class TicTacToeFactory : public monte_carlo::factories::ITreeFactory
     {
     public:
@@ -12,7 +13,7 @@ namespace sophia::examples::tic_tac_toe::factories
 
         [[nodiscard]] SharedNode CreateNode(std::string name) const override;
 
-        [[nodiscard]] SharedAction CreateAction(SharedNode parent) const override;
+        [[nodiscard]] SharedAction CreateAction(SharedNode node, TChange change) const override;
 
         [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
     };
