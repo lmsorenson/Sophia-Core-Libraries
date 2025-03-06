@@ -8,7 +8,6 @@ namespace sophia::monte_carlo::models
 {
     class Node;
 
-    template<typename TChange>
     class Action : public std::enable_shared_from_this<Action>
     {
     public:
