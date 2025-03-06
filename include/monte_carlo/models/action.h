@@ -15,12 +15,8 @@ namespace sophia::monte_carlo::models
         virtual ~Action() = default;
 
         [[nodiscard]] double UpperConfidenceBound() const;
-        [[nodiscard]] std::shared_ptr<Node> Source() const;
+        [[nodiscard]] virtual std::shared_ptr<Node> Source() const = 0;
         [[nodiscard]] virtual std::shared_ptr<Node> Target() const = 0;
-
-    private:
-        std::weak_ptr<Node> m_source_node_;
-        std::shared_ptr<Node> m_target_state_;
     };
 }
 
