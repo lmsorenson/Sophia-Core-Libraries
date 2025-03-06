@@ -14,7 +14,7 @@ namespace sophia::monte_carlo::models
 namespace sophia::monte_carlo::factories
 {
     template<typename TChange>
-    class ITreeFactory : public std::enable_shared_from_this<ITreeFactory>
+    class ITreeFactory : public std::enable_shared_from_this<ITreeFactory<TChange>>
     {
     protected:
         using SharedNode = std::shared_ptr<models::Node>;

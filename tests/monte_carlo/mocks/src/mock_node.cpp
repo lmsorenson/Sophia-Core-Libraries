@@ -12,8 +12,8 @@ using std::shared_ptr;
 using std::string;
 using testing::Return;
 
-MockNode::MockNode(const string& name, const shared_ptr<const ITreeFactory>& interface)
-    : Node(std::move(name), std::move(interface))
+MockNode::MockNode(const string& name, const shared_ptr<const ITreeFactory<int>>& interface)
+    : NodeBase(std::move(name), std::move(interface))
 {
 }
 
@@ -24,7 +24,7 @@ void MockNode::Setup(const vector<shared_ptr<Node>> &node_expansion )
 
     for(const auto& node : node_expansion)
     {
-        auto action = m_factory_->CreateAction(shared_from_this());
+        auto action = m_factory_->CreateAction(shared_from_this(), 1);
         const auto ma = std::dynamic_pointer_cast<MockAction>(action);
         ma->Setup(node);
         actions.push_back(action);

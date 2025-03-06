@@ -13,7 +13,7 @@ namespace sophia::monte_carlo::model_tests
 
         auto s1 = factory->CreateNode("S1");
         auto s2 = factory->CreateNode("S2");
-        auto a1 = factory->CreateAction(s1);
+        auto a1 = factory->CreateAction(s1, 1);
         s2->SetParent(a1);
 
         s1->Backpropagate(10);

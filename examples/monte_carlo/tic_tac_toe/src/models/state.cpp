@@ -8,8 +8,8 @@ using std::shared_ptr;
 using std::vector;
 using std::string;
 
-State::State(const string &name, const shared_ptr<const ITreeFactory> &interface)
-    : Node(name, interface)
+State::State(const string &name, const shared_ptr<const ITreeFactory<Position>> &interface)
+    : NodeBase(name, interface)
 {
 }
 
@@ -20,7 +20,8 @@ vector<shared_ptr<Action>> State::GetAvailableActions() const
     // todo - essentially you want to create a list of actions from these position moves,
     // todo - but these positions are specific to tic_tac_toe so we don't want the factory
     // todo - to have knowledge of tic tac toe positions.
-    auto action = m_factory_->CreateAction(nullptr);
+    for(const auto& position : open_positions)
+        auto action = m_factory_->CreateAction(nullptr, *position);
 
     return {};
 }

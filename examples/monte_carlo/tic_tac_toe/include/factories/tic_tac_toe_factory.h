@@ -1,19 +1,19 @@
 #ifndef TIC_TAC_TOE_FACTORY_H
 #define TIC_TAC_TOE_FACTORY_H
 
+#include <models/position.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 
 namespace sophia::examples::tic_tac_toe::factories
 {
-    template<typename TChange>
-    class TicTacToeFactory : public monte_carlo::factories::ITreeFactory<TChange>
+    class TicTacToeFactory : public monte_carlo::factories::ITreeFactory<models::Position>
     {
     public:
         ~TicTacToeFactory() override = default;
 
         [[nodiscard]] SharedNode CreateNode(std::string name) const override;
 
-        [[nodiscard]] SharedAction CreateAction(SharedNode node, TChange change) const override;
+        [[nodiscard]] SharedAction CreateAction(SharedNode node, models::Position change) const override;
 
         [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
     };

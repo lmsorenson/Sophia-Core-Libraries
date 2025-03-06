@@ -20,7 +20,7 @@ shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name) const
     return make_shared<State>(name, shared_from_this());
 }
 
-shared_ptr<Action> TicTacToeFactory::CreateAction(shared_ptr<Node> parent) const
+shared_ptr<Action> TicTacToeFactory::CreateAction(shared_ptr<Node> parent, models::Position change) const
 {
     return make_shared<Move>(parent);
 }

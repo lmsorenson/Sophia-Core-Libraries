@@ -16,7 +16,7 @@ namespace sophia::monte_carlo::model_tests
 
         auto s1 = factory->CreateNode("node 1");
         auto s2 = factory->CreateNode("node 2");
-        const auto a1 = factory->CreateAction(s1);
+        const auto a1 = factory->CreateAction(s1, 1);
 
         // before the parent is set,
         // the parent should null.

@@ -15,7 +15,7 @@ namespace sophia::monte_carlo::model_tests
     {
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
-        const auto a1 = factory->CreateAction(nullptr);
+        const auto a1 = factory->CreateAction(nullptr, 1);
         std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup(s1);
 
         const auto actual_target = a1->Target();
@@ -26,7 +26,7 @@ namespace sophia::monte_carlo::model_tests
     TEST_F(MonteCarloActionFixture, action_target_null_test)
     {
         const auto factory = std::make_shared<MockTreeFactory>();
-        const auto a1 = factory->CreateAction(nullptr);
+        const auto a1 = factory->CreateAction(nullptr, 1);
 
         const auto actual_target = a1->Target();
 

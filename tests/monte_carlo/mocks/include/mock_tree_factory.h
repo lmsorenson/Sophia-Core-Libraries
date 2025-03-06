@@ -16,13 +16,13 @@ namespace sophia::monte_carlo::mocks
 
     class MockActionSelectStrategy;
 
-    class MockTreeFactory : public ITreeFactory
+    class MockTreeFactory : public ITreeFactory<int>
     {
     public:
         ~MockTreeFactory() override = default;
 
         [[nodiscard]] SharedNode CreateNode(std::string name) const override;
-        [[nodiscard]] SharedAction CreateAction(SharedNode parent) const override;
+        [[nodiscard]] SharedAction CreateAction(SharedNode node, int change) const override;
         [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
     };
 }

@@ -2,7 +2,8 @@
 #define MOCK_NODE_H
 
 #include <gmock/gmock.h>
-#include <monte_carlo/models/node.h>
+#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/models/node_base.h>
 
 
 namespace sophia::monte_carlo::models
@@ -12,7 +13,7 @@ namespace sophia::monte_carlo::models
 
 namespace sophia::monte_carlo::mocks
 {
-    using models::Node;
+    using models::NodeBase;
     using models::Action;
     using models::ActionSelectStrategyInterface;
     using factories::ITreeFactory;
@@ -21,10 +22,10 @@ namespace sophia::monte_carlo::mocks
     using std::make_shared;
     using std::shared_ptr;
 
-    class MockNode : public Node
+    class MockNode : public NodeBase<int>
     {
     public:
-        explicit MockNode(const string& name, const shared_ptr<const ITreeFactory>& interface);
+        explicit MockNode(const string& name, const shared_ptr<const ITreeFactory<int>>& interface);
         ~MockNode() override = default;
 
         MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (const, override));

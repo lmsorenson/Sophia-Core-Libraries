@@ -13,9 +13,8 @@ using std::string;
 using std::shared_ptr;
 using std::vector;
 
-Node::Node(string name, shared_ptr<const ITreeFactory> factory)
+Node::Node(string name)
     : m_name_(std::move(name))
-    , m_factory_(std::move(factory))
 {
 }
 
@@ -120,7 +119,7 @@ double Node::Rollout()
 
     std::cout << "Rollout " << Name() << " is NOT terminal state." << std::endl;
 
-    auto select_strategy = m_factory_->CreateStrategy();
+    auto select_strategy = ActionSelectStrategy();
 
     if (const auto selected_action = select_strategy->select_action(m_child_action_))
     {
