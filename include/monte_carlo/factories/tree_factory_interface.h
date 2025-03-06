@@ -1,8 +1,14 @@
 #ifndef TREE_FACTORY_INTERFACE_H
 #define TREE_FACTORY_INTERFACE_H
 
-#include <monte_carlo/models/node.h>
-#include <monte_carlo/models/action_select_strategy_interface.h>
+#include <memory>
+
+namespace sophia::monte_carlo::models
+{
+    class Node;
+    class Action;
+    class ActionSelectStrategyInterface;
+}
 
 namespace sophia::monte_carlo::factories
 {
@@ -17,7 +23,7 @@ namespace sophia::monte_carlo::factories
         virtual ~ITreeFactory() = default;
 
         [[nodiscard]] virtual SharedNode CreateNode(std::string name) const = 0;
-        [[nodiscard]] virtual SharedAction CreateAction(SharedNode parent, SharedNode child) const = 0;
+        [[nodiscard]] virtual SharedAction CreateAction(SharedNode parent) const = 0;
         [[nodiscard]] virtual SharedActionSelectStrategy CreateStrategy() const = 0;
     };
 }

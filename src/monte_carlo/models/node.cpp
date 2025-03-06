@@ -1,6 +1,7 @@
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
-#include <monte_carlo/factories/tree_factory.h>
+#include <monte_carlo/models/action_select_strategy_interface.h>
+#include <monte_carlo/factories/tree_factory_interface.h>
 #include <cmath>
 #include <utility>
 #include <iostream>
@@ -28,11 +29,13 @@ double Node::UpperConfidenceBound() const
 {
     const auto V = m_total_reward_ / m_visit_count_;
     int N = 0;
-    if (m_parent_action_ != nullptr)
+
+    if (auto sp = m_parent_action_.lock())
     {
-        const auto parent = m_parent_action_->Source();
+        const auto parent = sp->Source();
         N = parent->VisitCount();
     }
+
     const int n = m_visit_count_;
 
     if (n == 0)
@@ -91,9 +94,8 @@ shared_ptr<Node> Node::Expand()
     {
         auto target = child->Target();
         std::cout << Name() << " adding child " << target->Name() << std::endl;
-        auto action = m_factory_->CreateAction(shared_from_this(), target);
-        m_child_action_.push_back(action);
-        target->SetParent(action);
+        m_child_action_.push_back(child);
+        target->SetParent(child);
     }
 
     if (m_child_action_.empty())
@@ -137,9 +139,9 @@ void Node::Backpropagate(const double reward)
     std::cout << Name() << ", t=" << m_total_reward_ << ", n=" << m_visit_count_ << std::endl;
 
     std::shared_ptr<Node> node = nullptr;
-    if (m_parent_action_ != nullptr)
+    if (auto sp = m_parent_action_.lock())
     {
-        node = m_parent_action_->Source();
+        node = sp->Source();
         node->Backpropagate(reward);
     }
 }

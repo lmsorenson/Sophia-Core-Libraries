@@ -1,5 +1,8 @@
 #ifndef ACTION_SELECTION_STRATEGY_INTERFACE_H
 #define ACTION_SELECTION_STRATEGY_INTERFACE_H
+
+#include <monte_carlo/models/action.h>
+
 #include <iostream>
 #include <memory>
 #include <ostream>
@@ -7,8 +10,6 @@
 
 namespace sophia::monte_carlo::models
 {
-    class Action;
-
     class ActionSelectStrategyInterface
     {
     public:

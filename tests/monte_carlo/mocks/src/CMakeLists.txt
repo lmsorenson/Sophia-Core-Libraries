@@ -10,6 +10,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_library(sophia_monte_carlo_mocks
         mock_node.cpp
+        mock_action.cpp
         mock_tree_factory.cpp
         mock_action_select_strategy.cpp
 )

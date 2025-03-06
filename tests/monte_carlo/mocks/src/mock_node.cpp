@@ -1,3 +1,4 @@
+#include <mock_action.h>
 #include <mock_node.h>
 
 #include <monte_carlo/factories/tree_factory_interface.h>
@@ -23,7 +24,10 @@ void MockNode::Setup(const vector<shared_ptr<Node>> &node_expansion )
 
     for(const auto& node : node_expansion)
     {
-        actions.push_back(m_factory_->CreateAction(shared_from_this(), node));
+        auto action = m_factory_->CreateAction(shared_from_this());
+        const auto ma = std::dynamic_pointer_cast<MockAction>(action);
+        ma->Setup(node);
+        actions.push_back(action);
     }
 
     EXPECT_CALL(*this, GetAvailableActions())
@@ -44,7 +48,7 @@ void MockNode::Setup( const double value ) const
 
 std::shared_ptr<const Action> MockNode::GetParent() const
 {
-    return m_parent_action_;
+    return m_parent_action_.lock();
 }
 
 void MockNode::SetVisitCount(const int newCount)

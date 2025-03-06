@@ -5,10 +5,9 @@
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 
-Action::Action(const std::shared_ptr<Node>& source, const std::shared_ptr<Node>& target)
+Action::Action(const std::shared_ptr<Node>& source)
 {
     m_source_node_ = source;
-    m_target_node_ = target;
 }
 
 std::shared_ptr<Node> Action::Source() const
@@ -16,14 +15,9 @@ std::shared_ptr<Node> Action::Source() const
     return m_source_node_.lock();
 }
 
-std::shared_ptr<Node> Action::Target() const
-{
-    return m_target_node_.lock();
-}
-
 double Action::UpperConfidenceBound() const
 {
-    if (auto sp = m_target_node_.lock())
+    if (auto sp = Target())
     {
         return sp->UpperConfidenceBound();
     }

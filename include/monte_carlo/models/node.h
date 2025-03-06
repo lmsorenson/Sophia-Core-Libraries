@@ -40,7 +40,7 @@ namespace sophia::monte_carlo::models
 
     protected:
         std::shared_ptr<const factories::ITreeFactory> m_factory_;
-        std::shared_ptr<Action> m_parent_action_;
+        std::weak_ptr<Action> m_parent_action_;
         std::vector<std::shared_ptr<Action>> m_child_action_;
         int m_visit_count_ = 0;
         double m_total_reward_ = 0;

@@ -1,6 +1,8 @@
 #include "monte_carlo_action_fixture.h"
 #include <gtest/gtest.h>
+#include <monte_carlo/models/action.h>
 #include <mock_node.h>
+#include <mock_action.h>
 #include <mock_tree_factory.h>
 
 namespace sophia::monte_carlo::model_tests
@@ -11,7 +13,7 @@ namespace sophia::monte_carlo::model_tests
     TEST_F(MonteCarloActionFixture, action_upper_confidence_bound_null_nodes_test)
     {
         const auto factory = std::make_shared<MockTreeFactory>();
-        const auto a1 = factory->CreateAction(nullptr, nullptr);
+        const auto a1 = factory->CreateAction(nullptr);
 
         const auto ucb = a1->UpperConfidenceBound();
 
@@ -23,7 +25,8 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
-        const auto a1 = factory->CreateAction(s1, s2);
+        const auto a1 = factory->CreateAction(s1);
+        std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup(s2);
 
         std::dynamic_pointer_cast<MockNode>(s1)->SetTotalReward(0);
         std::dynamic_pointer_cast<MockNode>(s1)->SetVisitCount(0);
@@ -38,7 +41,9 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
-        const auto a1 = factory->CreateAction(s1, s2);
+        const auto a1 = factory->CreateAction(s1);
+
+        std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup(s2);
 
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2 });
         s1->Expand();

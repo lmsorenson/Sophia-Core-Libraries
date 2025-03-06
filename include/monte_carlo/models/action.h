@@ -11,16 +11,15 @@ namespace sophia::monte_carlo::models
     class Action : public std::enable_shared_from_this<Action>
     {
     public:
-        Action(const std::shared_ptr<Node>& source, const std::shared_ptr<Node>& target);
+        Action(const std::shared_ptr<Node>& source);
         virtual ~Action() = default;
 
         [[nodiscard]] double UpperConfidenceBound() const;
         [[nodiscard]] std::shared_ptr<Node> Source() const;
-        [[nodiscard]] std::shared_ptr<Node> Target() const;
+        [[nodiscard]] virtual std::shared_ptr<Node> Target() const = 0;
 
     private:
         std::weak_ptr<Node> m_source_node_;
-        std::weak_ptr<Node> m_target_node_;
     };
 }
 

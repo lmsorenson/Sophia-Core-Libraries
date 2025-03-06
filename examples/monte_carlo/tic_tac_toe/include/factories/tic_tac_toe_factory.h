@@ -12,7 +12,7 @@ namespace sophia::examples::tic_tac_toe::factories
 
         [[nodiscard]] SharedNode CreateNode(std::string name) const override;
 
-        [[nodiscard]] SharedAction CreateAction(SharedNode parent, SharedNode child) const override;
+        [[nodiscard]] SharedAction CreateAction(SharedNode parent) const override;
 
         [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
     };

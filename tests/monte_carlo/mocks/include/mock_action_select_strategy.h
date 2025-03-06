@@ -1,8 +1,9 @@
 #ifndef MOCK_ACTION_SELECT_STRATEGY_H
 #define MOCK_ACTION_SELECT_STRATEGY_H
+
 #include <gmock/gmock.h>
-#include <monte_carlo/models/action.h>
 #include <monte_carlo/models/action_select_strategy_interface.h>
+
 
 namespace sophia::monte_carlo::mocks
 {
