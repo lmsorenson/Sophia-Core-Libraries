@@ -6,7 +6,7 @@
 namespace sophia::examples::tic_tac_toe::factories
 {
     template<typename TChange>
-    class TicTacToeFactory : public monte_carlo::factories::ITreeFactory
+    class TicTacToeFactory : public monte_carlo::factories::ITreeFactory<TChange>
     {
     public:
         ~TicTacToeFactory() override = default;
