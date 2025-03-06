@@ -8,8 +8,7 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_library(sophia_monte_carlo_mocks
-)
+add_library(sophia_monte_carlo_mocks)
 
 target_link_libraries(sophia_monte_carlo_mocks
         gmock gmock_main

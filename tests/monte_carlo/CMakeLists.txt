@@ -9,8 +9,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # Now simply link against gtest or gtest_main as needed. Eg
-add_executable(sophia_monte_carlo_tests
-        source.cpp)
+add_executable(sophia_monte_carlo_tests)
 target_link_libraries(sophia_monte_carlo_tests
         gtest gtest_main
         gmock gmock_main
