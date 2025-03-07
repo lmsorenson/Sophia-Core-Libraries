@@ -8,7 +8,7 @@ using std::shared_ptr;
 using std::vector;
 using std::string;
 
-State::State(const string &name, const shared_ptr<const ITreeFactory<Position>> &interface)
+State::State(const string &name, const shared_ptr<const ITreeFactory<Board, Position>> &interface)
     : NodeBase(name, interface)
 {
 }

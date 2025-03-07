@@ -5,21 +5,21 @@
 
 namespace sophia::monte_carlo::factories
 {
-    template<typename TChange>
+    template<typename TState, typename TChange>
     class ITreeFactory;
 }
 
 namespace sophia::monte_carlo::models
 {
-    template<typename TChange>
+    template<typename TState, typename TChange>
     class NodeBase : public Node
     {
     public:
-        NodeBase(std::string name, std::shared_ptr<const factories::ITreeFactory<TChange>> factory);
+        NodeBase(std::string name, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory);
 
     protected:
         std::shared_ptr<ActionSelectStrategyInterface> ActionSelectStrategy() const override;
-        std::shared_ptr<const factories::ITreeFactory<TChange>> m_factory_;
+        std::shared_ptr<const factories::ITreeFactory<TState, TChange>> m_factory_;
     };
 }
 

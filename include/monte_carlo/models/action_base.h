@@ -14,17 +14,17 @@ namespace sophia::monte_carlo::models
     class ActionBase : public Action
     {
     public:
-        ActionBase(const std::shared_ptr<NodeBase<TChange>> &state, TChange change);
+        ActionBase(const std::shared_ptr<NodeBase<TState, TChange>> &state, TChange change);
 
         [[nodiscard]] std::shared_ptr<Node> Source() const override;
 
     private:
-        std::weak_ptr<NodeBase<TChange>> m_source_;
+        std::weak_ptr<NodeBase<TState, TChange>> m_source_;
         TChange m_change_;
     };
 
     template<typename TState, typename TChange>
-    ActionBase<TState, TChange>::ActionBase(const std::shared_ptr<NodeBase<TChange>> &state, TChange change)
+    ActionBase<TState, TChange>::ActionBase(const std::shared_ptr<NodeBase<TState, TChange>> &state, TChange change)
         : Action()
         , m_source_(state)
         , m_change_(change)

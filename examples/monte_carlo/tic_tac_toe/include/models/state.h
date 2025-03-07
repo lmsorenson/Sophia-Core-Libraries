@@ -9,10 +9,10 @@ namespace sophia::examples::tic_tac_toe::models
     using monte_carlo::factories::ITreeFactory;
     using monte_carlo::models::Action;
 
-    class State : public NodeBase<Position>
+    class State : public NodeBase<Board, Position>
     {
     public:
-        explicit State(const std::string& name, const std::shared_ptr<const ITreeFactory<Position>>& interface);
+        explicit State(const std::string& name, const std::shared_ptr<const ITreeFactory<Board, Position>>& interface);
 
         [[nodiscard]] std::vector<std::shared_ptr<Action>> GetAvailableActions() override;
 

@@ -8,7 +8,7 @@ using std::shared_ptr;
 using std::string;
 using testing::Return;
 
-MockAction::MockAction(shared_ptr<NodeBase<int>> source)
+MockAction::MockAction(shared_ptr<NodeBase<bool, int>> source)
 : ActionBase(source, 0)
 {
 

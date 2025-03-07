@@ -12,7 +12,7 @@ using std::shared_ptr;
 using std::string;
 using testing::Return;
 
-MockNode::MockNode(const string& name, const shared_ptr<const ITreeFactory<int>>& interface)
+MockNode::MockNode(const string& name, const shared_ptr<const ITreeFactory<bool, int>>& interface)
     : NodeBase(std::move(name), std::move(interface))
 {
 }

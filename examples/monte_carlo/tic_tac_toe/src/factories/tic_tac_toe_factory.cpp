@@ -7,6 +7,7 @@
 
 using sophia::examples::tic_tac_toe::factories::TicTacToeFactory;
 using sophia::examples::tic_tac_toe::models::State;
+using sophia::examples::tic_tac_toe::models::Board;
 using sophia::examples::tic_tac_toe::models::Position;
 using sophia::examples::tic_tac_toe::models::Move;
 using sophia::monte_carlo::models::Node;
@@ -21,7 +22,7 @@ shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name) const
     return make_shared<State>(name, shared_from_this());
 }
 
-shared_ptr<Action> TicTacToeFactory::CreateAction(shared_ptr<NodeBase<Position>> node, Position change) const
+shared_ptr<Action> TicTacToeFactory::CreateAction(shared_ptr<NodeBase<Board, Position>> node, Position change) const
 {
     return make_shared<Move>(node, change);
 }

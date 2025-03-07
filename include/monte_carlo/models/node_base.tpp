@@ -3,15 +3,15 @@
 using sophia::monte_carlo::models::NodeBase;
 using sophia::monte_carlo::models::ActionSelectStrategyInterface;
 
-template<typename TChange>
-NodeBase<TChange>::NodeBase(std::string name, std::shared_ptr<const factories::ITreeFactory<TChange>> factory)
+template<typename TState, typename TChange>
+NodeBase<TState, TChange>::NodeBase(std::string name, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory)
 : Node(name)
 , m_factory_(factory)
 {
 }
 
-template<typename TChange>
-std::shared_ptr<ActionSelectStrategyInterface> NodeBase<TChange>::ActionSelectStrategy() const
+template<typename TState, typename TChange>
+std::shared_ptr<ActionSelectStrategyInterface> NodeBase<TState, TChange>::ActionSelectStrategy() const
 {
     return m_factory_->CreateStrategy();
 }

@@ -22,10 +22,10 @@ namespace sophia::monte_carlo::mocks
     using std::make_shared;
     using std::shared_ptr;
 
-    class MockNode : public NodeBase<int>
+    class MockNode : public NodeBase<bool, int>
     {
     public:
-        explicit MockNode(const string& name, const shared_ptr<const ITreeFactory<int>>& interface);
+        explicit MockNode(const string& name, const shared_ptr<const ITreeFactory<bool, int>>& interface);
         ~MockNode() override = default;
 
         MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (override));
