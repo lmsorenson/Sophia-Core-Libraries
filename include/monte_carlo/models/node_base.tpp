@@ -1,5 +1,4 @@
 #include <monte_carlo/models/node_base.h>
-#include <monte_carlo/factories/tree_factory_interface.h>
 
 using sophia::monte_carlo::models::NodeBase;
 using sophia::monte_carlo::models::ActionSelectStrategyInterface;
