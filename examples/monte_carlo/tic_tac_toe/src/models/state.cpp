@@ -59,15 +59,26 @@ bool State::IsTerminalState() const
     if (m_state_.GetOpenPositions().empty())
         return true;
 
-    auto winner = m_state_.Winner();
+    if (auto winner = m_state_.Winner())
+    {
+        return true;
+    }
 
     return false;
 }
 
 double State::Value() const
 {
-    std::cout << "Player " << TileStateToString(m_state_.Player()) << std::endl;
-    double score = 0.0;
+    auto player = m_state_.Player();
+    std::cout << "Player " << TileStateToString(player) << std::endl;
 
-    return score;
+    if (auto winner = m_state_.Winner())
+    {
+        if (winner->first == player)
+            return 1.0;
+        else
+            return -1.0;
+    }
+    
+    return 0.0;
 }
