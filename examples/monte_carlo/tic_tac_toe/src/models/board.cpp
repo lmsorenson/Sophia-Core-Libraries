@@ -128,7 +128,7 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
     }
 }
 
-std::shared_ptr<std::pair<TileState, bool>> Board::Winner() const
+shared_ptr<std::pair<TileState, bool>> Board::Winner() const
 {
     return nullptr;
 }
