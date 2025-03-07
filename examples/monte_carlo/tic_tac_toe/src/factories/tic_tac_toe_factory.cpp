@@ -24,7 +24,7 @@ shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name) const
 
 shared_ptr<Action> TicTacToeFactory::CreateAction(shared_ptr<NodeBase<Board, Position>> node, Position change) const
 {
-    return make_shared<Move>(node, change);
+    return make_shared<Move>(node, change, shared_from_this());
 }
 
 shared_ptr<ActionSelectStrategyInterface> TicTacToeFactory::CreateStrategy() const

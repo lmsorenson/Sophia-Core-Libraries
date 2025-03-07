@@ -4,12 +4,14 @@
 
 using sophia::monte_carlo::mocks::MockAction;
 using sophia::monte_carlo::models::Node;
+using sophia::monte_carlo::factories::ITreeFactory;
 using std::shared_ptr;
 using std::string;
 using testing::Return;
 
-MockAction::MockAction(shared_ptr<NodeBase<bool, int>> source)
-: ActionBase(source, 0)
+MockAction::MockAction(shared_ptr<NodeBase<bool, int>> source,
+        const std::shared_ptr<const ITreeFactory<bool, int>> &factory)
+: ActionBase(source, 0, factory)
 {
 
 }

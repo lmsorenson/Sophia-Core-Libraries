@@ -13,12 +13,14 @@ namespace sophia::monte_carlo::mocks
 {
     using models::ActionBase;
     using models::Node;
+    using factories::ITreeFactory;
     using std::shared_ptr;
 
     class MockAction : public ActionBase<bool, int>
     {
     public:
-        explicit MockAction(shared_ptr<NodeBase<bool, int>> source);
+        explicit MockAction(shared_ptr<NodeBase<bool, int>> source,
+        const std::shared_ptr<const ITreeFactory<bool, int>> &factory);
         ~MockAction() override = default;
 
         MOCK_METHOD(shared_ptr<Node>, Target, (), (const, override));

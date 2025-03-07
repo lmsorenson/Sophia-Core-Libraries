@@ -21,7 +21,7 @@ shared_ptr<Node> MockTreeFactory::CreateNode(string name) const
 
 shared_ptr<Action> MockTreeFactory::CreateAction(shared_ptr<NodeBase<bool, int>> node, int change) const
 {
-    return make_shared<MockAction>(node);
+    return make_shared<MockAction>(node, shared_from_this());
 }
 
 shared_ptr<ActionSelectStrategyInterface> MockTreeFactory::CreateStrategy() const

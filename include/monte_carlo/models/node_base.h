@@ -17,6 +17,8 @@ namespace sophia::monte_carlo::models
     public:
         NodeBase(std::string name, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory);
 
+        TState GetState() const;
+
     protected:
         std::shared_ptr<ActionSelectStrategyInterface> ActionSelectStrategy() const override;
         std::shared_ptr<const factories::ITreeFactory<TState, TChange>> m_factory_;

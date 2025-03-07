@@ -11,6 +11,12 @@ NodeBase<TState, TChange>::NodeBase(std::string name, std::shared_ptr<const fact
 }
 
 template<typename TState, typename TChange>
+TState NodeBase<TState, TChange>::GetState() const
+{
+
+}
+
+template<typename TState, typename TChange>
 std::shared_ptr<ActionSelectStrategyInterface> NodeBase<TState, TChange>::ActionSelectStrategy() const
 {
     return m_factory_->CreateStrategy();
