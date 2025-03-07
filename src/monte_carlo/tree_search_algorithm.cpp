@@ -49,6 +49,7 @@ shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Nod
 
         std::cout << "Phase 3: Rollout" << std::endl;
         const double reward = current->Rollout();
+        std::cout << "Reward " << reward << std::endl;
 
         std::cout << "Phase 4: Backpropagation" << std::endl;
         current->Backpropagate(reward);

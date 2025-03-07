@@ -69,16 +69,21 @@ bool State::IsTerminalState() const
 
 double State::Value() const
 {
-    auto player = m_state_.Player();
-    std::cout << "Player " << TileStateToString(player) << std::endl;
+    m_state_.Print();
 
-    if (auto winner = m_state_.Winner())
+    const auto player = m_state_.Player();
+    if (const auto winner = m_state_.Winner())
     {
         if (winner->first == player)
+        {
+            std::cout << "Player " << TileStateToString(player) << " wins :)" << std::endl;
             return 1.0;
-        else
-            return -1.0;
+        }
+
+        std::cout << "Player " << TileStateToString(player) << " loses :(" << std::endl;
+        return -1.0;
     }
-    
+
+    std::cout << "It's a draw :/" << std::endl;
     return 0.0;
 }

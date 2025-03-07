@@ -17,7 +17,7 @@ inline std::string TileStateToString(TileState state)
         case TileState::X: return "X";
         case TileState::O: return "O";
         default:
-        case TileState::E: return "Empty";
+        case TileState::E: return " ";
     }
 }
 

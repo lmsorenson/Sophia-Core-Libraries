@@ -20,7 +20,7 @@ namespace sophia::examples::tic_tac_toe::model_tests
 
         auto node = factory->CreateNode("S0");
 
-        monte_carlo::tree_search_algorithm(node, 2);
+        monte_carlo::tree_search_algorithm(node, 10);
 
         EXPECT_EQ(1,1);
     }

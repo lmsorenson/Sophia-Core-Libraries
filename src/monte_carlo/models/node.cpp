@@ -113,12 +113,10 @@ double Node::Rollout()
     {
         std::cout
         << "Rollout " << Name()
-        << " is terminal state. value: " << this->Value()
+        << " is terminal state."
         << std::endl;
         return this->Value();
     }
-
-    std::cout << "Rollout " << Name() << " is NOT terminal state." << std::endl;
 
     auto select_strategy = ActionSelectStrategy();
 
@@ -132,7 +130,6 @@ double Node::Rollout()
         actions = m_child_action_;
     }
 
-    std::cout << actions.size() << " available actions." << std::endl;
     if (const auto selected_action = select_strategy->select_action(actions))
     {
         const auto new_node = selected_action->Target();

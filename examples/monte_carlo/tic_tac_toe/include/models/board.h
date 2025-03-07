@@ -24,8 +24,9 @@ namespace sophia::examples::tic_tac_toe::models
         [[nodiscard]] TileState Player() const;
         [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
         [[nodiscard]] std::shared_ptr<const Board> WithMove(const Position& position) const;
-        std::vector<std::vector<TileState>> GetRow(LineType line_type) const;
-        std::shared_ptr<std::pair<TileState, bool>> Winner() const;
+        [[nodiscard]] std::vector<std::vector<TileState>> GetRow(LineType line_type) const;
+        [[nodiscard]] std::shared_ptr<std::pair<TileState, bool>> Winner() const;
+        void Print() const;
 
     private:
         TileState player_ = TileState::E;

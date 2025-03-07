@@ -1,6 +1,7 @@
-#include <iostream>
 #include <models/board.h>
 #include <models/position.h>
+#include <unordered_set>
+#include <iostream>
 #include <vector>
 
 
@@ -138,37 +139,51 @@ shared_ptr<std::pair<TileState, bool>> Board::Winner() const
 
     for(const auto& line_type : list)
     {
-        for(const auto& line : line_type)
+        for(auto line : line_type)
         {
-            auto tile_state = TileState::E;
-            bool completed = true;
-            for(const auto& position : line)
+            std::unordered_set unique_set(line.begin(), line.end());
+            std::vector unique_vec(unique_set.begin(), unique_set.end());
+            if (unique_vec.size() == 1 && unique_vec.front() != TileState::E)
             {
-                // if there is ever a position that is empty.
-                // the line is not complete.
-                if (position == TileState::E)
-                {
-                    completed = false;
-                    break;
-                }
-
-                // to start it will be empty.
-                // seed it with the first value.
-                if (tile_state == TileState::E)
-                {
-                    tile_state = position;
-                }
-
-                if (position != tile_state)
-                {
-                    completed = false;
-                    break;
-                }
+                return std::make_shared<std::pair<TileState, bool>>(unique_vec.front(), true);
             }
-            return std::make_shared<std::pair<TileState, bool>>(tile_state, true);
         }
     }
     return nullptr;
+}
+
+void Board::Print() const
+{
+    std::vector<std::string> rows_strings;
+    for (const auto& row : m_tiles_)
+    {
+        std::string row_str;
+
+        for (const auto& position : row)
+        {
+            if (!row_str.empty())
+                row_str.append("|");
+
+            row_str.append(" ");
+            row_str.append(TileStateToString(position->State()));
+            row_str.append(" ");
+        }
+
+        rows_strings.push_back(row_str);
+    }
+
+    if (auto it = rows_strings.begin(); it != rows_strings.end())
+    {
+        do
+        {
+            std::cout << *it << std::endl;
+            if (it++ + 1 != rows_strings.end())
+            {
+                std::cout << "---+---+---" << std::endl;
+            }
+        }
+        while (it != rows_strings.end());
+    }
 }
 
 std::vector<std::vector<TileState>> Board::GetRow(LineType line_type) const
