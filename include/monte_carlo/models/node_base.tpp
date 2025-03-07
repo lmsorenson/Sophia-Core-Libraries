@@ -11,9 +11,18 @@ NodeBase<TState, TChange>::NodeBase(std::string name, std::shared_ptr<const fact
 }
 
 template<typename TState, typename TChange>
+NodeBase<TState, TChange>::NodeBase(std::string name, TState state,
+    std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory)
+    : Node(name)
+    , m_state_(state)
+    , m_factory_(factory)
+{
+}
+
+template<typename TState, typename TChange>
 TState NodeBase<TState, TChange>::GetState() const
 {
-
+    return m_state_;
 }
 
 template<typename TState, typename TChange>

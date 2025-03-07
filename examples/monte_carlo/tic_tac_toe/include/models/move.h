@@ -3,7 +3,7 @@
 
 #include <monte_carlo/models/action_base.h>
 
-#include <models/Board.h>
+#include <models/board.h>
 #include <models/position.h>
 
 namespace sophia::examples::tic_tac_toe::models

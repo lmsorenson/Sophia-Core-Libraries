@@ -1,6 +1,8 @@
 #include <models/state.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 
+#include <utility>
+
 using sophia::examples::tic_tac_toe::models::State;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
@@ -13,11 +15,17 @@ State::State(const string &name, const shared_ptr<const ITreeFactory<Board, Posi
 {
 }
 
+State::State(const std::string &name, Board board,
+    const std::shared_ptr<const ITreeFactory<Board, Position>> &interface)
+: NodeBase(name, std::move(board), interface)
+{
+}
+
 vector<shared_ptr<Action>> State::GetAvailableActions()
 {
     vector<shared_ptr<Action>> actions;
 
-    auto open_positions = m_board_.GetOpenPositions();
+    auto open_positions = m_state_.GetOpenPositions();
 
     for(const auto& position : open_positions)
     {

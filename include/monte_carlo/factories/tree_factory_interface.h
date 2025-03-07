@@ -26,6 +26,7 @@ namespace sophia::monte_carlo::factories
         virtual ~ITreeFactory() = default;
 
         [[nodiscard]] virtual SharedNode CreateNode(std::string name) const = 0;
+        [[nodiscard]] virtual SharedNode CreateNode(std::string name, TState state) const = 0;
         [[nodiscard]] virtual SharedAction CreateAction(std::shared_ptr<NodeBase<TState, TChange>> node, TChange change) const = 0;
         [[nodiscard]] virtual SharedActionSelectStrategy CreateStrategy() const = 0;
     };

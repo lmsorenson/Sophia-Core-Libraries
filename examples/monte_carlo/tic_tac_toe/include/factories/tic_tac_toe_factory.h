@@ -15,6 +15,8 @@ namespace sophia::examples::tic_tac_toe::factories
 
         [[nodiscard]] SharedNode CreateNode(std::string name) const override;
 
+        [[nodiscard]] SharedNode CreateNode(std::string name, models::Board board) const override;
+
         [[nodiscard]] SharedAction CreateAction(std::shared_ptr<NodeBase<models::Board, models::Position>> node, models::Position change) const override;
 
         [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;

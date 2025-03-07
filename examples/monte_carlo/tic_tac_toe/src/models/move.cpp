@@ -1,6 +1,7 @@
 #include <models/move.h>
 
 #include <utility>
+#include <monte_carlo/factories/tree_factory_interface.h>
 
 using sophia::examples::tic_tac_toe::models::Move;
 using sophia::monte_carlo::models::Action;
@@ -19,8 +20,8 @@ shared_ptr<Node> Move::Target() const
     if (auto sp = m_source_.lock())
     {
         const auto board = sp->GetState();
-        auto newBoard = board.WithMove(m_change_);
-
+        const auto newBoard = board.WithMove(m_change_);
+        return m_factory_->CreateNode("name", *newBoard);
     }
 
     return nullptr;
