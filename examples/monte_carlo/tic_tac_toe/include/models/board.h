@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <models/position.h>
+#include <enums/line_type.h>
 #include <memory>
 
 namespace sophia::examples::tic_tac_toe::models
@@ -21,6 +22,7 @@ namespace sophia::examples::tic_tac_toe::models
         void SetPosition(const Position &new_position);
         [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
         [[nodiscard]] std::shared_ptr<const Board> WithMove(const Position& position) const;
+        std::vector<std::vector<TileState>> GetRow(LineType line_type) const;
 
     private:
         std::vector<std::vector<std::shared_ptr<const Position>>> m_tiles_;

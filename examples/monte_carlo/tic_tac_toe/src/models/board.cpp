@@ -106,3 +106,60 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
         return nullptr;
     }
 }
+
+std::vector<std::vector<TileState>> Board::GetRow(LineType line_type) const
+{
+    switch (line_type)
+    {
+        case LineType::Horizontal:
+            return {
+                {
+                    m_tiles_[0][0]->State(),
+                    m_tiles_[0][1]->State(),
+                    m_tiles_[0][2]->State()
+                },
+                {
+                    m_tiles_[1][0]->State(),
+                    m_tiles_[1][1]->State(),
+                    m_tiles_[1][2]->State()
+                },
+                {
+                    m_tiles_[2][0]->State(),
+                    m_tiles_[2][1]->State(),
+                    m_tiles_[2][2]->State()
+                }
+            };
+        case LineType::Vertical:
+            return {
+                    {
+                        m_tiles_[0][0]->State(),
+                        m_tiles_[1][0]->State(),
+                        m_tiles_[2][0]->State()
+                    },
+                    {
+                        m_tiles_[0][1]->State(),
+                        m_tiles_[1][1]->State(),
+                        m_tiles_[2][1]->State()
+                    },
+                    {
+                        m_tiles_[0][2]->State(),
+                        m_tiles_[1][2]->State(),
+                        m_tiles_[2][2]->State()
+                    },
+                };
+        case LineType::Diagonal:
+            return {
+                    {
+                        m_tiles_[0][0]->State(),
+                        m_tiles_[1][1]->State(),
+                        m_tiles_[2][2]->State()
+                    },
+                    {
+                        m_tiles_[2][0]->State(),
+                        m_tiles_[1][1]->State(),
+                        m_tiles_[0][2]->State()
+                    }
+                };
+        default: return {};
+    }
+}
