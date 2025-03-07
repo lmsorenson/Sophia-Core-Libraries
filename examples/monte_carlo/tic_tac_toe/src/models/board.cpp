@@ -128,6 +128,11 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
     }
 }
 
+std::shared_ptr<std::pair<TileState, bool>> Board::Winner() const
+{
+    return nullptr;
+}
+
 std::vector<std::vector<TileState>> Board::GetRow(LineType line_type) const
 {
     switch (line_type)
