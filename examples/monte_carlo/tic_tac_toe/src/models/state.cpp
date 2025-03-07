@@ -21,7 +21,8 @@ vector<shared_ptr<Action>> State::GetAvailableActions()
 
     for(const auto& position : open_positions)
     {
-        auto action = m_factory_->CreateAction(shared_from_this(), *position);
+        auto _this_ = std::static_pointer_cast<State>(shared_from_this());
+        auto action = m_factory_->CreateAction(_this_, *position);
         actions.push_back(action);
     }
 

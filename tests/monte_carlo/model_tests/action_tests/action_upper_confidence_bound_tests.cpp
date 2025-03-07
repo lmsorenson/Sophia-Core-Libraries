@@ -25,7 +25,8 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
-        const auto a1 = factory->CreateAction(s1, 1);
+        auto s1_ = std::static_pointer_cast<MockNode>(s1);
+        const auto a1 = factory->CreateAction(s1_, 1);
         std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup(s2);
 
         std::dynamic_pointer_cast<MockNode>(s1)->SetTotalReward(0);
@@ -41,7 +42,8 @@ namespace sophia::monte_carlo::model_tests
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
         const auto s2 = factory->CreateNode("S2");
-        const auto a1 = factory->CreateAction(s1, 1);
+        auto s1_ = std::static_pointer_cast<MockNode>(s1);
+        const auto a1 = factory->CreateAction(s1_, 1);
 
         std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup(s2);
 

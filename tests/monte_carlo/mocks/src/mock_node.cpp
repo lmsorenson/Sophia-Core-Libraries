@@ -24,7 +24,8 @@ void MockNode::Setup(const vector<shared_ptr<Node>> &node_expansion )
 
     for(const auto& node : node_expansion)
     {
-        auto action = m_factory_->CreateAction(shared_from_this(), 1);
+        auto _this_ = std::static_pointer_cast<MockNode>(shared_from_this());
+        auto action = m_factory_->CreateAction(_this_, 1);
         const auto ma = std::dynamic_pointer_cast<MockAction>(action);
         ma->Setup(node);
         actions.push_back(action);

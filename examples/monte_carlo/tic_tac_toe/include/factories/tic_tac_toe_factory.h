@@ -3,6 +3,7 @@
 
 #include <models/position.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/models/node_base.h>
 
 namespace sophia::examples::tic_tac_toe::factories
 {
@@ -13,7 +14,7 @@ namespace sophia::examples::tic_tac_toe::factories
 
         [[nodiscard]] SharedNode CreateNode(std::string name) const override;
 
-        [[nodiscard]] SharedAction CreateAction(SharedNode node, models::Position change) const override;
+        [[nodiscard]] SharedAction CreateAction(std::shared_ptr<NodeBase<models::Position>> node, models::Position change) const override;
 
         [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
     };

@@ -5,8 +5,8 @@ using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
 
-Move::Move(const shared_ptr<Node> &source)
-    : Action(source)
+Move::Move(const shared_ptr<NodeBase<Position>> &source, Position position)
+: ActionBase(source, position)
 {
 }
 

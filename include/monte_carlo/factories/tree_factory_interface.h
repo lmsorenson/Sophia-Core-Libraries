@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <string>
+#include <monte_carlo/models/node_base.h>
 
 namespace sophia::monte_carlo::models
 {
@@ -25,7 +26,7 @@ namespace sophia::monte_carlo::factories
         virtual ~ITreeFactory() = default;
 
         [[nodiscard]] virtual SharedNode CreateNode(std::string name) const = 0;
-        [[nodiscard]] virtual SharedAction CreateAction(SharedNode node, TChange change) const = 0;
+        [[nodiscard]] virtual SharedAction CreateAction(std::shared_ptr<NodeBase<TChange>> node, TChange change) const = 0;
         [[nodiscard]] virtual SharedActionSelectStrategy CreateStrategy() const = 0;
     };
 }

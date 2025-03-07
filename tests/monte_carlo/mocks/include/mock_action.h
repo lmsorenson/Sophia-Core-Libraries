@@ -2,7 +2,7 @@
 #define MOCK_ACTION_H
 
 #include <gmock/gmock.h>
-#include <monte_carlo/models/action.h>
+#include <monte_carlo/models/action_base.h>
 
 // namespace sophia::monte_carlo::models
 // {
@@ -11,19 +11,19 @@
 
 namespace sophia::monte_carlo::mocks
 {
-    using models::Action;
+    using models::ActionBase;
     using models::Node;
     using std::shared_ptr;
 
-    class MockAction : public Action
+    class MockAction : public ActionBase<bool, int>
     {
     public:
-        explicit MockAction(shared_ptr<Node> source);
+        explicit MockAction(shared_ptr<NodeBase<int>> source);
         ~MockAction() override = default;
 
         MOCK_METHOD(shared_ptr<Node>, Target, (), (const, override));
 
-        void Setup(const shared_ptr<Node> &node ) const;
+        void Setup( const shared_ptr<Node> &node ) const;
     };
 }
 

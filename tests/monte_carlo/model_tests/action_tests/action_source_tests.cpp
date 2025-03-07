@@ -13,7 +13,8 @@ namespace sophia::monte_carlo::model_tests
     {
         const auto factory = std::make_shared<MockTreeFactory>();
         const auto s1 = factory->CreateNode("S1");
-        const auto a1 = factory->CreateAction(s1, 1);
+        auto s1_ = std::static_pointer_cast<MockNode>(s1);
+        const auto a1 = factory->CreateAction(s1_, 1);
 
         const auto actual_source = a1->Source();
 
