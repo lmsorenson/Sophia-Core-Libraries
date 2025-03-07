@@ -15,8 +15,7 @@ namespace sophia::monte_carlo::models
     class NodeBase : public Node
     {
     public:
-        NodeBase(std::string name, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory);
-        NodeBase(std::string name, TState state, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory);
+        NodeBase(const std::string &name, TState state, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory);
 
         TState GetState() const;
 

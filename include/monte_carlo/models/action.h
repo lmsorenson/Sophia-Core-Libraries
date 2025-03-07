@@ -16,6 +16,7 @@ namespace sophia::monte_carlo::models
         virtual ~Action() = default;
 
         [[nodiscard]] double UpperConfidenceBound() const;
+        virtual void Generate() = 0;
         [[nodiscard]] virtual std::shared_ptr<Node> Source() const = 0;
         [[nodiscard]] virtual std::shared_ptr<Node> Target() const = 0;
     };

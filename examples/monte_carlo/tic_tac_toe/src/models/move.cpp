@@ -13,17 +13,22 @@ Move::Move(const shared_ptr<NodeBase<Board, Position>> &source, Position positio
     std::shared_ptr<const ITreeFactory<Board, Position>> factory)
 : ActionBase(source, position, std::move(factory))
 {
+
+}
+
+void Move::Generate()
+{
+    if (const auto source = m_source_.lock())
+    {
+        const auto board = source->GetState();
+        const auto newBoard = board.WithMove(m_change_);
+        m_target_ = m_factory_->CreateNode("name", *newBoard);
+    }
+
 }
 
 shared_ptr<Node> Move::Target() const
 {
-    if (auto sp = m_source_.lock())
-    {
-        const auto board = sp->GetState();
-        const auto newBoard = board.WithMove(m_change_);
-        return m_factory_->CreateNode("name", *newBoard);
-    }
-
-    return nullptr;
+    return m_target_;
 }
 

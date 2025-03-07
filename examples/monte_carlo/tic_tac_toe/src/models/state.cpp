@@ -10,8 +10,19 @@ using std::shared_ptr;
 using std::vector;
 using std::string;
 
-State::State(const string &name, const shared_ptr<const ITreeFactory<Board, Position>> &interface)
-    : NodeBase(name, interface)
+TileState Alternate(const TileState last_placed)
+{
+    switch (last_placed)
+    {
+        case TileState::X: return TileState::O;
+        case TileState::O:
+        default:
+        case TileState::E: return TileState::X;
+    }
+}
+
+State::State(const string &name, const TileState player, const shared_ptr<const ITreeFactory<Board, Position>> &interface)
+    : NodeBase(name, Board(player), interface)
 {
 }
 
@@ -25,12 +36,18 @@ vector<shared_ptr<Action>> State::GetAvailableActions()
 {
     vector<shared_ptr<Action>> actions;
 
-    auto open_positions = m_state_.GetOpenPositions();
+    const auto open_positions = m_state_.GetOpenPositions();
+    const auto last_placed = m_state_.LastPlaced();
+
+    TileState new_state = Alternate(last_placed);
 
     for(const auto& position : open_positions)
     {
+        auto new_position = position->WithState(new_state);
+
         auto _this_ = std::static_pointer_cast<State>(shared_from_this());
-        auto action = m_factory_->CreateAction(_this_, *position);
+        auto action = m_factory_->CreateAction(_this_, new_position);
+        action->Generate();
         actions.push_back(action);
     }
 
@@ -39,6 +56,9 @@ vector<shared_ptr<Action>> State::GetAvailableActions()
 
 bool State::IsTerminalState() const
 {
+    if (m_state_.GetOpenPositions().empty())
+        return true;
+
     const auto list = {
         m_state_.GetRow(LineType::Horizontal),
         m_state_.GetRow(LineType::Vertical),
@@ -83,6 +103,7 @@ bool State::IsTerminalState() const
 
 double State::Value() const
 {
+    std::cout << "Player " << TileStateToString(m_state_.Player()) << std::endl;
     double score = 0.0;
 
     return score;

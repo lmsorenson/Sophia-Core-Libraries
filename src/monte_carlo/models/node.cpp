@@ -91,6 +91,7 @@ shared_ptr<Node> Node::Expand()
     const vector<shared_ptr<Action>> child_nodes = GetAvailableActions();
     for(const auto& child : child_nodes)
     {
+        child->Generate();
         auto target = child->Target();
         std::cout << Name() << " adding child " << target->Name() << std::endl;
         m_child_action_.push_back(child);
@@ -121,7 +122,18 @@ double Node::Rollout()
 
     auto select_strategy = ActionSelectStrategy();
 
-    if (const auto selected_action = select_strategy->select_action(m_child_action_))
+    vector<shared_ptr<Action>> actions;
+    if (m_child_action_.empty())
+    {
+        actions = GetAvailableActions();
+    }
+    else
+    {
+        actions = m_child_action_;
+    }
+
+    std::cout << actions.size() << " available actions." << std::endl;
+    if (const auto selected_action = select_strategy->select_action(actions))
     {
         const auto new_node = selected_action->Target();
 

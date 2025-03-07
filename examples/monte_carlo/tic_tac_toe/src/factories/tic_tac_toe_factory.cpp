@@ -19,7 +19,7 @@ using std::shared_ptr;
 
 shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name) const
 {
-    return make_shared<State>(name, shared_from_this());
+    return make_shared<State>(name, TileState::X, shared_from_this());
 }
 
 shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name, Board board) const

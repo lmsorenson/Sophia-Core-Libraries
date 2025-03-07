@@ -4,15 +4,7 @@ using sophia::monte_carlo::models::NodeBase;
 using sophia::monte_carlo::models::ActionSelectStrategyInterface;
 
 template<typename TState, typename TChange>
-NodeBase<TState, TChange>::NodeBase(std::string name, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory)
-: Node(name)
-, m_factory_(factory)
-{
-}
-
-template<typename TState, typename TChange>
-NodeBase<TState, TChange>::NodeBase(std::string name, TState state,
-    std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory)
+NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory)
     : Node(name)
     , m_state_(state)
     , m_factory_(factory)

@@ -14,6 +14,7 @@ namespace sophia::examples::tic_tac_toe::models
 
         [[nodiscard]] std::pair<int, int> Coordinates() const;
         [[nodiscard]] TileState State() const;
+        Position WithState(TileState new_state) const;
 
     private:
         int m_row_index_ = 0;

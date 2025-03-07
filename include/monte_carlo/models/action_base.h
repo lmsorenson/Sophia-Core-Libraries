@@ -22,6 +22,7 @@ namespace sophia::monte_carlo::models
     protected:
         std::shared_ptr<const factories::ITreeFactory<TState, TChange>> m_factory_;
         std::weak_ptr<NodeBase<TState, TChange>> m_source_;
+        std::shared_ptr<Node> m_target_;
         TChange m_change_;
     };
 

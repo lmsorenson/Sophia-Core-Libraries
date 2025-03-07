@@ -31,4 +31,13 @@ TileState Position::State() const
     return m_state_;
 }
 
+Position Position::WithState(TileState new_state) const
+{
+    auto new_position = *this;
+
+    new_position.m_state_ = new_state;
+
+    return new_position;
+}
+
 
