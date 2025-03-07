@@ -131,9 +131,9 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
 shared_ptr<std::pair<TileState, bool>> Board::Winner() const
 {
     const auto list = {
-        m_state_.GetRow(LineType::Horizontal),
-        m_state_.GetRow(LineType::Vertical),
-        m_state_.GetRow(LineType::Diagonal)
+        GetRow(LineType::Horizontal),
+        GetRow(LineType::Vertical),
+        GetRow(LineType::Diagonal)
     };
 
     for(const auto& line_type : list)
