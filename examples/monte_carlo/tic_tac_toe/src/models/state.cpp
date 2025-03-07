@@ -59,44 +59,7 @@ bool State::IsTerminalState() const
     if (m_state_.GetOpenPositions().empty())
         return true;
 
-    const auto list = {
-        m_state_.GetRow(LineType::Horizontal),
-        m_state_.GetRow(LineType::Vertical),
-        m_state_.GetRow(LineType::Diagonal)
-    };
-
-    for(const auto& line_type : list)
-    {
-        for(const auto& line : line_type)
-        {
-            auto tile_state = TileState::E;
-            bool completed = true;
-            for(const auto& position : line)
-            {
-                // if there is ever a position that is empty.
-                // the line is not complete.
-                if (position == TileState::E)
-                {
-                    completed = false;
-                    break;
-                }
-
-                // to start it will be empty.
-                // seed it with the first value.
-                if (tile_state == TileState::E)
-                {
-                    tile_state = position;
-                }
-
-                if (position != tile_state)
-                {
-                    completed = false;
-                    break;
-                }
-            }
-            return completed;
-        }
-    }
+    auto winner = m_state_.Winner();
 
     return false;
 }
