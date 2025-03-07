@@ -22,7 +22,10 @@ void Move::Generate()
     {
         const auto board = source->GetState();
         const auto newBoard = board.WithMove(m_change_);
-        m_target_ = m_factory_->CreateNode("name", *newBoard);
+
+        const std::string name = m_change_.Name();
+
+        m_target_ = m_factory_->CreateNode(name, *newBoard);
     }
 
 }

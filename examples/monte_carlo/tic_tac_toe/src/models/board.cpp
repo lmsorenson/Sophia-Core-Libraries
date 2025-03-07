@@ -115,9 +115,6 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
 {
     try
     {
-        auto [row, column] = position.Coordinates();
-        auto state = position.State();
-        std::cout << row << "" << column << " " << TileStateToString(state) << std::endl;
         Board newBoard = *this;
 
         newBoard.SetPosition(position);

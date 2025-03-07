@@ -21,6 +21,14 @@ Position::Position(const std::pair<int, int> &coordinates, const TileState tile_
     m_state_ = tile_state;
 }
 
+std::string Position::Name() const
+{
+    return "row"
+    + std::to_string(m_row_index_)
+    + "-col" + std::to_string(m_column_index_)
+    + "-" + TileStateToString(m_state_);
+}
+
 std::pair<int, int> Position::Coordinates() const
 {
     return { m_row_index_, m_column_index_ };

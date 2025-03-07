@@ -12,6 +12,7 @@ namespace sophia::examples::tic_tac_toe::models
         explicit Position(const std::pair<int, int> &coordinates);
         Position(const std::pair<int, int> &coordinates, TileState tile_state);
 
+        [[nodiscard]] std::string Name() const;
         [[nodiscard]] std::pair<int, int> Coordinates() const;
         [[nodiscard]] TileState State() const;
         Position WithState(TileState new_state) const;
