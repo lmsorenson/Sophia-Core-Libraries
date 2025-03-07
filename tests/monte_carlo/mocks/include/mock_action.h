@@ -23,6 +23,7 @@ namespace sophia::monte_carlo::mocks
         const std::shared_ptr<const ITreeFactory<bool, int>> &factory);
         ~MockAction() override = default;
 
+        MOCK_METHOD(void, Generate, (), (override));
         MOCK_METHOD(shared_ptr<Node>, Target, (), (const, override));
 
         void Setup( const shared_ptr<Node> &node ) const;
