@@ -14,7 +14,7 @@ namespace sophia::monte_carlo::mocks
     using models::RolloutStrategyInterface;
     using factories::ITreeFactory;
 
-    class MockActionSelectStrategy;
+    class MockRolloutStrategy;
 
     class MockTreeFactory : public ITreeFactory<bool, int>
     {

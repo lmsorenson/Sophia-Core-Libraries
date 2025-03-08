@@ -31,5 +31,5 @@ shared_ptr<Action> MockTreeFactory::CreateAction(shared_ptr<NodeBase<bool, int>>
 
 shared_ptr<RolloutStrategyInterface> MockTreeFactory::CreateStrategy() const
 {
-    return make_shared<MockActionSelectStrategy>();
+    return make_shared<MockRolloutStrategy>();
 }
