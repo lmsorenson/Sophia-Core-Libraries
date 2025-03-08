@@ -20,7 +20,7 @@ namespace sophia::monte_carlo::models
         TState GetState() const;
 
     protected:
-        std::shared_ptr<ActionSelectStrategyInterface> ActionSelectStrategy() const override;
+        std::shared_ptr<ActionSelectStrategyInterface> RolloutStrategy() const override;
         std::shared_ptr<const factories::ITreeFactory<TState, TChange>> m_factory_;
         TState m_state_;
     };

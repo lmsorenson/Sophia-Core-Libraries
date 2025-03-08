@@ -12,6 +12,9 @@ namespace sophia::monte_carlo::models
 
     class Node : public std::enable_shared_from_this<Node>
     {
+    protected:
+        using rollout_strategy_ptr = std::shared_ptr<ActionSelectStrategyInterface>;
+
     public:
         explicit Node(std::string name);
         virtual ~Node() = default;
@@ -35,7 +38,7 @@ namespace sophia::monte_carlo::models
         [[nodiscard]] int TotalReward() const;
 
     protected:
-        virtual std::shared_ptr<ActionSelectStrategyInterface> ActionSelectStrategy() const = 0;
+        virtual rollout_strategy_ptr RolloutStrategy() const = 0;
 
         std::weak_ptr<Action> m_parent_action_;
         std::vector<std::shared_ptr<Action>> m_child_action_;

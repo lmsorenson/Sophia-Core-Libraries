@@ -118,7 +118,7 @@ double Node::Rollout()
         return this->Value();
     }
 
-    auto select_strategy = ActionSelectStrategy();
+    auto select_strategy = RolloutStrategy();
 
     vector<shared_ptr<Action>> actions;
     if (m_child_action_.empty())

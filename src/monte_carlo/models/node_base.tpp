@@ -18,7 +18,7 @@ inline TState NodeBase<TState, TChange>::GetState() const
 }
 
 template<typename TState, typename TChange>
-inline std::shared_ptr<ActionSelectStrategyInterface> NodeBase<TState, TChange>::ActionSelectStrategy() const
+inline std::shared_ptr<ActionSelectStrategyInterface> NodeBase<TState, TChange>::RolloutStrategy() const
 {
     return m_factory_->CreateStrategy();
 }
