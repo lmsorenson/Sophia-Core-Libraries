@@ -25,22 +25,8 @@ namespace sophia::monte_carlo::models
         std::shared_ptr<Node> m_target_;
         TChange m_change_;
     };
-
-    template<typename TState, typename TChange>
-    ActionBase<TState, TChange>::ActionBase(const std::shared_ptr<NodeBase<TState, TChange>> &state, TChange change,
-        std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory)
-        : Action()
-        , m_source_(state)
-        , m_change_(change)
-        , m_factory_(factory)
-    {
-    }
-
-    template<typename TState, typename TChange>
-    std::shared_ptr<Node> ActionBase<TState, TChange>::Source() const
-    {
-        return m_source_.lock();
-    }
 }
+
+#include <monte_carlo/models/action_base.tpp>
 
 #endif //ACTION_BASE_H

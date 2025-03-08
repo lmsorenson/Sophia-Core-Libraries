@@ -26,6 +26,6 @@ namespace sophia::monte_carlo::models
     };
 }
 
-#include "node_base.tpp"
+#include <monte_carlo/models/node_base.tpp>
 
 #endif //NODE_BASE_H
