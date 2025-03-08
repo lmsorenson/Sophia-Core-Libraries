@@ -1,8 +1,8 @@
 #include <mock_tree_factory.h>
-#include <monte_carlo/models/action_select_strategy_interface.h>
+#include <monte_carlo/models/rollout_strategy_interface.h>
 #include <mock_node.h>
 #include <mock_action.h>
-#include <mock_action_select_strategy.h>
+#include <mock_rollout_strategy.h>
 #include <memory>
 
 using sophia::monte_carlo::mocks::MockTreeFactory;

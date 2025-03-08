@@ -21,10 +21,10 @@ namespace sophia::monte_carlo::mocks
     public:
         ~MockTreeFactory() override = default;
 
-        [[nodiscard]] SharedNode CreateNode(std::string name) const override;
-        [[nodiscard]] SharedNode CreateNode(std::string name, bool state) const override;
-        [[nodiscard]] SharedAction CreateAction(std::shared_ptr<NodeBase<bool, int>> node, int change) const override;
-        [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
+        [[nodiscard]] node_ptr CreateNode(std::string name) const override;
+        [[nodiscard]] node_ptr CreateNode(std::string name, bool state) const override;
+        [[nodiscard]] action_ptr CreateAction(node_base_ptr node, int change) const override;
+        [[nodiscard]] rollout_strategy_ptr CreateStrategy() const override;
     };
 }
 
