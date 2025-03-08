@@ -8,14 +8,14 @@
 
 namespace sophia::monte_carlo::models
 {
-    class ActionSelectStrategyInterface;
+    class RolloutStrategyInterface;
 }
 
 namespace sophia::monte_carlo::mocks
 {
     using models::NodeBase;
     using models::Action;
-    using models::ActionSelectStrategyInterface;
+    using models::RolloutStrategyInterface;
     using factories::ITreeFactory;
     using std::string;
     using std::vector;

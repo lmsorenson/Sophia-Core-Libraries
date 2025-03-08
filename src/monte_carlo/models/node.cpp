@@ -1,6 +1,6 @@
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
-#include <monte_carlo/models/action_select_strategy_interface.h>
+#include <monte_carlo/models/rollout_strategy_interface.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <cmath>
 #include <utility>

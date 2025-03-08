@@ -11,7 +11,7 @@ namespace sophia::monte_carlo::models
 namespace sophia::monte_carlo::mocks
 {
     using models::Node;
-    using models::ActionSelectStrategyInterface;
+    using models::RolloutStrategyInterface;
     using factories::ITreeFactory;
 
     class MockActionSelectStrategy;

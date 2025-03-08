@@ -2,7 +2,7 @@
 
 using sophia::monte_carlo::models::ActionBase;
 using sophia::monte_carlo::models::Node;
-using sophia::monte_carlo::models::ActionSelectStrategyInterface;
+using sophia::monte_carlo::models::RolloutStrategyInterface;
 using node_ptr = std::shared_ptr<Node>;
 
 template<typename TState, typename TChange>

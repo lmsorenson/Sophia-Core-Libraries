@@ -5,6 +5,7 @@
 #include <ostream>
 
 #include <monte_carlo/models/action.h>
+#include <monte_carlo/factories/tree_factory_interface.h>
 
 #include "node_base.h"
 

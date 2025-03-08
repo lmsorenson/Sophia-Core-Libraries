@@ -2,12 +2,7 @@
 #define NODE_BASE_H
 
 #include <monte_carlo/models/node.h>
-
-namespace sophia::monte_carlo::factories
-{
-    template<typename TState, typename TChange>
-    class ITreeFactory;
-}
+#include <monte_carlo/factories/tree_factory_interface.h>
 
 namespace sophia::monte_carlo::models
 {
@@ -18,7 +13,7 @@ namespace sophia::monte_carlo::models
         using const_factory_ptr = std::shared_ptr<const factories::ITreeFactory<TState, TChange>>;
 
     public:
-        NodeBase(const std::string &name, TState state, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory);
+        NodeBase(const std::string &name, TState state, const_factory_ptr factory);
 
         TState GetState() const;
 

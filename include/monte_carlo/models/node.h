@@ -1,7 +1,7 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include <monte_carlo/models/action_select_strategy_interface.h>
+#include <monte_carlo/models/rollout_strategy_interface.h>
 #include <vector>
 #include <ostream>
 #include <memory>
@@ -13,7 +13,7 @@ namespace sophia::monte_carlo::models
     class Node : public std::enable_shared_from_this<Node>
     {
     protected:
-        using rollout_strategy_ptr = std::shared_ptr<ActionSelectStrategyInterface>;
+        using rollout_strategy_ptr = std::shared_ptr<RolloutStrategyInterface>;
         using action_ref = std::weak_ptr<Action>;
         using action_ptr = std::shared_ptr<Action>;
         using node_ptr = std::shared_ptr<Node>;

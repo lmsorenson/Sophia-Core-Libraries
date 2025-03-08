@@ -8,7 +8,7 @@
 using sophia::monte_carlo::mocks::MockTreeFactory;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
-using sophia::monte_carlo::models::ActionSelectStrategyInterface;
+using sophia::monte_carlo::models::RolloutStrategyInterface;
 using std::shared_ptr;
 using std::make_shared;
 using std::string;
@@ -29,7 +29,7 @@ shared_ptr<Action> MockTreeFactory::CreateAction(shared_ptr<NodeBase<bool, int>>
     return make_shared<MockAction>(node, shared_from_this());
 }
 
-shared_ptr<ActionSelectStrategyInterface> MockTreeFactory::CreateStrategy() const
+shared_ptr<RolloutStrategyInterface> MockTreeFactory::CreateStrategy() const
 {
     return make_shared<MockActionSelectStrategy>();
 }

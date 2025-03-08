@@ -3,13 +3,16 @@
 
 #include <memory>
 #include <string>
-#include <monte_carlo/models/node_base.h>
 
 namespace sophia::monte_carlo::models
 {
     class Node;
+
+    template<typename TState, typename TChange>
+    class NodeBase;
+
     class Action;
-    class ActionSelectStrategyInterface;
+    class RolloutStrategyInterface;
 }
 
 namespace sophia::monte_carlo::factories
@@ -18,17 +21,18 @@ namespace sophia::monte_carlo::factories
     class ITreeFactory : public std::enable_shared_from_this<ITreeFactory<TState, TChange>>
     {
     protected:
-        using SharedNode = std::shared_ptr<models::Node>;
-        using SharedAction = std::shared_ptr<models::Action>;
-        using SharedActionSelectStrategy = std::shared_ptr<models::ActionSelectStrategyInterface>;
+        using node_ptr = std::shared_ptr<models::Node>;
+        using node_base_ptr = std::shared_ptr<models::NodeBase<TState, TChange>>;
+        using action_ptr = std::shared_ptr<models::Action>;
+        using rollout_strategy_ptr = std::shared_ptr<models::RolloutStrategyInterface>;
 
     public:
         virtual ~ITreeFactory() = default;
 
-        [[nodiscard]] virtual SharedNode CreateNode(std::string name) const = 0;
-        [[nodiscard]] virtual SharedNode CreateNode(std::string name, TState state) const = 0;
-        [[nodiscard]] virtual SharedAction CreateAction(std::shared_ptr<NodeBase<TState, TChange>> node, TChange change) const = 0;
-        [[nodiscard]] virtual SharedActionSelectStrategy CreateStrategy() const = 0;
+        [[nodiscard]] virtual node_ptr CreateNode(std::string name) const = 0;
+        [[nodiscard]] virtual node_ptr CreateNode(std::string name, TState state) const = 0;
+        [[nodiscard]] virtual action_ptr CreateAction(node_base_ptr node, TChange change) const = 0;
+        [[nodiscard]] virtual rollout_strategy_ptr CreateStrategy() const = 0;
     };
 }
 

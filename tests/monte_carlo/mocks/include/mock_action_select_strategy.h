@@ -7,12 +7,12 @@
 
 namespace sophia::monte_carlo::mocks
 {
-    using models::ActionSelectStrategyInterface;
+    using models::RolloutStrategyInterface;
     using models::Action;
     using std::shared_ptr;
     using std::vector;
 
-    class MockActionSelectStrategy : public ActionSelectStrategyInterface
+    class MockActionSelectStrategy : public RolloutStrategyInterface
     {
     public:
         [[nodiscard]] shared_ptr<Action> select_action(std::vector<std::shared_ptr<Action>> actions) const override;
