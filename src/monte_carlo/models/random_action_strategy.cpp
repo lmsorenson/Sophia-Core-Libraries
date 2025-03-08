@@ -6,7 +6,7 @@ using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 using std::vector;
 
-shared_ptr<const Action> RandomRolloutStrategy::select_action(const vector<shared_ptr<const Action>> actions) const
+shared_ptr<Action> RandomRolloutStrategy::select_action(vector<shared_ptr<Action>> actions) const
 {
     if (actions.empty())
     {

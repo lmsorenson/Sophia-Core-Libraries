@@ -10,7 +10,7 @@ namespace sophia::monte_carlo::models
     class RandomRolloutStrategy final : public RolloutStrategyInterface
     {
     public:
-        [[nodiscard]] const_action_ptr select_action(std::vector<const_action_ptr> actions) const override;
+        [[nodiscard]] action_ptr select_action(std::vector<action_ptr> actions) const override;
 
     };
 }

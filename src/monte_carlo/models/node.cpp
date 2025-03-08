@@ -8,7 +8,7 @@
 
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
-using sophia::monte_carlo::factories::ITreeFactory;
+using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::string;
 using std::shared_ptr;
 using std::vector;

@@ -16,7 +16,7 @@ namespace sophia::monte_carlo::mocks
     using models::NodeBase;
     using models::Action;
     using models::RolloutStrategyInterface;
-    using factories::ITreeFactory;
+    using factories::TreeFactoryBase;
     using std::string;
     using std::vector;
     using std::make_shared;
@@ -25,7 +25,7 @@ namespace sophia::monte_carlo::mocks
     class MockNode : public NodeBase<bool, int>
     {
     public:
-        explicit MockNode(const string& name, const shared_ptr<const ITreeFactory<bool, int>>& interface);
+        explicit MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface);
         ~MockNode() override = default;
 
         MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (override));

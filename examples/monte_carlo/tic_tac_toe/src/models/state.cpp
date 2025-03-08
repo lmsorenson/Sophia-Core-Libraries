@@ -21,13 +21,13 @@ TileState Alternate(const TileState last_placed)
     }
 }
 
-State::State(const string &name, const TileState player, const shared_ptr<const ITreeFactory<Board, Position>> &interface)
+State::State(const string &name, const TileState player, const shared_ptr<const TreeFactoryBase<Board, Position>> &interface)
     : NodeBase(name, Board(player), interface)
 {
 }
 
 State::State(const std::string &name, Board board,
-    const std::shared_ptr<const ITreeFactory<Board, Position>> &interface)
+    const std::shared_ptr<const TreeFactoryBase<Board, Position>> &interface)
 : NodeBase(name, std::move(board), interface)
 {
 }

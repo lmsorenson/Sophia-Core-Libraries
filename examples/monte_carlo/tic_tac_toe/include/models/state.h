@@ -6,7 +6,7 @@
 
 namespace sophia::examples::tic_tac_toe::models
 {
-    using monte_carlo::factories::ITreeFactory;
+    using monte_carlo::factories::TreeFactoryBase;
     using monte_carlo::models::Action;
 
     class State : public NodeBase<Board, Position>

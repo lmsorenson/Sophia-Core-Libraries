@@ -6,13 +6,13 @@
 using sophia::monte_carlo::mocks::MockNode;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
-using sophia::monte_carlo::factories::ITreeFactory;
+using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::vector;
 using std::shared_ptr;
 using std::string;
 using testing::Return;
 
-MockNode::MockNode(const string& name, const shared_ptr<const ITreeFactory<bool, int>>& interface)
+MockNode::MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface)
     : NodeBase(std::move(name), true, std::move(interface))
 {
 }

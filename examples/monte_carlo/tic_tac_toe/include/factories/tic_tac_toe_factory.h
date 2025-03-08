@@ -8,7 +8,7 @@
 
 namespace sophia::examples::tic_tac_toe::factories
 {
-    class TicTacToeFactory : public monte_carlo::factories::ITreeFactory<models::Board, models::Position>
+    class TicTacToeFactory : public monte_carlo::factories::TreeFactoryBase<models::Board, models::Position>
     {
     public:
         ~TicTacToeFactory() override = default;

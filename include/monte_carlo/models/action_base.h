@@ -17,7 +17,7 @@ namespace sophia::monte_carlo::models
     protected:
         using node_base_ptr = std::shared_ptr<NodeBase<TState, TChange>>;
         using node_base_ref = std::weak_ptr<NodeBase<TState, TChange>>;
-        using const_factory_ptr = std::shared_ptr<const factories::ITreeFactory<TState, TChange>>;
+        using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
 
     public:
         ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory);

@@ -10,7 +10,7 @@ namespace sophia::monte_carlo::models
     class NodeBase : public Node
     {
     protected:
-        using const_factory_ptr = std::shared_ptr<const factories::ITreeFactory<TState, TChange>>;
+        using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
 
     public:
         NodeBase(const std::string &name, TState state, const_factory_ptr factory);

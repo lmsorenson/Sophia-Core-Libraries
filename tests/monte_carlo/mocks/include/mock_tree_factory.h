@@ -12,11 +12,11 @@ namespace sophia::monte_carlo::mocks
 {
     using models::Node;
     using models::RolloutStrategyInterface;
-    using factories::ITreeFactory;
+    using factories::TreeFactoryBase;
 
     class MockRolloutStrategy;
 
-    class MockTreeFactory : public ITreeFactory<bool, int>
+    class MockTreeFactory : public TreeFactoryBase<bool, int>
     {
     public:
         ~MockTreeFactory() override = default;

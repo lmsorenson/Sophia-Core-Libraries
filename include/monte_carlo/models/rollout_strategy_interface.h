@@ -13,13 +13,13 @@ namespace sophia::monte_carlo::models
     class RolloutStrategyInterface
     {
     protected:
-        using const_action_ptr = std::shared_ptr<const Action>;
+        using action_ptr = std::shared_ptr<Action>;
 
     public:
         RolloutStrategyInterface() = default;
         virtual ~RolloutStrategyInterface() = default;
 
-        [[nodiscard]] virtual const_action_ptr select_action(std::vector<const_action_ptr> actions) const = 0;
+        [[nodiscard]] virtual action_ptr select_action(std::vector<action_ptr> actions) const = 0;
     };
 }
 

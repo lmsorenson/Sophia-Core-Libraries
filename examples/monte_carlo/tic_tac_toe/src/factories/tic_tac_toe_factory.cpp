@@ -3,7 +3,7 @@
 #include <models/move.h>
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
-#include <monte_carlo/models/random_action_strategy.h>
+#include <monte_carlo/models/random_rollout_strategy.h>
 
 using sophia::examples::tic_tac_toe::factories::TicTacToeFactory;
 using sophia::examples::tic_tac_toe::models::State;

@@ -9,13 +9,13 @@
 namespace sophia::examples::tic_tac_toe::models
 {
     using monte_carlo::models::Node;
-    using monte_carlo::factories::ITreeFactory;
+    using monte_carlo::factories::TreeFactoryBase;
 
     class Move : public monte_carlo::models::ActionBase<Board, Position>
     {
     public:
         explicit Move(const std::shared_ptr<NodeBase<Board, Position>> &source, Position change,
-            std::shared_ptr<const ITreeFactory<Board, Position>> factory);
+            std::shared_ptr<const TreeFactoryBase<Board, Position>> factory);
 
         void Generate() override;
     };

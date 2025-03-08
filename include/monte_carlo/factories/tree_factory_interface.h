@@ -18,7 +18,7 @@ namespace sophia::monte_carlo::models
 namespace sophia::monte_carlo::factories
 {
     template<typename TState, typename TChange>
-    class ITreeFactory : public std::enable_shared_from_this<ITreeFactory<TState, TChange>>
+    class TreeFactoryBase : public std::enable_shared_from_this<TreeFactoryBase<TState, TChange>>
     {
     protected:
         using node_ptr = std::shared_ptr<models::Node>;
@@ -27,7 +27,7 @@ namespace sophia::monte_carlo::factories
         using rollout_strategy_ptr = std::shared_ptr<models::RolloutStrategyInterface>;
 
     public:
-        virtual ~ITreeFactory() = default;
+        virtual ~TreeFactoryBase() = default;
 
         [[nodiscard]] virtual node_ptr CreateNode(std::string name) const = 0;
         [[nodiscard]] virtual node_ptr CreateNode(std::string name, TState state) const = 0;
