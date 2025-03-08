@@ -18,7 +18,6 @@ namespace sophia::examples::tic_tac_toe::models
             std::shared_ptr<const ITreeFactory<Board, Position>> factory);
 
         void Generate() override;
-        [[nodiscard]] std::shared_ptr<Node> Target() const override;
     };
 }
 

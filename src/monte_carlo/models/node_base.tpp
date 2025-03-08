@@ -2,9 +2,10 @@
 
 using sophia::monte_carlo::models::NodeBase;
 using sophia::monte_carlo::models::ActionSelectStrategyInterface;
+using rollout_strategy_ptr = std::shared_ptr<ActionSelectStrategyInterface>;
 
 template<typename TState, typename TChange>
-inline NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory)
+NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, const_factory_ptr factory)
     : Node(name)
     , m_state_(state)
     , m_factory_(factory)
@@ -12,13 +13,13 @@ inline NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state
 }
 
 template<typename TState, typename TChange>
-inline TState NodeBase<TState, TChange>::GetState() const
+TState NodeBase<TState, TChange>::GetState() const
 {
     return m_state_;
 }
 
 template<typename TState, typename TChange>
-inline std::shared_ptr<ActionSelectStrategyInterface> NodeBase<TState, TChange>::RolloutStrategy() const
+rollout_strategy_ptr NodeBase<TState, TChange>::RolloutStrategy() const
 {
     return m_factory_->CreateStrategy();
 }

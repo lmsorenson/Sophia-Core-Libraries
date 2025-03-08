@@ -9,9 +9,8 @@ using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::factories::ITreeFactory;
 using std::shared_ptr;
 
-Move::Move(const shared_ptr<NodeBase<Board, Position>> &source, Position position,
-    std::shared_ptr<const ITreeFactory<Board, Position>> factory)
-: ActionBase(source, position, std::move(factory))
+Move::Move(const node_base_ptr &source, const Position change, const_factory_ptr factory)
+: ActionBase(source, change, std::move(factory))
 {
 
 }
@@ -27,11 +26,5 @@ void Move::Generate()
 
         m_target_ = m_factory_->CreateNode(name, *newBoard);
     }
-
-}
-
-shared_ptr<Node> Move::Target() const
-{
-    return m_target_;
 }
 

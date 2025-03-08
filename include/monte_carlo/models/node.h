@@ -14,22 +14,25 @@ namespace sophia::monte_carlo::models
     {
     protected:
         using rollout_strategy_ptr = std::shared_ptr<ActionSelectStrategyInterface>;
+        using action_ref = std::weak_ptr<Action>;
+        using action_ptr = std::shared_ptr<Action>;
+        using node_ptr = std::shared_ptr<Node>;
 
     public:
         explicit Node(std::string name);
         virtual ~Node() = default;
 
-        void SetParent(std::shared_ptr<Action> action);
+        void SetParent(action_ptr action);
         [[nodiscard]] double UpperConfidenceBound() const;
         [[nodiscard]] bool IsLeafNode() const;
         [[nodiscard]] bool HasBeenSampled() const;
 
-        [[nodiscard]] virtual std::vector<std::shared_ptr<Action>> GetAvailableActions() = 0;
+        [[nodiscard]] virtual std::vector<action_ptr> GetAvailableActions() = 0;
         [[nodiscard]] virtual bool IsTerminalState() const = 0;
         [[nodiscard]] virtual double Value() const = 0;
 
-        [[nodiscard]] std::shared_ptr<Action> SelectBestAction() const;
-        std::shared_ptr<Node> Expand();
+        [[nodiscard]] action_ptr SelectBestAction() const;
+        node_ptr Expand();
         double Rollout();
         void Backpropagate(double reward);
 
@@ -40,8 +43,8 @@ namespace sophia::monte_carlo::models
     protected:
         virtual rollout_strategy_ptr RolloutStrategy() const = 0;
 
-        std::weak_ptr<Action> m_parent_action_;
-        std::vector<std::shared_ptr<Action>> m_child_action_;
+        action_ref m_parent_action_;
+        std::vector<action_ptr> m_child_action_;
         int m_visit_count_ = 0;
         double m_total_reward_ = 0;
 

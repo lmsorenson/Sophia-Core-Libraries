@@ -19,3 +19,9 @@ node_ptr ActionBase<TState, TChange>::Source() const
 {
     return m_source_.lock();
 }
+
+template<typename TState, typename TChange>
+node_ptr ActionBase<TState, TChange>::Target() const
+{
+    return m_target_;
+}

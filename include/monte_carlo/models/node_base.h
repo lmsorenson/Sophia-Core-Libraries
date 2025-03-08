@@ -14,14 +14,17 @@ namespace sophia::monte_carlo::models
     template<typename TState, typename TChange>
     class NodeBase : public Node
     {
+    protected:
+        using const_factory_ptr = std::shared_ptr<const factories::ITreeFactory<TState, TChange>>;
+
     public:
         NodeBase(const std::string &name, TState state, std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory);
 
         TState GetState() const;
 
     protected:
-        std::shared_ptr<ActionSelectStrategyInterface> RolloutStrategy() const override;
-        std::shared_ptr<const factories::ITreeFactory<TState, TChange>> m_factory_;
+        rollout_strategy_ptr RolloutStrategy() const override;
+        const_factory_ptr m_factory_;
         TState m_state_;
     };
 }
