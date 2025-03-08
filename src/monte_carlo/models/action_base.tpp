@@ -3,10 +3,10 @@
 using sophia::monte_carlo::models::ActionBase;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::ActionSelectStrategyInterface;
+using node_ptr = std::shared_ptr<Node>;
 
 template<typename TState, typename TChange>
-ActionBase<TState, TChange>::ActionBase(const std::shared_ptr<NodeBase<TState, TChange>> &state, TChange change,
-    std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory)
+ActionBase<TState, TChange>::ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory)
     : Action()
     , m_source_(state)
     , m_change_(change)
@@ -15,7 +15,7 @@ ActionBase<TState, TChange>::ActionBase(const std::shared_ptr<NodeBase<TState, T
 }
 
 template<typename TState, typename TChange>
-std::shared_ptr<Node> ActionBase<TState, TChange>::Source() const
+node_ptr ActionBase<TState, TChange>::Source() const
 {
     return m_source_.lock();
 }

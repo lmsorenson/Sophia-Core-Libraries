@@ -1,6 +1,6 @@
 #ifndef ACTION_BASE_H
 #define ACTION_BASE_H
-#include <iostream>
+
 #include <memory>
 #include <ostream>
 
@@ -13,16 +13,20 @@ namespace sophia::monte_carlo::models
     template<typename TState, typename TChange>
     class ActionBase : public Action
     {
+    protected:
+        using node_base_ptr = std::shared_ptr<NodeBase<TState, TChange>>;
+        using node_base_ref = std::weak_ptr<NodeBase<TState, TChange>>;
+        using const_factory_ptr = std::shared_ptr<const factories::ITreeFactory<TState, TChange>>;
+
     public:
-        ActionBase(const std::shared_ptr<NodeBase<TState, TChange>> &state, TChange change,
-            std::shared_ptr<const factories::ITreeFactory<TState, TChange>> factory);
+        ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory);
 
         [[nodiscard]] std::shared_ptr<Node> Source() const override;
 
     protected:
-        std::shared_ptr<const factories::ITreeFactory<TState, TChange>> m_factory_;
-        std::weak_ptr<NodeBase<TState, TChange>> m_source_;
-        std::shared_ptr<Node> m_target_;
+        const_factory_ptr m_factory_;
+        node_base_ref m_source_;
+        node_ptr m_target_;
         TChange m_change_;
     };
 }
