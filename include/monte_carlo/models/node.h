@@ -22,14 +22,7 @@ namespace sophia::monte_carlo::models
         explicit Node(std::string name);
         virtual ~Node() = default;
 
-        void SetParent(action_ptr action);
-        [[nodiscard]] double UpperConfidenceBound() const;
-        [[nodiscard]] bool IsLeafNode() const;
-        [[nodiscard]] bool HasBeenSampled() const;
-
-        [[nodiscard]] virtual std::vector<action_ptr> GetAvailableActions() = 0;
-        [[nodiscard]] virtual bool IsTerminalState() const = 0;
-        [[nodiscard]] virtual double Value() const = 0;
+        void SetParent(const action_ptr& action);
 
         [[nodiscard]] action_ptr SelectBestAction() const;
         node_ptr Expand();
@@ -37,10 +30,16 @@ namespace sophia::monte_carlo::models
         void Backpropagate(double reward);
 
         [[nodiscard]] std::string Name() const;
+        [[nodiscard]] double UpperConfidenceBound() const;
+        [[nodiscard]] bool IsLeafNode() const;
+        [[nodiscard]] bool HasBeenSampled() const;
         [[nodiscard]] int VisitCount() const;
-        [[nodiscard]] int TotalReward() const;
+        [[nodiscard]] double TotalReward() const;
+        [[nodiscard]] virtual bool IsTerminalState() const = 0;
+        [[nodiscard]] virtual double Value() const = 0;
 
     protected:
+        [[nodiscard]] virtual std::vector<action_ptr> GetAvailableActions() = 0;
         virtual rollout_strategy_ptr RolloutStrategy() const = 0;
 
         action_ref m_parent_action_;

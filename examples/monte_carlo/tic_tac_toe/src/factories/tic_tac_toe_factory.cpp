@@ -13,7 +13,7 @@ using sophia::examples::tic_tac_toe::models::Move;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::RolloutStrategyInterface;
-using sophia::monte_carlo::models::RandomActionStrategy;
+using sophia::monte_carlo::models::RandomRolloutStrategy;
 using std::make_shared;
 using std::shared_ptr;
 
@@ -34,5 +34,5 @@ shared_ptr<Action> TicTacToeFactory::CreateAction(shared_ptr<NodeBase<Board, Pos
 
 shared_ptr<RolloutStrategyInterface> TicTacToeFactory::CreateStrategy() const
 {
-    return make_shared<RandomActionStrategy>();
+    return make_shared<RandomRolloutStrategy>();
 }

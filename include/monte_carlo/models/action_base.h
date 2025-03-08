@@ -22,8 +22,8 @@ namespace sophia::monte_carlo::models
     public:
         ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory);
 
-        [[nodiscard]] std::shared_ptr<Node> Source() const override;
-        [[nodiscard]] std::shared_ptr<Node> Target() const override;
+        [[nodiscard]] node_ptr Source() const override;
+        [[nodiscard]] node_ptr Target() const override;
 
     protected:
         const_factory_ptr m_factory_;

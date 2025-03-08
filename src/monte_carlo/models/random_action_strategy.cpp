@@ -1,15 +1,17 @@
-#include <monte_carlo/models/random_action_strategy.h>
+#include <monte_carlo/models/random_rollout_strategy.h>
 #include <random>
 
-using sophia::monte_carlo::models::RandomActionStrategy;
+using sophia::monte_carlo::models::RandomRolloutStrategy;
 using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 using std::vector;
 
-shared_ptr<Action> RandomActionStrategy::select_action(const vector<shared_ptr<Action>> actions) const
+shared_ptr<const Action> RandomRolloutStrategy::select_action(const vector<shared_ptr<const Action>> actions) const
 {
     if (actions.empty())
+    {
         return nullptr;
+    }
 
     // get random action.
     std::random_device rd;

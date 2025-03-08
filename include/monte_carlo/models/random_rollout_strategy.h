@@ -7,10 +7,10 @@ namespace sophia::monte_carlo::models
 {
     class Action;
 
-    class RandomActionStrategy : public RolloutStrategyInterface
+    class RandomRolloutStrategy final : public RolloutStrategyInterface
     {
     public:
-        [[nodiscard]] std::shared_ptr<Action> select_action(std::vector<std::shared_ptr<Action>> actions) const override;
+        [[nodiscard]] const_action_ptr select_action(std::vector<const_action_ptr> actions) const override;
 
     };
 }

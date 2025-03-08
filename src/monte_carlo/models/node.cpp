@@ -18,44 +18,9 @@ Node::Node(string name)
 {
 }
 
-void Node::SetParent(std::shared_ptr<Action> action)
+void Node::SetParent(const std::shared_ptr<Action>& action)
 {
-    m_parent_action_ = std::move(action);
-}
-
-
-double Node::UpperConfidenceBound() const
-{
-    const auto V = m_total_reward_ / m_visit_count_;
-    int N = 0;
-
-    if (auto sp = m_parent_action_.lock())
-    {
-        const auto parent = sp->Source();
-        N = parent->VisitCount();
-    }
-
-    const int n = m_visit_count_;
-
-    if (n == 0)
-        return std::numeric_limits<double>::infinity();
-
-    constexpr int c = 2;
-
-    const auto logN = std::log(N);
-    const auto sql = std::sqrt(logN/n);
-
-    return V + c * sql;
-}
-
-bool Node::IsLeafNode() const
-{
-    return m_child_action_.empty();
-}
-
-bool Node::HasBeenSampled() const
-{
-    return m_visit_count_ > 0;
+    m_parent_action_ = action;
 }
 
 std::shared_ptr<Action> Node::SelectBestAction() const
@@ -88,7 +53,7 @@ std::shared_ptr<Action> Node::SelectBestAction() const
 
 shared_ptr<Node> Node::Expand()
 {
-    const vector<shared_ptr<Action>> child_nodes = GetAvailableActions();
+    const vector<shared_ptr<Action>> child_nodes = this->GetAvailableActions();
     for(const auto& child : child_nodes)
     {
         child->Generate();
@@ -123,7 +88,7 @@ double Node::Rollout()
     vector<shared_ptr<Action>> actions;
     if (m_child_action_.empty())
     {
-        actions = GetAvailableActions();
+        actions = this->GetAvailableActions();
     }
     else
     {
@@ -159,12 +124,47 @@ std::string Node::Name() const
     return m_name_;
 }
 
+double Node::UpperConfidenceBound() const
+{
+    const auto V = m_total_reward_ / m_visit_count_;
+    int N = 0;
+
+    if (const auto sp = m_parent_action_.lock())
+    {
+        const auto parent = sp->Source();
+        N = parent->VisitCount();
+    }
+
+    const int n = m_visit_count_;
+    if (n == 0)
+    {
+        return std::numeric_limits<double>::infinity();
+    }
+
+    constexpr int c = 2;
+
+    const auto logN = std::log(N);
+    const auto sql = std::sqrt(logN/n);
+
+    return V + c * sql;
+}
+
+bool Node::IsLeafNode() const
+{
+    return m_child_action_.empty();
+}
+
+bool Node::HasBeenSampled() const
+{
+    return m_visit_count_ > 0;
+}
+
 int Node::VisitCount() const
 {
     return m_visit_count_;
 }
 
-int Node::TotalReward() const
+double Node::TotalReward() const
 {
     return m_total_reward_;
 }

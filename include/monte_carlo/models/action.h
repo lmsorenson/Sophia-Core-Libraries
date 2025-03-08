@@ -7,9 +7,8 @@
 namespace sophia::monte_carlo::models
 {
     class Node;
-    using std::enable_shared_from_this;
 
-    class Action : public enable_shared_from_this<Action>
+    class Action : public std::enable_shared_from_this<Action>
     {
     protected:
         using node_ptr = std::shared_ptr<Node>;

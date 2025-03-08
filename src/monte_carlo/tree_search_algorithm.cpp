@@ -43,8 +43,7 @@ shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Nod
         }
         else
         {
-            std::cout << "No, don't expand it."
-            "" << std::endl;
+            std::cout << "No, don't expand it." << std::endl;
         }
 
         std::cout << "Phase 3: Rollout" << std::endl;
