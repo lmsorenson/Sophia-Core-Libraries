@@ -1,6 +1,6 @@
-#include <factories/tic_tac_toe_factory.h>
-#include <models/state.h>
-#include <models/move.h>
+#include <tic_tac_toe/factories/tic_tac_toe_factory.h>
+#include <tic_tac_toe/models/state.h>
+#include <tic_tac_toe/models/move.h>
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
 #include <monte_carlo/models/random_rollout_strategy.h>

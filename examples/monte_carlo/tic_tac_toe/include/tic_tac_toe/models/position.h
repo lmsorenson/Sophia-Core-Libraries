@@ -2,7 +2,7 @@
 #define POSITION_H
 
 #include <utility>
-#include <enums/tile_state.h>
+#include <tic_tac_toe/enums/tile_state.h>
 
 namespace sophia::examples::tic_tac_toe::models
 {

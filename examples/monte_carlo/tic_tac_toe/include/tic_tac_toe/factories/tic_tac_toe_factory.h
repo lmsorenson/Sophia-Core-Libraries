@@ -1,8 +1,8 @@
 #ifndef TIC_TAC_TOE_FACTORY_H
 #define TIC_TAC_TOE_FACTORY_H
 
-#include <models/board.h>
-#include <models/position.h>
+#include <tic_tac_toe/models/board.h>
+#include <tic_tac_toe/models/position.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <monte_carlo/models/node_base.h>
 

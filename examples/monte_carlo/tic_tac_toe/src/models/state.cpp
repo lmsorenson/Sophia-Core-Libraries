@@ -1,4 +1,4 @@
-#include <models/state.h>
+#include <tic_tac_toe/models/state.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 
 #include <utility>

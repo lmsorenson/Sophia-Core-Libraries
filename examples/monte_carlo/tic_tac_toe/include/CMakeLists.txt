@@ -1,2 +1,2 @@
-add_subdirectory(factories)
-add_subdirectory(models)
+add_subdirectory(tic_tac_toe/factories)
+add_subdirectory(tic_tac_toe/models)

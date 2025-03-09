@@ -2,8 +2,8 @@
 #define TIC_TAC_TOE_BOARD_H
 
 #include <vector>
-#include <models/position.h>
-#include <enums/line_type.h>
+#include <tic_tac_toe/models/position.h>
+#include <tic_tac_toe/enums/line_type.h>
 #include <memory>
 
 namespace sophia::examples::tic_tac_toe::models

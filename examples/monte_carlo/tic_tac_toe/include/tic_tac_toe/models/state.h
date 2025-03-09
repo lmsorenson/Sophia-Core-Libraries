@@ -2,7 +2,7 @@
 #define STATE_H
 
 #include <monte_carlo/models/node_base.h>
-#include <models/board.h>
+#include <tic_tac_toe/models/board.h>
 
 namespace sophia::examples::tic_tac_toe::models
 {

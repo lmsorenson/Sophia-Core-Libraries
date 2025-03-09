@@ -1,4 +1,4 @@
-#include <models/move.h>
+#include <tic_tac_toe/models/move.h>
 
 #include <utility>
 #include <monte_carlo/factories/tree_factory_interface.h>

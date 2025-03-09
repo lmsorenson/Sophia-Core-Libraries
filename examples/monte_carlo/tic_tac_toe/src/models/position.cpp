@@ -1,5 +1,5 @@
-#include <models/position.h>
-#include <models/state.h>
+#include <tic_tac_toe/models/position.h>
+#include <tic_tac_toe/models/state.h>
 #include <vector>
 #include <utility>
 
