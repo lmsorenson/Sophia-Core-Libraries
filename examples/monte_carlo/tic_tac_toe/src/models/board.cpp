@@ -155,14 +155,25 @@ shared_ptr<std::pair<TileState, bool>> Board::Winner() const
 void Board::Print() const
 {
     std::vector<std::string> rows_strings;
+    auto column_letter = { "A", "B", "C" };
+    auto itr = column_letter.begin();
+
     for (const auto& row : m_tiles_)
     {
         std::string row_str;
-
         for (const auto& position : row)
         {
             if (!row_str.empty())
+            {
                 row_str.append("|");
+            }
+            else
+            {
+                row_str.append(" ");
+                row_str.append(*itr);
+                row_str.append(" ");
+                itr++;
+            }
 
             row_str.append(" ");
             row_str.append(TileStateToString(position->State()));
@@ -174,12 +185,13 @@ void Board::Print() const
 
     if (auto it = rows_strings.begin(); it != rows_strings.end())
     {
+        std::cout << "    1   2   3 " << std::endl;
         do
         {
             std::cout << *it << std::endl;
             if (it++ + 1 != rows_strings.end())
             {
-                std::cout << "---+---+---" << std::endl;
+                std::cout << "   ---+---+---" << std::endl;
             }
         }
         while (it != rows_strings.end());

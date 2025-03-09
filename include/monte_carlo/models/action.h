@@ -17,7 +17,8 @@ namespace sophia::monte_carlo::models
         Action() = default;
         virtual ~Action() = default;
 
-        [[nodiscard]] double UpperConfidenceBound() const;
+        virtual std::string Name() const = 0;
+        [[nodiscard]] double UpperConfidenceBound(int c) const;
         virtual void Generate() = 0;
         [[nodiscard]] virtual node_ptr Source() const = 0;
         [[nodiscard]] virtual node_ptr Target() const = 0;

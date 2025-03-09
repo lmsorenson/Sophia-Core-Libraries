@@ -39,11 +39,11 @@ vector<shared_ptr<Action>> State::GetAvailableActions()
     const auto open_positions = m_state_.GetOpenPositions();
     const auto last_placed = m_state_.LastPlaced();
 
-    TileState new_state = Alternate(last_placed);
+    const TileState new_state = Alternate(last_placed);
 
     for(const auto& position : open_positions)
     {
-        auto new_position = position->WithState(new_state);
+        const auto new_position = position->WithState(new_state);
 
         auto _this_ = std::static_pointer_cast<State>(shared_from_this());
         auto action = m_factory_->CreateAction(_this_, new_position);
@@ -86,4 +86,35 @@ double State::Value() const
 
     std::cout << "It's a draw :/" << std::endl;
     return 0.0;
+}
+
+Node::action_ptr State::SelectAction(const std::string action_name)
+{
+    std::string desired_name = action_name;
+    for (char &c : desired_name)
+    {
+        c = static_cast<char>(std::toupper(c));
+    }
+
+    const auto actions = GetAvailableActions();
+    std::vector<action_ptr> matching_actions;
+    for (const auto& action : actions)
+    {
+        if (action->Name() == desired_name)
+        {
+            matching_actions.push_back(action);
+        }
+    }
+
+    if (matching_actions.size() == 1)
+    {
+        return matching_actions.front();
+    }
+
+    return nullptr;
+}
+
+void State::Print() const
+{
+    m_state_.Print();
 }

@@ -30,13 +30,17 @@ namespace sophia::monte_carlo::models
         void Backpropagate(double reward);
 
         [[nodiscard]] std::string Name() const;
-        [[nodiscard]] double UpperConfidenceBound() const;
+        [[nodiscard]] double UpperConfidenceBound(int c) const;
         [[nodiscard]] bool IsLeafNode() const;
         [[nodiscard]] bool HasBeenSampled() const;
         [[nodiscard]] int VisitCount() const;
         [[nodiscard]] double TotalReward() const;
         [[nodiscard]] virtual bool IsTerminalState() const = 0;
         [[nodiscard]] virtual double Value() const = 0;
+
+        virtual action_ptr SelectAction(std::string action_name) = 0;
+        virtual action_ptr SelectAction();
+        virtual void Print() const = 0;
 
     protected:
         [[nodiscard]] virtual std::vector<action_ptr> GetAvailableActions() = 0;

@@ -23,10 +23,11 @@ Position::Position(const std::pair<int, int> &coordinates, const TileState tile_
 
 std::string Position::Name() const
 {
-    return "row"
-    + std::to_string(m_row_index_)
-    + "-col" + std::to_string(m_column_index_)
-    + "-" + TileStateToString(m_state_);
+    const char row = static_cast<char>('A' + m_row_index_);
+    const char letter = static_cast<char>('0' + m_column_index_ + 1);
+    std::string str(1, row);
+    str += letter;
+    return str;
 }
 
 std::pair<int, int> Position::Coordinates() const

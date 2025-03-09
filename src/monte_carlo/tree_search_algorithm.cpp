@@ -55,7 +55,7 @@ shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Nod
     }
 
     std::cout << std::endl << "Process Complete: Selecting Best Action" << std::endl;
-    const auto action = root->SelectBestAction();
+    const auto action = root->SelectAction();
     auto selected_action = action->Target();
     std::cout << "Best action: " << selected_action->Name() << std::endl;
     return selected_action;

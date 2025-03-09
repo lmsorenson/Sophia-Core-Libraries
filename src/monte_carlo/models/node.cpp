@@ -30,7 +30,7 @@ std::shared_ptr<Action> Node::SelectBestAction() const
 
     for (const auto& child : m_child_action_)
     {
-        const double current_score = child->UpperConfidenceBound();
+        const double current_score = child->UpperConfidenceBound(2);
         auto target = child->Target();
         std::cout<< "UCB(" << target->Name() << ") = " << current_score
         << std::endl;
@@ -124,7 +124,7 @@ std::string Node::Name() const
     return m_name_;
 }
 
-double Node::UpperConfidenceBound() const
+double Node::UpperConfidenceBound(const int c) const
 {
     const auto V = m_total_reward_ / m_visit_count_;
     int N = 0;
@@ -140,8 +140,6 @@ double Node::UpperConfidenceBound() const
     {
         return std::numeric_limits<double>::infinity();
     }
-
-    constexpr int c = 2;
 
     const auto logN = std::log(N);
     const auto sql = std::sqrt(logN/n);
@@ -167,6 +165,34 @@ int Node::VisitCount() const
 double Node::TotalReward() const
 {
     return m_total_reward_;
+}
+
+std::shared_ptr<Action> Node::SelectAction()
+{
+    double best_score = 0;
+    shared_ptr<Action> best_child = nullptr;
+
+    for (const auto& child : m_child_action_)
+    {
+        const double current_score = child->UpperConfidenceBound(0);
+        const auto target = child->Target();
+        std::cout<< "UCB(" << target->Name() << ") = " << current_score
+        << std::endl;
+
+        if (best_child == nullptr)
+        {
+            best_score = current_score;
+            best_child = child;
+        }
+
+        if (current_score > best_score)
+        {
+            best_score = current_score;
+            best_child = child;
+        }
+    }
+
+    return best_child;
 }
 
 

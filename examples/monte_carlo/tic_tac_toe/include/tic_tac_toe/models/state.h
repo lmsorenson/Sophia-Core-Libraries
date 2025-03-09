@@ -20,6 +20,10 @@ namespace sophia::examples::tic_tac_toe::models
         [[nodiscard]] bool IsTerminalState() const override;
 
         [[nodiscard]] double Value() const override;
+
+        action_ptr SelectAction(std::string action_name) override;
+
+        void Print() const override;
     };
 }
 
