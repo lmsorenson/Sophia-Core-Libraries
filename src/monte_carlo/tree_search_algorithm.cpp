@@ -10,7 +10,7 @@ using std::shared_ptr;
 
 shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Node>& root, const int iterations)
 {
-    if (iterations < 0 || iterations > 1000)
+    if (iterations < 0 || iterations > 20000)
     {
         std::cerr << "Invalid iterations" << std::endl;
         throw std::invalid_argument("Invalid iterations");
