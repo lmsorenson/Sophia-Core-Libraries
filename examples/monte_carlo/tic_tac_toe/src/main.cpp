@@ -25,7 +25,7 @@ int main()
     {
         if (not your_turn)
         {
-            auto best_action = tree_search_algorithm(current, 30);
+            auto best_action = tree_search_algorithm(current, 50);
             current = best_action;
             current->Print();
             your_turn = !your_turn;
