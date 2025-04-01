@@ -25,6 +25,7 @@ void Move::Generate()
     if (const auto source = m_source_.lock())
     {
         const auto board = source->GetState();
+
         const auto newBoard = board.WithMove(m_change_);
 
         const std::string name = m_change_.Name();

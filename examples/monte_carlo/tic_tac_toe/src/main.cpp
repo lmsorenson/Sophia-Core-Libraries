@@ -36,6 +36,10 @@ int main()
         while (next_node == nullptr)
         {
             next_node = process_player_move(current);
+
+            if (next_node == nullptr)
+                continue;
+
             next_node->Print();
         }
         current = next_node;
