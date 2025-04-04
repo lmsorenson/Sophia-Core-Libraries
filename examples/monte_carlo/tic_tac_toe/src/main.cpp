@@ -26,21 +26,16 @@ int main()
     const auto factory = std::make_shared<const TicTacToeFactory>();
     const auto root = factory->CreateNode("0");
 
-    auto x = make_shared<Human>(Symbol::X);
-    auto o = make_shared<Bot>(Symbol::O);
-    auto board = make_shared<Board>();
-    auto game_state = make_shared<GameState>(o, x, board);
-
     std::shared_ptr<Node> current = root;
     while(!current->IsTerminalState())
     {
-        const auto player = game_state->CurrentPlayer();
-        auto node = factory->CreateNode("0", *game_state);
-        const auto action = player->GenerateAction(node);
-        const auto new_node = action->Target();
-        new_node->Print();
+        auto new_node = current->ApplyAction();
+        if (new_node == nullptr)
+            continue;
 
+        current = new_node;
 
+        current->Print();
     }
 
     return 0;

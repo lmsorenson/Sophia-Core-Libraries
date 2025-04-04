@@ -17,5 +17,5 @@ Bot::Bot(const Symbol symbol)
 
 shared_ptr<Action> Bot::GenerateAction(const shared_ptr<Node> &node) const
 {
-    return tree_search_algorithm(node, 50);
+    return tree_search_algorithm(node, 100);
 }

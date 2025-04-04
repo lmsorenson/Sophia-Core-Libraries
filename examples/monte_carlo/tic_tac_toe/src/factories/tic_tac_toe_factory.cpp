@@ -24,10 +24,10 @@ using std::shared_ptr;
 
 shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name) const
 {
-    auto x = make_shared<Human>(Symbol::X);
-    auto o = make_shared<Bot>(Symbol::O);
+    auto x = make_shared<Bot>(Symbol::X);
+    auto o = make_shared<Human>(Symbol::O);
     auto board = make_shared<Board>();
-    auto game_state = make_shared<GameState>(o, x, board);
+    auto game_state = make_shared<GameState>(x, o, board);
 
     return make_shared<State>(name, *game_state, shared_from_this());
 }

@@ -41,7 +41,7 @@ std::shared_ptr<const Player> GameState::CurrentPlayer() const
         return m_opponent_;
     }
 
-    if (m_opponent_->symbol() != last_placed_)
+    if (m_you_->symbol() != last_placed_)
     {
         return m_you_;
     }
