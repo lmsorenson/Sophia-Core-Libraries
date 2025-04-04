@@ -2,6 +2,8 @@
 #include <monte_carlo/factories/tree_factory_interface.h>
 
 #include <utility>
+#include <tic_tac_toe/models/bot.h>
+#include <tic_tac_toe/models/human.h>
 
 using sophia::examples::tic_tac_toe::models::State;
 using sophia::monte_carlo::models::Node;
@@ -10,25 +12,25 @@ using std::shared_ptr;
 using std::vector;
 using std::string;
 
-TileState Alternate(const TileState last_placed)
+Symbol Alternate(const Symbol last_placed)
 {
     switch (last_placed)
     {
-        case TileState::X: return TileState::O;
-        case TileState::O:
+        case Symbol::X: return Symbol::O;
+        case Symbol::O:
         default:
-        case TileState::E: return TileState::X;
+        case Symbol::None: return Symbol::X;
     }
 }
 
-State::State(const string &name, const TileState player, const shared_ptr<const TreeFactoryBase<Board, Position>> &interface)
-    : NodeBase(name, Board(player), interface)
+State::State(const string &name, const shared_ptr<const TreeFactoryBase<GameState, Position>> &interface)
+    : NodeBase(name, GameState(nullptr, nullptr, nullptr), interface)
 {
 }
 
-State::State(const std::string &name, Board board,
-    const std::shared_ptr<const TreeFactoryBase<Board, Position>> &interface)
-: NodeBase(name, std::move(board), interface)
+State::State(const std::string &name, GameState game_state,
+    const std::shared_ptr<const TreeFactoryBase<GameState, Position>> &interface)
+: NodeBase(name, std::move(game_state), interface)
 {
 }
 
@@ -39,7 +41,7 @@ vector<shared_ptr<Action>> State::GetAvailableActions()
     const auto open_positions = m_state_.GetOpenPositions();
     const auto last_placed = m_state_.LastPlaced();
 
-    const TileState new_state = Alternate(last_placed);
+    const Symbol new_state = Alternate(last_placed);
 
     for(const auto& position : open_positions)
     {
@@ -69,23 +71,10 @@ bool State::IsTerminalState() const
 
 double State::Value() const
 {
-    m_state_.Print();
+    const auto board = m_state_.GetBoard();
+    const auto you = m_state_.You();
 
-    const auto player = m_state_.Player();
-    if (const auto winner = m_state_.Winner())
-    {
-        if (winner->first == player)
-        {
-            std::cout << "Player " << TileStateToString(player) << " wins :)" << std::endl;
-            return 1.0;
-        }
-
-        std::cout << "Player " << TileStateToString(player) << " loses :(" << std::endl;
-        return -1.0;
-    }
-
-    std::cout << "It's a draw :/" << std::endl;
-    return 0.0;
+    return you->Value(board);
 }
 
 Node::action_ptr State::SelectAction(const std::string action_name)
@@ -112,6 +101,15 @@ Node::action_ptr State::SelectAction(const std::string action_name)
     }
 
     return nullptr;
+}
+
+Node::node_ptr State::ApplyAction()
+{
+    const auto player = m_state_.CurrentPlayer();
+
+    const auto action = player->GenerateAction(shared_from_this());
+
+    return action->Target();
 }
 
 void State::Print() const

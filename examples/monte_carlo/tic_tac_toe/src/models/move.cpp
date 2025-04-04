@@ -24,13 +24,13 @@ void Move::Generate()
 {
     if (const auto source = m_source_.lock())
     {
-        const auto board = source->GetState();
+        const auto game_state = source->GetState();
 
-        const auto newBoard = board.WithMove(m_change_);
+        const auto new_state = game_state.ApplyMove(m_change_);
 
         const std::string name = m_change_.Name();
 
-        m_target_ = m_factory_->CreateNode(name, *newBoard);
+        m_target_ = m_factory_->CreateNode(name, *new_state);
     }
 }
 

@@ -25,6 +25,7 @@ namespace sophia::monte_carlo::factories
         using node_base_ptr = std::shared_ptr<models::NodeBase<TState, TChange>>;
         using action_ptr = std::shared_ptr<models::Action>;
         using rollout_strategy_ptr = std::shared_ptr<models::RolloutStrategyInterface>;
+        using state_ptr = std::shared_ptr<TState>;
 
     public:
         virtual ~TreeFactoryBase() = default;

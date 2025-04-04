@@ -8,7 +8,7 @@ using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 
-shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Node>& root, const int iterations)
+shared_ptr<Action> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Node>& root, const int iterations)
 {
     if (iterations < 0 || iterations > 20000)
     {
@@ -56,7 +56,7 @@ shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Nod
 
     std::cout << std::endl << "Process Complete: Selecting Best Action" << std::endl;
     const auto action = root->SelectAction();
-    auto selected_action = action->Target();
-    std::cout << "Best action: " << selected_action->Name() << std::endl;
-    return selected_action;
+    const auto selected_action = action->Name();
+    std::cout << "Best action: " << selected_action << std::endl;
+    return action;
 }

@@ -2,7 +2,7 @@
 #define POSITION_H
 
 #include <utility>
-#include <tic_tac_toe/enums/tile_state.h>
+#include <tic_tac_toe/enums/symbol.h>
 
 namespace sophia::examples::tic_tac_toe::models
 {
@@ -10,17 +10,17 @@ namespace sophia::examples::tic_tac_toe::models
     {
     public:
         explicit Position(const std::pair<int, int> &coordinates);
-        Position(const std::pair<int, int> &coordinates, TileState tile_state);
+        Position(const std::pair<int, int> &coordinates, Symbol tile_state);
 
         [[nodiscard]] std::string Name() const;
         [[nodiscard]] std::pair<int, int> Coordinates() const;
-        [[nodiscard]] TileState State() const;
-        Position WithState(TileState new_state) const;
+        [[nodiscard]] Symbol State() const;
+        [[nodiscard]] Position WithState(Symbol new_state) const;
 
     private:
         int m_row_index_ = 0;
         int m_column_index_ = 0;
-        TileState m_state_ = TileState::E;
+        Symbol m_state_ = Symbol::None;
     };
 }
 

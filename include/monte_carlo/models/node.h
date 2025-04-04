@@ -40,6 +40,7 @@ namespace sophia::monte_carlo::models
 
         virtual action_ptr SelectAction(std::string action_name) = 0;
         virtual action_ptr SelectAction();
+        virtual node_ptr ApplyAction() = 0;
         virtual void Print() const = 0;
 
     protected:

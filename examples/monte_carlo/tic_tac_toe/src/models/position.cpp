@@ -11,10 +11,10 @@ Position::Position(const std::pair<int, int> &coordinates)
 {
     m_row_index_ = coordinates.first;
     m_column_index_ = coordinates.second;
-    m_state_ = TileState::E;
+    m_state_ = Symbol::None;
 }
 
-Position::Position(const std::pair<int, int> &coordinates, const TileState tile_state)
+Position::Position(const std::pair<int, int> &coordinates, const Symbol tile_state)
 {
     m_row_index_ = coordinates.first;
     m_column_index_ = coordinates.second;
@@ -35,12 +35,12 @@ std::pair<int, int> Position::Coordinates() const
     return { m_row_index_, m_column_index_ };
 }
 
-TileState Position::State() const
+Symbol Position::State() const
 {
     return m_state_;
 }
 
-Position Position::WithState(TileState new_state) const
+Position Position::WithState(Symbol new_state) const
 {
     auto new_position = *this;
 

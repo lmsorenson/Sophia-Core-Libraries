@@ -1,5 +1,7 @@
 #include <tic_tac_toe/models/board.h>
 #include <tic_tac_toe/models/position.h>
+#include <tic_tac_toe/models/bot.h>
+#include <tic_tac_toe/models/human.h>
 #include <unordered_set>
 #include <iostream>
 #include <vector>
@@ -7,13 +9,15 @@
 
 using sophia::examples::tic_tac_toe::models::Board;
 using sophia::examples::tic_tac_toe::models::Position;
+using sophia::examples::tic_tac_toe::models::Player;
+using sophia::examples::tic_tac_toe::models::player_ptr;
 using std::make_shared;
 using std::shared_ptr;
 using std::vector;
+using std::pair;
 
 
-Board::Board(const TileState player)
-: player_(player)
+Board::Board()
 {
     for(int row = 0; row < 3; row++)
     {
@@ -21,7 +25,7 @@ Board::Board(const TileState player)
 
         for (int col = 0; col < 3; col++)
         {
-            auto new_position = make_shared<Position>(std::pair(row, col), TileState::E);
+            auto new_position = make_shared<Position>(std::pair(row, col), Symbol::None);
             row_positions.push_back(new_position);
         }
 
@@ -31,15 +35,11 @@ Board::Board(const TileState player)
 
 Board::Board(const Board &other)
 : m_tiles_(other.m_tiles_)
-, last_placed_(other.last_placed_)
-, player_(other.player_)
 {
 }
 
 Board::Board(Board &&other) noexcept
 : m_tiles_(std::move(other.m_tiles_))
-, last_placed_(other.last_placed_)
-, player_(other.player_)
 {
 }
 
@@ -48,8 +48,6 @@ Board & Board::operator=(const Board &other)
     if (this == &other)
         return *this;
     m_tiles_ = other.m_tiles_;
-    last_placed_ = other.last_placed_;
-    player_ = other.player_;
     return *this;
 }
 
@@ -58,14 +56,12 @@ Board & Board::operator=(Board &&other) noexcept
     if (this == &other)
         return *this;
     m_tiles_ = std::move(other.m_tiles_);
-    last_placed_ = other.last_placed_;
-    player_ = other.player_;
     return *this;
 }
 
 void Board::SetPosition(const Position &new_position)
 {
-    if (new_position.State() == TileState::E)
+    if (new_position.State() == Symbol::None)
     {
         throw std::invalid_argument("Can't set a position to empty.");
     }
@@ -74,24 +70,13 @@ void Board::SetPosition(const Position &new_position)
 
     const auto existing_position = m_tiles_[row][column];
 
-    if (existing_position->State() != TileState::E)
+    if (existing_position->State() != Symbol::None)
     {
         throw std::invalid_argument("Position already taken.");
     }
 
     auto placed_state = new_position.State();
     m_tiles_[row][column] = make_shared<Position>(std::pair( row, column ), placed_state);
-    last_placed_ = placed_state;
-}
-
-TileState Board::LastPlaced() const
-{
-    return last_placed_;
-}
-
-TileState Board::Player() const
-{
-    return player_;
 }
 
 vector<shared_ptr<const Position>> Board::GetOpenPositions() const
@@ -102,7 +87,7 @@ vector<shared_ptr<const Position>> Board::GetOpenPositions() const
     {
         for (const auto& position : row)
         {
-            if (position->State() == TileState::E)
+            if (position->State() == Symbol::None)
             {
                 open_positions.push_back(position);
             }
@@ -129,7 +114,7 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
     }
 }
 
-shared_ptr<std::pair<TileState, bool>> Board::Winner() const
+shared_ptr<std::pair<Symbol, bool>> Board::Winner() const
 {
     const auto list = {
         GetRow(LineType::Horizontal),
@@ -143,9 +128,9 @@ shared_ptr<std::pair<TileState, bool>> Board::Winner() const
         {
             std::unordered_set unique_set(line.begin(), line.end());
             std::vector unique_vec(unique_set.begin(), unique_set.end());
-            if (unique_vec.size() == 1 && unique_vec.front() != TileState::E)
+            if (unique_vec.size() == 1 && unique_vec.front() != Symbol::None)
             {
-                return std::make_shared<std::pair<TileState, bool>>(unique_vec.front(), true);
+                return std::make_shared<std::pair<Symbol, bool>>(unique_vec.front(), true);
             }
         }
     }
@@ -198,7 +183,7 @@ void Board::Print() const
     }
 }
 
-std::vector<std::vector<TileState>> Board::GetRow(LineType line_type) const
+std::vector<std::vector<Symbol>> Board::GetRow(LineType line_type) const
 {
     switch (line_type)
     {
