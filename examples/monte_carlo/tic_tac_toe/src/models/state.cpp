@@ -107,9 +107,9 @@ Node::node_ptr State::ApplyAction()
 {
     const auto player = m_state_.CurrentPlayer();
 
-    const auto action = player->GenerateAction(shared_from_this());
+    player->NextMove();
 
-    return action->Target();
+    return nullptr;
 }
 
 void State::Print() const

@@ -1,5 +1,5 @@
 #include <tic_tac_toe/models/player.h>
-#include <tic_tac_toe/models/Board.h>
+#include <tic_tac_toe/models/board.h>
 #include <iostream>
 
 using sophia::examples::tic_tac_toe::models::Player;

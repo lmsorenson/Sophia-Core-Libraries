@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <factories/tic_tac_toe_factory.h>
+#include <tic_tac_toe/factories/tic_tac_toe_factory.h>
 #include <monte_carlo/models/node.h>
 
 namespace sophia::examples::tic_tac_toe::model_tests

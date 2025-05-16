@@ -10,7 +10,7 @@ namespace sophia::examples::tic_tac_toe::models
     public:
         explicit Human(Symbol symbol);
 
-        [[nodiscard]] std::shared_ptr<monte_carlo::models::Action> GenerateAction(const std::shared_ptr<monte_carlo::models::Node> &node) const override;
+        [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
     };
 }
 

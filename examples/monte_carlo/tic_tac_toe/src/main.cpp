@@ -1,41 +1,55 @@
 #include <tic_tac_toe/factories/tic_tac_toe_factory.h>
-#include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/human.h>
 #include <tic_tac_toe/models/bot.h>
-#include <tic_tac_toe/models/board.h>
-#include <monte_carlo/tree_search_algorithm.h>
+#include <tic_tac_toe/models/game.h>
 #include <iostream>
 #include <memory>
 #include <utility>
 
 using sophia::examples::tic_tac_toe::factories::TicTacToeFactory;
-using sophia::examples::tic_tac_toe::models::GameState;
-using sophia::examples::tic_tac_toe::models::Board;
+using sophia::examples::tic_tac_toe::models::Game;
 using sophia::examples::tic_tac_toe::models::Human;
 using sophia::examples::tic_tac_toe::models::Bot;
-using sophia::monte_carlo::tree_search_algorithm;
-using sophia::monte_carlo::models::Node;
-using sophia::monte_carlo::models::Action;
 using std::make_shared;
+using std::shared_ptr;
 
 
 int main()
 {
     std::cout << "Let's Play Tic Tac Toe!" << std::endl;
 
-    const auto factory = std::make_shared<const TicTacToeFactory>();
-    const auto root = factory->CreateNode("0");
+    // const auto factory = std::make_shared<const TicTacToeFactory>();
+    // const auto root = factory->CreateNode("0");
+    //
+    // std::shared_ptr<Node> current = root;
+    // while(!current->IsTerminalState())
+    // {
+    //     auto new_node = current->ApplyAction();
+    //     if (new_node == nullptr)
+    //     {
+    //         continue;
+    //     }
+    //
+    //     current = new_node;
+    //
+    //     current->Print();
+    // }
 
-    std::shared_ptr<Node> current = root;
-    while(!current->IsTerminalState())
+    const shared_ptr<Game> game = make_shared<Game>();
+    game->print();
+
+    game->Assign<Human>(Symbol::X);
+    game->Assign<Bot>(Symbol::O);
+
+    while(game->game_over() == false)
     {
-        auto new_node = current->ApplyAction();
-        if (new_node == nullptr)
-            continue;
+        const auto current_player = game->active_player();
 
-        current = new_node;
+        const auto position = current_player->NextMove();
 
-        current->Print();
+        game->accept_move(*position);
+
+        game->print();
     }
 
     return 0;

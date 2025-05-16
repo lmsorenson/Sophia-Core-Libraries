@@ -5,11 +5,16 @@
 #include <iostream>
 
 using sophia::examples::tic_tac_toe::models::Human;
+using sophia::examples::tic_tac_toe::models::Board;
+using sophia::examples::tic_tac_toe::models::Position;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
+using std::pair;
+using std::string;
 
-std::shared_ptr<Action> process_player_move(const std::shared_ptr<Node> &node);
+std::shared_ptr<const Position> process_player_move(Symbol symbol);
+pair<int,int> parse_move(const std::string &input);
 bool is_valid(const std::string &input);
 
 Human::Human(const Symbol symbol)
@@ -18,36 +23,48 @@ Human::Human(const Symbol symbol)
     std::cout << "Creating human" << std::endl;
 }
 
-shared_ptr<Action> Human::GenerateAction(const shared_ptr<Node> &node) const
+std::shared_ptr<const Position> Human::NextMove() const
 {
-    std::shared_ptr<Action> next_action = nullptr;
+    std::shared_ptr<const Position> position = nullptr;
 
-    while (next_action == nullptr)
+    while (position == nullptr)
     {
-        next_action = process_player_move(node);
+        position = process_player_move(m_player_symbol_);
     }
 
-    return next_action;
+    return position;
 }
 
-std::shared_ptr<Action> process_player_move(const std::shared_ptr<Node> &node)
+std::shared_ptr<const Position> process_player_move(Symbol symbol)
 {
-    node->Print();
     std::string move;
     std::cout << "Enter your move : ";
     std::getline(std::cin, move);
 
-    std::shared_ptr<Action> action;
-    if (is_valid(move) && ((action = node->SelectAction(move))))
+    if (is_valid(move))
     {
-        action->Generate();
-        return action;
+        auto coordinates = parse_move(move);
+        const auto position = std::make_shared<Position>(coordinates, symbol);
+        return position;
     }
     else
     {
         std::cout << "Invalid input format! Expected letter + digit (e.g., A1).\n";
         return nullptr;
     }
+}
+
+pair<int, int> parse_move(const std::string &input)
+{
+    if (input.length() != 2)
+    {
+        throw std::invalid_argument("Invalid input format!");
+    }
+
+    int r = std::toupper(input[0]) - 'A' + 1;
+    int c = input[1] - '0';
+
+    return { r - 1, c - 1 };
 }
 
 bool is_valid(const std::string &input)

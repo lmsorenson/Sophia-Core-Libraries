@@ -1,9 +1,10 @@
-#include <tic_tac_toe/models/Bot.h>
-#include <tic_tac_toe/models/Board.h>
+#include <tic_tac_toe/models/bot.h>
+#include <tic_tac_toe/models/board.h>
 #include <monte_carlo/tree_search_algorithm.h>
 #include <iostream>
 
 using sophia::examples::tic_tac_toe::models::Bot;
+using sophia::examples::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tree_search_algorithm;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
@@ -15,7 +16,9 @@ Bot::Bot(const Symbol symbol)
     std::cout << "Creating bot" << std::endl;
 }
 
-shared_ptr<Action> Bot::GenerateAction(const shared_ptr<Node> &node) const
+std::shared_ptr<const Position> Bot::NextMove() const
 {
-    return tree_search_algorithm(node, 100);
+    shared_ptr<Action> best_action = tree_search_algorithm(node_, 100);
+
+    return nullptr;
 }

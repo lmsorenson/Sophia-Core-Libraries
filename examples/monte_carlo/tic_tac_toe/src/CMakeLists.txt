@@ -1,4 +1,6 @@
-add_library(sophia_monte_carlo_examples_tic_tac_toe)
+add_library(sophia_monte_carlo_examples_tic_tac_toe
+        ../include/tic_tac_toe/models/game.h
+        models/game.cpp)
 target_link_libraries(sophia_monte_carlo_examples_tic_tac_toe sophia_monte_carlo)
 target_include_directories(sophia_monte_carlo_examples_tic_tac_toe
         PUBLIC
