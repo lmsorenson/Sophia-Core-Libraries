@@ -18,23 +18,6 @@ int main()
 {
     std::cout << "Let's Play Tic Tac Toe!" << std::endl;
 
-    // const auto factory = std::make_shared<const TicTacToeFactory>();
-    // const auto root = factory->CreateNode("0");
-    //
-    // std::shared_ptr<Node> current = root;
-    // while(!current->IsTerminalState())
-    // {
-    //     auto new_node = current->ApplyAction();
-    //     if (new_node == nullptr)
-    //     {
-    //         continue;
-    //     }
-    //
-    //     current = new_node;
-    //
-    //     current->Print();
-    // }
-
     const shared_ptr<Game> game = make_shared<Game>();
     game->print();
 
@@ -46,6 +29,9 @@ int main()
         const auto current_player = game->active_player();
 
         const auto position = current_player->NextMove();
+
+        if (position == nullptr)
+            break;
 
         game->accept_move(*position);
 

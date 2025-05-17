@@ -21,6 +21,7 @@ namespace sophia::examples::tic_tac_toe::models
 
     private:
         std::shared_ptr<sophia::monte_carlo::models::Node> node_;
+        int iterations_ = 100;
     };
 }
 

@@ -24,7 +24,7 @@ std::shared_ptr<const Position> Bot::NextMove() const
         return nullptr;
     }
 
-    const shared_ptr<Action> best_action = tree_search_algorithm(node_, 100);
+    const shared_ptr<Action> best_action = tree_search_algorithm(node_, iterations_);
 
     auto t = best_action->Target();
 
@@ -34,6 +34,7 @@ std::shared_ptr<const Position> Bot::NextMove() const
 
 void Bot::Update(std::string message)
 {
+    std::cout << "Bot received message " << message << std::endl;
     if (node_ == nullptr)
     {
         const auto factory = std::make_shared<factories::TicTacToeFactory>(shared_from_this());
@@ -43,5 +44,6 @@ void Bot::Update(std::string message)
     const auto action = node_->SelectAction(message);
     node_ = action->Target();
 
-    std::cout << "Bot Updated..." << std::endl;
+    std::cout << "Child node " << node_->Name() << " selected." << std::endl;
+
 }
