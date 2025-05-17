@@ -49,7 +49,7 @@ void Game::accept_move(const Position move)
 
     if (new_state != nullptr)
     {
-        auto name = move.Name();
+        const auto name = move.Name();
         game_states_.push_back(new_state);
         notify(name);
     }

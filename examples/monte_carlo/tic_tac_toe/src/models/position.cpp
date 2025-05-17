@@ -40,13 +40,54 @@ Symbol Position::State() const
     return m_state_;
 }
 
-Position Position::WithState(Symbol new_state) const
+Position Position::WithState(const Symbol new_state) const
 {
     auto new_position = *this;
 
     new_position.m_state_ = new_state;
 
     return new_position;
+}
+
+std::pair<int, int> Position::parse_move(const std::string &input)
+{
+    if (input.length() != 2)
+    {
+        throw std::invalid_argument("Invalid input format!");
+    }
+
+    int r = std::toupper(input[0]) - 'A' + 1;
+    int c = input[1] - '0';
+
+    return { r - 1, c - 1 };
+}
+
+bool Position::is_valid(const std::string &input)
+{
+    bool is_valid = input.length() == 2;
+    is_valid = is_valid && std::isalpha(input[0]);
+    is_valid = is_valid && std::isdigit(input[1]);
+    if (!is_valid)
+    {
+        return is_valid;
+    }
+
+    const char row_letter = input[0];
+    int r = std::toupper(row_letter) - 'A' + 1;
+    is_valid = r >= 1 && r <= 3;
+    if (!is_valid)
+    {
+        return is_valid;
+    }
+
+    int c = input[1] - '0';
+    is_valid = c >= 1 && c <= 3;
+    if (!is_valid)
+    {
+        return is_valid;
+    }
+
+    return true;
 }
 
 

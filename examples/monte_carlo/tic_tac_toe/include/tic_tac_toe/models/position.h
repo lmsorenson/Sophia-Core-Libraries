@@ -17,6 +17,9 @@ namespace sophia::examples::tic_tac_toe::models
         [[nodiscard]] Symbol State() const;
         [[nodiscard]] Position WithState(Symbol new_state) const;
 
+        static std::pair<int,int> parse_move(const std::string &input);
+        static bool is_valid(const std::string &input);
+
     private:
         int m_row_index_ = 0;
         int m_column_index_ = 0;

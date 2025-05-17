@@ -11,7 +11,7 @@ namespace sophia::examples::tic_tac_toe::factories
     class TicTacToeFactory : public monte_carlo::factories::TreeFactoryBase<models::GameState, models::Position>
     {
     public:
-        TicTacToeFactory(models::const_player_ptr you);
+        explicit TicTacToeFactory(models::const_player_ptr you);
         ~TicTacToeFactory() override = default;
 
         [[nodiscard]] node_ptr CreateNode(std::string name) const override;
@@ -24,7 +24,6 @@ namespace sophia::examples::tic_tac_toe::factories
 
     private:
         models::const_player_ptr you_;
-        models::const_player_ptr opponent_;
     };
 }
 
