@@ -1,11 +1,12 @@
 #ifndef GAME_H
 #define GAME_H
 #include <tic_tac_toe/models/board.h>
+#include <tic_tac_toe/observer/subject.h>
 #include <memory>
 
 namespace sophia::examples::tic_tac_toe::models
 {
-    class Game
+    class Game : observer::Subject
     {
     public:
         Game();
@@ -23,6 +24,7 @@ namespace sophia::examples::tic_tac_toe::models
         std::shared_ptr<Player> x_ = nullptr;
         std::shared_ptr<Player> o_ = nullptr;
         std::vector<std::shared_ptr<const Board>> game_states_;
+
     };
 
     template<class TPlayer>
@@ -30,8 +32,14 @@ namespace sophia::examples::tic_tac_toe::models
     {
         switch (symbol)
         {
-            case Symbol::X: x_ = std::make_shared<TPlayer>(symbol); break;
-            case Symbol::O: o_ = std::make_shared<TPlayer>(symbol); break;
+            case Symbol::X:
+                x_ = std::make_shared<TPlayer>(symbol);
+                add_observer(x_);
+                break;
+            case Symbol::O:
+                o_ = std::make_shared<TPlayer>(symbol);
+                add_observer(o_);
+                break;
             default: throw std::invalid_argument("Invalid symbol");
         }
     }

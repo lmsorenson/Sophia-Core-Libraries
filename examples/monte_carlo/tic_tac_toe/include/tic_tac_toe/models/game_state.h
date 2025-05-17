@@ -11,8 +11,8 @@ namespace sophia::examples::tic_tac_toe::models
     class GameState
     {
     public:
-        explicit GameState(const_player_ptr you, const_player_ptr opponent, std::shared_ptr<const Board> board);
-        explicit GameState(const_player_ptr you, const_player_ptr opponent, std::shared_ptr<const Board> board, Symbol last_placed);
+        explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board);
+        explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board, Symbol last_placed);
 
         [[nodiscard]] std::shared_ptr<const GameState> ApplyMove(const Position& position) const;
         [[nodiscard]] std::shared_ptr<const Player> CurrentPlayer() const;
@@ -26,7 +26,6 @@ namespace sophia::examples::tic_tac_toe::models
     private:
         std::shared_ptr<const Board> m_board_;
         std::shared_ptr<const Player> m_you_;
-        std::shared_ptr<const Player> m_opponent_;
     };
 }
 

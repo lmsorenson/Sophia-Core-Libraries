@@ -2,7 +2,11 @@
 #define BOT_H
 #include <tic_tac_toe/models/player.h>
 #include <monte_carlo/models/node.h>
+#include <tic_tac_toe/observer/observer.h>
+
 #include <memory>
+
+#include "board.h"
 
 namespace sophia::examples::tic_tac_toe::models
 {
@@ -13,6 +17,7 @@ namespace sophia::examples::tic_tac_toe::models
         explicit Bot(Symbol symbol);
 
         [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
+        void Update() override;
 
     private:
         std::shared_ptr<sophia::monte_carlo::models::Node> node_;

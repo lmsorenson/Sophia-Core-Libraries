@@ -11,6 +11,7 @@ namespace sophia::examples::tic_tac_toe::models
         explicit Human(Symbol symbol);
 
         [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
+        void Update() override;
     };
 }
 

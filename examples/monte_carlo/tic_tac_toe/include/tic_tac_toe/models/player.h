@@ -3,10 +3,11 @@
 #include <memory>
 #include <tic_tac_toe/models/position.h>
 #include <tic_tac_toe/enums/symbol.h>
+#include <tic_tac_toe/observer/observer.h>
 
 namespace sophia::examples::tic_tac_toe::models
 {
-    class Player
+    class Player : public std::enable_shared_from_this<Player>, public observer::Observer
     {
     public:
         explicit Player(Symbol symbol);

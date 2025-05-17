@@ -23,8 +23,6 @@ namespace sophia::examples::tic_tac_toe::models
 
         action_ptr SelectAction(std::string action_name) override;
 
-        node_ptr ApplyAction() override;
-
         void Print() const override;
     };
 }

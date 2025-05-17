@@ -2,6 +2,7 @@
 #include <tic_tac_toe/models/board.h>
 #include <monte_carlo/tree_search_algorithm.h>
 #include <iostream>
+#include <tic_tac_toe/factories/tic_tac_toe_factory.h>
 
 using sophia::examples::tic_tac_toe::models::Bot;
 using sophia::examples::tic_tac_toe::models::Position;
@@ -11,14 +12,29 @@ using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 
 Bot::Bot(const Symbol symbol)
-    : Player(symbol)
+: Player(symbol)
 {
     std::cout << "Creating bot" << std::endl;
 }
 
 std::shared_ptr<const Position> Bot::NextMove() const
 {
+    if (node_ == nullptr)
+    {
+        return nullptr;
+    }
+
     shared_ptr<Action> best_action = tree_search_algorithm(node_, 100);
 
     return nullptr;
+}
+
+void Bot::Update()
+{
+    if (node_ == nullptr)
+    {
+        const auto factory = std::make_shared<factories::TicTacToeFactory>(shared_from_this());
+        node_ = factory->CreateNode("root");
+    }
+    std::cout << "Bot Updated..." << std::endl;
 }

@@ -24,7 +24,7 @@ Symbol Alternate(const Symbol last_placed)
 }
 
 State::State(const string &name, const shared_ptr<const TreeFactoryBase<GameState, Position>> &interface)
-    : NodeBase(name, GameState(nullptr, nullptr, nullptr), interface)
+    : NodeBase(name, GameState(nullptr, nullptr), interface)
 {
 }
 
@@ -100,15 +100,6 @@ Node::action_ptr State::SelectAction(const std::string action_name)
     {
         return matching_actions.front();
     }
-
-    return nullptr;
-}
-
-Node::node_ptr State::ApplyAction()
-{
-    const auto player = m_state_.CurrentPlayer();
-
-    auto p = player->NextMove();
 
     return nullptr;
 }

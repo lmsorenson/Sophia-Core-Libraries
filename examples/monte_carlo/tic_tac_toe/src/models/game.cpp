@@ -50,6 +50,7 @@ void Game::accept_move(const Position move)
     if (new_state != nullptr)
     {
         game_states_.push_back(new_state);
+        notify();
     }
 }
 

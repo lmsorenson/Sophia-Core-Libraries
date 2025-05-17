@@ -1,6 +1,5 @@
 #include <tic_tac_toe/models/board.h>
 #include <tic_tac_toe/models/position.h>
-#include <tic_tac_toe/models/bot.h>
 #include <unordered_set>
 #include <iostream>
 #include <vector>

@@ -1,6 +1,8 @@
 add_library(sophia_monte_carlo_examples_tic_tac_toe
         ../include/tic_tac_toe/models/game.h
-        models/game.cpp)
+        models/game.cpp
+        ../include/tic_tac_toe/observer/subject.h
+        observer/observer.cpp)
 target_link_libraries(sophia_monte_carlo_examples_tic_tac_toe sophia_monte_carlo)
 target_include_directories(sophia_monte_carlo_examples_tic_tac_toe
         PUBLIC
@@ -10,6 +12,7 @@ target_include_directories(sophia_monte_carlo_examples_tic_tac_toe
 
 add_subdirectory(factories)
 add_subdirectory(models)
+add_subdirectory(observer)
 
 add_executable(tic_tac_toe_game main.cpp)
 target_link_libraries(tic_tac_toe_game
