@@ -8,8 +8,8 @@ void Subject::add_observer(const std::shared_ptr<Observer> &observer)
     observers_.push_back(observer);
 }
 
-void Subject::notify() const
+void Subject::notify(std::string message) const
 {
     for (const auto& observer : observers_)
-        observer->Update();
+        observer->Update(message);
 }

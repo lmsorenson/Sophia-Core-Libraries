@@ -17,7 +17,7 @@ namespace sophia::examples::tic_tac_toe::models
         explicit Bot(Symbol symbol);
 
         [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
-        void Update() override;
+        void Update(std::string message) override;
 
     private:
         std::shared_ptr<sophia::monte_carlo::models::Node> node_;

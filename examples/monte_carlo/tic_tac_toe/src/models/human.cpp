@@ -35,9 +35,9 @@ std::shared_ptr<const Position> Human::NextMove() const
     return position;
 }
 
-void Human::Update()
+void Human::Update(const std::string message)
 {
-    std::cout << "Human Updated..." << std::endl;
+    std::cout << "human received Message: " << message << std::endl;
 }
 
 std::shared_ptr<const Position> process_player_move(Symbol symbol)

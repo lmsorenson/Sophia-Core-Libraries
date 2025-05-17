@@ -10,7 +10,7 @@ namespace sophia::examples::tic_tac_toe::observer
     {
     public:
         void add_observer(const std::shared_ptr<Observer>& observer);
-        void notify() const;
+        void notify(std::string message) const;
 
     private:
         std::vector<std::shared_ptr<Observer>> observers_;

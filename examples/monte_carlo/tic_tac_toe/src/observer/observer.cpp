@@ -2,6 +2,3 @@
 
 using sophia::examples::tic_tac_toe::observer::Observer;
 
-void Observer::Update()
-{
-}

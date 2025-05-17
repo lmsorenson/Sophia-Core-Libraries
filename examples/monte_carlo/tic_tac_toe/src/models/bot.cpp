@@ -24,17 +24,24 @@ std::shared_ptr<const Position> Bot::NextMove() const
         return nullptr;
     }
 
-    shared_ptr<Action> best_action = tree_search_algorithm(node_, 100);
+    const shared_ptr<Action> best_action = tree_search_algorithm(node_, 100);
 
+    auto t = best_action->Target();
+
+    std::cout << t->Name() << std::endl;
     return nullptr;
 }
 
-void Bot::Update()
+void Bot::Update(std::string message)
 {
     if (node_ == nullptr)
     {
         const auto factory = std::make_shared<factories::TicTacToeFactory>(shared_from_this());
         node_ = factory->CreateNode("root");
     }
+
+    const auto action = node_->SelectAction(message);
+    node_ = action->Target();
+
     std::cout << "Bot Updated..." << std::endl;
 }
