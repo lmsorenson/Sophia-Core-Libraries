@@ -10,7 +10,6 @@ GameState::GameState(const_player_ptr you, const_player_ptr opponent, std::share
     : m_you_(std::move(you))
     , m_opponent_(std::move(opponent))
     , m_board_(std::move(board))
-    , last_placed_(Symbol::None)
 {
 }
 
@@ -18,7 +17,6 @@ GameState::GameState(const_player_ptr you, const_player_ptr opponent, std::share
     : m_you_(std::move(you))
     , m_opponent_(std::move(opponent))
     , m_board_(std::move(board))
-    , last_placed_(last_placed)
 {
 }
 
@@ -31,17 +29,18 @@ std::shared_ptr<const GameState> GameState::ApplyMove(const Position &position) 
 
 std::shared_ptr<const Player> GameState::CurrentPlayer() const
 {
-    if (last_placed_ == Symbol::None && m_you_->symbol() == Symbol::X)
+    auto last_placed = m_board_->LastPlaced();
+    if (last_placed == Symbol::None && m_you_->symbol() == Symbol::X)
     {
         return m_you_;
     }
 
-    if (last_placed_ == Symbol::None && m_opponent_->symbol() == Symbol::X)
+    if (last_placed == Symbol::None && m_opponent_->symbol() == Symbol::X)
     {
         return m_opponent_;
     }
 
-    if (m_you_->symbol() != last_placed_)
+    if (m_you_->symbol() != last_placed)
     {
         return m_you_;
     }
@@ -66,7 +65,7 @@ std::vector<std::shared_ptr<const sophia::examples::tic_tac_toe::models::Positio
 
 Symbol GameState::LastPlaced() const
 {
-    return last_placed_;
+    return m_board_->LastPlaced();
 }
 
 Board GameState::GetBoard() const

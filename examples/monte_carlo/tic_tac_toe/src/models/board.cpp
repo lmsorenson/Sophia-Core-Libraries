@@ -34,11 +34,13 @@ Board::Board()
 
 Board::Board(const Board &other)
 : m_tiles_(other.m_tiles_)
+, last_placed_(other.last_placed_)
 {
 }
 
 Board::Board(Board &&other) noexcept
 : m_tiles_(std::move(other.m_tiles_))
+, last_placed_(other.last_placed_)
 {
 }
 
@@ -47,6 +49,7 @@ Board & Board::operator=(const Board &other)
     if (this == &other)
         return *this;
     m_tiles_ = other.m_tiles_;
+    last_placed_ = other.last_placed_;
     return *this;
 }
 
@@ -55,6 +58,7 @@ Board & Board::operator=(Board &&other) noexcept
     if (this == &other)
         return *this;
     m_tiles_ = std::move(other.m_tiles_);
+    last_placed_ = other.last_placed_;
     return *this;
 }
 
@@ -76,6 +80,12 @@ void Board::SetPosition(const Position &new_position)
 
     auto placed_state = new_position.State();
     m_tiles_[row][column] = make_shared<Position>(std::pair( row, column ), placed_state);
+    last_placed_ = placed_state;
+}
+
+Symbol Board::LastPlaced() const
+{
+    return last_placed_;
 }
 
 vector<shared_ptr<const Position>> Board::GetOpenPositions() const

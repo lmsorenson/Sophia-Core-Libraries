@@ -25,6 +25,7 @@ namespace sophia::examples::tic_tac_toe::models
         Board & operator=(Board &&other) noexcept;
 
         void SetPosition(const Position &new_position);
+        [[nodiscard]] Symbol LastPlaced() const;
         [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
         [[nodiscard]] std::shared_ptr<const Board> WithMove(const Position& position) const;
         [[nodiscard]] std::vector<std::vector<Symbol>> GetRow(LineType line_type) const;
@@ -33,6 +34,7 @@ namespace sophia::examples::tic_tac_toe::models
 
     private:
         std::vector<std::vector<std::shared_ptr<const Position>>> m_tiles_;
+        Symbol last_placed_ = Symbol::None;
     };
 }
 

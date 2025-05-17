@@ -1,6 +1,7 @@
 #include <tic_tac_toe/models/game.h>
 #include <tic_tac_toe/models/board.h>
 #include <memory>
+#include <tic_tac_toe/models/game_state.h>
 
 using sophia::examples::tic_tac_toe::models::Game;
 using sophia::examples::tic_tac_toe::models::const_player_ptr;
@@ -8,15 +9,18 @@ using std::make_shared;
 using std::shared_ptr;
 
 Game::Game()
-: board_(make_shared<Board>())
 {
-}
-
+    game_states_.push_back(make_shared<Board>());
+};
 Game::~Game() = default;
 
 bool Game::game_over() const
 {
-    return board_->Winner() != nullptr;
+    if (game_states_.empty()) return false;
+
+    const auto current_state = game_states_.back();
+
+    return current_state->Winner() != nullptr;
 }
 
 const_player_ptr Game::active_player() const
@@ -31,22 +35,29 @@ const_player_ptr Game::active_player() const
     switch (current_state->LastPlaced())
     {
         case Symbol::X: return o_;
-        case Symbol::O: return x_;
-        default: throw std::runtime_error("Last Placed symbol is not a valid symbol.");
+        default: case Symbol::O: return x_;
     }
 }
 
 void Game::accept_move(const Position move)
 {
-    auto new_board = board_->WithMove(move);
+    if (game_states_.empty()) return;
 
-    if (new_board != nullptr)
+    const auto current_state = game_states_.back();
+
+    const auto new_state = current_state->WithMove(move);
+
+    if (new_state != nullptr)
     {
-        board_ = new_board;
+        game_states_.push_back(new_state);
     }
 }
 
 void Game::print() const
 {
-    board_->Print();
+    if (game_states_.empty()) return;
+
+    const auto current_state = game_states_.back();
+
+    current_state->Print();
 }

@@ -6,6 +6,8 @@
 
 namespace sophia::examples::tic_tac_toe::models
 {
+    /// A state refers to the state from one player's perspective.
+    /// This is for the monte carlo engine.
     class GameState
     {
     public:
@@ -25,7 +27,6 @@ namespace sophia::examples::tic_tac_toe::models
         std::shared_ptr<const Board> m_board_;
         std::shared_ptr<const Player> m_you_;
         std::shared_ptr<const Player> m_opponent_;
-        Symbol last_placed_ = Symbol::None;
     };
 }
 

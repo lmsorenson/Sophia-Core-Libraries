@@ -1,7 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
 #include <tic_tac_toe/models/board.h>
-#include <tic_tac_toe/models/game_state.h>
 #include <memory>
 
 namespace sophia::examples::tic_tac_toe::models
@@ -21,10 +20,9 @@ namespace sophia::examples::tic_tac_toe::models
         void print() const;
 
     private:
-        std::shared_ptr<const Board> board_ = nullptr;
         std::shared_ptr<Player> x_ = nullptr;
         std::shared_ptr<Player> o_ = nullptr;
-        std::vector<std::shared_ptr<GameState>> game_states_;
+        std::vector<std::shared_ptr<const Board>> game_states_;
     };
 
     template<class TPlayer>

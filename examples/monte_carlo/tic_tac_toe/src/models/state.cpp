@@ -72,6 +72,7 @@ bool State::IsTerminalState() const
 double State::Value() const
 {
     const auto board = m_state_.GetBoard();
+
     const auto you = m_state_.You();
 
     return you->Value(board);
@@ -107,7 +108,7 @@ Node::node_ptr State::ApplyAction()
 {
     const auto player = m_state_.CurrentPlayer();
 
-    player->NextMove();
+    auto p = player->NextMove();
 
     return nullptr;
 }
