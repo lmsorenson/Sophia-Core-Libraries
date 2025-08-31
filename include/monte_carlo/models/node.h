@@ -48,7 +48,7 @@ namespace sophia::monte_carlo::models
 
         action_ref m_parent_action_;
         std::vector<action_ptr> m_child_action_;
-        int m_visit_count_ = 0;
+        unsigned long m_visit_count_ = 0;
         double m_total_reward_ = 0;
 
     private:

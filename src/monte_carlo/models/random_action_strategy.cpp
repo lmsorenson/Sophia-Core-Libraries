@@ -19,6 +19,8 @@ shared_ptr<Action> RandomRolloutStrategy::select_action(vector<shared_ptr<Action
     std::uniform_int_distribution<size_t> dist(0, actions.size() - 1);
     const auto& random_action = actions[dist(gen)];
 
+    std::cout << "Rollout " << random_action->Name() << std::endl;
+
     return random_action;
 }
 

@@ -80,6 +80,7 @@ double Node::Rollout()
         << "Rollout " << Name()
         << " is terminal state."
         << std::endl;
+        this->Print();
         return this->Value();
     }
 
@@ -107,12 +108,24 @@ double Node::Rollout()
 
 void Node::Backpropagate(const double reward)
 {
+    if (m_visit_count_ + 1 > std::numeric_limits<unsigned long>::max())
+    {
+        throw std::runtime_error("Node::Backpropagate");
+    }
+
+    if (m_total_reward_ + reward > std::numeric_limits<double>::max()
+        || m_total_reward_ + reward < std::numeric_limits<double>::lowest())
+    {
+        throw std::runtime_error("Node::Backpropagate");
+    }
+
     m_total_reward_ += reward;
     m_visit_count_++;
+
     std::cout << Name() << ", t=" << m_total_reward_ << ", n=" << m_visit_count_ << std::endl;
 
     std::shared_ptr<Node> node = nullptr;
-    if (auto sp = m_parent_action_.lock())
+    if (const auto sp = m_parent_action_.lock())
     {
         node = sp->Source();
         node->Backpropagate(reward);
