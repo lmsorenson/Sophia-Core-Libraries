@@ -15,6 +15,7 @@ namespace sophia::monte_carlo::mocks
     using models::Node;
     using factories::TreeFactoryBase;
     using std::shared_ptr;
+    using std::string;
 
     class MockAction : public ActionBase<bool, int>
     {
@@ -23,6 +24,7 @@ namespace sophia::monte_carlo::mocks
         const std::shared_ptr<const TreeFactoryBase<bool, int>> &factory);
         ~MockAction() override = default;
 
+        MOCK_METHOD(string, Name, (), (const, override));
         MOCK_METHOD(void, Generate, (), (override));
         MOCK_METHOD(shared_ptr<Node>, Target, (), (const, override));
 

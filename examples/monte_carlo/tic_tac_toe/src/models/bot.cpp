@@ -46,12 +46,14 @@ void Bot::Update(const std::string message)
 {
     std::cout << "Bot received message " << message << std::endl;
 
+    // If the node is empty create a new one.
     if (node_ == nullptr)
     {
         const auto factory = std::make_shared<factories::TicTacToeFactory>(shared_from_this());
         node_ = factory->CreateNode("root");
     }
 
+    // Select the message that is
     const auto action = node_->SelectAction(message);
     node_ = action->Target();
 

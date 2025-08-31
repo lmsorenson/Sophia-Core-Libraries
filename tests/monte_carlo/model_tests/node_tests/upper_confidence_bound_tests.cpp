@@ -35,7 +35,7 @@ namespace sophia::monte_carlo::model_tests
         std::dynamic_pointer_cast<MockNode>(s2)->SetTotalReward(20);
         std::dynamic_pointer_cast<MockNode>(s2)->SetVisitCount(1);
 
-        const auto ucb = s2->UpperConfidenceBound();
+        const auto ucb = s2->UpperConfidenceBound(3);
 
         EXPECT_EQ(ucb, 20);
     }

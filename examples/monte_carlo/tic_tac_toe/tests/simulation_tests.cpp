@@ -2,6 +2,7 @@
 #include <tic_tac_toe/factories/tic_tac_toe_factory.h>
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/tree_search_algorithm.h>
+#include <tic_tac_toe/models/bot.h>
 
 namespace sophia::examples::tic_tac_toe::model_tests
 {
@@ -16,7 +17,8 @@ namespace sophia::examples::tic_tac_toe::model_tests
 
     TEST_F(TicTacToeModelsFixture, simulation_test)
     {
-        const auto factory = make_shared<factories::TicTacToeFactory>();
+        auto bot = std::make_shared<models::Bot>(Symbol::X);
+        const auto factory = make_shared<factories::TicTacToeFactory>(bot);
 
         auto node = factory->CreateNode("S0");
 
