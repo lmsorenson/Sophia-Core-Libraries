@@ -16,7 +16,7 @@ namespace sophia::examples::tic_tac_toe::model_tests
 
     TEST_F(TicTacToeModelsFixture, test)
     {
-        auto bot = std::make_shared<models::Bot>(Symbol::X);
+        auto bot = std::make_shared<models::Bot>(Symbol::X, 1);
         const auto factory = make_shared<factories::TicTacToeFactory>(bot);
 
         auto node = factory->CreateNode("S0");
