@@ -20,7 +20,7 @@ Bot::Bot(const Symbol symbol, const double difficulty)
         throw std::invalid_argument("Difficulty must be a percentage between 0 and 1.");
     }
 
-    iterations_ = std::max(1, static_cast<int>(std::round(10000 * difficulty)));
+    iterations_ = std::max(1, static_cast<int>(std::round(20000 * difficulty)));
 }
 
 std::shared_ptr<const Position> Bot::NextMove() const
@@ -55,11 +55,14 @@ void Bot::Update(const std::string message)
     // If the node is empty create a new one.
     if (node_ == nullptr)
     {
+        std::cout << "initializing the node" << std::endl;
         const auto factory = std::make_shared<factories::TicTacToeFactory>(shared_from_this());
         node_ = factory->CreateNode("root");
     }
 
-    // Select the message that is
+    std::cout << "Child node " << node_->Name() << " active." << std::endl;
+
+    // Select the message
     const auto action = node_->SelectAction(message);
     node_ = action->Target();
 

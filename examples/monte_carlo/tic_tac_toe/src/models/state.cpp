@@ -86,7 +86,8 @@ Node::action_ptr State::SelectAction(const std::string action_name)
         c = static_cast<char>(std::toupper(c));
     }
 
-    const auto actions = GetAvailableActions();
+    const vector<action_ptr> actions = GetAvailableActions();
+
     std::vector<action_ptr> matching_actions;
     for (const auto& action : actions)
     {
