@@ -12,8 +12,8 @@ namespace sophia::examples::tic_tac_toe::models
         Game();
         ~Game();
 
-        template<class TPlayer>
-        void Assign(Symbol symbol);
+        template<class TPlayer, typename... Args>
+        void Assign(Symbol symbol, Args... args);
 
         [[nodiscard]] bool game_over() const;
         [[nodiscard]] const_player_ptr active_player() const;
@@ -27,17 +27,17 @@ namespace sophia::examples::tic_tac_toe::models
 
     };
 
-    template<class TPlayer>
-    void Game::Assign(Symbol symbol)
+    template<class TPlayer, typename... Args>
+    void Game::Assign(Symbol symbol, Args ... args)
     {
         switch (symbol)
         {
             case Symbol::X:
-                x_ = std::make_shared<TPlayer>(symbol);
+                x_ = std::make_shared<TPlayer>(symbol, args...);
                 add_observer(x_);
                 break;
             case Symbol::O:
-                o_ = std::make_shared<TPlayer>(symbol);
+                o_ = std::make_shared<TPlayer>(symbol, args...);
                 add_observer(o_);
                 break;
             default: throw std::invalid_argument("Invalid symbol");

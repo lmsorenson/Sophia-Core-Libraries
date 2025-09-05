@@ -22,7 +22,7 @@ int main()
     game->print();
 
     game->Assign<Human>(Symbol::X);
-    game->Assign<Bot>(Symbol::O);
+    game->Assign<Bot>(Symbol::O, 0.9);
 
     while(game->game_over() == false)
     {

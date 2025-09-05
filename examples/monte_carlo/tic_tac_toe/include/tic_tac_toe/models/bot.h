@@ -14,14 +14,14 @@ namespace sophia::examples::tic_tac_toe::models
     {
 
     public:
-        explicit Bot(Symbol symbol);
+        explicit Bot(Symbol symbol, double difficulty);
 
         [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
         void Update(std::string message) override;
 
     private:
         std::shared_ptr<sophia::monte_carlo::models::Node> node_;
-        int iterations_ = 50;
+        int iterations_;
     };
 }
 

@@ -11,10 +11,16 @@ using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 
-Bot::Bot(const Symbol symbol)
+Bot::Bot(const Symbol symbol, const double difficulty)
 : Player(symbol)
 {
     std::cout << "Creating bot" << std::endl;
+    if (difficulty > 1 || difficulty < 0)
+    {
+        throw std::invalid_argument("Difficulty must be a percentage between 0 and 1.");
+    }
+
+    iterations_ = std::max(1, static_cast<int>(std::round(10000 * difficulty)));
 }
 
 std::shared_ptr<const Position> Bot::NextMove() const
