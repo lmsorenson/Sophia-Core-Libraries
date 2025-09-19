@@ -28,12 +28,12 @@ TicTacToeFactory::TicTacToeFactory(models::const_player_ptr you)
 shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name) const
 {
     auto board = make_shared<Board>();
-    auto game_state = make_shared<GameState>(you_, board);
+    const auto game_state = make_shared<GameState>(you_, board);
 
     return make_shared<State>(name, *game_state, shared_from_this());
 }
 
-shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name, models::GameState game_state) const
+shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name, GameState game_state) const
 {
     return make_shared<State>(name, game_state, shared_from_this());
 }

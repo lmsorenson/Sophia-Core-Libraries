@@ -30,9 +30,33 @@ namespace sophia::monte_carlo::factories
     public:
         virtual ~TreeFactoryBase() = default;
 
+        /**
+         * Creates a new Node.
+         * @param name the name of the new Node being created.
+         * @returns a shared pointer to a Node.
+         */
         [[nodiscard]] virtual node_ptr CreateNode(std::string name) const = 0;
+
+        /**
+         * Creates a new Node.
+         * @param name the name of the new Node being created.
+         * @param state the state represented by the Node being created.
+         * @returns a shared pointer to a Node.
+         */
         [[nodiscard]] virtual node_ptr CreateNode(std::string name, TState state) const = 0;
+
+        /**
+         * Creates a new Action.
+         * @param node the source node for the action being created.
+         * @param change the change being applied to the source node.
+         * @returns a shared pointer to a Node.
+         */
         [[nodiscard]] virtual action_ptr CreateAction(node_base_ptr node, TChange change) const = 0;
+
+        /**
+         * Creates a new Strategy.
+         * @returns a shared pointer to a Rollout Strategy.
+         */
         [[nodiscard]] virtual rollout_strategy_ptr CreateStrategy() const = 0;
     };
 }
