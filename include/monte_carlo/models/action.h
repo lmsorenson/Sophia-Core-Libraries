@@ -1,6 +1,6 @@
 #ifndef ACTION_H
 #define ACTION_H
-#include <iostream>
+
 #include <memory>
 #include <ostream>
 
@@ -10,16 +10,18 @@ namespace sophia::monte_carlo::models
 
     class Action : public std::enable_shared_from_this<Action>
     {
+    protected:
+        using node_ptr = std::shared_ptr<Node>;
+
     public:
-        Action(const std::shared_ptr<Node>& source);
+        Action() = default;
         virtual ~Action() = default;
 
-        [[nodiscard]] double UpperConfidenceBound() const;
-        [[nodiscard]] std::shared_ptr<Node> Source() const;
-        [[nodiscard]] virtual std::shared_ptr<Node> Target() const = 0;
-
-    private:
-        std::weak_ptr<Node> m_source_node_;
+        virtual std::string Name() const = 0;
+        [[nodiscard]] double UpperConfidenceBound(int c) const;
+        virtual void Generate() = 0;
+        [[nodiscard]] virtual node_ptr Source() const = 0;
+        [[nodiscard]] virtual node_ptr Target() const = 0;
     };
 }
 

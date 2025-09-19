@@ -6,14 +6,14 @@
 using sophia::monte_carlo::mocks::MockNode;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
-using sophia::monte_carlo::factories::ITreeFactory;
+using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::vector;
 using std::shared_ptr;
 using std::string;
 using testing::Return;
 
-MockNode::MockNode(const string& name, const shared_ptr<const ITreeFactory>& interface)
-    : Node(std::move(name), std::move(interface))
+MockNode::MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface)
+    : NodeBase(std::move(name), true, std::move(interface))
 {
 }
 
@@ -24,7 +24,8 @@ void MockNode::Setup(const vector<shared_ptr<Node>> &node_expansion )
 
     for(const auto& node : node_expansion)
     {
-        auto action = m_factory_->CreateAction(shared_from_this());
+        auto _this_ = std::static_pointer_cast<MockNode>(shared_from_this());
+        auto action = m_factory_->CreateAction(_this_, 1);
         const auto ma = std::dynamic_pointer_cast<MockAction>(action);
         ma->Setup(node);
         actions.push_back(action);

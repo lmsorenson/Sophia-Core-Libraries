@@ -2,12 +2,18 @@
 #define TIC_TAC_TOE_BOARD_H
 
 #include <vector>
-#include <models/position.h>
+#include <tic_tac_toe/models/player.h>
+#include <tic_tac_toe/models/position.h>
+#include <tic_tac_toe/enums/line_type.h>
 #include <memory>
+
+
 
 namespace sophia::examples::tic_tac_toe::models
 {
     class Position;
+    using player_ptr = std::shared_ptr<Player>;
+    using const_player_ptr = std::shared_ptr<const Player>;
 
     class Board
     {
@@ -19,11 +25,16 @@ namespace sophia::examples::tic_tac_toe::models
         Board & operator=(Board &&other) noexcept;
 
         void SetPosition(const Position &new_position);
+        [[nodiscard]] Symbol LastPlaced() const;
         [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
         [[nodiscard]] std::shared_ptr<const Board> WithMove(const Position& position) const;
+        [[nodiscard]] std::vector<std::vector<Symbol>> GetRow(LineType line_type) const;
+        [[nodiscard]] std::shared_ptr<std::pair<Symbol, bool>> Winner() const;
+        void Print() const;
 
     private:
         std::vector<std::vector<std::shared_ptr<const Position>>> m_tiles_;
+        Symbol last_placed_ = Symbol::None;
     };
 }
 

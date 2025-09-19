@@ -1,6 +1,6 @@
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
-#include <monte_carlo/models/action_select_strategy_interface.h>
+#include <monte_carlo/models/rollout_strategy_interface.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <cmath>
 #include <utility>
@@ -8,55 +8,19 @@
 
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
-using sophia::monte_carlo::factories::ITreeFactory;
+using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::string;
 using std::shared_ptr;
 using std::vector;
 
-Node::Node(string name, shared_ptr<const ITreeFactory> factory)
+Node::Node(string name)
     : m_name_(std::move(name))
-    , m_factory_(std::move(factory))
 {
 }
 
-void Node::SetParent(std::shared_ptr<Action> action)
+void Node::SetParent(const std::shared_ptr<Action>& action)
 {
-    m_parent_action_ = std::move(action);
-}
-
-
-double Node::UpperConfidenceBound() const
-{
-    const auto V = m_total_reward_ / m_visit_count_;
-    int N = 0;
-
-    if (auto sp = m_parent_action_.lock())
-    {
-        const auto parent = sp->Source();
-        N = parent->VisitCount();
-    }
-
-    const int n = m_visit_count_;
-
-    if (n == 0)
-        return std::numeric_limits<double>::infinity();
-
-    constexpr int c = 2;
-
-    const auto logN = std::log(N);
-    const auto sql = std::sqrt(logN/n);
-
-    return V + c * sql;
-}
-
-bool Node::IsLeafNode() const
-{
-    return m_child_action_.empty();
-}
-
-bool Node::HasBeenSampled() const
-{
-    return m_visit_count_ > 0;
+    m_parent_action_ = action;
 }
 
 std::shared_ptr<Action> Node::SelectBestAction() const
@@ -66,7 +30,7 @@ std::shared_ptr<Action> Node::SelectBestAction() const
 
     for (const auto& child : m_child_action_)
     {
-        const double current_score = child->UpperConfidenceBound();
+        const double current_score = child->UpperConfidenceBound(2);
         auto target = child->Target();
         std::cout<< "UCB(" << target->Name() << ") = " << current_score
         << std::endl;
@@ -89,9 +53,10 @@ std::shared_ptr<Action> Node::SelectBestAction() const
 
 shared_ptr<Node> Node::Expand()
 {
-    const vector<shared_ptr<Action>> child_nodes = GetAvailableActions();
+    const vector<shared_ptr<Action>> child_nodes = this->GetAvailableActions();
     for(const auto& child : child_nodes)
     {
+        child->Generate();
         auto target = child->Target();
         std::cout << Name() << " adding child " << target->Name() << std::endl;
         m_child_action_.push_back(child);
@@ -113,16 +78,25 @@ double Node::Rollout()
     {
         std::cout
         << "Rollout " << Name()
-        << " is terminal state. value: " << this->Value()
+        << " is terminal state."
         << std::endl;
+        this->Print();
         return this->Value();
     }
 
-    std::cout << "Rollout " << Name() << " is NOT terminal state." << std::endl;
+    auto select_strategy = RolloutStrategy();
 
-    auto select_strategy = m_factory_->CreateStrategy();
+    vector<shared_ptr<Action>> actions;
+    if (m_child_action_.empty())
+    {
+        actions = this->GetAvailableActions();
+    }
+    else
+    {
+        actions = m_child_action_;
+    }
 
-    if (const auto selected_action = select_strategy->select_action(m_child_action_))
+    if (const auto selected_action = select_strategy->select_action(actions))
     {
         const auto new_node = selected_action->Target();
 
@@ -134,12 +108,24 @@ double Node::Rollout()
 
 void Node::Backpropagate(const double reward)
 {
+    if (m_visit_count_ + 1 > std::numeric_limits<unsigned long>::max())
+    {
+        throw std::runtime_error("Node::Backpropagate");
+    }
+
+    if (m_total_reward_ + reward > std::numeric_limits<double>::max()
+        || m_total_reward_ + reward < std::numeric_limits<double>::lowest())
+    {
+        throw std::runtime_error("Node::Backpropagate");
+    }
+
     m_total_reward_ += reward;
     m_visit_count_++;
+
     std::cout << Name() << ", t=" << m_total_reward_ << ", n=" << m_visit_count_ << std::endl;
 
     std::shared_ptr<Node> node = nullptr;
-    if (auto sp = m_parent_action_.lock())
+    if (const auto sp = m_parent_action_.lock())
     {
         node = sp->Source();
         node->Backpropagate(reward);
@@ -151,14 +137,75 @@ std::string Node::Name() const
     return m_name_;
 }
 
+double Node::UpperConfidenceBound(const int c) const
+{
+    const auto V = m_total_reward_ / m_visit_count_;
+    int N = 0;
+
+    if (const auto sp = m_parent_action_.lock())
+    {
+        const auto parent = sp->Source();
+        N = parent->VisitCount();
+    }
+
+    const int n = m_visit_count_;
+    if (n == 0)
+    {
+        return std::numeric_limits<double>::infinity();
+    }
+
+    const auto logN = std::log(N);
+    const auto sql = std::sqrt(logN/n);
+
+    return V + c * sql;
+}
+
+bool Node::IsLeafNode() const
+{
+    return m_child_action_.empty();
+}
+
+bool Node::HasBeenSampled() const
+{
+    return m_visit_count_ > 0;
+}
+
 int Node::VisitCount() const
 {
     return m_visit_count_;
 }
 
-int Node::TotalReward() const
+double Node::TotalReward() const
 {
     return m_total_reward_;
+}
+
+std::shared_ptr<Action> Node::SelectAction()
+{
+    double best_score = 0;
+    shared_ptr<Action> best_child = nullptr;
+
+    for (const auto& child : m_child_action_)
+    {
+        const double current_score = child->UpperConfidenceBound(0);
+        const auto target = child->Target();
+        std::cout<< "UCB(" << target->Name() << ") = " << current_score
+        << std::endl;
+
+        if (best_child == nullptr)
+        {
+            best_score = current_score;
+            best_child = child;
+        }
+
+        if (current_score > best_score)
+        {
+            best_score = current_score;
+            best_child = child;
+        }
+    }
+
+    return best_child;
 }
 
 

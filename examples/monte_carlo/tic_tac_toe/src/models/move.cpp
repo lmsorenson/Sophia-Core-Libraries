@@ -1,17 +1,36 @@
-#include <models/move.h>
+#include <tic_tac_toe/models/move.h>
+
+#include <utility>
+#include <monte_carlo/factories/tree_factory_interface.h>
 
 using sophia::examples::tic_tac_toe::models::Move;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
+using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::shared_ptr;
 
-Move::Move(const shared_ptr<Node> &source)
-    : Action(source)
+Move::Move(const node_base_ptr &source, const Position change, const_factory_ptr factory)
+: ActionBase(source, change, std::move(factory))
 {
+
 }
 
-shared_ptr<Node> Move::Target() const
+std::string Move::Name() const
 {
-    return nullptr;
+    return m_change_.Name();
+}
+
+void Move::Generate()
+{
+    if (const auto source = m_source_.lock())
+    {
+        const auto game_state = source->GetState();
+
+        const auto new_state = game_state.ApplyMove(m_change_);
+
+        const std::string name = m_change_.Name();
+
+        m_target_ = m_factory_->CreateNode(name, *new_state);
+    }
 }
 

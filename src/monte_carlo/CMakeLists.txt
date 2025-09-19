@@ -3,4 +3,7 @@ add_library(sophia_monte_carlo
 
 add_subdirectory(models)
 
-target_include_directories(sophia_monte_carlo PUBLIC ../../include)
+target_include_directories(sophia_monte_carlo
+        PUBLIC
+        ${CMAKE_SOURCE_DIR}/include
+        ${CMAKE_SOURCE_DIR}/src)

@@ -8,6 +8,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
     using mocks::MockNode;
     using mocks::MockTreeFactory;
     using models::Node;
+    using models::Action;
     using std::dynamic_pointer_cast;
     using std::shared_ptr;
     using std::make_shared;
@@ -38,7 +39,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
 
         // the tree starts with two actions?
         s0->Expand();
-        const shared_ptr<Node> best_decision = tree_search_algorithm(s0, 4);
+        const shared_ptr<Action> best_decision = tree_search_algorithm(s0, 4);
 
         EXPECT_EQ(best_decision->Name(), "s2");
     }

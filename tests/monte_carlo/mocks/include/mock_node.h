@@ -2,34 +2,37 @@
 #define MOCK_NODE_H
 
 #include <gmock/gmock.h>
-#include <monte_carlo/models/node.h>
+#include <monte_carlo/factories/tree_factory_interface.h>
+#include <monte_carlo/models/node_base.h>
 
 
 namespace sophia::monte_carlo::models
 {
-    class ActionSelectStrategyInterface;
+    class RolloutStrategyInterface;
 }
 
 namespace sophia::monte_carlo::mocks
 {
-    using models::Node;
+    using models::NodeBase;
     using models::Action;
-    using models::ActionSelectStrategyInterface;
-    using factories::ITreeFactory;
+    using models::RolloutStrategyInterface;
+    using factories::TreeFactoryBase;
     using std::string;
     using std::vector;
     using std::make_shared;
     using std::shared_ptr;
 
-    class MockNode : public Node
+    class MockNode : public NodeBase<bool, int>
     {
     public:
-        explicit MockNode(const string& name, const shared_ptr<const ITreeFactory>& interface);
+        explicit MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface);
         ~MockNode() override = default;
 
-        MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (const, override));
+        MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (override));
         MOCK_METHOD(bool, IsTerminalState, (), (const, override));
         MOCK_METHOD(double, Value, (), (const, override));
+        MOCK_METHOD(void, Print, (), (const, override));
+        MOCK_METHOD(shared_ptr<Action>, SelectAction, (std::string action_name), (override));
 
         void Setup(const vector<shared_ptr<Node>> &node_expansion);
         void Setup(double value ) const;

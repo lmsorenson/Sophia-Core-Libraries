@@ -11,19 +11,20 @@ namespace sophia::monte_carlo::models
 namespace sophia::monte_carlo::mocks
 {
     using models::Node;
-    using models::ActionSelectStrategyInterface;
-    using factories::ITreeFactory;
+    using models::RolloutStrategyInterface;
+    using factories::TreeFactoryBase;
 
-    class MockActionSelectStrategy;
+    class MockRolloutStrategy;
 
-    class MockTreeFactory : public ITreeFactory
+    class MockTreeFactory : public TreeFactoryBase<bool, int>
     {
     public:
         ~MockTreeFactory() override = default;
 
-        [[nodiscard]] SharedNode CreateNode(std::string name) const override;
-        [[nodiscard]] SharedAction CreateAction(SharedNode parent) const override;
-        [[nodiscard]] SharedActionSelectStrategy CreateStrategy() const override;
+        [[nodiscard]] node_ptr CreateNode(std::string name) const override;
+        [[nodiscard]] node_ptr CreateNode(std::string name, bool state) const override;
+        [[nodiscard]] action_ptr CreateAction(node_base_ptr node, int change) const override;
+        [[nodiscard]] rollout_strategy_ptr CreateStrategy() const override;
     };
 }
 

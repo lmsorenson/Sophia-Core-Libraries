@@ -8,9 +8,9 @@ using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 
-shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Node>& root, const int iterations)
+shared_ptr<Action> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Node>& root, const int iterations)
 {
-    if (iterations < 0 || iterations > 1000)
+    if (iterations < 0 || iterations > 20000)
     {
         std::cerr << "Invalid iterations" << std::endl;
         throw std::invalid_argument("Invalid iterations");
@@ -43,20 +43,20 @@ shared_ptr<Node> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Nod
         }
         else
         {
-            std::cout << "No, don't expand it."
-            "" << std::endl;
+            std::cout << "No, don't expand it." << std::endl;
         }
 
         std::cout << "Phase 3: Rollout" << std::endl;
         const double reward = current->Rollout();
+        std::cout << "Reward " << reward << std::endl;
 
         std::cout << "Phase 4: Backpropagation" << std::endl;
         current->Backpropagate(reward);
     }
 
     std::cout << std::endl << "Process Complete: Selecting Best Action" << std::endl;
-    const auto action = root->SelectBestAction();
-    auto selected_action = action->Target();
-    std::cout << "Best action: " << selected_action->Name() << std::endl;
-    return selected_action;
+    const auto action = root->SelectAction();
+    const auto selected_action = action->Name();
+    std::cout << "Best action: " << selected_action << std::endl;
+    return action;
 }
