@@ -14,15 +14,15 @@
 \DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Player}{Player}}\ :\ \textcolor{keyword}{public}\ std::enable\_shared\_from\_this<Player>,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer}{observer::Observer}}}
 \DoxyCodeLine{00015\ \ \ \ \ \{}
 \DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Player}{Player}}(\mbox{\hyperlink{classSymbol}{Symbol}}\ symbol);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Player}{Player}}(enums::Symbol\ symbol);}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Player}{\string~Player}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classSymbol}{Symbol}}\ symbol()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ [[nodiscard]]\ enums::Symbol\ symbol()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ std::shared\_ptr<const\ Position>\ NextMove()\ \textcolor{keyword}{const}\ =\ 0;}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ Value(\textcolor{keyword}{class}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ board)\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00023\ }
 \DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSymbol}{Symbol}}\ m\_player\_symbol\_\ =\ Symbol::None;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ enums::Symbol\ m\_player\_symbol\_\ =\ enums::Symbol::None;}
 \DoxyCodeLine{00026\ \ \ \ \ \};}
 \DoxyCodeLine{00027\ \}}
 \DoxyCodeLine{00028\ }
