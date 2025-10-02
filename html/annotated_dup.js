@@ -12,7 +12,7 @@ var annotated_dup =
           [ "models", null, [
             [ "Board", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board.html", null ],
             [ "Bot", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Bot.html", null ],
-            [ "Game", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game.html", null ],
+            [ "Game", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game.html", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game" ],
             [ "GameState", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState.html", null ],
             [ "Human", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Human.html", null ],
             [ "Move", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Move.html", null ],
