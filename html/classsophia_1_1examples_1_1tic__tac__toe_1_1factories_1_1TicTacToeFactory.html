@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sophia Core Libraries: sophia::examples::tic_tac_toe::factories::TicTacToeFactory Class Reference</title>
+<title>Sophia: sophia::examples::tic_tac_toe::factories::TicTacToeFactory Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sophia Core Libraries<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sophia<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">Generates wisdom for its users.</div>
+   <div id="projectbrief">Sophia (σοφία) means Wisdom.</div>
   </td>
  </tr>
  </tbody>
@@ -96,6 +96,11 @@ $(document).ready(function(){initNavTree('classsophia_1_1examples_1_1tic__tac__t
   <div class="headertitle"><div class="title">sophia::examples::tic_tac_toe::factories::TicTacToeFactory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Creates simulation nodes and actions for a Tic Tac Toe game.  
+ <a href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="tic__tac__toe__factory_8h_source.html">tic_tac_toe_factory.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sophia::examples::tic_tac_toe::factories::TicTacToeFactory:</div>
 <div class="dyncontent">
@@ -144,7 +149,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>rollout_strategy_ptr
 using&#160;</td><td class="memItemRight" valign="bottom"><b>state_ptr</b> = std::shared_ptr&lt; models::GameState &gt;</td></tr>
 <tr class="separator:a8310e68e3b30cdd09c8bf4a065450deb inherit pro_types_classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Creates simulation nodes and actions for a Tic Tac Toe game. </p>
+<p>Example: </p><div class="fragment"><div class="line">std::shared_ptr&lt;models::const_player_ptr&gt; you;</div>
+<div class="line"><span class="keyword">auto</span> f = std::make_shared&lt;TicTacToeFactory&gt;(you);</div>
+<div class="line"><span class="keyword">auto</span> node = f-&gt;CreateNode();</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab50b5c930b959a30dd42672c530df092" name="ab50b5c930b959a30dd42672c530df092"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab50b5c930b959a30dd42672c530df092">&#9670;&#160;</a></span>CreateAction()</h2>
 
@@ -212,7 +222,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>state_ptr</b> = std:
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates a new Node. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>#Creates a new Node. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>the name of the new Node being created. </td></tr>
   </table>
@@ -257,7 +267,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>state_ptr</b> = std:
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates a new Node. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>#Creates a new Node. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>the name of the new Node being created. </td></tr>
     <tr><td class="paramname">game_state</td><td>the state represented by the Node being created. </td></tr>
