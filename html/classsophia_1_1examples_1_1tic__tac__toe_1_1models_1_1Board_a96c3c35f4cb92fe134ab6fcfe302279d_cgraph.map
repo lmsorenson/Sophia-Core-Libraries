@@ -1,0 +1,7 @@
+<map id="sophia::examples::tic_tac_toe::models::Board::SetPosition" name="sophia::examples::tic_tac_toe::models::Board::SetPosition">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,184,100"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a782a06b17216cd642969ef7c62fc6c88" title=" " alt="" coords="232,5,425,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,55,218,49,219,54,185,60"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a996a0a412a8dd6a0700fcffba6b1de70" title=" " alt="" coords="232,84,425,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,85,219,90,218,96,184,90"/>
+</map>

@@ -1,6 +1,25 @@
 var searchData=
 [
-  ['randomrolloutstrategy_0',['RandomRolloutStrategy',['../classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html',1,'sophia::monte_carlo::models']]],
-  ['rolloutstrategyinterface_1',['RolloutStrategyInterface',['../classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html',1,'sophia::monte_carlo::models']]],
-  ['run_2',['run',['../classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#add75e8e0fa2db2b5c6ed1d10d5b1b2a4',1,'sophia::monte_carlo::MonteCarloTreeSearch']]]
+  ['m_5fboard_5f_0',['m_board_',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState.html#a204b2d98154408074b73ad7423f9f078',1,'sophia::examples::tic_tac_toe::models::GameState']]],
+  ['m_5fchange_5f_1',['m_change_',['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a4da8508812df2144666eb5919f7bd3ef',1,'sophia::monte_carlo::models::ActionBase']]],
+  ['m_5fchild_5faction_5f_2',['m_child_action_',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a76c446637890b93646bd5741325280c4',1,'sophia::monte_carlo::models::Node']]],
+  ['m_5fcolumn_5findex_5f_3',['m_column_index_',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a96f84532247954620c8efcbbaad89ed1',1,'sophia::examples::tic_tac_toe::models::Position']]],
+  ['m_5ffactory_5f_4',['m_factory_',['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a842c231b04df89b33d2a703e7f66f260',1,'sophia::monte_carlo::models::ActionBase::m_factory_'],['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a5fb4a0ae3ffd3407b306a8d3bb31bcf8',1,'sophia::monte_carlo::models::NodeBase::m_factory_']]],
+  ['m_5fname_5f_5',['m_name_',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#afcaa239b875c4990dee32d00e50787b9',1,'sophia::monte_carlo::models::Node']]],
+  ['m_5fparent_5faction_5f_6',['m_parent_action_',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a678224d9b35cc4935a7ff420e767b8ff',1,'sophia::monte_carlo::models::Node']]],
+  ['m_5fplayer_5fsymbol_5f_7',['m_player_symbol_',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Player.html#acf4549a718875b546b091db2cf512aa2',1,'sophia::examples::tic_tac_toe::models::Player']]],
+  ['m_5frow_5findex_5f_8',['m_row_index_',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a855b3fa12244805e4e17cd6883564f4f',1,'sophia::examples::tic_tac_toe::models::Position']]],
+  ['m_5fsource_5f_9',['m_source_',['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a40c4ff890160e24a6b5284665aa56dcc',1,'sophia::monte_carlo::models::ActionBase']]],
+  ['m_5fstate_5f_10',['m_state_',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#ab2366975b686464e0530558948ef5e9e',1,'sophia::examples::tic_tac_toe::models::Position::m_state_'],['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a6e6a87ffd017ce10decc5d7eb901bef7',1,'sophia::monte_carlo::models::NodeBase::m_state_']]],
+  ['m_5ftarget_5f_11',['m_target_',['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#aaea9315ff9798302c0140beefdc8e06a',1,'sophia::monte_carlo::models::ActionBase']]],
+  ['m_5ftiles_5f_12',['m_tiles_',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board.html#a558ecdc330b74b0c3a01dae4cb65b8ac',1,'sophia::examples::tic_tac_toe::models::Board']]],
+  ['m_5ftotal_5freward_5f_13',['m_total_reward_',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1e77bb521e186a4b82c2ef4efec0ebb9',1,'sophia::monte_carlo::models::Node']]],
+  ['m_5fvisit_5fcount_5f_14',['m_visit_count_',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae5a08d850097e581881d9c6b9fbd26e3',1,'sophia::monte_carlo::models::Node']]],
+  ['m_5fyou_5f_15',['m_you_',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState.html#a382c98f7f71a285e6602d09484439b70',1,'sophia::examples::tic_tac_toe::models::GameState']]],
+  ['main_16',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_17',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['montecarlotreesearch_18',['MonteCarloTreeSearch',['../classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html',1,'sophia::monte_carlo']]],
+  ['move_19',['move',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Move.html',1,'sophia::examples::tic_tac_toe::models::Move'],['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Move.html#a397331ac0d79e140b24537ee09b16230',1,'sophia::examples::tic_tac_toe::models::Move::Move()']]],
+  ['move_2ecpp_20',['move.cpp',['../move_8cpp.html',1,'']]],
+  ['move_2eh_21',['move.h',['../move_8h.html',1,'']]]
 ];

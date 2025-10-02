@@ -2,6 +2,10 @@
 \hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{}\label{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}\index{sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}}
 
 
+{\ttfamily \#include $<$random\+\_\+rollout\+\_\+strategy.\+h$>$}
+
+
+
 Inheritance diagram for sophia\+::monte\+\_\+carlo\+::models\+::Random\+Rollout\+Strategy\+:
 \nopagebreak
 \begin{figure}[H]
@@ -23,13 +27,20 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Random\+Rollou
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-action\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}{select\+\_\+action}} (std\+::vector$<$ action\+\_\+ptr $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{override}}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{override}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Types inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} {\bfseries action\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$
 \end{DoxyCompactItemize}
 
 
@@ -38,15 +49,23 @@ action\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Random
 \index{sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}!select\_action@{select\_action}}
 \index{select\_action@{select\_action}!sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}}
 \doxysubsubsection{\texorpdfstring{select\_action()}{select\_action()}}
-{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ Random\+Rollout\+Strategy\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ action\+\_\+ptr $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ Random\+Rollout\+Strategy\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}.
+Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/monte\+\_\+carlo/models/random\+\_\+rollout\+\_\+strategy.\+h\item 
-src/monte\+\_\+carlo/models/random\+\_\+action\+\_\+strategy.\+cpp\end{DoxyCompactItemize}
+include/monte\+\_\+carlo/models/\mbox{\hyperlink{random__rollout__strategy_8h}{random\+\_\+rollout\+\_\+strategy.\+h}}\item 
+src/monte\+\_\+carlo/models/\mbox{\hyperlink{random__action__strategy_8cpp}{random\+\_\+action\+\_\+strategy.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="include/monte_carlo/models/action_base.h" name="include/monte_carlo/models/action_base.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="112,5,280,45"/>
+<area shape="rect" id="Node000002" href="$move_8h.html" title=" " alt="" coords="95,93,297,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,59,199,93,193,93,193,59"/>
+<area shape="rect" id="Node000003" href="$tic__tac__toe__factory_8cpp.html" title=" " alt="" coords="5,196,187,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="162,160,124,198,120,194,158,156"/>
+<area shape="rect" id="Node000004" href="$move_8cpp.html" title=" " alt="" coords="211,196,383,251"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="234,156,273,194,269,198,231,160"/>
+</map>

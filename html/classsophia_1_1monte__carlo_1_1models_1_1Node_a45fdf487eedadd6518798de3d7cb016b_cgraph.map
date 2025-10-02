@@ -1,0 +1,16 @@
+<map id="sophia::monte_carlo::models::Node::Rollout" name="sophia::monte_carlo::models::Node::Rollout">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,195,180,235"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="47,196,44,186,51,176,68,171,93,169,121,172,137,179,135,184,120,177,93,174,69,176,54,181,49,187,52,194"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab435a2663c9ac64279b9ee684436e7f2" title=" " alt="" coords="237,5,448,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,194,154,133,188,99,226,69,234,64,237,69,230,74,192,103,158,136,110,197"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a3b57c4db3bce104f80944bca5558fa4d" title=" " alt="" coords="245,84,440,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,193,227,149,247,141,249,146,229,154,134,198"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2" title=" " alt="" coords="259,163,426,203"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,202,246,193,246,198,181,207"/>
+<area shape="rect" id="Node000005" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ade2b382a86e4c36a60caefc196ad82" title=" " alt="" coords="263,227,422,267"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="181,224,249,233,249,238,180,229"/>
+<area shape="rect" id="Node000006" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5a6b97bf4237e24d26a19027e24e8a55" title=" " alt="" coords="228,291,457,331"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="133,233,229,277,251,285,250,290,227,282,131,238"/>
+<area shape="rect" id="Node000007" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48e865e8df5b298f3111c7d372327656" title=" " alt="" coords="261,355,425,395"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="111,234,160,287,193,316,229,341,248,350,246,355,227,346,190,320,157,291,108,237"/>
+</map>

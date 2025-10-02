@@ -1,0 +1,9 @@
+<map id="sophia::monte_carlo::models::Action::UpperConfidenceBound" name="sophia::monte_carlo::models::Action::UpperConfidenceBound">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,34,252,89"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1models_1_1Action.html#a1ed1fb9b12a952cd2cac018149945026" title=" " alt="" coords="332,5,507,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,43,318,35,318,40,252,49"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351" title=" " alt="" coords="300,70,539,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,74,287,78,286,84,252,79"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48dfc98b8e0e68a0682e7dae957328cf" title=" " alt="" coords="587,77,781,117"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="539,95,573,95,573,100,539,100"/>
+</map>

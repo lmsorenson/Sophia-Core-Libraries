@@ -1,0 +1,7 @@
+<map id="sophia::examples::tic_tac_toe::models::Player::Value" name="sophia::examples::tic_tac_toe::models::Player::Value">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,188,60"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board.html#aa2e980e5f14e9dedace99356a52df9cb" title=" " alt="" coords="236,5,415,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,30,222,30,222,35,189,35"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board.html#a72d1797b7fbd71ce6225d4335797c9c5" title=" " alt="" coords="463,5,641,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,30,449,30,449,35,415,35"/>
+</map>

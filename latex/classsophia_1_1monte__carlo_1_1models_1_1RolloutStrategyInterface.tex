@@ -2,6 +2,10 @@
 \hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}\index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
 
 
+{\ttfamily \#include $<$rollout\+\_\+strategy\+\_\+interface.\+h$>$}
+
+
+
 Inheritance diagram for sophia\+::monte\+\_\+carlo\+::models\+::Rollout\+Strategy\+Interface\+:
 \nopagebreak
 \begin{figure}[H]
@@ -23,17 +27,56 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Rollout\+Strat
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6} 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} action\+\_\+ptr {\bfseries select\+\_\+action} (std\+::vector$<$ action\+\_\+ptr $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020} 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} {\bfseries action\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020} 
+\index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}!action\_ptr@{action\_ptr}}
+\index{action\_ptr@{action\_ptr}!sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
+\doxysubsubsection{\texorpdfstring{action\_ptr}{action\_ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::action\+\_\+ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}}$>$\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5} 
+\index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}!RolloutStrategyInterface@{RolloutStrategyInterface}}
+\index{RolloutStrategyInterface@{RolloutStrategyInterface}!sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
+\doxysubsubsection{\texorpdfstring{RolloutStrategyInterface()}{RolloutStrategyInterface()}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::\+Rollout\+Strategy\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699} 
+\index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}!````~RolloutStrategyInterface@{\texorpdfstring{$\sim$}{\string~}RolloutStrategyInterface}}
+\index{````~RolloutStrategyInterface@{\texorpdfstring{$\sim$}{\string~}RolloutStrategyInterface}!sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RolloutStrategyInterface()}{\string~RolloutStrategyInterface()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6} 
+\index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}!select\_action@{select\_action}}
+\index{select\_action@{select\_action}!sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
+\doxysubsubsection{\texorpdfstring{select\_action()}{select\_action()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}{sophia\+::monte\+\_\+carlo\+::models\+::\+Random\+Rollout\+Strategy}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/monte\+\_\+carlo/models/rollout\+\_\+strategy\+\_\+interface.\+h\end{DoxyCompactItemize}
+include/monte\+\_\+carlo/models/\mbox{\hyperlink{rollout__strategy__interface_8h}{rollout\+\_\+strategy\+\_\+interface.\+h}}\end{DoxyCompactItemize}

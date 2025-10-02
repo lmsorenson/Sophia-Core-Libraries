@@ -95,18 +95,21 @@ $(document).ready(function(){initNavTree('classsophia_1_1monte__carlo_1_1models_
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsophia_1_1monte__carlo_1_1models_1_1Node-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">sophia::monte_carlo::models::Node Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="node_8h_source.html">node.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sophia::monte_carlo::models::Node:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node__inherit__graph.png" border="0" usemap="#asophia_1_1monte__carlo_1_1models_1_1Node_inherit__map" alt="Inheritance graph"/></div>
 <map name="asophia_1_1monte__carlo_1_1models_1_1Node_inherit__map" id="asophia_1_1monte__carlo_1_1models_1_1Node_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,133,196,513"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html" title=" " alt="" coords="23,561,178,716"/>
-<area shape="poly" title=" " alt="" coords="103,527,103,561,98,561,98,527"/>
+<area shape="rect" title=" " alt="" coords="5,133,196,533"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html" title=" " alt="" coords="23,581,178,736"/>
+<area shape="poly" title=" " alt="" coords="103,547,103,581,98,581,98,547"/>
 <area shape="rect" title=" " alt="" coords="27,5,174,85"/>
 <area shape="poly" title=" " alt="" coords="103,99,103,133,98,133,98,99"/>
 </map>
@@ -116,115 +119,939 @@ Collaboration diagram for sophia::monte_carlo::models::Node:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node__coll__graph.png" border="0" usemap="#asophia_1_1monte__carlo_1_1models_1_1Node_coll__map" alt="Collaboration graph"/></div>
 <map name="asophia_1_1monte__carlo_1_1models_1_1Node_coll__map" id="asophia_1_1monte__carlo_1_1models_1_1Node_coll__map">
-<area shape="rect" title=" " alt="" coords="5,133,196,513"/>
-<area shape="rect" title=" " alt="" coords="27,5,174,85"/>
-<area shape="poly" title=" " alt="" coords="103,99,103,133,98,133,98,99"/>
+<area shape="rect" title=" " alt="" coords="45,148,235,528"/>
+<area shape="rect" title=" " alt="" coords="5,5,152,85"/>
+<area shape="poly" title=" " alt="" coords="92,98,103,147,97,148,87,100"/>
+<area shape="rect" title=" " alt="" coords="176,13,227,78"/>
+<area shape="poly" title=" " alt="" coords="197,79,186,132,181,131,192,78"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afceb8877cfab44e0eda5ae3a88513242" id="r_afceb8877cfab44e0eda5ae3a88513242"><td class="memItemLeft" align="right" valign="top"><a id="afceb8877cfab44e0eda5ae3a88513242" name="afceb8877cfab44e0eda5ae3a88513242"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Node</b> (std::string <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">name</a>)</td></tr>
+<tr class="memitem:afceb8877cfab44e0eda5ae3a88513242" id="r_afceb8877cfab44e0eda5ae3a88513242"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#afceb8877cfab44e0eda5ae3a88513242">Node</a> (std::string <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">name</a>)</td></tr>
 <tr class="separator:afceb8877cfab44e0eda5ae3a88513242"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0db427e98f2175a37fedffa96b7def7c" id="r_a0db427e98f2175a37fedffa96b7def7c"><td class="memItemLeft" align="right" valign="top"><a id="a0db427e98f2175a37fedffa96b7def7c" name="a0db427e98f2175a37fedffa96b7def7c"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>SetParent</b> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> action_ptr &amp;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">action</a>)</td></tr>
+<tr class="memitem:ac06be54937bd5bbd0473141d2e44de59" id="r_ac06be54937bd5bbd0473141d2e44de59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ac06be54937bd5bbd0473141d2e44de59">~Node</a> ()=<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">default</a></td></tr>
+<tr class="separator:ac06be54937bd5bbd0473141d2e44de59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db427e98f2175a37fedffa96b7def7c" id="r_a0db427e98f2175a37fedffa96b7def7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a0db427e98f2175a37fedffa96b7def7c">SetParent</a> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> &amp;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">action</a>)</td></tr>
 <tr class="separator:a0db427e98f2175a37fedffa96b7def7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ce0f76debcad38090914219a5598221" id="r_a8ce0f76debcad38090914219a5598221"><td class="memItemLeft" align="right" valign="top"><a id="a8ce0f76debcad38090914219a5598221" name="a8ce0f76debcad38090914219a5598221"></a>
-action_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>SelectBestAction</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memitem:a8ce0f76debcad38090914219a5598221" id="r_a8ce0f76debcad38090914219a5598221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ce0f76debcad38090914219a5598221">SelectBestAction</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
 <tr class="separator:a8ce0f76debcad38090914219a5598221"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3ecba21ed1d43901db2ad52ee950936" id="r_af3ecba21ed1d43901db2ad52ee950936"><td class="memItemLeft" align="right" valign="top"><a id="af3ecba21ed1d43901db2ad52ee950936" name="af3ecba21ed1d43901db2ad52ee950936"></a>
-node_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>Expand</b> ()</td></tr>
+<tr class="memitem:af3ecba21ed1d43901db2ad52ee950936" id="r_af3ecba21ed1d43901db2ad52ee950936"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab0abeb571ec63f8fe17d4bcaeb960f13">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af3ecba21ed1d43901db2ad52ee950936">Expand</a> ()</td></tr>
 <tr class="separator:af3ecba21ed1d43901db2ad52ee950936"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45fdf487eedadd6518798de3d7cb016b" id="r_a45fdf487eedadd6518798de3d7cb016b"><td class="memItemLeft" align="right" valign="top"><a id="a45fdf487eedadd6518798de3d7cb016b" name="a45fdf487eedadd6518798de3d7cb016b"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Rollout</b> ()</td></tr>
+<tr class="memitem:a45fdf487eedadd6518798de3d7cb016b" id="r_a45fdf487eedadd6518798de3d7cb016b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b">Rollout</a> ()</td></tr>
 <tr class="separator:a45fdf487eedadd6518798de3d7cb016b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ab17bae40a734dd206b82c78ec0fbe9" id="r_a1ab17bae40a734dd206b82c78ec0fbe9"><td class="memItemLeft" align="right" valign="top"><a id="a1ab17bae40a734dd206b82c78ec0fbe9" name="a1ab17bae40a734dd206b82c78ec0fbe9"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Backpropagate</b> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">reward</a>)</td></tr>
+<tr class="memitem:a1ab17bae40a734dd206b82c78ec0fbe9" id="r_a1ab17bae40a734dd206b82c78ec0fbe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1ab17bae40a734dd206b82c78ec0fbe9">Backpropagate</a> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">reward</a>)</td></tr>
 <tr class="separator:a1ab17bae40a734dd206b82c78ec0fbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a839863194c78433b294b3c11dcf746c2" id="r_a839863194c78433b294b3c11dcf746c2"><td class="memItemLeft" align="right" valign="top"><a id="a839863194c78433b294b3c11dcf746c2" name="a839863194c78433b294b3c11dcf746c2"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memitem:a839863194c78433b294b3c11dcf746c2" id="r_a839863194c78433b294b3c11dcf746c2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2">Name</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
 <tr class="separator:a839863194c78433b294b3c11dcf746c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a731a6c2e925df83e28eb1cdb117e2351" id="r_a731a6c2e925df83e28eb1cdb117e2351"><td class="memItemLeft" align="right" valign="top"><a id="a731a6c2e925df83e28eb1cdb117e2351" name="a731a6c2e925df83e28eb1cdb117e2351"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><b>UpperConfidenceBound</b> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">c</a>) <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memitem:a731a6c2e925df83e28eb1cdb117e2351" id="r_a731a6c2e925df83e28eb1cdb117e2351"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351">UpperConfidenceBound</a> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">c</a>) <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
 <tr class="separator:a731a6c2e925df83e28eb1cdb117e2351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a174e378c4581899275b3f1e601fad062" id="r_a174e378c4581899275b3f1e601fad062"><td class="memItemLeft" align="right" valign="top"><a id="a174e378c4581899275b3f1e601fad062" name="a174e378c4581899275b3f1e601fad062"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>IsLeafNode</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memitem:a174e378c4581899275b3f1e601fad062" id="r_a174e378c4581899275b3f1e601fad062"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a174e378c4581899275b3f1e601fad062">IsLeafNode</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
 <tr class="separator:a174e378c4581899275b3f1e601fad062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99c747bf5454aa0f21874deab8c0d1a8" id="r_a99c747bf5454aa0f21874deab8c0d1a8"><td class="memItemLeft" align="right" valign="top"><a id="a99c747bf5454aa0f21874deab8c0d1a8" name="a99c747bf5454aa0f21874deab8c0d1a8"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>HasBeenSampled</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memitem:a99c747bf5454aa0f21874deab8c0d1a8" id="r_a99c747bf5454aa0f21874deab8c0d1a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a99c747bf5454aa0f21874deab8c0d1a8">HasBeenSampled</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
 <tr class="separator:a99c747bf5454aa0f21874deab8c0d1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48dfc98b8e0e68a0682e7dae957328cf" id="r_a48dfc98b8e0e68a0682e7dae957328cf"><td class="memItemLeft" align="right" valign="top"><a id="a48dfc98b8e0e68a0682e7dae957328cf" name="a48dfc98b8e0e68a0682e7dae957328cf"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>VisitCount</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memitem:a48dfc98b8e0e68a0682e7dae957328cf" id="r_a48dfc98b8e0e68a0682e7dae957328cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48dfc98b8e0e68a0682e7dae957328cf">VisitCount</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
 <tr class="separator:a48dfc98b8e0e68a0682e7dae957328cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b2f4bdc1e2d0b247ac2cdad13e7da9b" id="r_a7b2f4bdc1e2d0b247ac2cdad13e7da9b"><td class="memItemLeft" align="right" valign="top"><a id="a7b2f4bdc1e2d0b247ac2cdad13e7da9b" name="a7b2f4bdc1e2d0b247ac2cdad13e7da9b"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TotalReward</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memitem:a7b2f4bdc1e2d0b247ac2cdad13e7da9b" id="r_a7b2f4bdc1e2d0b247ac2cdad13e7da9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a7b2f4bdc1e2d0b247ac2cdad13e7da9b">TotalReward</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
 <tr class="separator:a7b2f4bdc1e2d0b247ac2cdad13e7da9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b57c4db3bce104f80944bca5558fa4d" id="r_a3b57c4db3bce104f80944bca5558fa4d"><td class="memItemLeft" align="right" valign="top"><a id="a3b57c4db3bce104f80944bca5558fa4d" name="a3b57c4db3bce104f80944bca5558fa4d"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>IsTerminalState</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memitem:a3b57c4db3bce104f80944bca5558fa4d" id="r_a3b57c4db3bce104f80944bca5558fa4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a3b57c4db3bce104f80944bca5558fa4d">IsTerminalState</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
 <tr class="separator:a3b57c4db3bce104f80944bca5558fa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48e865e8df5b298f3111c7d372327656" id="r_a48e865e8df5b298f3111c7d372327656"><td class="memItemLeft" align="right" valign="top"><a id="a48e865e8df5b298f3111c7d372327656" name="a48e865e8df5b298f3111c7d372327656"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memitem:a48e865e8df5b298f3111c7d372327656" id="r_a48e865e8df5b298f3111c7d372327656"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48e865e8df5b298f3111c7d372327656">Value</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
 <tr class="separator:a48e865e8df5b298f3111c7d372327656"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21d7afbcd694dbf00efa0dc1b8698780" id="r_a21d7afbcd694dbf00efa0dc1b8698780"><td class="memItemLeft" align="right" valign="top"><a id="a21d7afbcd694dbf00efa0dc1b8698780" name="a21d7afbcd694dbf00efa0dc1b8698780"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> action_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>SelectAction</b> (std::string <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">action_name</a>)=0</td></tr>
+<tr class="memitem:a21d7afbcd694dbf00efa0dc1b8698780" id="r_a21d7afbcd694dbf00efa0dc1b8698780"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a21d7afbcd694dbf00efa0dc1b8698780">SelectAction</a> (std::string <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">action_name</a>)=0</td></tr>
 <tr class="separator:a21d7afbcd694dbf00efa0dc1b8698780"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a404072a810c1cf1e201c82e539e0b721" id="r_a404072a810c1cf1e201c82e539e0b721"><td class="memItemLeft" align="right" valign="top"><a id="a404072a810c1cf1e201c82e539e0b721" name="a404072a810c1cf1e201c82e539e0b721"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> action_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>SelectAction</b> ()</td></tr>
+<tr class="memitem:a404072a810c1cf1e201c82e539e0b721" id="r_a404072a810c1cf1e201c82e539e0b721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a404072a810c1cf1e201c82e539e0b721">SelectAction</a> ()</td></tr>
 <tr class="separator:a404072a810c1cf1e201c82e539e0b721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ade2b382a86e4c36a60caefc196ad82" id="r_a8ade2b382a86e4c36a60caefc196ad82"><td class="memItemLeft" align="right" valign="top"><a id="a8ade2b382a86e4c36a60caefc196ad82" name="a8ade2b382a86e4c36a60caefc196ad82"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Print</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memitem:a8ade2b382a86e4c36a60caefc196ad82" id="r_a8ade2b382a86e4c36a60caefc196ad82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ade2b382a86e4c36a60caefc196ad82">Print</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
 <tr class="separator:a8ade2b382a86e4c36a60caefc196ad82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr class="memitem:af9e46c99f553335cd366802962fe8875" id="r_af9e46c99f553335cd366802962fe8875"><td class="memItemLeft" align="right" valign="top"><a id="af9e46c99f553335cd366802962fe8875" name="af9e46c99f553335cd366802962fe8875"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rollout_strategy_ptr</b> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html">RolloutStrategyInterface</a> &gt;</td></tr>
+<tr class="memitem:af9e46c99f553335cd366802962fe8875" id="r_af9e46c99f553335cd366802962fe8875"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af9e46c99f553335cd366802962fe8875">rollout_strategy_ptr</a> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html">RolloutStrategyInterface</a> &gt;</td></tr>
 <tr class="separator:af9e46c99f553335cd366802962fe8875"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdd6c0a15177e182fcdaa8137b09c7ca" id="r_acdd6c0a15177e182fcdaa8137b09c7ca"><td class="memItemLeft" align="right" valign="top"><a id="acdd6c0a15177e182fcdaa8137b09c7ca" name="acdd6c0a15177e182fcdaa8137b09c7ca"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>action_ref</b> = std::weak_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a> &gt;</td></tr>
+<tr class="memitem:acdd6c0a15177e182fcdaa8137b09c7ca" id="r_acdd6c0a15177e182fcdaa8137b09c7ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#acdd6c0a15177e182fcdaa8137b09c7ca">action_ref</a> = std::weak_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a> &gt;</td></tr>
 <tr class="separator:acdd6c0a15177e182fcdaa8137b09c7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2b93b080abc1c5d74a32d8c68e49c34" id="r_ae2b93b080abc1c5d74a32d8c68e49c34"><td class="memItemLeft" align="right" valign="top"><a id="ae2b93b080abc1c5d74a32d8c68e49c34" name="ae2b93b080abc1c5d74a32d8c68e49c34"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>action_ptr</b> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a> &gt;</td></tr>
+<tr class="memitem:ae2b93b080abc1c5d74a32d8c68e49c34" id="r_ae2b93b080abc1c5d74a32d8c68e49c34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a> &gt;</td></tr>
 <tr class="separator:ae2b93b080abc1c5d74a32d8c68e49c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0abeb571ec63f8fe17d4bcaeb960f13" id="r_ab0abeb571ec63f8fe17d4bcaeb960f13"><td class="memItemLeft" align="right" valign="top"><a id="ab0abeb571ec63f8fe17d4bcaeb960f13" name="ab0abeb571ec63f8fe17d4bcaeb960f13"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>node_ptr</b> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">Node</a> &gt;</td></tr>
+<tr class="memitem:ab0abeb571ec63f8fe17d4bcaeb960f13" id="r_ab0abeb571ec63f8fe17d4bcaeb960f13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab0abeb571ec63f8fe17d4bcaeb960f13">node_ptr</a> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">Node</a> &gt;</td></tr>
 <tr class="separator:ab0abeb571ec63f8fe17d4bcaeb960f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ab435a2663c9ac64279b9ee684436e7f2" id="r_ab435a2663c9ac64279b9ee684436e7f2"><td class="memItemLeft" align="right" valign="top"><a id="ab435a2663c9ac64279b9ee684436e7f2" name="ab435a2663c9ac64279b9ee684436e7f2"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> std::vector&lt; action_ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAvailableActions</b> ()=0</td></tr>
+<tr class="memitem:ab435a2663c9ac64279b9ee684436e7f2" id="r_ab435a2663c9ac64279b9ee684436e7f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> std::vector&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab435a2663c9ac64279b9ee684436e7f2">GetAvailableActions</a> ()=0</td></tr>
 <tr class="separator:ab435a2663c9ac64279b9ee684436e7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a6b97bf4237e24d26a19027e24e8a55" id="r_a5a6b97bf4237e24d26a19027e24e8a55"><td class="memItemLeft" align="right" valign="top"><a id="a5a6b97bf4237e24d26a19027e24e8a55" name="a5a6b97bf4237e24d26a19027e24e8a55"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> rollout_strategy_ptr&#160;</td><td class="memItemRight" valign="bottom"><b>RolloutStrategy</b> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memitem:a5a6b97bf4237e24d26a19027e24e8a55" id="r_a5a6b97bf4237e24d26a19027e24e8a55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af9e46c99f553335cd366802962fe8875">rollout_strategy_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5a6b97bf4237e24d26a19027e24e8a55">RolloutStrategy</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
 <tr class="separator:a5a6b97bf4237e24d26a19027e24e8a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a678224d9b35cc4935a7ff420e767b8ff" id="r_a678224d9b35cc4935a7ff420e767b8ff"><td class="memItemLeft" align="right" valign="top"><a id="a678224d9b35cc4935a7ff420e767b8ff" name="a678224d9b35cc4935a7ff420e767b8ff"></a>
-action_ref&#160;</td><td class="memItemRight" valign="bottom"><b>m_parent_action_</b></td></tr>
+<tr class="memitem:a678224d9b35cc4935a7ff420e767b8ff" id="r_a678224d9b35cc4935a7ff420e767b8ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#acdd6c0a15177e182fcdaa8137b09c7ca">action_ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a678224d9b35cc4935a7ff420e767b8ff">m_parent_action_</a></td></tr>
 <tr class="separator:a678224d9b35cc4935a7ff420e767b8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76c446637890b93646bd5741325280c4" id="r_a76c446637890b93646bd5741325280c4"><td class="memItemLeft" align="right" valign="top"><a id="a76c446637890b93646bd5741325280c4" name="a76c446637890b93646bd5741325280c4"></a>
-std::vector&lt; action_ptr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_child_action_</b></td></tr>
+<tr class="memitem:a76c446637890b93646bd5741325280c4" id="r_a76c446637890b93646bd5741325280c4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a76c446637890b93646bd5741325280c4">m_child_action_</a></td></tr>
 <tr class="separator:a76c446637890b93646bd5741325280c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5a08d850097e581881d9c6b9fbd26e3" id="r_ae5a08d850097e581881d9c6b9fbd26e3"><td class="memItemLeft" align="right" valign="top"><a id="ae5a08d850097e581881d9c6b9fbd26e3" name="ae5a08d850097e581881d9c6b9fbd26e3"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">unsigned</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">long</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_visit_count_</b> = 0</td></tr>
+<tr class="memitem:ae5a08d850097e581881d9c6b9fbd26e3" id="r_ae5a08d850097e581881d9c6b9fbd26e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">unsigned</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">long</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae5a08d850097e581881d9c6b9fbd26e3">m_visit_count_</a> = 0</td></tr>
 <tr class="separator:ae5a08d850097e581881d9c6b9fbd26e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e77bb521e186a4b82c2ef4efec0ebb9" id="r_a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="memItemLeft" align="right" valign="top"><a id="a1e77bb521e186a4b82c2ef4efec0ebb9" name="a1e77bb521e186a4b82c2ef4efec0ebb9"></a>
-<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_total_reward_</b> = 0</td></tr>
+<tr class="memitem:a1e77bb521e186a4b82c2ef4efec0ebb9" id="r_a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1e77bb521e186a4b82c2ef4efec0ebb9">m_total_reward_</a> = 0</td></tr>
 <tr class="separator:a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afcaa239b875c4990dee32d00e50787b9" id="r_afcaa239b875c4990dee32d00e50787b9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#afcaa239b875c4990dee32d00e50787b9">m_name_</a></td></tr>
+<tr class="separator:afcaa239b875c4990dee32d00e50787b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ae2b93b080abc1c5d74a32d8c68e49c34" name="ae2b93b080abc1c5d74a32d8c68e49c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2b93b080abc1c5d74a32d8c68e49c34">&#9670;&#160;</a></span>action_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">sophia::monte_carlo::models::Node::action_ptr</a> =  std::shared_ptr&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdd6c0a15177e182fcdaa8137b09c7ca" name="acdd6c0a15177e182fcdaa8137b09c7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd6c0a15177e182fcdaa8137b09c7ca">&#9670;&#160;</a></span>action_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#acdd6c0a15177e182fcdaa8137b09c7ca">sophia::monte_carlo::models::Node::action_ref</a> =  std::weak_ptr&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0abeb571ec63f8fe17d4bcaeb960f13" name="ab0abeb571ec63f8fe17d4bcaeb960f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0abeb571ec63f8fe17d4bcaeb960f13">&#9670;&#160;</a></span>node_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab0abeb571ec63f8fe17d4bcaeb960f13">sophia::monte_carlo::models::Node::node_ptr</a> =  std::shared_ptr&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">Node</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9e46c99f553335cd366802962fe8875" name="af9e46c99f553335cd366802962fe8875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e46c99f553335cd366802962fe8875">&#9670;&#160;</a></span>rollout_strategy_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af9e46c99f553335cd366802962fe8875">sophia::monte_carlo::models::Node::rollout_strategy_ptr</a> =  std::shared_ptr&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html">RolloutStrategyInterface</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afceb8877cfab44e0eda5ae3a88513242" name="afceb8877cfab44e0eda5ae3a88513242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afceb8877cfab44e0eda5ae3a88513242">&#9670;&#160;</a></span>Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Node::Node </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac06be54937bd5bbd0473141d2e44de59" name="ac06be54937bd5bbd0473141d2e44de59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac06be54937bd5bbd0473141d2e44de59">&#9670;&#160;</a></span>~Node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> sophia::monte_carlo::models::Node::~Node </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1ab17bae40a734dd206b82c78ec0fbe9" name="a1ab17bae40a734dd206b82c78ec0fbe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab17bae40a734dd206b82c78ec0fbe9">&#9670;&#160;</a></span>Backpropagate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a> Node::Backpropagate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td>
+          <td class="paramname"><em>reward</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9_cgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9_cgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,232,69"/>
+<area shape="poly" title=" " alt="" coords="73,30,71,20,78,10,94,5,119,3,147,6,162,13,160,18,145,11,119,8,95,10,81,15,76,21,79,28"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2" title=" " alt="" coords="280,29,447,69"/>
+<area shape="poly" title=" " alt="" coords="232,47,266,47,266,52,232,52"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a1ab17bae40a734dd206b82c78ec0fbe9_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,232,69"/>
+<area shape="poly" title=" " alt="" coords="157,18,144,11,119,8,97,10,84,15,79,21,81,28,76,30,74,20,81,10,96,5,119,3,145,6,160,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3ecba21ed1d43901db2ad52ee950936" name="af3ecba21ed1d43901db2ad52ee950936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ecba21ed1d43901db2ad52ee950936">&#9670;&#160;</a></span>Expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">Node</a> &gt; Node::Expand </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_af3ecba21ed1d43901db2ad52ee950936_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_af3ecba21ed1d43901db2ad52ee950936_cgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_af3ecba21ed1d43901db2ad52ee950936_cgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_af3ecba21ed1d43901db2ad52ee950936_cgraph">
+<area shape="rect" title=" " alt="" coords="5,85,181,125"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab435a2663c9ac64279b9ee684436e7f2" title=" " alt="" coords="229,5,440,60"/>
+<area shape="poly" title=" " alt="" coords="160,82,229,61,231,66,162,87"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2" title=" " alt="" coords="251,85,418,125"/>
+<area shape="poly" title=" " alt="" coords="182,102,238,102,238,107,182,107"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a0db427e98f2175a37fedffa96b7def7c" title=" " alt="" coords="239,149,430,189"/>
+<area shape="poly" title=" " alt="" coords="170,122,247,143,245,148,169,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab435a2663c9ac64279b9ee684436e7f2" name="ab435a2663c9ac64279b9ee684436e7f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab435a2663c9ac64279b9ee684436e7f2">&#9670;&#160;</a></span>GetAvailableActions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> std::vector&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> &gt; sophia::monte_carlo::models::Node::GetAvailableActions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_ab435a2663c9ac64279b9ee684436e7f2_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_ab435a2663c9ac64279b9ee684436e7f2_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_ab435a2663c9ac64279b9ee684436e7f2_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_ab435a2663c9ac64279b9ee684436e7f2_icgraph">
+<area shape="rect" title=" " alt="" coords="229,42,440,97"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af3ecba21ed1d43901db2ad52ee950936" title=" " alt="" coords="5,5,181,45"/>
+<area shape="poly" title=" " alt="" coords="215,50,181,44,182,39,216,45"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b" title=" " alt="" coords="6,93,181,133"/>
+<area shape="poly" title=" " alt="" coords="216,94,181,100,180,95,215,88"/>
+<area shape="poly" title=" " alt="" coords="134,82,120,75,93,72,70,74,56,79,51,85,54,92,49,94,46,84,53,74,69,69,93,67,121,70,136,77"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a99c747bf5454aa0f21874deab8c0d1a8" name="a99c747bf5454aa0f21874deab8c0d1a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99c747bf5454aa0f21874deab8c0d1a8">&#9670;&#160;</a></span>HasBeenSampled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a> Node::HasBeenSampled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a174e378c4581899275b3f1e601fad062" name="a174e378c4581899275b3f1e601fad062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a174e378c4581899275b3f1e601fad062">&#9670;&#160;</a></span>IsLeafNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a> Node::IsLeafNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b57c4db3bce104f80944bca5558fa4d" name="a3b57c4db3bce104f80944bca5558fa4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b57c4db3bce104f80944bca5558fa4d">&#9670;&#160;</a></span>IsTerminalState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a> sophia::monte_carlo::models::Node::IsTerminalState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a3b57c4db3bce104f80944bca5558fa4d_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a3b57c4db3bce104f80944bca5558fa4d_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a3b57c4db3bce104f80944bca5558fa4d_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a3b57c4db3bce104f80944bca5558fa4d_icgraph">
+<area shape="rect" title=" " alt="" coords="228,22,423,77"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b" title=" " alt="" coords="5,29,180,69"/>
+<area shape="poly" title=" " alt="" coords="214,52,180,52,180,47,214,47"/>
+<area shape="poly" title=" " alt="" coords="132,18,118,11,93,8,70,10,57,15,52,21,54,28,49,30,47,20,54,10,69,5,93,3,120,6,134,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a839863194c78433b294b3c11dcf746c2" name="a839863194c78433b294b3c11dcf746c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839863194c78433b294b3c11dcf746c2">&#9670;&#160;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Node::Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a839863194c78433b294b3c11dcf746c2_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a839863194c78433b294b3c11dcf746c2_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a839863194c78433b294b3c11dcf746c2_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a839863194c78433b294b3c11dcf746c2_icgraph">
+<area shape="rect" title=" " alt="" coords="295,217,461,257"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1ab17bae40a734dd206b82c78ec0fbe9" title=" " alt="" coords="13,29,239,69"/>
+<area shape="poly" title=" " alt="" coords="356,207,311,144,280,111,245,84,222,72,225,67,248,79,284,107,315,140,361,204"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af3ecba21ed1d43901db2ad52ee950936" title=" " alt="" coords="38,93,214,133"/>
+<area shape="poly" title=" " alt="" coords="342,211,297,178,246,148,213,135,215,130,248,143,300,173,345,207"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b" title=" " alt="" coords="39,181,213,221"/>
+<area shape="poly" title=" " alt="" coords="280,226,213,216,214,211,281,221"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html#a625c265aac424fc41dd38d709b110016" title=" " alt="" coords="5,246,247,301"/>
+<area shape="poly" title=" " alt="" coords="281,254,247,259,247,253,281,249"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a404072a810c1cf1e201c82e539e0b721" title=" " alt="" coords="21,325,231,365"/>
+<area shape="poly" title=" " alt="" coords="337,267,294,292,248,314,211,328,209,323,246,310,292,287,334,262"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ce0f76debcad38090914219a5598221" title=" " alt="" coords="27,390,225,445"/>
+<area shape="poly" title=" " alt="" coords="357,270,311,326,281,355,248,380,225,392,222,387,245,375,278,351,307,322,353,267"/>
+<area shape="poly" title=" " alt="" coords="169,18,154,11,126,8,102,10,87,15,82,21,84,28,79,30,77,20,84,10,101,5,126,3,155,6,171,13"/>
+<area shape="poly" title=" " alt="" coords="169,170,154,163,126,160,102,162,87,167,82,173,84,180,79,182,77,172,84,162,101,157,126,155,155,158,171,165"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8ade2b382a86e4c36a60caefc196ad82" name="a8ade2b382a86e4c36a60caefc196ad82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ade2b382a86e4c36a60caefc196ad82">&#9670;&#160;</a></span>Print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a> sophia::monte_carlo::models::Node::Print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a8ade2b382a86e4c36a60caefc196ad82_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a8ade2b382a86e4c36a60caefc196ad82_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a8ade2b382a86e4c36a60caefc196ad82_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a8ade2b382a86e4c36a60caefc196ad82_icgraph">
+<area shape="rect" title=" " alt="" coords="228,29,387,69"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b" title=" " alt="" coords="5,29,180,69"/>
+<area shape="poly" title=" " alt="" coords="214,52,180,52,180,47,214,47"/>
+<area shape="poly" title=" " alt="" coords="129,18,116,11,93,8,72,10,60,15,55,21,58,28,53,30,50,20,57,10,71,5,93,3,118,6,131,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a45fdf487eedadd6518798de3d7cb016b" name="a45fdf487eedadd6518798de3d7cb016b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45fdf487eedadd6518798de3d7cb016b">&#9670;&#160;</a></span>Rollout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a> Node::Rollout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b_cgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b_cgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,195,180,235"/>
+<area shape="poly" title=" " alt="" coords="47,196,44,186,51,176,68,171,93,169,121,172,137,179,135,184,120,177,93,174,69,176,54,181,49,187,52,194"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab435a2663c9ac64279b9ee684436e7f2" title=" " alt="" coords="237,5,448,60"/>
+<area shape="poly" title=" " alt="" coords="106,194,154,133,188,99,226,69,234,64,237,69,230,74,192,103,158,136,110,197"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a3b57c4db3bce104f80944bca5558fa4d" title=" " alt="" coords="245,84,440,139"/>
+<area shape="poly" title=" " alt="" coords="132,193,227,149,247,141,249,146,229,154,134,198"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2" title=" " alt="" coords="259,163,426,203"/>
+<area shape="poly" title=" " alt="" coords="180,202,246,193,246,198,181,207"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ade2b382a86e4c36a60caefc196ad82" title=" " alt="" coords="263,227,422,267"/>
+<area shape="poly" title=" " alt="" coords="181,224,249,233,249,238,180,229"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5a6b97bf4237e24d26a19027e24e8a55" title=" " alt="" coords="228,291,457,331"/>
+<area shape="poly" title=" " alt="" coords="133,233,229,277,251,285,250,290,227,282,131,238"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48e865e8df5b298f3111c7d372327656" title=" " alt="" coords="261,355,425,395"/>
+<area shape="poly" title=" " alt="" coords="111,234,160,287,193,316,229,341,248,350,246,355,227,346,190,320,157,291,108,237"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,180,69"/>
+<area shape="poly" title=" " alt="" coords="122,17,111,11,93,8,76,10,67,15,63,21,65,28,60,30,58,20,63,11,75,5,93,3,113,6,124,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a6b97bf4237e24d26a19027e24e8a55" name="a5a6b97bf4237e24d26a19027e24e8a55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6b97bf4237e24d26a19027e24e8a55">&#9670;&#160;</a></span>RolloutStrategy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af9e46c99f553335cd366802962fe8875">rollout_strategy_ptr</a> sophia::monte_carlo::models::Node::RolloutStrategy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a18b71c3bd5e5f4d4ff7198b02612abba">sophia::monte_carlo::models::NodeBase&lt; TState, TChange &gt;</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55_icgraph">
+<area shape="rect" title=" " alt="" coords="228,29,457,69"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b" title=" " alt="" coords="5,29,180,69"/>
+<area shape="poly" title=" " alt="" coords="214,52,180,52,180,47,214,47"/>
+<area shape="poly" title=" " alt="" coords="135,18,120,11,93,8,69,10,54,15,49,21,52,28,47,30,44,20,51,10,68,5,93,3,121,6,137,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a404072a810c1cf1e201c82e539e0b721" name="a404072a810c1cf1e201c82e539e0b721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404072a810c1cf1e201c82e539e0b721">&#9670;&#160;</a></span>SelectAction() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a> &gt; Node::SelectAction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a404072a810c1cf1e201c82e539e0b721_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a404072a810c1cf1e201c82e539e0b721_cgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a404072a810c1cf1e201c82e539e0b721_cgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a404072a810c1cf1e201c82e539e0b721_cgraph">
+<area shape="rect" title=" " alt="" coords="5,41,215,81"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2" title=" " alt="" coords="299,5,465,45"/>
+<area shape="poly" title=" " alt="" coords="214,45,285,35,286,41,215,50"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351" title=" " alt="" coords="263,70,501,125"/>
+<area shape="poly" title=" " alt="" coords="215,73,249,77,249,82,214,78"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48dfc98b8e0e68a0682e7dae957328cf" title=" " alt="" coords="549,77,744,117"/>
+<area shape="poly" title=" " alt="" coords="502,95,536,95,536,100,502,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a21d7afbcd694dbf00efa0dc1b8698780" name="a21d7afbcd694dbf00efa0dc1b8698780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d7afbcd694dbf00efa0dc1b8698780">&#9670;&#160;</a></span>SelectAction() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> sophia::monte_carlo::models::Node::SelectAction </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>action_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ce0f76debcad38090914219a5598221" name="a8ce0f76debcad38090914219a5598221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce0f76debcad38090914219a5598221">&#9670;&#160;</a></span>SelectBestAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a> &gt; Node::SelectBestAction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a8ce0f76debcad38090914219a5598221_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a8ce0f76debcad38090914219a5598221_cgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a8ce0f76debcad38090914219a5598221_cgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a8ce0f76debcad38090914219a5598221_cgraph">
+<area shape="rect" title=" " alt="" coords="5,34,203,89"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2" title=" " alt="" coords="287,5,453,45"/>
+<area shape="poly" title=" " alt="" coords="203,45,273,36,273,41,203,51"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351" title=" " alt="" coords="251,70,489,125"/>
+<area shape="poly" title=" " alt="" coords="203,72,238,77,237,82,203,77"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48dfc98b8e0e68a0682e7dae957328cf" title=" " alt="" coords="537,77,732,117"/>
+<area shape="poly" title=" " alt="" coords="490,95,524,95,524,100,490,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0db427e98f2175a37fedffa96b7def7c" name="a0db427e98f2175a37fedffa96b7def7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db427e98f2175a37fedffa96b7def7c">&#9670;&#160;</a></span>SetParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a> Node::SetParent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2175a37fedffa96b7def7c_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2175a37fedffa96b7def7c_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2175a37fedffa96b7def7c_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2175a37fedffa96b7def7c_icgraph">
+<area shape="rect" title=" " alt="" coords="229,5,420,45"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af3ecba21ed1d43901db2ad52ee950936" title=" " alt="" coords="5,5,181,45"/>
+<area shape="poly" title=" " alt="" coords="216,28,181,28,181,23,216,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b2f4bdc1e2d0b247ac2cdad13e7da9b" name="a7b2f4bdc1e2d0b247ac2cdad13e7da9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2f4bdc1e2d0b247ac2cdad13e7da9b">&#9670;&#160;</a></span>TotalReward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a> Node::TotalReward </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a731a6c2e925df83e28eb1cdb117e2351" name="a731a6c2e925df83e28eb1cdb117e2351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a731a6c2e925df83e28eb1cdb117e2351">&#9670;&#160;</a></span>UpperConfidenceBound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a> Node::UpperConfidenceBound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351_cgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351_cgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,244,60"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48dfc98b8e0e68a0682e7dae957328cf" title=" " alt="" coords="292,13,487,53"/>
+<area shape="poly" title=" " alt="" coords="244,30,278,30,278,35,244,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351_icgraph">
+<area shape="rect" title=" " alt="" coords="300,70,539,125"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a404072a810c1cf1e201c82e539e0b721" title=" " alt="" coords="24,5,233,45"/>
+<area shape="poly" title=" " alt="" coords="295,69,210,48,211,43,296,64"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ce0f76debcad38090914219a5598221" title=" " alt="" coords="30,70,227,125"/>
+<area shape="poly" title=" " alt="" coords="286,100,228,100,228,95,286,95"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a227a49dcfd5971ca79b5193ecabf580b" title=" " alt="" coords="5,149,252,203"/>
+<area shape="poly" title=" " alt="" coords="305,131,231,151,230,146,304,126"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a48e865e8df5b298f3111c7d372327656" name="a48e865e8df5b298f3111c7d372327656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48e865e8df5b298f3111c7d372327656">&#9670;&#160;</a></span>Value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a> sophia::monte_carlo::models::Node::Value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a48e865e8df5b298f3111c7d372327656_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a48e865e8df5b298f3111c7d372327656_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a48e865e8df5b298f3111c7d372327656_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a48e865e8df5b298f3111c7d372327656_icgraph">
+<area shape="rect" title=" " alt="" coords="228,29,392,69"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b" title=" " alt="" coords="5,29,180,69"/>
+<area shape="poly" title=" " alt="" coords="214,52,180,52,180,47,214,47"/>
+<area shape="poly" title=" " alt="" coords="129,18,116,11,93,8,72,10,59,15,55,21,57,28,52,30,50,20,56,10,71,5,93,3,118,6,132,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a48dfc98b8e0e68a0682e7dae957328cf" name="a48dfc98b8e0e68a0682e7dae957328cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48dfc98b8e0e68a0682e7dae957328cf">&#9670;&#160;</a></span>VisitCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a> Node::VisitCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1models_1_1Node_a48dfc98b8e0e68a0682e7dae957328cf_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1models_1_1Node_a48dfc98b8e0e68a0682e7dae957328cf_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a48dfc98b8e0e68a0682e7dae957328cf_icgraph" id="aclasssophia_1_1monte__carlo_1_1models_1_1Node_a48dfc98b8e0e68a0682e7dae957328cf_icgraph">
+<area shape="rect" title=" " alt="" coords="587,77,781,117"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351" title=" " alt="" coords="300,70,539,125"/>
+<area shape="poly" title=" " alt="" coords="573,100,539,100,539,95,573,95"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a404072a810c1cf1e201c82e539e0b721" title=" " alt="" coords="24,5,233,45"/>
+<area shape="poly" title=" " alt="" coords="295,69,210,48,211,43,296,64"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ce0f76debcad38090914219a5598221" title=" " alt="" coords="30,70,227,125"/>
+<area shape="poly" title=" " alt="" coords="286,100,228,100,228,95,286,95"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a227a49dcfd5971ca79b5193ecabf580b" title=" " alt="" coords="5,149,252,203"/>
+<area shape="poly" title=" " alt="" coords="305,131,231,151,230,146,304,126"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a76c446637890b93646bd5741325280c4" name="a76c446637890b93646bd5741325280c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c446637890b93646bd5741325280c4">&#9670;&#160;</a></span>m_child_action_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a>&gt; sophia::monte_carlo::models::Node::m_child_action_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcaa239b875c4990dee32d00e50787b9" name="afcaa239b875c4990dee32d00e50787b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcaa239b875c4990dee32d00e50787b9">&#9670;&#160;</a></span>m_name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string sophia::monte_carlo::models::Node::m_name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a678224d9b35cc4935a7ff420e767b8ff" name="a678224d9b35cc4935a7ff420e767b8ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678224d9b35cc4935a7ff420e767b8ff">&#9670;&#160;</a></span>m_parent_action_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#acdd6c0a15177e182fcdaa8137b09c7ca">action_ref</a> sophia::monte_carlo::models::Node::m_parent_action_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e77bb521e186a4b82c2ef4efec0ebb9" name="a1e77bb521e186a4b82c2ef4efec0ebb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e77bb521e186a4b82c2ef4efec0ebb9">&#9670;&#160;</a></span>m_total_reward_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a> sophia::monte_carlo::models::Node::m_total_reward_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5a08d850097e581881d9c6b9fbd26e3" name="ae5a08d850097e581881d9c6b9fbd26e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a08d850097e581881d9c6b9fbd26e3">&#9670;&#160;</a></span>m_visit_count_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">unsigned</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">long</a> sophia::monte_carlo::models::Node::m_visit_count_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/monte_carlo/models/<a class="el" href="node_8h_source.html">node.h</a></li>
-<li>src/monte_carlo/models/<b>node.cpp</b></li>
+<li>src/monte_carlo/models/<a class="el" href="node_8cpp.html">node.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>sophia</b></li><li class="navelem"><b>monte_carlo</b></li><li class="navelem"><b>models</b></li><li class="navelem"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">Node</a></li>
+    <li class="navelem"><a class="el" href="namespacesophia.html">sophia</a></li><li class="navelem"><a class="el" href="namespacesophia_1_1monte__carlo.html">monte_carlo</a></li><li class="navelem"><a class="el" href="namespacesophia_1_1monte__carlo_1_1models.html">models</a></li><li class="navelem"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">Node</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

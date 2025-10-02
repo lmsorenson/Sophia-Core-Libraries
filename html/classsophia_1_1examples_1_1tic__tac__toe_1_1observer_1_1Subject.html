@@ -92,17 +92,20 @@ $(document).ready(function(){initNavTree('classsophia_1_1examples_1_1tic__tac__t
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">sophia::examples::tic_tac_toe::observer::Subject Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="subject_8h_source.html">subject.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sophia::examples::tic_tac_toe::observer::Subject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject__inherit__graph.png" border="0" usemap="#asophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_inherit__map" alt="Inheritance graph"/></div>
 <map name="asophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_inherit__map" id="asophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,5,196,105"/>
-<area shape="rect" href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game.html" title="A Tic Tac Toe game." alt="" coords="15,153,187,373"/>
+<area shape="rect" href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game.html" title="A Tic Tac Toe game." alt="" coords="15,153,187,413"/>
 <area shape="poly" title=" " alt="" coords="103,119,103,153,98,153,98,119"/>
 </map>
 </div>
@@ -117,23 +120,116 @@ Collaboration diagram for sophia::examples::tic_tac_toe::observer::Subject:</div
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a83cf7208251650e5402daa766774e032" id="r_a83cf7208251650e5402daa766774e032"><td class="memItemLeft" align="right" valign="top"><a id="a83cf7208251650e5402daa766774e032" name="a83cf7208251650e5402daa766774e032"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_observer</b> (const std::shared_ptr&lt; <a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer.html">Observer</a> &gt; &amp;observer)</td></tr>
+<tr class="memitem:a83cf7208251650e5402daa766774e032" id="r_a83cf7208251650e5402daa766774e032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html#a83cf7208251650e5402daa766774e032">add_observer</a> (const std::shared_ptr&lt; <a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer.html">Observer</a> &gt; &amp;observer)</td></tr>
 <tr class="separator:a83cf7208251650e5402daa766774e032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b58c916cb8756c5eed1fc5510adc998" id="r_a7b58c916cb8756c5eed1fc5510adc998"><td class="memItemLeft" align="right" valign="top"><a id="a7b58c916cb8756c5eed1fc5510adc998" name="a7b58c916cb8756c5eed1fc5510adc998"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notify</b> (std::string message) const</td></tr>
+<tr class="memitem:a7b58c916cb8756c5eed1fc5510adc998" id="r_a7b58c916cb8756c5eed1fc5510adc998"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998">notify</a> (std::string message) const</td></tr>
 <tr class="separator:a7b58c916cb8756c5eed1fc5510adc998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa8c57cdfeb00faeb0da4c58afdc0aa1b" id="r_aa8c57cdfeb00faeb0da4c58afdc0aa1b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer.html">Observer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html#aa8c57cdfeb00faeb0da4c58afdc0aa1b">observers_</a></td></tr>
+<tr class="separator:aa8c57cdfeb00faeb0da4c58afdc0aa1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a83cf7208251650e5402daa766774e032" name="a83cf7208251650e5402daa766774e032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83cf7208251650e5402daa766774e032">&#9670;&#160;</a></span>add_observer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Subject::add_observer </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer.html">Observer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>observer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a83cf7208251650e5402daa766774e032_icgraph.png" border="0" usemap="#aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a83cf7208251650e5402daa766774e032_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a83cf7208251650e5402daa766774e032_icgraph" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a83cf7208251650e5402daa766774e032_icgraph">
+<area shape="rect" title=" " alt="" coords="233,5,432,60"/>
+<area shape="rect" href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game.html#a6fcae6b48bf977a777f4b4e3395af800" title=" " alt="" coords="5,5,185,60"/>
+<area shape="poly" title=" " alt="" coords="220,35,185,35,185,30,220,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b58c916cb8756c5eed1fc5510adc998" name="a7b58c916cb8756c5eed1fc5510adc998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b58c916cb8756c5eed1fc5510adc998">&#9670;&#160;</a></span>notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Subject::notify </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998_cgraph.png" border="0" usemap="#aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998_cgraph" alt=""/></div>
+<map name="aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998_cgraph" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,204,60"/>
+<area shape="rect" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer.html#ad617f6d1f3eb91485c842ae257b80c99" title=" " alt="" coords="252,5,461,60"/>
+<area shape="poly" title=" " alt="" coords="204,30,238,30,238,35,204,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998_icgraph.png" border="0" usemap="#aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998_icgraph" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998_icgraph">
+<area shape="rect" title=" " alt="" coords="233,5,432,60"/>
+<area shape="rect" href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game.html#a8364ea57344ca585a0e9041b99653ef4" title="Applies a move to the Tic Tac Toe game." alt="" coords="5,5,185,60"/>
+<area shape="poly" title=" " alt="" coords="220,35,185,35,185,30,220,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa8c57cdfeb00faeb0da4c58afdc0aa1b" name="aa8c57cdfeb00faeb0da4c58afdc0aa1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8c57cdfeb00faeb0da4c58afdc0aa1b">&#9670;&#160;</a></span>observers_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::shared_ptr&lt;<a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer.html">Observer</a>&gt; &gt; sophia::examples::tic_tac_toe::observer::Subject::observers_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>examples/monte_carlo/tic_tac_toe/include/tic_tac_toe/observer/<a class="el" href="subject_8h_source.html">subject.h</a></li>
-<li>examples/monte_carlo/tic_tac_toe/src/observer/<b>subject.cpp</b></li>
+<li>examples/monte_carlo/tic_tac_toe/src/observer/<a class="el" href="subject_8cpp.html">subject.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>sophia</b></li><li class="navelem"><b>examples</b></li><li class="navelem"><b>tic_tac_toe</b></li><li class="navelem"><b>observer</b></li><li class="navelem"><a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html">Subject</a></li>
+    <li class="navelem"><a class="el" href="namespacesophia.html">sophia</a></li><li class="navelem"><a class="el" href="namespacesophia_1_1examples.html">examples</a></li><li class="navelem"><a class="el" href="namespacesophia_1_1examples_1_1tic__tac__toe.html">tic_tac_toe</a></li><li class="navelem"><a class="el" href="namespacesophia_1_1examples_1_1tic__tac__toe_1_1observer.html">observer</a></li><li class="navelem"><a class="el" href="classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html">Subject</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

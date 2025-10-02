@@ -2,6 +2,10 @@
 \hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State}{}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State}\index{sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}}
 
 
+{\ttfamily \#include $<$state.\+h$>$}
+
+
+
 Inheritance diagram for sophia\+::examples\+::tic\+\_\+tac\+\_\+toe\+::models\+::State\+:
 \nopagebreak
 \begin{figure}[H]
@@ -23,30 +27,95 @@ Collaboration diagram for sophia\+::examples\+::tic\+\_\+tac\+\_\+toe\+::models\
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a39d413a9177c457deb7e52e5389434d1}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a39d413a9177c457deb7e52e5389434d1} 
-{\bfseries State} (const std\+::string \&name, const const\+\_\+factory\+\_\+ptr \&interface)
+\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a39d413a9177c457deb7e52e5389434d1}{State}} (const std\+::string \&name, const const\+\_\+factory\+\_\+ptr \&interface)
 \item 
-\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a1a229bc50e9eada7fc2cc96ff8513d57}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a1a229bc50e9eada7fc2cc96ff8513d57} 
-{\bfseries State} (const std\+::string \&name, \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} game\+\_\+state, const const\+\_\+factory\+\_\+ptr \&interface)
+\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a1a229bc50e9eada7fc2cc96ff8513d57}{State}} (const std\+::string \&name, \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} game\+\_\+state, const const\+\_\+factory\+\_\+ptr \&interface)
 \item 
-\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22} 
-std\+::vector$<$ action\+\_\+ptr $>$ {\bfseries Get\+Available\+Actions} () override
+std\+::vector$<$ action\+\_\+ptr $>$ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22}{Get\+Available\+Actions}} () override
 \item 
-\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a92a058c4863cdd4f07af0146bff557c4}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a92a058c4863cdd4f07af0146bff557c4} 
-bool {\bfseries Is\+Terminal\+State} () const override
+bool \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a92a058c4863cdd4f07af0146bff557c4}{Is\+Terminal\+State}} () const override
 \item 
-\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a0505d2a290fcb28751510b3ee581b4c8}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a0505d2a290fcb28751510b3ee581b4c8} 
-double {\bfseries Value} () const override
+double \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a0505d2a290fcb28751510b3ee581b4c8}{Value}} () const override
 \item 
-\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65} 
-action\+\_\+ptr {\bfseries Select\+Action} (std\+::string action\+\_\+name) override
+action\+\_\+ptr \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65}{Select\+Action}} (std\+::string action\+\_\+name) override
 \item 
-\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51} 
-void {\bfseries Print} () const override
+void \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51}{Print}} () const override
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a39d413a9177c457deb7e52e5389434d1}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a39d413a9177c457deb7e52e5389434d1} 
+\index{sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}!State@{State}}
+\index{State@{State}!sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sophia\+::examples\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{interface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a1a229bc50e9eada7fc2cc96ff8513d57}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a1a229bc50e9eada7fc2cc96ff8513d57} 
+\index{sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}!State@{State}}
+\index{State@{State}!sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sophia\+::examples\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}}]{game\+\_\+state,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{interface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22} 
+\index{sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}!GetAvailableActions@{GetAvailableActions}}
+\index{GetAvailableActions@{GetAvailableActions}!sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}}
+\doxysubsubsection{\texorpdfstring{GetAvailableActions()}{GetAvailableActions()}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ $>$ State\+::\+Get\+Available\+Actions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a92a058c4863cdd4f07af0146bff557c4}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a92a058c4863cdd4f07af0146bff557c4} 
+\index{sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}!IsTerminalState@{IsTerminalState}}
+\index{IsTerminalState@{IsTerminalState}!sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}}
+\doxysubsubsection{\texorpdfstring{IsTerminalState()}{IsTerminalState()}}
+{\footnotesize\ttfamily bool State\+::\+Is\+Terminal\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51} 
+\index{sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}!Print@{Print}}
+\index{Print@{Print}!sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void State\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65} 
+\index{sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}!SelectAction@{SelectAction}}
+\index{SelectAction@{SelectAction}!sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}}
+\doxysubsubsection{\texorpdfstring{SelectAction()}{SelectAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{Node\+::action\+\_\+ptr}} State\+::\+Select\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a0505d2a290fcb28751510b3ee581b4c8}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State_a0505d2a290fcb28751510b3ee581b4c8} 
+\index{sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}!Value@{Value}}
+\index{Value@{Value}!sophia::examples::tic\_tac\_toe::models::State@{sophia::examples::tic\_tac\_toe::models::State}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}}
+{\footnotesize\ttfamily double State\+::\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/include/tic\+\_\+tac\+\_\+toe/models/state.\+h\item 
-examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/src/models/state.\+cpp\end{DoxyCompactItemize}
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/include/tic\+\_\+tac\+\_\+toe/models/\mbox{\hyperlink{state_8h}{state.\+h}}\item 
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/src/models/\mbox{\hyperlink{state_8cpp}{state.\+cpp}}\end{DoxyCompactItemize}

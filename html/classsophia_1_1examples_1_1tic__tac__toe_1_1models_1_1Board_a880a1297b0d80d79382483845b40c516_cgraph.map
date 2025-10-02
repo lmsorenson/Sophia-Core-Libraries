@@ -1,0 +1,9 @@
+<map id="sophia::examples::tic_tac_toe::models::Board::WithMove" name="sophia::examples::tic_tac_toe::models::Board::WithMove">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,184,100"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board.html#a96c3c35f4cb92fe134ab6fcfe302279d" title=" " alt="" coords="232,45,411,100"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,70,218,70,218,75,185,75"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a782a06b17216cd642969ef7c62fc6c88" title=" " alt="" coords="459,5,652,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="410,55,445,49,445,54,411,60"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a996a0a412a8dd6a0700fcffba6b1de70" title=" " alt="" coords="459,84,652,139"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="411,85,445,90,445,96,410,90"/>
+</map>

@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['name_0',['name',['../classsophia_1_1monte__carlo_1_1models_1_1Action.html#aa7f1c91ede054c1828dffb2efcb80ea1',1,'sophia::monte_carlo::models::Action::Name()'],['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2',1,'sophia::monte_carlo::models::Node::Name()'],['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Move.html#a9436e05427bf263e777d3ee852c6a737',1,'sophia::examples::tic_tac_toe::models::Move::Name()'],['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a3b3d88fdd83ecc8b9e6d59a007f82266',1,'sophia::examples::tic_tac_toe::models::Position::Name()']]],
+  ['nextmove_1',['nextmove',['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Bot.html#a1740b1e423571b8883c6948650b0dea1',1,'sophia::examples::tic_tac_toe::models::Bot::NextMove()'],['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Human.html#a278f45eafc63834da9a0aa2ff5128f36',1,'sophia::examples::tic_tac_toe::models::Human::NextMove()'],['../classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Player.html#a83ff9fc7da7b3a6edadd822819a50dbf',1,'sophia::examples::tic_tac_toe::models::Player::NextMove()']]],
+  ['node_2',['Node',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#afceb8877cfab44e0eda5ae3a88513242',1,'sophia::monte_carlo::models::Node']]],
+  ['nodebase_3',['NodeBase',['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a7167c0718dd89dcb32165f6da032d372',1,'sophia::monte_carlo::models::NodeBase']]],
+  ['notify_4',['notify',['../classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998',1,'sophia::examples::tic_tac_toe::observer::Subject']]]
+];

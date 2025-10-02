@@ -2,6 +2,10 @@
 \hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action}{}\label{classsophia_1_1monte__carlo_1_1models_1_1Action}\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
 
 
+{\ttfamily \#include $<$action.\+h$>$}
+
+
+
 Inheritance diagram for sophia\+::monte\+\_\+carlo\+::models\+::Action\+:
 \nopagebreak
 \begin{figure}[H]
@@ -23,30 +27,117 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Action\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1} 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::string {\bfseries Name} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a42932491acbd29bf0e2f4e2864fd3036}{Action}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
 \item 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b} 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} {\bfseries Upper\+Confidence\+Bound} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{int}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{c}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_ac5744085b404e111f8a375ad28384700}{\texorpdfstring{$\sim$}{\string~}\+Action}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
 \item 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2} 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{void}} {\bfseries Generate} ()=0
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1}{Name}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
 \item 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b} 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} node\+\_\+ptr {\bfseries Source} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b}{Upper\+Confidence\+Bound}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{int}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{c}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}}
 \item 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026} 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} node\+\_\+ptr {\bfseries Target} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{void}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2}{Generate}} ()=0
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b}{Source}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026}{Target}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b} 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} {\bfseries node\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}} $>$
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}} $>$
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!node\_ptr@{node\_ptr}}
+\index{node\_ptr@{node\_ptr}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{node\_ptr}{node\_ptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::node\+\_\+ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}}$>$\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a42932491acbd29bf0e2f4e2864fd3036}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a42932491acbd29bf0e2f4e2864fd3036} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Action@{Action}}
+\index{Action@{Action}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{Action()}{Action()}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_ac5744085b404e111f8a375ad28384700}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_ac5744085b404e111f8a375ad28384700} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!````~Action@{\texorpdfstring{$\sim$}{\string~}Action}}
+\index{````~Action@{\texorpdfstring{$\sim$}{\string~}Action}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Action()}{\string~Action()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\texorpdfstring{$\sim$}{\string~}\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Generate@{Generate}}
+\index{Generate@{Generate}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{void}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Move_a9a5774e47a96f957f94627c6874442cf}{sophia\+::examples\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Move}}.
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Name@{Name}}
+\index{Name@{Name}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{Name()}{Name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::string sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Move_a9436e05427bf263e777d3ee852c6a737}{sophia\+::examples\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Move}}.
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Source@{Source}}
+\index{Source@{Source}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{Source()}{Source()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Target@{Target}}
+\index{Target@{Target}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{Target()}{Target()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ Game\+State, Position $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b} 
+\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!UpperConfidenceBound@{UpperConfidenceBound}}
+\index{UpperConfidenceBound@{UpperConfidenceBound}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
+\doxysubsubsection{\texorpdfstring{UpperConfidenceBound()}{UpperConfidenceBound()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} Action\+::\+Upper\+Confidence\+Bound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{int}}}]{c }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/monte\+\_\+carlo/models/action.\+h\item 
-src/monte\+\_\+carlo/models/action.\+cpp\end{DoxyCompactItemize}
+include/monte\+\_\+carlo/models/\mbox{\hyperlink{action_8h}{action.\+h}}\item 
+src/monte\+\_\+carlo/models/\mbox{\hyperlink{action_8cpp}{action.\+cpp}}\end{DoxyCompactItemize}
