@@ -1,2 +1,2 @@
-# Sophia σοφία
+# Sophia
 Sophia (σοφία) means "Wisdom".
