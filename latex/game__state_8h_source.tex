@@ -10,27 +10,27 @@
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }sophia::examples::tic\_tac\_toe::models}
 \DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}}
-\DoxyCodeLine{00012\ \ \ \ \ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}(const\_player\_ptr\ you,\ std::shared\_ptr<const\ Board>\ board);}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}(const\_player\_ptr\ you,\ std::shared\_ptr<const\ Board>\ board,\ Symbol\ last\_placed);}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ GameState>\ ApplyMove(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\&\ position)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Player>\ CurrentPlayer()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Player>\ You()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<std::pair<Symbol,\ bool>>\ Winner()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<const\ Position>>\ GetOpenPositions()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ Symbol\ LastPlaced()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ GetBoard()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Print()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ Board>\ m\_board\_;}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ Player>\ m\_you\_;}
-\DoxyCodeLine{00029\ \ \ \ \ \};}
-\DoxyCodeLine{00030\ \}}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GAME\_STATE\_H}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}(const\_player\_ptr\ you,\ std::shared\_ptr<const\ Board>\ board);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}(const\_player\_ptr\ you,\ std::shared\_ptr<const\ Board>\ board,\ Symbol\ last\_placed);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ GameState>\ ApplyMove(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\&\ position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Player>\ CurrentPlayer()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Player>\ You()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<std::pair<Symbol,\ bool>>\ Winner()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<const\ Position>>\ GetOpenPositions()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ [[nodiscard]]\ Symbol\ LastPlaced()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ GetBoard()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Print()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ Board>\ m\_board\_;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ Player>\ m\_you\_;}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//GAME\_STATE\_H}}
 
 \end{DoxyCode}

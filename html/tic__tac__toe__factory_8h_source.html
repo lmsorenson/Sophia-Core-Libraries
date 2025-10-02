@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Sophia Core Libraries: examples/monte_carlo/tic_tac_toe/include/tic_tac_toe/factories/tic_tac_toe_factory.h Source File</title>
+<title>Sophia: examples/monte_carlo/tic_tac_toe/include/tic_tac_toe/factories/tic_tac_toe_factory.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sophia Core Libraries<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">Sophia<span id="projectnumber">&#160;1.0.0</span>
    </div>
-   <div id="projectbrief">Generates wisdom for its users.</div>
+   <div id="projectbrief">Sophia (σοφία) means Wisdom.</div>
   </td>
  </tr>
  </tbody>
@@ -108,33 +108,33 @@ $(document).ready(function(){initNavTree('tic__tac__toe__factory_8h_source.html'
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>sophia::examples::tic_tac_toe::factories</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">TicTacToeFactory</a> : <span class="keyword">public</span> <a class="code hl_class" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">monte_carlo::factories::TreeFactoryBase</a>&lt;models::GameState, models::Position&gt;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">TicTacToeFactory</a>(models::const_player_ptr you);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">~TicTacToeFactory</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        [[nodiscard]] node_ptr <a class="code hl_function" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a8e2c87aca0fa98b0ce8faf482aec7791">CreateNode</a>(std::string name) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        [[nodiscard]] node_ptr <a class="code hl_function" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a8e2c87aca0fa98b0ce8faf482aec7791">CreateNode</a>(std::string name, <a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState.html">models::GameState</a> game_state) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        [[nodiscard]] action_ptr <a class="code hl_function" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#ab50b5c930b959a30dd42672c530df092">CreateAction</a>(std::shared_ptr&lt;NodeBase&lt;models::GameState, models::Position&gt;&gt; node, <a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html">models::Position</a> change) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        [[nodiscard]] rollout_strategy_ptr <a class="code hl_function" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a48177417aac774a54502196d7a6c7e47">CreateStrategy</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        models::const_player_ptr you_;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
-</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">   22</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">TicTacToeFactory</a> : <span class="keyword">public</span> <a class="code hl_class" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">monte_carlo::factories::TreeFactoryBase</a>&lt;models::GameState, models::Position&gt;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">TicTacToeFactory</a>(models::const_player_ptr you);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">~TicTacToeFactory</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        [[nodiscard]] node_ptr <a class="code hl_function" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a8e2c87aca0fa98b0ce8faf482aec7791">CreateNode</a>(std::string name) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        [[nodiscard]] node_ptr <a class="code hl_function" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a8e2c87aca0fa98b0ce8faf482aec7791">CreateNode</a>(std::string name, <a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState.html">models::GameState</a> game_state) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        [[nodiscard]] action_ptr <a class="code hl_function" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#ab50b5c930b959a30dd42672c530df092">CreateAction</a>(std::shared_ptr&lt;NodeBase&lt;models::GameState, models::Position&gt;&gt; node, <a class="code hl_class" href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html">models::Position</a> change) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">//TIC_TAC_TOE_FACTORY_H</span></div>
-<div class="ttc" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_html"><div class="ttname"><a href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">sophia::examples::tic_tac_toe::factories::TicTacToeFactory</a></div><div class="ttdef"><b>Definition</b> tic_tac_toe_factory.h:12</div></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        [[nodiscard]] rollout_strategy_ptr <a class="code hl_function" href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a48177417aac774a54502196d7a6c7e47">CreateStrategy</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        models::const_player_ptr you_;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    };</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif </span><span class="comment">//TIC_TAC_TOE_FACTORY_H</span></div>
+<div class="ttc" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_html"><div class="ttname"><a href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html">sophia::examples::tic_tac_toe::factories::TicTacToeFactory</a></div><div class="ttdoc">Creates simulation nodes and actions for a Tic Tac Toe game.</div><div class="ttdef"><b>Definition</b> tic_tac_toe_factory.h:23</div></div>
 <div class="ttc" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_html_a48177417aac774a54502196d7a6c7e47"><div class="ttname"><a href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a48177417aac774a54502196d7a6c7e47">sophia::examples::tic_tac_toe::factories::TicTacToeFactory::CreateStrategy</a></div><div class="ttdeci">rollout_strategy_ptr CreateStrategy() const override</div><div class="ttdef"><b>Definition</b> tic_tac_toe_factory.cpp:46</div></div>
 <div class="ttc" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_html_a8e2c87aca0fa98b0ce8faf482aec7791"><div class="ttname"><a href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a8e2c87aca0fa98b0ce8faf482aec7791">sophia::examples::tic_tac_toe::factories::TicTacToeFactory::CreateNode</a></div><div class="ttdeci">node_ptr CreateNode(std::string name) const override</div><div class="ttdef"><b>Definition</b> tic_tac_toe_factory.cpp:28</div></div>
 <div class="ttc" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_html_ab50b5c930b959a30dd42672c530df092"><div class="ttname"><a href="classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#ab50b5c930b959a30dd42672c530df092">sophia::examples::tic_tac_toe::factories::TicTacToeFactory::CreateAction</a></div><div class="ttdeci">action_ptr CreateAction(std::shared_ptr&lt; NodeBase&lt; models::GameState, models::Position &gt; &gt; node, models::Position change) const override</div><div class="ttdef"><b>Definition</b> tic_tac_toe_factory.cpp:41</div></div>
-<div class="ttc" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_html"><div class="ttname"><a href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState.html">sophia::examples::tic_tac_toe::models::GameState</a></div><div class="ttdef"><b>Definition</b> game_state.h:12</div></div>
+<div class="ttc" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_html"><div class="ttname"><a href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState.html">sophia::examples::tic_tac_toe::models::GameState</a></div><div class="ttdef"><b>Definition</b> game_state.h:15</div></div>
 <div class="ttc" id="aclasssophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_html"><div class="ttname"><a href="classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html">sophia::examples::tic_tac_toe::models::Position</a></div><div class="ttdef"><b>Definition</b> position.h:10</div></div>
 <div class="ttc" id="aclasssophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_html"><div class="ttname"><a href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">sophia::monte_carlo::factories::TreeFactoryBase</a></div><div class="ttdef"><b>Definition</b> tree_factory_interface.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
