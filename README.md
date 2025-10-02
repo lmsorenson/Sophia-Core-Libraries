@@ -1,2 +1,2 @@
-# Sophia-Core-Libraries
+# Sophia σοφία
 Sophia (σοφία) means "Wisdom".
