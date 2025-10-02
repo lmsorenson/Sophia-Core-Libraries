@@ -1,0 +1,47 @@
+\doxysection{board.\+h}
+\hypertarget{board_8h_source}{}\label{board_8h_source}\index{examples/monte\_carlo/tic\_tac\_toe/include/tic\_tac\_toe/models/board.h@{examples/monte\_carlo/tic\_tac\_toe/include/tic\_tac\_toe/models/board.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TIC\_TAC\_TOE\_BOARD\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TIC\_TAC\_TOE\_BOARD\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <tic\_tac\_toe/models/player.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <tic\_tac\_toe/models/position.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <tic\_tac\_toe/enums/line\_type.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }sophia::examples::tic\_tac\_toe::models}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }Position;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{using\ }player\_ptr\ =\ std::shared\_ptr<Player>;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{using\ }const\_player\_ptr\ =\ std::shared\_ptr<const\ Player>;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ \&other);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}(\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ \&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ \&other);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ \&\ operator=(\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\ \&new\_position);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ [[nodiscard]]\ Symbol\ LastPlaced()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<const\ Position>>\ GetOpenPositions()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Board>\ WithMove(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\&\ position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::vector<Symbol>>\ GetRow(LineType\ line\_type)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<std::pair<Symbol,\ bool>>\ Winner()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Print()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::vector<std::vector<std::shared\_ptr<const\ Position>>>\ m\_tiles\_;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ Symbol\ last\_placed\_\ =\ Symbol::None;}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TIC\_TAC\_TOE\_BOARD\_H}}
+
+\end{DoxyCode}
