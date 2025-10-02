@@ -14,6 +14,9 @@ namespace sophia::examples::tic_tac_toe::models
     class Game : observer::Subject
     {
     public:
+        /**
+         * @brief Constructs a new Game with default settings.
+         */
         Game();
         ~Game();
 
@@ -41,21 +44,32 @@ namespace sophia::examples::tic_tac_toe::models
         [[nodiscard]] const_player_ptr active_player() const;
 
         /**
-         * Applies a move to the Tic Tac Toe game.
+         * @brief Applies a move to the Tic Tac Toe game.
          * @param move The move being applied.
          */
         void accept_move(Position move);
 
         /**
-         * Prints the Tic Tac Toe game to the console.
+         * @brief Prints the Tic Tac Toe game to the console.
          */
         void print() const;
 
     private:
+        /**
+         * @brief The player controlling the X positions.
+         */
         std::shared_ptr<Player> x_ = nullptr;
-        std::shared_ptr<Player> o_ = nullptr;
-        std::vector<std::shared_ptr<const Board>> game_states_;
 
+        /**
+         * @brief The player controlling the Y positions.
+         */
+        std::shared_ptr<Player> o_ = nullptr;
+
+        /**
+         * @brief A list of boards.  A board represents a state of play.
+         * This list should be ordered.  A Tic Tac Toe game will have 9 states at most.
+         */
+        std::vector<std::shared_ptr<const Board>> game_states_;
     };
 
     template<class TPlayer, typename... Args>
