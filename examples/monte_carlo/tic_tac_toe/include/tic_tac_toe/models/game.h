@@ -27,6 +27,8 @@ namespace sophia::examples::tic_tac_toe::models
 
     };
 
+#include <stdexcept>
+
     template<class TPlayer, typename... Args>
     void Game::Assign(Symbol symbol, Args ... args)
     {
