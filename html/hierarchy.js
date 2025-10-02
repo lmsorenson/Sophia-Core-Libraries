@@ -21,6 +21,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "sophia::examples::tic_tac_toe::models::GameState", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState.html", null ],
+    [ "sophia::monte_carlo::MonteCarloTreeSearch", "classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html", null ],
     [ "NodeBase", null, [
       [ "sophia::examples::tic_tac_toe::models::State", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State.html", null ]
     ] ],

@@ -30,6 +30,8 @@ var NAVTREEINDEX0 =
 "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State.html":[0,0,0,0,0,2,8],
 "classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer.html":[0,0,0,0,0,3,0],
 "classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html":[0,0,0,0,0,3,1],
+"classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html":[0,0,0,1,2],
+"classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#add75e8e0fa2db2b5c6ed1d10d5b1b2a4":[0,0,0,1,2,0],
 "classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html":[0,0,0,1,0,0],
 "classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a20f69a5532b9e6c8ad2271fe96e582d8":[0,0,0,1,0,0,3],
 "classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a410fb7b25b1af2eeb3fcdc1e3744dc67":[0,0,0,1,0,0,2],
