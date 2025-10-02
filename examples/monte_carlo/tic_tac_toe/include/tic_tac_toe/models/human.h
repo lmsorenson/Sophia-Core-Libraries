@@ -5,6 +5,10 @@
 
 namespace sophia::examples::tic_tac_toe::models
 {
+    /**
+     * @class Human
+     * @brief A human Tic Tac Toe Player
+     */
     class Human : public Player
     {
     public:

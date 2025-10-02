@@ -7,6 +7,10 @@
 
 namespace sophia::examples::tic_tac_toe::models
 {
+    /**
+     * @class Game
+     * @brief A Tic Tac Toe game.
+     */
     class Game : observer::Subject
     {
     public:

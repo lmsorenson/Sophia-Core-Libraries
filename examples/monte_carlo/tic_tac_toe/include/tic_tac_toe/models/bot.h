@@ -10,6 +10,10 @@
 
 namespace sophia::examples::tic_tac_toe::models
 {
+    /**
+     * @class Bot
+     * @brief A non-human Tic Tac Toe Player
+     */
     class Bot : public Player
     {
 

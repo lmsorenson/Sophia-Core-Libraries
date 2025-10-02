@@ -6,8 +6,11 @@
 
 namespace sophia::examples::tic_tac_toe::models
 {
-    /// A state refers to the state from one player's perspective.
-    /// This is for the monte carlo engine.
+    /**
+     * @class Game State
+     * @brief A state refers to the state from one player's perspective.
+     * This is for the monte carlo engine.
+     */
     class GameState
     {
     public:
