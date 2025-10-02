@@ -31,7 +31,9 @@ int main()
         const auto position = current_player->NextMove();
 
         if (position == nullptr)
+        {
             break;
+        }
 
         game->accept_move(*position);
 

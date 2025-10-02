@@ -9,9 +9,9 @@
  */
 enum class Symbol
 {
-    None = 0,
-    X,
-    O
+    None = 0, ///< No Symbol has been placed.
+    X, ///< First player in Tic Tac Toe an X.
+    O ///< The Second player in Tic Tac Toe places an O.
 };
 
 inline std::string TileStateToString(const Symbol state)
