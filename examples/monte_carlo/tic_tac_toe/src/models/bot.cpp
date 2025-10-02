@@ -3,6 +3,7 @@
 #include <monte_carlo/tree_search_algorithm.h>
 #include <iostream>
 #include <tic_tac_toe/factories/tic_tac_toe_factory.h>
+#include <cmath>
 
 using sophia::examples::tic_tac_toe::models::Bot;
 using sophia::examples::tic_tac_toe::models::Position;
