@@ -3,6 +3,7 @@
 #include <tic_tac_toe/models/board.h>
 #include <tic_tac_toe/observer/subject.h>
 #include <memory>
+#include <stdexcept>
 
 namespace sophia::examples::tic_tac_toe::models
 {
@@ -26,8 +27,6 @@ namespace sophia::examples::tic_tac_toe::models
         std::vector<std::shared_ptr<const Board>> game_states_;
 
     };
-
-#include <stdexcept>
 
     template<class TPlayer, typename... Args>
     void Game::Assign(Symbol symbol, Args ... args)
