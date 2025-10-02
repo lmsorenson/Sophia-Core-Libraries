@@ -14,15 +14,15 @@ namespace sophia::examples::tic_tac_toe::models
     class Player : public std::enable_shared_from_this<Player>, public observer::Observer
     {
     public:
-        explicit Player(Symbol symbol);
+        explicit Player(enums::Symbol symbol);
         virtual ~Player() = default;
 
-        [[nodiscard]] Symbol symbol() const;
+        [[nodiscard]] enums::Symbol symbol() const;
         [[nodiscard]] virtual std::shared_ptr<const Position> NextMove() const = 0;
         [[nodiscard]] double Value(class Board board) const;
 
     protected:
-        Symbol m_player_symbol_ = Symbol::None;
+        enums::Symbol m_player_symbol_ = enums::Symbol::None;
     };
 }
 

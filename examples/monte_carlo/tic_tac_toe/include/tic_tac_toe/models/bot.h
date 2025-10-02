@@ -18,7 +18,7 @@ namespace sophia::examples::tic_tac_toe::models
     {
 
     public:
-        explicit Bot(Symbol symbol, double difficulty);
+        explicit Bot(enums::Symbol symbol, double difficulty);
 
         [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
         void Update(std::string message) override;

@@ -29,7 +29,7 @@ namespace sophia::examples::tic_tac_toe::models
          * @throws invalid_argument if the Symbol is not valid.
          */
         template<class TPlayer, typename... Args>
-        void Assign(Symbol symbol, Args... args);
+        void Assign(enums::Symbol symbol, Args... args);
 
         /**
          * @brief Is the game over?
@@ -73,15 +73,15 @@ namespace sophia::examples::tic_tac_toe::models
     };
 
     template<class TPlayer, typename... Args>
-    void Game::Assign(Symbol symbol, Args ... args)
+    void Game::Assign(enums::Symbol symbol, Args ... args)
     {
         switch (symbol)
         {
-            case Symbol::X:
+            case enums::Symbol::X:
                 x_ = std::make_shared<TPlayer>(symbol, args...);
                 add_observer(x_);
                 break;
-            case Symbol::O:
+            case enums::Symbol::O:
                 o_ = std::make_shared<TPlayer>(symbol, args...);
                 add_observer(o_);
                 break;

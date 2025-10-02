@@ -12,7 +12,7 @@ namespace sophia::examples::tic_tac_toe::models
     class Human : public Player
     {
     public:
-        explicit Human(Symbol symbol);
+        explicit Human(enums::Symbol symbol);
 
         [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
         void Update(std::string message) override;

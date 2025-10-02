@@ -15,14 +15,14 @@ namespace sophia::examples::tic_tac_toe::models
     {
     public:
         explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board);
-        explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board, Symbol last_placed);
+        explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed);
 
         [[nodiscard]] std::shared_ptr<const GameState> ApplyMove(const Position& position) const;
         [[nodiscard]] std::shared_ptr<const Player> CurrentPlayer() const;
         [[nodiscard]] std::shared_ptr<const Player> You() const;
-        [[nodiscard]] std::shared_ptr<std::pair<Symbol, bool>> Winner() const;
+        [[nodiscard]] std::shared_ptr<std::pair<enums::Symbol, bool>> Winner() const;
         [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
-        [[nodiscard]] Symbol LastPlaced() const;
+        [[nodiscard]] enums::Symbol LastPlaced() const;
         [[nodiscard]] Board GetBoard() const;
         void Print() const;
 

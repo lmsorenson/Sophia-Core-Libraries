@@ -4,6 +4,7 @@
 #include <utility>
 
 using sophia::examples::tic_tac_toe::models::Position;
+using sophia::examples::tic_tac_toe::enums::Symbol;
 using std::shared_ptr;
 using std::vector;
 
@@ -11,7 +12,7 @@ Position::Position(const std::pair<int, int> &coordinates)
 {
     m_row_index_ = coordinates.first;
     m_column_index_ = coordinates.second;
-    m_state_ = Symbol::None;
+    m_state_ = enums::Symbol::None;
 }
 
 Position::Position(const std::pair<int, int> &coordinates, const Symbol tile_state)

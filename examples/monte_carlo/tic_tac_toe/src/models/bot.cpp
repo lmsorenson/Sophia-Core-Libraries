@@ -7,6 +7,7 @@
 
 using sophia::examples::tic_tac_toe::models::Bot;
 using sophia::examples::tic_tac_toe::models::Position;
+using sophia::examples::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::tree_search_algorithm;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;

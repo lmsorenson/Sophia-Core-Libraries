@@ -5,6 +5,7 @@
 
 using sophia::examples::tic_tac_toe::models::Game;
 using sophia::examples::tic_tac_toe::models::const_player_ptr;
+using sophia::examples::tic_tac_toe::enums::Symbol;
 using std::make_shared;
 using std::shared_ptr;
 
@@ -34,8 +35,8 @@ const_player_ptr Game::active_player() const
 
     switch (current_state->LastPlaced())
     {
-        case Symbol::X: return o_;
-        default: case Symbol::O: return x_;
+        case enums::Symbol::X: return o_;
+        default: case enums::Symbol::O: return x_;
     }
 }
 

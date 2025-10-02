@@ -10,6 +10,7 @@ using sophia::examples::tic_tac_toe::factories::TicTacToeFactory;
 using sophia::examples::tic_tac_toe::models::Game;
 using sophia::examples::tic_tac_toe::models::Human;
 using sophia::examples::tic_tac_toe::models::Bot;
+using sophia::examples::tic_tac_toe::enums::Symbol;
 using std::make_shared;
 using std::shared_ptr;
 

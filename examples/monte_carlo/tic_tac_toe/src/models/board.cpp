@@ -9,6 +9,7 @@ using sophia::examples::tic_tac_toe::models::Board;
 using sophia::examples::tic_tac_toe::models::Position;
 using sophia::examples::tic_tac_toe::models::Player;
 using sophia::examples::tic_tac_toe::models::player_ptr;
+using sophia::examples::tic_tac_toe::enums::Symbol;
 using std::make_shared;
 using std::shared_ptr;
 using std::vector;

@@ -7,6 +7,7 @@
 using sophia::examples::tic_tac_toe::models::Human;
 using sophia::examples::tic_tac_toe::models::Board;
 using sophia::examples::tic_tac_toe::models::Position;
+using sophia::examples::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;

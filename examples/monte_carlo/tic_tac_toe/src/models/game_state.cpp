@@ -5,6 +5,7 @@
 using sophia::examples::tic_tac_toe::models::GameState;
 using sophia::examples::tic_tac_toe::models::Board;
 using sophia::examples::tic_tac_toe::models::Player;
+using sophia::examples::tic_tac_toe::enums::Symbol;
 
 GameState::GameState(const_player_ptr you, std::shared_ptr<const Board> board)
     : m_you_(std::move(you))
@@ -12,7 +13,7 @@ GameState::GameState(const_player_ptr you, std::shared_ptr<const Board> board)
 {
 }
 
-GameState::GameState(const_player_ptr you, std::shared_ptr<const Board> board, Symbol last_placed)
+GameState::GameState(const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed)
     : m_you_(std::move(you))
     , m_board_(std::move(board))
 {

@@ -3,6 +3,7 @@
 #include <iostream>
 
 using sophia::examples::tic_tac_toe::models::Player;
+using sophia::examples::tic_tac_toe::enums::Symbol;
 
 Player::Player(const Symbol symbol)
 : m_player_symbol_(symbol)
