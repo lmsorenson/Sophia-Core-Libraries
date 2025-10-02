@@ -18,6 +18,9 @@ Inheritance diagram for sophia\+::examples\+::tic\+\_\+tac\+\_\+toe\+::models\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_ad59df6562a58a614fda24622d3715b65}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_ad59df6562a58a614fda24622d3715b65} 
+{\bfseries Game} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game}{Game} with default settings. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class TPlayer , typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_a05df8e048d34f923cd38de51e6541f0c}{Assign}} (\mbox{\hyperlink{classSymbol}{Symbol}} symbol, Args... args)
 \begin{DoxyCompactList}\small\item\em Assigns a particular type of player to a symbol. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_a6b830a2c1b1f0b54d410e1481a0faae8}{game\+\_\+over}} () const
@@ -25,9 +28,10 @@ bool \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game
 const\+\_\+player\+\_\+ptr \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_ae5fdf69ae58480776a505b9d67d0566e}{active\+\_\+player}} () const
 \begin{DoxyCompactList}\small\item\em Gets the current active player. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_a8364ea57344ca585a0e9041b99653ef4}{accept\+\_\+move}} (\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}} move)
-\item 
-void \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_a78e1a17440eace186f6ae1109e09db2c}{print}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Applies a move to the Tic Tac Toe game. \end{DoxyCompactList}\item 
+\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_a78e1a17440eace186f6ae1109e09db2c}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_a78e1a17440eace186f6ae1109e09db2c} 
+void {\bfseries print} () const
+\begin{DoxyCompactList}\small\item\em Prints the Tic Tac Toe game to the console. \end{DoxyCompactList}\item 
 \Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_ae32751a4fffaf77c04ba026cb1e95b04}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_ae32751a4fffaf77c04ba026cb1e95b04} 
 {\footnotesize template$<$class TPlayer , typename... Args$>$ }\\void {\bfseries Assign} (\mbox{\hyperlink{classSymbol}{Symbol}} symbol, Args ... args)
 \end{DoxyCompactItemize}
@@ -43,7 +47,11 @@ A Tic Tac Toe game.
 \doxysubsubsection{\texorpdfstring{accept\_move()}{accept\_move()}}
 {\footnotesize\ttfamily void Game\+::accept\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}}]{move }\end{DoxyParamCaption})}
 
+
+
 Applies a move to the Tic Tac Toe game. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em move} & The move being applied. \\
 \hline
@@ -104,13 +112,7 @@ Is the game over?
 \begin{DoxyReturn}{Returns}
 A boolean value\+: true if the game is over, false if it is not. 
 \end{DoxyReturn}
-\Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_a78e1a17440eace186f6ae1109e09db2c}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game_a78e1a17440eace186f6ae1109e09db2c} 
-\index{sophia::examples::tic\_tac\_toe::models::Game@{sophia::examples::tic\_tac\_toe::models::Game}!print@{print}}
-\index{print@{print}!sophia::examples::tic\_tac\_toe::models::Game@{sophia::examples::tic\_tac\_toe::models::Game}}
-\doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void Game\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Prints the Tic Tac Toe game to the console. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
