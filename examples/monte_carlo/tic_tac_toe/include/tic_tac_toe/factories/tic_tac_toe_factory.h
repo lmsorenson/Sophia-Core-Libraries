@@ -8,6 +8,17 @@
 
 namespace sophia::examples::tic_tac_toe::factories
 {
+    /**
+     * @class TicTacToeFactory
+     * @brief Creates simulation nodes and actions for a Tic Tac Toe game.
+     *
+     * Example:
+     * @code
+     * std::shared_ptr<models::const_player_ptr> you;
+     * auto f = std::make_shared<TicTacToeFactory>(you);
+     * auto node = f->CreateNode();
+     * @endcode
+     */
     class TicTacToeFactory : public monte_carlo::factories::TreeFactoryBase<models::GameState, models::Position>
     {
     public:
@@ -15,14 +26,14 @@ namespace sophia::examples::tic_tac_toe::factories
         ~TicTacToeFactory() override = default;
 
         /**
-         * Creates a new Node.
+         * #Creates a new Node.
          * @param name the name of the new Node being created.
          * @returns a shared pointer to a Node
          */
         [[nodiscard]] node_ptr CreateNode(std::string name) const override;
 
         /**
-         * Creates a new Node.
+         * #Creates a new Node.
          * @param name the name of the new Node being created.
          * @param game_state the state represented by the Node being created.
          * @returns a shared pointer to a Node
