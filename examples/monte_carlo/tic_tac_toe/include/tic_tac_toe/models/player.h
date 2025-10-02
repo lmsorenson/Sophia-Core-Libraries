@@ -7,6 +7,10 @@
 
 namespace sophia::examples::tic_tac_toe::models
 {
+    /**
+     * @class Player
+     * @brief A Player in a Tic Tac Toe Game
+     */
     class Player : public std::enable_shared_from_this<Player>, public observer::Observer
     {
     public:

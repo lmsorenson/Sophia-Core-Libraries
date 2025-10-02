@@ -3,6 +3,10 @@
 
 #include <string>
 
+/**
+ * @class Symbol
+ * @brief A Tic Tac Toe Symbol is an X, an O, or an empty space.
+ */
 enum class Symbol
 {
     None = 0,

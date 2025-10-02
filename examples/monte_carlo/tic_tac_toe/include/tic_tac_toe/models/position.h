@@ -6,6 +6,11 @@
 
 namespace sophia::examples::tic_tac_toe::models
 {
+    /**
+     * @class Position
+     * @brief Refers to a move that a Player can make in a Tic Tac Toe Game.
+     * A position can be empty, it can have an X Symbol, or it can have an O Symbol.
+     */
     class Position
     {
     public:
