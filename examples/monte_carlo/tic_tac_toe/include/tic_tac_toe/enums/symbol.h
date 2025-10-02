@@ -3,7 +3,8 @@
 
 #include <string>
 
-namespace sophia::examples::tic_tac_toe::enums {
+namespace sophia::examples::tic_tac_toe::enums
+{
     /**
      * @class Symbol
      * @brief A Tic Tac Toe Symbol is an X, an O, or an empty space.

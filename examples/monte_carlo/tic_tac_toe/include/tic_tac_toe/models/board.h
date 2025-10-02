@@ -28,7 +28,7 @@ namespace sophia::examples::tic_tac_toe::models
         [[nodiscard]] enums::Symbol LastPlaced() const;
         [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
         [[nodiscard]] std::shared_ptr<const Board> WithMove(const Position& position) const;
-        [[nodiscard]] std::vector<std::vector<enums::Symbol>> GetRow(LineType line_type) const;
+        [[nodiscard]] std::vector<std::vector<enums::Symbol>> GetRow(enums::LineType line_type) const;
         [[nodiscard]] std::shared_ptr<std::pair<enums::Symbol, bool>> Winner() const;
         void Print() const;
 
