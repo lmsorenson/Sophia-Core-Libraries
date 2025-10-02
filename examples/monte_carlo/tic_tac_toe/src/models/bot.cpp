@@ -8,7 +8,7 @@
 using sophia::examples::tic_tac_toe::models::Bot;
 using sophia::examples::tic_tac_toe::models::Position;
 using sophia::examples::tic_tac_toe::enums::Symbol;
-using sophia::monte_carlo::tree_search_algorithm;
+using sophia::monte_carlo::MonteCarloTreeSearch;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
@@ -32,7 +32,7 @@ std::shared_ptr<const Position> Bot::NextMove() const
         return nullptr;
     }
 
-    const shared_ptr<Action> best_action = tree_search_algorithm(node_, iterations_);
+    const shared_ptr<Action> best_action = MonteCarloTreeSearch::run(node_, iterations_);
 
     const auto t = best_action->Target();
 

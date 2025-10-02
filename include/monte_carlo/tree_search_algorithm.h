@@ -5,7 +5,25 @@
 
 namespace sophia::monte_carlo
 {
-    std::shared_ptr<models::Action> tree_search_algorithm(const std::shared_ptr<models::Node>& root, int iterations);
+    /**
+     * @class MonteCarloTreeSearch
+     */
+    class MonteCarloTreeSearch
+    {
+    public:
+        /**
+         * @brief Runs the Monte Carlo Search algorithm.
+         *
+         * @callgraph
+         * @callergraph
+         *
+         * @param root
+         * @param iterations
+         * @return
+         */
+        static std::shared_ptr<models::Action> run(const std::shared_ptr<models::Node>& root, int iterations);
+    };
+
 }
 
 #endif //TREE_SEARCH_ALGORITHM_H

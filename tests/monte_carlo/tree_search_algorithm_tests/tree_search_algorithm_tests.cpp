@@ -39,7 +39,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
 
         // the tree starts with two actions?
         s0->Expand();
-        const shared_ptr<Action> best_decision = tree_search_algorithm(s0, 4);
+        const shared_ptr<Action> best_decision = MonteCarloTreeSearch::run(s0, 4);
 
         auto name = best_decision->Name();
 
