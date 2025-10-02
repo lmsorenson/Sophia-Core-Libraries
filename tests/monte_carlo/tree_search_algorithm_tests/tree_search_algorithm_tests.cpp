@@ -41,7 +41,9 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
         s0->Expand();
         const shared_ptr<Action> best_decision = tree_search_algorithm(s0, 4);
 
-        EXPECT_EQ(best_decision->Name(), "s2");
+        auto name = best_decision->Name();
+
+        EXPECT_EQ(name, "s2");
     }
 }
 

@@ -27,7 +27,7 @@ namespace sophia::monte_carlo::model_tests
         const auto s2 = factory->CreateNode("S2");
         auto s1_ = std::static_pointer_cast<MockNode>(s1);
         const auto a1 = factory->CreateAction(s1_, 1);
-        std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup(s2);
+        std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup("S2", s2);
 
         std::dynamic_pointer_cast<MockNode>(s1)->SetTotalReward(0);
         std::dynamic_pointer_cast<MockNode>(s1)->SetVisitCount(0);
@@ -45,7 +45,7 @@ namespace sophia::monte_carlo::model_tests
         auto s1_ = std::static_pointer_cast<MockNode>(s1);
         const auto a1 = factory->CreateAction(s1_, 1);
 
-        std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup(s2);
+        std::dynamic_pointer_cast<mocks::MockAction>(a1)->Setup("S2", s2);
 
         std::dynamic_pointer_cast<MockNode>(s1)->Setup({ s2 });
         s1->Expand();

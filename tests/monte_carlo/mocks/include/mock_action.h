@@ -28,7 +28,7 @@ namespace sophia::monte_carlo::mocks
         MOCK_METHOD(void, Generate, (), (override));
         MOCK_METHOD(shared_ptr<Node>, Target, (), (const, override));
 
-        void Setup( const shared_ptr<Node> &node ) const;
+        void Setup( std::string name, const shared_ptr<Node> &node ) const;
     };
 }
 
