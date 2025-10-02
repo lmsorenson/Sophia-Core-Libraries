@@ -1,5 +1,14 @@
 \doxysection{sophia\+::examples\+::tic\+\_\+tac\+\_\+toe\+::models\+::Position Class Reference}
 \hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}\index{sophia::examples::tic\_tac\_toe::models::Position@{sophia::examples::tic\_tac\_toe::models::Position}}
+
+
+Refers to a move that a \doxylink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Player}{Player} can make in a Tic Tac Toe \doxylink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game}{Game}. A position can be empty, it can have an X \doxylink{classSymbol}{Symbol}, or it can have an O \doxylink{classSymbol}{Symbol}.  
+
+
+
+
+{\ttfamily \#include $<$position.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -7,7 +16,7 @@
 {\bfseries Position} (const std\+::pair$<$ int, int $>$ \&coordinates)
 \item 
 \Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_ac8ab5a88feac8c966801819f28175f28}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_ac8ab5a88feac8c966801819f28175f28} 
-{\bfseries Position} (const std\+::pair$<$ int, int $>$ \&coordinates, Symbol tile\+\_\+state)
+{\bfseries Position} (const std\+::pair$<$ int, int $>$ \&coordinates, \mbox{\hyperlink{classSymbol}{Symbol}} tile\+\_\+state)
 \item 
 \Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_a3b3d88fdd83ecc8b9e6d59a007f82266}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_a3b3d88fdd83ecc8b9e6d59a007f82266} 
 std\+::string {\bfseries Name} () const
@@ -16,10 +25,10 @@ std\+::string {\bfseries Name} () const
 std\+::pair$<$ int, int $>$ {\bfseries Coordinates} () const
 \item 
 \Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_a996a0a412a8dd6a0700fcffba6b1de70}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_a996a0a412a8dd6a0700fcffba6b1de70} 
-Symbol {\bfseries State} () const
+\mbox{\hyperlink{classSymbol}{Symbol}} {\bfseries State} () const
 \item 
 \Hypertarget{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_aa0ae97983a4db0713ba886f0d6c6cd38}\label{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position_aa0ae97983a4db0713ba886f0d6c6cd38} 
-\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}} {\bfseries With\+State} (Symbol new\+\_\+state) const
+\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}} {\bfseries With\+State} (\mbox{\hyperlink{classSymbol}{Symbol}} new\+\_\+state) const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -31,6 +40,9 @@ static std\+::pair$<$ int, int $>$ {\bfseries parse\+\_\+move} (const std\+::str
 static bool {\bfseries is\+\_\+valid} (const std\+::string \&input)
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Refers to a move that a \doxylink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Player}{Player} can make in a Tic Tac Toe \doxylink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game}{Game}. A position can be empty, it can have an X \doxylink{classSymbol}{Symbol}, or it can have an O \doxylink{classSymbol}{Symbol}. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

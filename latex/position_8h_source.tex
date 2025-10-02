@@ -10,27 +10,27 @@
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }sophia::examples::tic\_tac\_toe::models}
 \DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}}
-\DoxyCodeLine{00010\ \ \ \ \ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}(\textcolor{keyword}{const}\ std::pair<int,\ int>\ \&coordinates);}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}(\textcolor{keyword}{const}\ std::pair<int,\ int>\ \&coordinates,\ Symbol\ tile\_state);}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ Name()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::pair<int,\ int>\ Coordinates()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ [[nodiscard]]\ Symbol\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State}{State}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\ WithState(Symbol\ new\_state)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}(\textcolor{keyword}{const}\ std::pair<int,\ int>\ \&coordinates);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}(\textcolor{keyword}{const}\ std::pair<int,\ int>\ \&coordinates,\ \mbox{\hyperlink{classSymbol}{Symbol}}\ tile\_state);}
 \DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::pair<int,int>\ parse\_move(\textcolor{keyword}{const}\ std::string\ \&input);}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ is\_valid(\textcolor{keyword}{const}\ std::string\ \&input);}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_row\_index\_\ =\ 0;}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_column\_index\_\ =\ 0;}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ Symbol\ m\_state\_\ =\ Symbol::None;}
-\DoxyCodeLine{00027\ \ \ \ \ \};}
-\DoxyCodeLine{00028\ \}}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//POSITION\_H}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ Name()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::pair<int,\ int>\ Coordinates()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classSymbol}{Symbol}}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1State}{State}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\ WithState(\mbox{\hyperlink{classSymbol}{Symbol}}\ new\_state)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::pair<int,int>\ parse\_move(\textcolor{keyword}{const}\ std::string\ \&input);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ is\_valid(\textcolor{keyword}{const}\ std::string\ \&input);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_row\_index\_\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_column\_index\_\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSymbol}{Symbol}}\ m\_state\_\ =\ Symbol::None;}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//POSITION\_H}}
 
 \end{DoxyCode}

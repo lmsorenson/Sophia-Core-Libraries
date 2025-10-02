@@ -5,6 +5,7 @@ var NAVTREEINDEX0 =
 "annotated.html":[0,0],
 "board_8h_source.html":[1,0,0,0,0,0,0,2,0],
 "bot_8h_source.html":[1,0,0,0,0,0,0,2,1],
+"classSymbol.html":[0,0,1],
 "classes.html":[0,1],
 "classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html":[0,0,0,0,0,0,0],
 "classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a48177417aac774a54502196d7a6c7e47":[0,0,0,0,0,0,0,3],

@@ -34,6 +34,7 @@ var hierarchy =
     [ "sophia::examples::tic_tac_toe::observer::Subject", "classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html", [
       [ "sophia::examples::tic_tac_toe::models::Game", "classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Game.html", null ]
     ] ],
+    [ "Symbol", "classSymbol.html", null ],
     [ "testing::Test", null, [
       [ "sophia::examples::tic_tac_toe::model_tests::TicTacToeModelsFixture", "classsophia_1_1examples_1_1tic__tac__toe_1_1model__tests_1_1TicTacToeModelsFixture.html", null ],
       [ "sophia::examples::tic_tac_toe::model_tests::TicTacToeModelsFixture", "classsophia_1_1examples_1_1tic__tac__toe_1_1model__tests_1_1TicTacToeModelsFixture.html", null ]

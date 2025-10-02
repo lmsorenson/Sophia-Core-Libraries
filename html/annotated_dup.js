@@ -39,5 +39,6 @@ var annotated_dup =
           [ "RolloutStrategyInterface", "classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html", null ]
         ] ]
       ] ]
-    ] ]
+    ] ],
+    [ "Symbol", "classSymbol.html", null ]
 ];
