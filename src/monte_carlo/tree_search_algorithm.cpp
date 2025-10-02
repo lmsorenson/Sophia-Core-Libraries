@@ -8,6 +8,16 @@ using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 
+/**
+ * @brief Runs the Monte Carlo Search algorithm.
+ *
+ * @callgraph
+ * @callergraph
+ *
+ * @param root
+ * @param iterations
+ * @return
+ */
 shared_ptr<Action> sophia::monte_carlo::tree_search_algorithm(const shared_ptr<Node>& root, const int iterations)
 {
     if (iterations < 0 || iterations > 20000)
