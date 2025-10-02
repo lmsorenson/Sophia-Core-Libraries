@@ -3,7 +3,6 @@
 
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <vector>
-#include <ostream>
 #include <memory>
 
 namespace sophia::monte_carlo::models
