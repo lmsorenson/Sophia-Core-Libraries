@@ -10,27 +10,27 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tree__factory__interface_8h}{monte\_carlo/factories/tree\_factory\_interface.h}}>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{node__base_8h}{monte\_carlo/models/node\_base.h}}>}}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1examples_1_1tic__tac__toe_1_1factories}{sophia::examples::tic\_tac\_toe::factories}}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories}{sophia::monte\_carlo::tic\_tac\_toe::factories}}}
 \DoxyCodeLine{00010\ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory}{TicTacToeFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{monte\_carlo::factories::TreeFactoryBase}}<models::GameState,\ models::Position>}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory}{TicTacToeFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{monte\_carlo::factories::TreeFactoryBase}}<models::GameState,\ models::Position>}
 \DoxyCodeLine{00023\ \ \ \ \ \{}
 \DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory}{TicTacToeFactory}}(\mbox{\hyperlink{namespacesophia_1_1examples_1_1tic__tac__toe_1_1models_a3978286627c18e9ffb2510dfd9e74694}{models::const\_player\_ptr}}\ you);}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_adfb4a7b150865ed08ec3c4a683fb2e99}{\string~TicTacToeFactory}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a89db0ab284403eb1345b89d9c8f9b34b}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a8e2c87aca0fa98b0ce8faf482aec7791}{CreateNode}}(std::string\ name)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a89db0ab284403eb1345b89d9c8f9b34b}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a8e2c87aca0fa98b0ce8faf482aec7791}{CreateNode}}(std::string\ name,\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{models::GameState}}\ game\_state)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a656e2b0b95bbedd507ee91321cb08682}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_ab50b5c930b959a30dd42672c530df092}{CreateAction}}(std::shared\_ptr<NodeBase<models::GameState,\ models::Position>>\ node,\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{models::Position}}\ change)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a9b33941458eb78f1efe152c0d6dd77b4}{rollout\_strategy\_ptr}}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a48177417aac774a54502196d7a6c7e47}{CreateStrategy}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1examples_1_1tic__tac__toe_1_1models_a3978286627c18e9ffb2510dfd9e74694}{models::const\_player\_ptr}}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_ae1cc0cd4cdf69e1be1d1f333a9f5efd3}{you\_}};}
-\DoxyCodeLine{00059\ \ \ \ \ \};}
-\DoxyCodeLine{00060\ \}}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TIC\_TAC\_TOE\_FACTORY\_H}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory}{TicTacToeFactory}}(\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{models::const\_player\_ptr}}\ you);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_af3a9e6d862c03681f632cc7e469d40eb}{\string~TicTacToeFactory}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a89db0ab284403eb1345b89d9c8f9b34b}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a8e2c87aca0fa98b0ce8faf482aec7791}{CreateNode}}(std::string\ name)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a89db0ab284403eb1345b89d9c8f9b34b}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a8e2c87aca0fa98b0ce8faf482aec7791}{CreateNode}}(std::string\ name,\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{models::GameState}}\ game\_state)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a656e2b0b95bbedd507ee91321cb08682}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_ab50b5c930b959a30dd42672c530df092}{CreateAction}}(std::shared\_ptr<NodeBase<models::GameState,\ models::Position>>\ node,\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{models::Position}}\ change)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a9b33941458eb78f1efe152c0d6dd77b4}{rollout\_strategy\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a48177417aac774a54502196d7a6c7e47}{CreateStrategy}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{models::const\_player\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a7545de809c05a0c15082a101768ca35e}{you\_}};}
+\DoxyCodeLine{00063\ \ \ \ \ \};}
+\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TIC\_TAC\_TOE\_FACTORY\_H}}
 
 \end{DoxyCode}

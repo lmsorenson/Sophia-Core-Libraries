@@ -1,9 +1,0 @@
-<map id="sophia::examples::tic_tac_toe::models::Game::accept_move" name="sophia::examples::tic_tac_toe::models::Game::accept_move">
-<area shape="rect" id="Node000001" title="Applies a move to the Tic Tac Toe game." alt="" coords="5,34,185,89"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a3b3d88fdd83ecc8b9e6d59a007f82266" title=" " alt="" coords="233,5,473,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,46,219,41,220,47,186,51"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998" title=" " alt="" coords="254,70,453,125"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,71,241,79,240,84,185,77"/>
-<area shape="rect" id="Node000004" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1observer_1_1Observer.html#ad617f6d1f3eb91485c842ae257b80c99" title=" " alt="" coords="521,70,731,125"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="453,95,507,95,507,100,453,100"/>
-</map>

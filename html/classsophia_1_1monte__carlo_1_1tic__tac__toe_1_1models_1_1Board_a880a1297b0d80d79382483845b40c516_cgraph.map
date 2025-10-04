@@ -1,0 +1,9 @@
+<map id="sophia::monte_carlo::tic_tac_toe::models::Board::WithMove" name="sophia::monte_carlo::tic_tac_toe::models::Board::WithMove">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,163,100"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a96c3c35f4cb92fe134ab6fcfe302279d" title=" " alt="" coords="211,45,368,100"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,70,197,70,197,75,163,75"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a782a06b17216cd642969ef7c62fc6c88" title=" " alt="" coords="416,5,584,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,55,402,49,403,54,369,60"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a996a0a412a8dd6a0700fcffba6b1de70" title=" " alt="" coords="421,84,579,139"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="369,84,408,92,408,97,368,90"/>
+</map>

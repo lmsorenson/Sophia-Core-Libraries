@@ -1,0 +1,235 @@
+\doxysection{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::Game Class Reference}
+\hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+
+
+A Tic Tac Toe game.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+
+
+Inheritance diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game} with default settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae3d112ca6e0e55150d2fdbc704474530}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
+\item 
+{\footnotesize template$<$class TPlayer , typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ac41e0aa399a1bffa1199fa05e6103245}{Assign}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} symbol, Args... args)
+\begin{DoxyCompactList}\small\item\em Assigns a particular type of player to a symbol. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a6b830a2c1b1f0b54d410e1481a0faae8}{game\+\_\+over}} () const
+\begin{DoxyCompactList}\small\item\em Is the game over? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{const\+\_\+player\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae5fdf69ae58480776a505b9d67d0566e}{active\+\_\+player}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current active player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a8364ea57344ca585a0e9041b99653ef4}{accept\+\_\+move}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} move)
+\begin{DoxyCompactList}\small\item\em Applies a move to the Tic Tac Toe game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a78e1a17440eace186f6ae1109e09db2c}{print}} () const
+\begin{DoxyCompactList}\small\item\em Prints the Tic Tac Toe game to the console. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class TPlayer , typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_aedd5e28f7d4abccd3b4eab4a03f332cd}{Assign}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} symbol, Args ... args)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ac7b5069cdef89cf8eb60641ff44bcfd4}{x\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em The player controlling the X positions. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_acfad8342ff583409465962da41ff876c}{o\+\_\+}} = nullptr
+\begin{DoxyCompactList}\small\item\em The player controlling the Y positions. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a951db9a42a0f0c2ecb684be032ebb5ae}{game\+\_\+states\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A list of boards. A board represents a state of play. This list should be ordered. A Tic Tac Toe game will have 9 states at most. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Private Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::observer\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject_a83cf7208251650e5402daa766774e032}{add\+\_\+observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer}{Observer}} $>$ \&observer)
+\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998}{notify}} (std\+::string message) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Tic Tac Toe game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ad59df6562a58a614fda24622d3715b65}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ad59df6562a58a614fda24622d3715b65} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!Game@{Game}}
+\index{Game@{Game}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game} with default settings. 
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae3d112ca6e0e55150d2fdbc704474530}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae3d112ca6e0e55150d2fdbc704474530} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
+\index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
+{\footnotesize\ttfamily Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a8364ea57344ca585a0e9041b99653ef4}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a8364ea57344ca585a0e9041b99653ef4} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!accept\_move@{accept\_move}}
+\index{accept\_move@{accept\_move}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{accept\_move()}{accept\_move()}}
+{\footnotesize\ttfamily void Game\+::accept\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Applies a move to the Tic Tac Toe game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move being applied. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a8364ea57344ca585a0e9041b99653ef4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae5fdf69ae58480776a505b9d67d0566e}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae5fdf69ae58480776a505b9d67d0566e} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!active\_player@{active\_player}}
+\index{active\_player@{active\_player}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{active\_player()}{active\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{const\+\_\+player\+\_\+ptr}} Game\+::active\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current active player. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the active player of the game. 
+\end{DoxyReturn}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_aedd5e28f7d4abccd3b4eab4a03f332cd}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_aedd5e28f7d4abccd3b4eab4a03f332cd} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!Assign@{Assign}}
+\index{Assign@{Assign}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{Assign()}{Assign()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class TPlayer , typename... Args$>$ \\
+void sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Game\+::\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}}]{symbol,  }\item[{Args ...}]{args }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_aedd5e28f7d4abccd3b4eab4a03f332cd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ac41e0aa399a1bffa1199fa05e6103245}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ac41e0aa399a1bffa1199fa05e6103245} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!Assign@{Assign}}
+\index{Assign@{Assign}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{Assign()}{Assign()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class TPlayer , typename... Args$>$ \\
+void sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Game\+::\+Assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}}]{symbol,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+
+
+Assigns a particular type of player to a symbol. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TPlayer} & The type of player to be assigned. (Probably a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human}{Human} or a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot}{Bot}) \\
+\hline
+{\em Args} & Constructor arguments for the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol in which the new player will occupy. \\
+\hline
+{\em args} & The constructor argument values for the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em invalid\+\_\+argument} & if the \doxylink{classSymbol}{Symbol} is not valid. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a6b830a2c1b1f0b54d410e1481a0faae8}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a6b830a2c1b1f0b54d410e1481a0faae8} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!game\_over@{game\_over}}
+\index{game\_over@{game\_over}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{game\_over()}{game\_over()}}
+{\footnotesize\ttfamily bool Game\+::game\+\_\+over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Is the game over? 
+
+\begin{DoxyReturn}{Returns}
+A boolean value\+: true if the game is over, false if it is not. 
+\end{DoxyReturn}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a78e1a17440eace186f6ae1109e09db2c}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a78e1a17440eace186f6ae1109e09db2c} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!print@{print}}
+\index{print@{print}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Game\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints the Tic Tac Toe game to the console. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a951db9a42a0f0c2ecb684be032ebb5ae}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a951db9a42a0f0c2ecb684be032ebb5ae} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!game\_states\_@{game\_states\_}}
+\index{game\_states\_@{game\_states\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{game\_states\_}{game\_states\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}}$>$ $>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Game\+::game\+\_\+states\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A list of boards. A board represents a state of play. This list should be ordered. A Tic Tac Toe game will have 9 states at most. 
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_acfad8342ff583409465962da41ff876c}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_acfad8342ff583409465962da41ff876c} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!o\_@{o\_}}
+\index{o\_@{o\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{o\_}{o\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}}$>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Game\+::o\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The player controlling the Y positions. 
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ac7b5069cdef89cf8eb60641ff44bcfd4}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ac7b5069cdef89cf8eb60641ff44bcfd4} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!x\_@{x\_}}
+\index{x\_@{x\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{x\_}{x\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}}$>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Game\+::x\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The player controlling the X positions. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/include/tic\+\_\+tac\+\_\+toe/models/\mbox{\hyperlink{game_8h}{game.\+h}}\item 
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/src/models/\mbox{\hyperlink{game_8cpp}{game.\+cpp}}\end{DoxyCompactItemize}

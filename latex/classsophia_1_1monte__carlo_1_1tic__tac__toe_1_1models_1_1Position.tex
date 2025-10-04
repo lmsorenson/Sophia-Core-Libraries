@@ -1,0 +1,184 @@
+\doxysection{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::Position Class Reference}
+\hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+
+
+Refers to a move that a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player} can make in a Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game}. A position can be empty, it can have an X \doxylink{classSymbol}{Symbol}, or it can have an O \doxylink{classSymbol}{Symbol}.  
+
+
+
+
+{\ttfamily \#include $<$position.\+h$>$}
+
+
+
+Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::Position\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a5d0ee05a8159974d626c97e41f12a152}{Position}} (const std\+::pair$<$ int, int $>$ \&coordinates)
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a133dabb81fac6ace358a491123b8547d}{Position}} (const std\+::pair$<$ int, int $>$ \&coordinates, \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} tile\+\_\+state)
+\item 
+std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a3b3d88fdd83ecc8b9e6d59a007f82266}{Name}} () const
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a782a06b17216cd642969ef7c62fc6c88}{Coordinates}} () const
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a996a0a412a8dd6a0700fcffba6b1de70}{State}} () const
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_ae6f7a5498b9757691818c38c0194336d}{With\+State}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} new\+\_\+state) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a19c054d633267c4795a670d999114c69}{parse\+\_\+move}} (const std\+::string \&input)
+\item 
+static bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a300bb565546648de737647917ea9fd92}{is\+\_\+valid}} (const std\+::string \&input)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a912799fce5e0640308a1b7a6ad64b4d2}{m\+\_\+row\+\_\+index\+\_\+}} = 0
+\item 
+int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a9f965c07f945870bfbbf60fe8c974ca8}{m\+\_\+column\+\_\+index\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a5433b228b49219f628332509fa5c4433}{m\+\_\+state\+\_\+}} = \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754}{enums\+::\+Symbol\+::\+None}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Refers to a move that a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player} can make in a Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game}. A position can be empty, it can have an X \doxylink{classSymbol}{Symbol}, or it can have an O \doxylink{classSymbol}{Symbol}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a5d0ee05a8159974d626c97e41f12a152}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a5d0ee05a8159974d626c97e41f12a152} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!Position@{Position}}
+\index{Position@{Position}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Position\+::\+Position (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ int, int $>$ \&}]{coordinates }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a133dabb81fac6ace358a491123b8547d}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a133dabb81fac6ace358a491123b8547d} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!Position@{Position}}
+\index{Position@{Position}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Position\+::\+Position (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ int, int $>$ \&}]{coordinates,  }\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}}]{tile\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a782a06b17216cd642969ef7c62fc6c88}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a782a06b17216cd642969ef7c62fc6c88} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!Coordinates@{Coordinates}}
+\index{Coordinates@{Coordinates}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{Coordinates()}{Coordinates()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Position\+::\+Coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a782a06b17216cd642969ef7c62fc6c88_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a300bb565546648de737647917ea9fd92}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a300bb565546648de737647917ea9fd92} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!is\_valid@{is\_valid}}
+\index{is\_valid@{is\_valid}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{is\_valid()}{is\_valid()}}
+{\footnotesize\ttfamily bool Position\+::is\+\_\+valid (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a300bb565546648de737647917ea9fd92_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a300bb565546648de737647917ea9fd92_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a3b3d88fdd83ecc8b9e6d59a007f82266}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a3b3d88fdd83ecc8b9e6d59a007f82266} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!Name@{Name}}
+\index{Name@{Name}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{Name()}{Name()}}
+{\footnotesize\ttfamily std\+::string Position\+::\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a3b3d88fdd83ecc8b9e6d59a007f82266_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a19c054d633267c4795a670d999114c69}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a19c054d633267c4795a670d999114c69} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!parse\_move@{parse\_move}}
+\index{parse\_move@{parse\_move}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{parse\_move()}{parse\_move()}}
+{\footnotesize\ttfamily std\+::pair$<$ int, int $>$ Position\+::parse\+\_\+move (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a19c054d633267c4795a670d999114c69_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a996a0a412a8dd6a0700fcffba6b1de70}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a996a0a412a8dd6a0700fcffba6b1de70} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!State@{State}}
+\index{State@{State}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymbol}{Symbol}} Position\+::\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a996a0a412a8dd6a0700fcffba6b1de70_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_ae6f7a5498b9757691818c38c0194336d}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_ae6f7a5498b9757691818c38c0194336d} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!WithState@{WithState}}
+\index{WithState@{WithState}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{WithState()}{WithState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} Position\+::\+With\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}}]{new\+\_\+state }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a9f965c07f945870bfbbf60fe8c974ca8}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a9f965c07f945870bfbbf60fe8c974ca8} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!m\_column\_index\_@{m\_column\_index\_}}
+\index{m\_column\_index\_@{m\_column\_index\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{m\_column\_index\_}{m\_column\_index\_}}
+{\footnotesize\ttfamily int sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Position\+::m\+\_\+column\+\_\+index\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a912799fce5e0640308a1b7a6ad64b4d2}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a912799fce5e0640308a1b7a6ad64b4d2} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!m\_row\_index\_@{m\_row\_index\_}}
+\index{m\_row\_index\_@{m\_row\_index\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{m\_row\_index\_}{m\_row\_index\_}}
+{\footnotesize\ttfamily int sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Position\+::m\+\_\+row\+\_\+index\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a5433b228b49219f628332509fa5c4433}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position_a5433b228b49219f628332509fa5c4433} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}!m\_state\_@{m\_state\_}}
+\index{m\_state\_@{m\_state\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Position@{sophia::monte\_carlo::tic\_tac\_toe::models::Position}}
+\doxysubsubsection{\texorpdfstring{m\_state\_}{m\_state\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Position\+::m\+\_\+state\+\_\+ = \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754}{enums\+::\+Symbol\+::\+None}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/include/tic\+\_\+tac\+\_\+toe/models/\mbox{\hyperlink{position_8h}{position.\+h}}\item 
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/src/models/\mbox{\hyperlink{position_8cpp}{position.\+cpp}}\end{DoxyCompactItemize}

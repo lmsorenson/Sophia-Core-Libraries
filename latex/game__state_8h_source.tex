@@ -8,26 +8,26 @@
 \DoxyCodeLine{00004\ }
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{board_8h}{tic\_tac\_toe/models/board.h}}>}}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1examples_1_1tic__tac__toe_1_1models}{sophia::examples::tic\_tac\_toe::models}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models}{sophia::monte\_carlo::tic\_tac\_toe::models}}}
 \DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}}
 \DoxyCodeLine{00015\ \ \ \ \ \{}
 \DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}(\mbox{\hyperlink{namespacesophia_1_1examples_1_1tic__tac__toe_1_1models_a3978286627c18e9ffb2510dfd9e74694}{const\_player\_ptr}}\ you,\ std::shared\_ptr<const\ Board>\ board);}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}(\mbox{\hyperlink{namespacesophia_1_1examples_1_1tic__tac__toe_1_1models_a3978286627c18e9ffb2510dfd9e74694}{const\_player\_ptr}}\ you,\ std::shared\_ptr<const\ Board>\ board,\ \mbox{\hyperlink{namespacesophia_1_1examples_1_1tic__tac__toe_1_1enums_aee499ed70fae1e1d999aca698537dd76}{enums::Symbol}}\ last\_placed);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}(\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{const\_player\_ptr}}\ you,\ std::shared\_ptr<const\ Board>\ board);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}(\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{const\_player\_ptr}}\ you,\ std::shared\_ptr<const\ Board>\ board,\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums::Symbol}}\ last\_placed);}
 \DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ GameState>\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_a6dc854b0b8d20bf45c7c369747bd8ead}{ApplyMove}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\&\ position)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Player>\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_a4d2f84a81953f21fb3925bd79dc498df}{CurrentPlayer}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Player>\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_ae9ffbe5af784223c888170586f0ef71f}{You}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<std::pair<enums::Symbol,\ bool>>\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_a1a41f3b32270de2dbf66bf68ddfcac76}{Winner}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<const\ Position>>\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_abe216d9dee5c65719431e2a99a685ba4}{GetOpenPositions}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1examples_1_1tic__tac__toe_1_1enums_aee499ed70fae1e1d999aca698537dd76}{enums::Symbol}}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_aaafa7f0f2aee3daf9922808c096d1666}{LastPlaced}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_a437457f6b544794f2d3ca841a100263e}{GetBoard}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_a74f9cd4901361de082efc572c8e66d66}{Print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ GameState>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a6dc854b0b8d20bf45c7c369747bd8ead}{ApplyMove}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}\&\ position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Player>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a878aa6764746fe3d29f4aa3610898d72}{CurrentPlayer}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Player>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_ae9ffbe5af784223c888170586f0ef71f}{You}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<std::pair<enums::Symbol,\ bool>>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a1a41f3b32270de2dbf66bf68ddfcac76}{Winner}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<const\ Position>>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a362e131dbc2d9f15917b2ba134f8df65}{GetOpenPositions}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums::Symbol}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aaafa7f0f2aee3daf9922808c096d1666}{LastPlaced}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a437457f6b544794f2d3ca841a100263e}{GetBoard}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a74f9cd4901361de082efc572c8e66d66}{Print}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ Board>\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_a204b2d98154408074b73ad7423f9f078}{m\_board\_}};}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ Player>\ \mbox{\hyperlink{classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1GameState_a382c98f7f71a285e6602d09484439b70}{m\_you\_}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ Board>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a3e735f05f743cdb034fbe1156f890ad0}{m\_board\_}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::shared\_ptr<const\ Player>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a38fd0b33adaeb4007c59306474d35561}{m\_you\_}};}
 \DoxyCodeLine{00032\ \ \ \ \ \};}
 \DoxyCodeLine{00033\ \}}
 \DoxyCodeLine{00034\ }

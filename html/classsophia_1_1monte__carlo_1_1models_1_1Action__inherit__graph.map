@@ -1,11 +1,11 @@
 <map id="sophia::monte_carlo::models::Action" name="sophia::monte_carlo::models::Action">
-<area shape="rect" id="Node000001" title=" " alt="" coords="92,133,283,333"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html" title=" " alt="" coords="5,381,183,576"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,347,134,382,129,380,142,345"/>
-<area shape="rect" id="Node000005" href="$classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html" title=" " alt="" coords="207,381,357,576"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="233,345,247,380,242,382,228,347"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="110,5,265,85"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,99,190,133,185,133,185,99"/>
-<area shape="rect" id="Node000004" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Move.html" title=" " alt="" coords="9,624,179,744"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="97,590,97,624,91,624,91,590"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="100,133,291,333"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html" title=" " alt="" coords="13,381,191,576"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,347,142,382,137,380,150,345"/>
+<area shape="rect" id="Node000005" href="$classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html" title=" " alt="" coords="215,381,365,576"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="241,345,255,380,250,382,236,347"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="118,5,273,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,99,198,133,193,133,193,99"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Move.html" title=" " alt="" coords="5,624,199,744"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="105,590,105,624,99,624,99,590"/>
 </map>

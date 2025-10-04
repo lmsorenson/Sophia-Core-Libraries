@@ -1,0 +1,3 @@
+<map id="sophia::monte_carlo::tic_tac_toe::models::GameState" name="sophia::monte_carlo::tic_tac_toe::models::GameState">
+<area shape="rect" id="Node000001" title="A state refers to the state from one player&#39;s perspective. This is for the monte carlo engine." alt="" coords="5,5,160,300"/>
+</map>

@@ -1,3 +1,0 @@
-<map id="sophia::examples::tic_tac_toe::models::Position" name="sophia::examples::tic_tac_toe::models::Position">
-<area shape="rect" id="Node000001" title="Refers to a move that a Player can make in a Tic Tac Toe Game. A position can be empty,..." alt="" coords="5,5,191,265"/>
-</map>

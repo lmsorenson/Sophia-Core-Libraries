@@ -1,10 +1,12 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,84,60,109"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Bot.html#a1740b1e423571b8883c6948650b0dea1" title=" " alt="" coords="108,69,271,124"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,94,94,94,94,99,60,99"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a300bb565546648de737647917ea9fd92" title=" " alt="" coords="319,29,512,84"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,80,305,74,306,79,272,85"/>
-<area shape="rect" id="Node000004" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a19c054d633267c4795a670d999114c69" title=" " alt="" coords="319,108,512,163"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="272,108,306,114,305,119,271,113"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="371,29,372,19,380,10,394,5,415,3,441,6,455,14,453,18,439,11,415,8,395,10,383,15,377,21,377,29"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,60,148"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#a1740b1e423571b8883c6948650b0dea1" title=" " alt="" coords="108,108,265,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,133,94,133,94,138,60,138"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a300bb565546648de737647917ea9fd92" title=" " alt="" coords="337,29,495,84"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="264,106,324,85,325,90,266,111"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a19c054d633267c4795a670d999114c69" title=" " alt="" coords="331,108,501,163"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="265,133,317,133,317,138,265,138"/>
+<area shape="rect" id="Node000005" href="$classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#add75e8e0fa2db2b5c6ed1d10d5b1b2a4" title="Runs the Monte Carlo Search algorithm." alt="" coords="313,187,519,227"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="266,157,340,181,338,186,265,162"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="371,29,371,19,379,10,394,5,416,3,442,6,457,14,454,18,440,11,416,8,396,10,382,15,376,21,377,29"/>
 </map>

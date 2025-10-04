@@ -1,0 +1,9 @@
+<map id="sophia::monte_carlo::tic_tac_toe::models::Human" name="sophia::monte_carlo::tic_tac_toe::models::Human">
+<area shape="rect" id="Node000001" title="A human Tic Tac Toe Player." alt="" coords="99,371,248,505"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html" title="A Player in a Tic Tac Toe Game." alt="" coords="97,148,249,323"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,337,176,370,171,370,171,337"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,160,93"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,104,132,147,127,149,106,106"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html" title=" " alt="" coords="185,5,343,100"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="237,114,219,149,214,147,232,111"/>
+</map>

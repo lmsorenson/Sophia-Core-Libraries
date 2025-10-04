@@ -1,0 +1,205 @@
+\doxysection{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::Board Class Reference}
+\hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+
+
+{\ttfamily \#include $<$board.\+h$>$}
+
+
+
+Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::Board\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af23f785e7c9d49271672c79c09cfa4e6}{Board}} (const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&other)
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a19733c5733bf14c6fb69327a19f69b99}{Board}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \& \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae6c8d66af1bb70e1d34a704321675975}{operator=}} (const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&other)
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \& \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae88c2bd6a0749bbc56c0f53190d67e88}{operator=}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&\&other) noexcept
+\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a96c3c35f4cb92fe134ab6fcfe302279d}{Set\+Position}} (const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&new\+\_\+position)
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a6dde21f0a0b92a75981a5ecf7f5cc421}{Last\+Placed}} () const
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af8a81c8554231afdba42ebdcc5e2a0bc}{Get\+Open\+Positions}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a880a1297b0d80d79382483845b40c516}{With\+Move}} (const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&position) const
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59}{Get\+Row}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_a794b70ae5eb251e7c6e7393c7e130ee3}{enums\+::\+Alignment}} line\+\_\+type) const
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::pair$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}, bool $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb}{Winner}} () const
+\item 
+void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536}{Print}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a45fdf6ae302c985f3b6998f7ec3db4ae}{m\+\_\+tiles\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ac283fb619f6b92b2be2d2556f413a440}{last\+\_\+placed\+\_\+}} = \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754}{enums\+::\+Symbol\+::\+None}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9ee491d4fea680cf69b033374a9fdfcb}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9ee491d4fea680cf69b033374a9fdfcb} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!Board@{Board}}
+\index{Board@{Board}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af23f785e7c9d49271672c79c09cfa4e6}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af23f785e7c9d49271672c79c09cfa4e6} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!Board@{Board}}
+\index{Board@{Board}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&}]{other }\end{DoxyParamCaption})}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a19733c5733bf14c6fb69327a19f69b99}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a19733c5733bf14c6fb69327a19f69b99} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!Board@{Board}}
+\index{Board@{Board}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af8a81c8554231afdba42ebdcc5e2a0bc}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af8a81c8554231afdba42ebdcc5e2a0bc} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!GetOpenPositions@{GetOpenPositions}}
+\index{GetOpenPositions@{GetOpenPositions}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{GetOpenPositions()}{GetOpenPositions()}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ $>$ Board\+::\+Get\+Open\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{GetRow()}{GetRow()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classSymbol}{Symbol}} $>$ $>$ Board\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_a794b70ae5eb251e7c6e7393c7e130ee3}{enums\+::\+Alignment}}}]{line\+\_\+type }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a6dde21f0a0b92a75981a5ecf7f5cc421}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a6dde21f0a0b92a75981a5ecf7f5cc421} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!LastPlaced@{LastPlaced}}
+\index{LastPlaced@{LastPlaced}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{LastPlaced()}{LastPlaced()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSymbol}{Symbol}} Board\+::\+Last\+Placed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae88c2bd6a0749bbc56c0f53190d67e88}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae88c2bd6a0749bbc56c0f53190d67e88} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!operator=@{operator=}}
+\index{operator=@{operator=}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \& Board\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae6c8d66af1bb70e1d34a704321675975}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ae6c8d66af1bb70e1d34a704321675975} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!operator=@{operator=}}
+\index{operator=@{operator=}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \& Board\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&}]{other }\end{DoxyParamCaption})}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!Print@{Print}}
+\index{Print@{Print}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void Board\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a96c3c35f4cb92fe134ab6fcfe302279d}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a96c3c35f4cb92fe134ab6fcfe302279d} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Board\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&}]{new\+\_\+position }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a96c3c35f4cb92fe134ab6fcfe302279d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a96c3c35f4cb92fe134ab6fcfe302279d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!Winner@{Winner}}
+\index{Winner@{Winner}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{Winner()}{Winner()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ std\+::pair$<$ \mbox{\hyperlink{classSymbol}{Symbol}}, bool $>$ $>$ Board\+::\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a880a1297b0d80d79382483845b40c516}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a880a1297b0d80d79382483845b40c516} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!WithMove@{WithMove}}
+\index{WithMove@{WithMove}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{WithMove()}{WithMove()}}
+{\footnotesize\ttfamily shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ Board\+::\+With\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&}]{position }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a880a1297b0d80d79382483845b40c516_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ac283fb619f6b92b2be2d2556f413a440}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_ac283fb619f6b92b2be2d2556f413a440} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!last\_placed\_@{last\_placed\_}}
+\index{last\_placed\_@{last\_placed\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{last\_placed\_}{last\_placed\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Board\+::last\+\_\+placed\+\_\+ = \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754}{enums\+::\+Symbol\+::\+None}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a45fdf6ae302c985f3b6998f7ec3db4ae}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a45fdf6ae302c985f3b6998f7ec3db4ae} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!m\_tiles\_@{m\_tiles\_}}
+\index{m\_tiles\_@{m\_tiles\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{m\_tiles\_}{m\_tiles\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}}$>$ $>$ $>$ sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Board\+::m\+\_\+tiles\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/include/tic\+\_\+tac\+\_\+toe/models/\mbox{\hyperlink{board_8h}{board.\+h}}\item 
+examples/monte\+\_\+carlo/tic\+\_\+tac\+\_\+toe/src/models/\mbox{\hyperlink{board_8cpp}{board.\+cpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var tic__tac__toe__factory_8h =
 [
-    [ "sophia::examples::tic_tac_toe::factories::TicTacToeFactory", "classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html", "classsophia_1_1examples_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory" ]
+    [ "sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory" ]
 ];

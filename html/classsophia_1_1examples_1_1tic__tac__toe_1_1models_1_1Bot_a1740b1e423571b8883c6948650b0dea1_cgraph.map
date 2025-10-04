@@ -1,8 +1,0 @@
-<map id="sophia::examples::tic_tac_toe::models::Bot::NextMove" name="sophia::examples::tic_tac_toe::models::Bot::NextMove">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,168,124"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a300bb565546648de737647917ea9fd92" title=" " alt="" coords="216,29,409,84"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,80,202,74,203,79,169,85"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1examples_1_1tic__tac__toe_1_1models_1_1Position.html#a19c054d633267c4795a670d999114c69" title=" " alt="" coords="216,108,409,163"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="169,108,203,114,202,119,168,113"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="269,29,269,19,277,10,292,5,313,3,338,6,353,14,350,18,336,11,313,8,293,10,280,15,274,21,274,29"/>
-</map>
