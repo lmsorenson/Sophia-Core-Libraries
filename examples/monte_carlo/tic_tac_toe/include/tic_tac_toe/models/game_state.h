@@ -4,7 +4,7 @@
 
 #include <tic_tac_toe/models/board.h>
 
-namespace sophia::examples::tic_tac_toe::models
+namespace sophia::monte_carlo::tic_tac_toe::models
 {
     /**
      * @class GameState

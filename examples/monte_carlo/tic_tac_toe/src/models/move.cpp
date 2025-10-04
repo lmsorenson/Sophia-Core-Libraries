@@ -3,7 +3,7 @@
 #include <utility>
 #include <monte_carlo/factories/tree_factory_interface.h>
 
-using sophia::examples::tic_tac_toe::models::Move;
+using sophia::monte_carlo::tic_tac_toe::models::Move;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::factories::TreeFactoryBase;

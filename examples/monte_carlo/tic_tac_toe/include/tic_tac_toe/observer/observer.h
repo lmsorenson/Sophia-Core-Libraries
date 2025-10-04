@@ -2,7 +2,7 @@
 #define SUBJECT_H
 #include <string>
 
-namespace sophia::examples::tic_tac_toe::observer
+namespace sophia::monte_carlo::tic_tac_toe::observer
 {
     class Observer
     {

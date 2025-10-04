@@ -4,7 +4,7 @@
 #include <monte_carlo/models/node_base.h>
 #include <tic_tac_toe/models/game_state.h>
 
-namespace sophia::examples::tic_tac_toe::models
+namespace sophia::monte_carlo::tic_tac_toe::models
 {
     using monte_carlo::factories::TreeFactoryBase;
     using monte_carlo::models::Action;

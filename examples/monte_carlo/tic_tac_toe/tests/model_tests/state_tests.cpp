@@ -3,7 +3,7 @@
 #include <monte_carlo/models/node.h>
 #include <tic_tac_toe/models/bot.h>
 
-namespace sophia::examples::tic_tac_toe::model_tests
+namespace sophia::monte_carlo::tic_tac_toe::model_tests
 {
     using std::dynamic_pointer_cast;
     using std::shared_ptr;

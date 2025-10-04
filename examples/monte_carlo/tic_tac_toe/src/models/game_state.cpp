@@ -2,10 +2,10 @@
 
 #include <utility>
 
-using sophia::examples::tic_tac_toe::models::GameState;
-using sophia::examples::tic_tac_toe::models::Board;
-using sophia::examples::tic_tac_toe::models::Player;
-using sophia::examples::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::models::GameState;
+using sophia::monte_carlo::tic_tac_toe::models::Board;
+using sophia::monte_carlo::tic_tac_toe::models::Player;
+using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 
 GameState::GameState(const_player_ptr you, std::shared_ptr<const Board> board)
     : m_you_(std::move(you))
@@ -36,7 +36,7 @@ std::shared_ptr<std::pair<Symbol, bool>> GameState::Winner() const
     return m_board_->Winner();
 }
 
-std::vector<std::shared_ptr<const sophia::examples::tic_tac_toe::models::Position>> GameState::GetOpenPositions() const
+std::vector<std::shared_ptr<const sophia::monte_carlo::tic_tac_toe::models::Position>> GameState::GetOpenPositions() const
 {
     return m_board_->GetOpenPositions();
 }

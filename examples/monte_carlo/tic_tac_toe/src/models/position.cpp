@@ -3,8 +3,8 @@
 #include <vector>
 #include <utility>
 
-using sophia::examples::tic_tac_toe::models::Position;
-using sophia::examples::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::models::Position;
+using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using std::shared_ptr;
 using std::vector;
 

@@ -7,12 +7,12 @@
 
 #include <utility>
 
-using sophia::examples::tic_tac_toe::factories::TicTacToeFactory;
-using sophia::examples::tic_tac_toe::models::State;
-using sophia::examples::tic_tac_toe::models::Board;
-using sophia::examples::tic_tac_toe::models::GameState;
-using sophia::examples::tic_tac_toe::models::Position;
-using sophia::examples::tic_tac_toe::models::Move;
+using sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory;
+using sophia::monte_carlo::tic_tac_toe::models::State;
+using sophia::monte_carlo::tic_tac_toe::models::Board;
+using sophia::monte_carlo::tic_tac_toe::models::GameState;
+using sophia::monte_carlo::tic_tac_toe::models::Position;
+using sophia::monte_carlo::tic_tac_toe::models::Move;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::RolloutStrategyInterface;

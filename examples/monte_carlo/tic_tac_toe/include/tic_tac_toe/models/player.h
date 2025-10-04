@@ -5,7 +5,7 @@
 #include <tic_tac_toe/enums/symbol.h>
 #include <tic_tac_toe/observer/observer.h>
 
-namespace sophia::examples::tic_tac_toe::models
+namespace sophia::monte_carlo::tic_tac_toe::models
 {
     /**
      * @class Player

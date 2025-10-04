@@ -5,8 +5,8 @@
 #include <tic_tac_toe/models/bot.h>
 #include <tic_tac_toe/models/human.h>
 
-using sophia::examples::tic_tac_toe::models::State;
-using sophia::examples::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::models::State;
+using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
 using std::shared_ptr;

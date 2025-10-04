@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace sophia::examples::tic_tac_toe::enums
+namespace sophia::monte_carlo::tic_tac_toe::enums
 {
     /**
      * @class Symbol
@@ -16,6 +16,11 @@ namespace sophia::examples::tic_tac_toe::enums
         O ///< The Second player in Tic Tac Toe places an O.
     };
 
+    /**
+     * @brief Converts a symbol to a string.
+     * @param state The Symbol to be converted to a string.
+     * @return Returns a string version of the Symbol
+     */
     inline std::string TileStateToString(const Symbol state)
     {
         switch (state)

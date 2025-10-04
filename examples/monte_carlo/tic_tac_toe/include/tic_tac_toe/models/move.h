@@ -6,7 +6,7 @@
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/position.h>
 
-namespace sophia::examples::tic_tac_toe::models
+namespace sophia::monte_carlo::tic_tac_toe::models
 {
     using monte_carlo::models::Node;
     using monte_carlo::factories::TreeFactoryBase;

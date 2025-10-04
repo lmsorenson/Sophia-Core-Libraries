@@ -1,7 +1,7 @@
 #include <tic_tac_toe/observer/subject.h>
 
-using sophia::examples::tic_tac_toe::observer::Subject;
-using sophia::examples::tic_tac_toe::observer::Observer;
+using sophia::monte_carlo::tic_tac_toe::observer::Subject;
+using sophia::monte_carlo::tic_tac_toe::observer::Observer;
 
 void Subject::add_observer(const std::shared_ptr<Observer> &observer)
 {

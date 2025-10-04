@@ -4,10 +4,10 @@
 #include <tic_tac_toe/models/board.h>
 #include <iostream>
 
-using sophia::examples::tic_tac_toe::models::Human;
-using sophia::examples::tic_tac_toe::models::Board;
-using sophia::examples::tic_tac_toe::models::Position;
-using sophia::examples::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::models::Human;
+using sophia::monte_carlo::tic_tac_toe::models::Board;
+using sophia::monte_carlo::tic_tac_toe::models::Position;
+using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;

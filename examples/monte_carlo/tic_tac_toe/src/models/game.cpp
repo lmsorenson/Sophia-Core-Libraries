@@ -3,9 +3,9 @@
 #include <memory>
 #include <tic_tac_toe/models/game_state.h>
 
-using sophia::examples::tic_tac_toe::models::Game;
-using sophia::examples::tic_tac_toe::models::const_player_ptr;
-using sophia::examples::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::models::Game;
+using sophia::monte_carlo::tic_tac_toe::models::const_player_ptr;
+using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using std::make_shared;
 using std::shared_ptr;
 

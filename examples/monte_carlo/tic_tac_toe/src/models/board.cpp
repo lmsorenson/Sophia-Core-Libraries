@@ -5,12 +5,12 @@
 #include <vector>
 
 
-using sophia::examples::tic_tac_toe::models::Board;
-using sophia::examples::tic_tac_toe::models::Position;
-using sophia::examples::tic_tac_toe::models::Player;
-using sophia::examples::tic_tac_toe::models::player_ptr;
-using sophia::examples::tic_tac_toe::enums::Symbol;
-using sophia::examples::tic_tac_toe::enums::LineType;
+using sophia::monte_carlo::tic_tac_toe::models::Board;
+using sophia::monte_carlo::tic_tac_toe::models::Position;
+using sophia::monte_carlo::tic_tac_toe::models::Player;
+using sophia::monte_carlo::tic_tac_toe::models::player_ptr;
+using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::enums::Alignment;
 using std::make_shared;
 using std::shared_ptr;
 using std::vector;
@@ -127,9 +127,9 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
 shared_ptr<std::pair<Symbol, bool>> Board::Winner() const
 {
     const auto list = {
-        GetRow(LineType::Horizontal),
-        GetRow(LineType::Vertical),
-        GetRow(LineType::Diagonal)
+        GetRow(Alignment::Horizontal),
+        GetRow(Alignment::Vertical),
+        GetRow(Alignment::Diagonal)
     };
 
     for(const auto& line_type : list)
@@ -193,11 +193,11 @@ void Board::Print() const
     }
 }
 
-std::vector<std::vector<Symbol>> Board::GetRow(LineType line_type) const
+std::vector<std::vector<Symbol>> Board::GetRow(Alignment line_type) const
 {
     switch (line_type)
     {
-        case LineType::Horizontal:
+        case Alignment::Horizontal:
             return {
                 {
                     m_tiles_[0][0]->State(),
@@ -215,7 +215,7 @@ std::vector<std::vector<Symbol>> Board::GetRow(LineType line_type) const
                     m_tiles_[2][2]->State()
                 }
             };
-        case LineType::Vertical:
+        case Alignment::Vertical:
             return {
                     {
                         m_tiles_[0][0]->State(),
@@ -233,7 +233,7 @@ std::vector<std::vector<Symbol>> Board::GetRow(LineType line_type) const
                         m_tiles_[2][2]->State()
                     },
                 };
-        case LineType::Diagonal:
+        case Alignment::Diagonal:
             return {
                     {
                         m_tiles_[0][0]->State(),

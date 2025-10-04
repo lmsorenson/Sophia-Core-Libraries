@@ -5,9 +5,9 @@
 #include <tic_tac_toe/factories/tic_tac_toe_factory.h>
 #include <cmath>
 
-using sophia::examples::tic_tac_toe::models::Bot;
-using sophia::examples::tic_tac_toe::models::Position;
-using sophia::examples::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::models::Bot;
+using sophia::monte_carlo::tic_tac_toe::models::Position;
+using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::MonteCarloTreeSearch;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;

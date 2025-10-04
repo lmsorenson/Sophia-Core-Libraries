@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 
-namespace sophia::examples::tic_tac_toe::observer
+namespace sophia::monte_carlo::tic_tac_toe::observer
 {
     class Subject
     {

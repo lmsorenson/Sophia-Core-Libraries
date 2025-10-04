@@ -1,4 +1,4 @@
 #include <tic_tac_toe/observer/observer.h>
 
-using sophia::examples::tic_tac_toe::observer::Observer;
+using sophia::monte_carlo::tic_tac_toe::observer::Observer;
 

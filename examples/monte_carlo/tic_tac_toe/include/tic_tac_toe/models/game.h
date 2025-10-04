@@ -5,7 +5,7 @@
 #include <memory>
 #include <stdexcept>
 
-namespace sophia::examples::tic_tac_toe::models
+namespace sophia::monte_carlo::tic_tac_toe::models
 {
     /**
      * @class Game
