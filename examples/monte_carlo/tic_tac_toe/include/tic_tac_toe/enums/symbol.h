@@ -12,8 +12,8 @@ namespace sophia::monte_carlo::tic_tac_toe::enums
     enum class Symbol
     {
         None = 0, ///< No Symbol has been placed.
-        X, ///< First player in Tic Tac Toe an X.
-        O ///< The Second player in Tic Tac Toe places an O.
+        X, ///< The first player in Tic Tac Toe places an X.
+        O ///< The second player in Tic Tac Toe places an O.
     };
 
     /**
