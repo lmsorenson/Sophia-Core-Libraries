@@ -8,7 +8,7 @@ var searchData=
   ['node_5',['node',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#autotoc_md1',1,'Creates a new Node.'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#autotoc_md0',1,'Creates a new Node.'],['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#afceb8877cfab44e0eda5ae3a88513242',1,'sophia::monte_carlo::models::Node::Node()'],['../classsophia_1_1monte__carlo_1_1models_1_1Node.html',1,'sophia::monte_carlo::models::Node']]],
   ['node_2ecpp_6',['node.cpp',['../node_8cpp.html',1,'']]],
   ['node_2eh_7',['node.h',['../node_8h.html',1,'']]],
-  ['node_5f_8',['node_',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#aa2cfbc29f1500472ccb25c62136f7c2e',1,'sophia::monte_carlo::tic_tac_toe::models::Bot']]],
+  ['node_5f_8',['node_',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#a22868ba708f11ff9da8a2152dcdbe9ee',1,'sophia::monte_carlo::tic_tac_toe::models::Bot']]],
   ['node_5fbase_2eh_9',['node_base.h',['../node__base_8h.html',1,'']]],
   ['node_5fbase_5fptr_10',['node_base_ptr',['../classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a6c6af4509e3d73d2ff9be543085fc142',1,'sophia::monte_carlo::factories::TreeFactoryBase::node_base_ptr'],['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ac23a86ce906eb00affa971a53a9dce72',1,'sophia::monte_carlo::models::ActionBase::node_base_ptr']]],
   ['node_5fbase_5fref_11',['node_base_ref',['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a4fdbd67b8a9ad98d8a07d730c04ad099',1,'sophia::monte_carlo::models::ActionBase']]],

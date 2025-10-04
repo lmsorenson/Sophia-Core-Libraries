@@ -1,6 +1,6 @@
 <map id="main" name="main">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,123,60,148"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#a1740b1e423571b8883c6948650b0dea1" title=" " alt="" coords="108,108,265,163"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#a1740b1e423571b8883c6948650b0dea1" title="Prompts the bot to make its next move." alt="" coords="108,108,265,163"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,133,94,133,94,138,60,138"/>
 <area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a300bb565546648de737647917ea9fd92" title=" " alt="" coords="337,29,495,84"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="264,106,324,85,325,90,266,111"/>

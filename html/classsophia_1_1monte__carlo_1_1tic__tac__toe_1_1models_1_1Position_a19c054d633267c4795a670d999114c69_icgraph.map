@@ -1,6 +1,6 @@
 <map id="sophia::monte_carlo::tic_tac_toe::models::Position::parse_move" name="sophia::monte_carlo::tic_tac_toe::models::Position::parse_move">
 <area shape="rect" id="Node000001" title=" " alt="" coords="423,37,593,92"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#a1740b1e423571b8883c6948650b0dea1" title=" " alt="" coords="214,5,371,60"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#a1740b1e423571b8883c6948650b0dea1" title="Prompts the bot to make its next move." alt="" coords="214,5,371,60"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="409,53,371,47,372,42,409,47"/>
 <area shape="rect" id="Node000004" href="$human_8cpp.html#ae4706ba8d397c3394cbfe45bc88a37ec" title=" " alt="" coords="211,84,375,109"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="410,82,375,87,375,82,409,77"/>
