@@ -5,7 +5,7 @@ namespace sophia::monte_carlo::tic_tac_toe::enums
 {
     /**
      * @class Alignment
-     * @brief A player wins when he places three of their symbols (X's or O's)
+     * @brief A player wins when he or she places three of their symbols (X's or O's)
      * in a straight line.  Alignment is the orientation of the line whether it be
      * Horizontal, Vertical or Diagonal.
      */
