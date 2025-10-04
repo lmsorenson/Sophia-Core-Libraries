@@ -15,21 +15,85 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     using player_ptr = std::shared_ptr<Player>;
     using const_player_ptr = std::shared_ptr<const Player>;
 
+    /**
+     * @class Board
+     * @brief A Tic Tac Toe board.
+     */
     class Board
     {
     public:
+        /**
+         * @brief Creates a default Tic Tac Toe board.
+         */
         Board();
+
+        /**
+         * @brief creates a copy of a Tic Tac Toe board.
+         * @param other
+         */
         Board(const Board &other);
+
+        /**
+         * @brief Moves a Tic Tac Toe board.
+         * @param other
+         */
         Board(Board &&other) noexcept;
+
+        /**
+         * @brief The assignment operator for a Tic Tac Toe Board.
+         * @param other
+         * @return a Board
+         */
         Board & operator=(const Board &other);
+
+        /**
+         * @brief The assignment operator for a Tic Tac Toe Board.
+         * @param other
+         * @return a Board
+         */
         Board & operator=(Board &&other) noexcept;
 
+        /**
+         * @brief Set a position.
+         * @param new_position
+         */
         void SetPosition(const Position &new_position);
+
+        /**
+         * @brief The last placed symbol.
+         * @return A Symbol value X, O, or None.
+         */
         [[nodiscard]] enums::Symbol LastPlaced() const;
+
+        /**
+         * Returns the Open Positions on the board.  These are the positions where there is no X or O.
+         * @return The Open positions on the board.
+         */
         [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
+
+        /**
+         * @brief Creates a copy of the board with the given move applied.
+         * @param position The position to apply.
+         * @return The new board with the position applied.
+         */
         [[nodiscard]] std::shared_ptr<const Board> WithMove(const Position& position) const;
+
+        /**
+         * @brief ??
+         * @param line_type
+         * @return
+         */
         [[nodiscard]] std::vector<std::vector<enums::Symbol>> GetRow(enums::Alignment line_type) const;
+
+        /**
+         * @brief Gets the winner of the game if one exists.
+         * @return The winner of the game, nullptr if there is no winner.
+         */
         [[nodiscard]] std::shared_ptr<std::pair<enums::Symbol, bool>> Winner() const;
+
+        /**
+         * @brief Prints the game board to the console.
+         */
         void Print() const;
 
     private:
