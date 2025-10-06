@@ -127,9 +127,9 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
 shared_ptr<std::pair<Symbol, bool>> Board::Winner() const
 {
     const auto list = {
-        GetRow(Alignment::Horizontal),
-        GetRow(Alignment::Vertical),
-        GetRow(Alignment::Diagonal)
+        GetLines(Alignment::Horizontal),
+        GetLines(Alignment::Vertical),
+        GetLines(Alignment::Diagonal)
     };
 
     for(const auto& line_type : list)
@@ -193,9 +193,9 @@ void Board::Print() const
     }
 }
 
-std::vector<std::vector<Symbol>> Board::GetRow(Alignment line_type) const
+std::vector<std::vector<Symbol>> Board::GetLines(const Alignment alignment) const
 {
-    switch (line_type)
+    switch (alignment)
     {
         case Alignment::Horizontal:
             return {

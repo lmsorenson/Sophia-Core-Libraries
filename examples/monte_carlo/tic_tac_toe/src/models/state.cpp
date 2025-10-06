@@ -24,14 +24,14 @@ Symbol Alternate(const Symbol last_placed)
     }
 }
 
-State::State(const string &name, const shared_ptr<const TreeFactoryBase<GameState, Position>> &interface)
-    : NodeBase(name, GameState(nullptr, nullptr), interface)
+State::State(const string &name, const shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory)
+    : NodeBase(name, GameState(nullptr, nullptr), tree_factory)
 {
 }
 
 State::State(const std::string &name, GameState game_state,
-    const std::shared_ptr<const TreeFactoryBase<GameState, Position>> &interface)
-: NodeBase(name, std::move(game_state), interface)
+    const std::shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory)
+: NodeBase(name, std::move(game_state), tree_factory)
 {
 }
 

@@ -66,7 +66,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         [[nodiscard]] enums::Symbol LastPlaced() const;
 
         /**
-         * Returns the Open Positions on the board.  These are the positions where there is no X or O.
+         * @brief Returns the Open Positions on the board.  These are the positions where there is no X or O.
          * @return The Open positions on the board.
          */
         [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
@@ -79,11 +79,11 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         [[nodiscard]] std::shared_ptr<const Board> WithMove(const Position& position) const;
 
         /**
-         * @brief ??
-         * @param line_type
+         * @brief Gets lines of positions
+         * @param alignment The line alignment
          * @return
          */
-        [[nodiscard]] std::vector<std::vector<enums::Symbol>> GetRow(enums::Alignment line_type) const;
+        [[nodiscard]] std::vector<std::vector<enums::Symbol>> GetLines(enums::Alignment alignment) const;
 
         /**
          * @brief Gets the winner of the game if one exists.

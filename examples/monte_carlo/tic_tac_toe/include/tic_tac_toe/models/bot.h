@@ -20,14 +20,14 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     public:
         /**
          * @brief Creates a bot.
-         * @param symbol The symbol that the bot owns.
+         * @param symbol The symbol that the bot places.
          * @param difficulty The skill level of the bot a decimal value from 0 to 1.
          */
         explicit Bot(enums::Symbol symbol, double difficulty);
 
         /**
          * @brief Prompts the bot to make its next move.
-         * @return A shared pointer to the move.
+         * @return A shared pointer to the move made.
          */
         [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
 

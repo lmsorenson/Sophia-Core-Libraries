@@ -50,7 +50,7 @@ Position Position::WithState(const Symbol new_state) const
     return new_position;
 }
 
-std::pair<int, int> Position::parse_move(const std::string &input)
+std::pair<int, int> Position::ParseMove(const std::string &input)
 {
     if (input.length() != 2)
     {
@@ -63,7 +63,7 @@ std::pair<int, int> Position::parse_move(const std::string &input)
     return { r - 1, c - 1 };
 }
 
-bool Position::is_valid(const std::string &input)
+bool Position::IsValid(const std::string &input)
 {
     bool is_valid = input.length() == 2;
     is_valid = is_valid && std::isalpha(input[0]);

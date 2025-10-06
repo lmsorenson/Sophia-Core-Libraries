@@ -45,9 +45,9 @@ std::shared_ptr<const Position> process_player_move(Symbol symbol)
     std::cout << "Enter your move : ";
     std::getline(std::cin, move);
 
-    if (Position::is_valid(move))
+    if (Position::IsValid(move))
     {
-        auto coordinates = Position::parse_move(move);
+        auto coordinates = Position::ParseMove(move);
         const auto position = std::make_shared<Position>(coordinates, symbol);
         return position;
     }

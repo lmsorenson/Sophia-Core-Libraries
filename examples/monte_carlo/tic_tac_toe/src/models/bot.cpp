@@ -38,9 +38,9 @@ std::shared_ptr<const Position> Bot::NextMove() const
 
     const std::string move = t->Name();
     std::cout << "Bot move " << move << std::endl;
-    if (Position::is_valid(t->Name()))
+    if (Position::IsValid(t->Name()))
     {
-        auto coords = Position::parse_move(t->Name());
+        auto coords = Position::ParseMove(t->Name());
         std::cout << "parsed " << "row " << coords.first << ", column " << coords.second << std::endl;
         std::cout << "mark " <<  TileStateToString(m_player_symbol_) << std::endl;
 

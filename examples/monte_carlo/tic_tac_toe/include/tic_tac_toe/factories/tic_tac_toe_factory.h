@@ -30,14 +30,14 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
         ~TicTacToeFactory() override = default;
 
         /**
-         * # Creates a new Node.
+         * @brief Creates a new Node.
          * @param name the name of the new Node being created.
          * @returns a shared pointer to a Node
          */
         [[nodiscard]] node_ptr CreateNode(std::string name) const override;
 
         /**
-         * # Creates a new Node.
+         * @brief Creates a new Node.
          * @param name the name of the new Node being created.
          * @param game_state the state represented by the Node being created.
          * @returns a shared pointer to a Node
@@ -45,7 +45,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
         [[nodiscard]] node_ptr CreateNode(std::string name, models::GameState game_state) const override;
 
         /**
-         * # Creates a new Action.
+         * @brief Creates a new Action.
          * @param node the source node for the action being created.
          * @param change the change being applied to the source node.
          * @returns a shared pointer to a Node
@@ -53,7 +53,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
         [[nodiscard]] action_ptr CreateAction(std::shared_ptr<NodeBase<models::GameState, models::Position>> node, models::Position change) const override;
 
         /**
-         * # Creates a new Strategy.
+         * @brief Creates a new Strategy.
          * @returns a shared pointer to a Rollout Strategy.
          */
         [[nodiscard]] rollout_strategy_ptr CreateStrategy() const override;
