@@ -37,11 +37,11 @@ void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a6dde21f0a0b92a75981a5ecf7f5cc421}{Last\+Placed}} () const
 \begin{DoxyCompactList}\small\item\em The last placed symbol. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af8a81c8554231afdba42ebdcc5e2a0bc}{Get\+Open\+Positions}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the Open Positions on the board. These are the positions where there is no X or O. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a880a1297b0d80d79382483845b40c516}{With\+Move}} (const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} \&position) const
 \begin{DoxyCompactList}\small\item\em Creates a copy of the board with the given move applied. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59}{Get\+Row}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_a794b70ae5eb251e7c6e7393c7e130ee3}{enums\+::\+Alignment}} line\+\_\+type) const
-\begin{DoxyCompactList}\small\item\em ?? \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9a3a642a4bd5f59fed6b678d6db1dae8}{Get\+Lines}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_a794b70ae5eb251e7c6e7393c7e130ee3}{enums\+::\+Alignment}} alignment) const
+\begin{DoxyCompactList}\small\item\em Gets lines of positions. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ std\+::pair$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}}, bool $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb}{Winner}} () const
 \begin{DoxyCompactList}\small\item\em Gets the winner of the game if one exists. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536}{Print}} () const
@@ -102,28 +102,19 @@ Moves a Tic Tac Toe board.
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af8a81c8554231afdba42ebdcc5e2a0bc}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af8a81c8554231afdba42ebdcc5e2a0bc} 
-\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!GetOpenPositions@{GetOpenPositions}}
-\index{GetOpenPositions@{GetOpenPositions}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
-\doxysubsubsection{\texorpdfstring{GetOpenPositions()}{GetOpenPositions()}}
-{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ $>$ Board\+::\+Get\+Open\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-Returns the Open Positions on the board. These are the positions where there is no X or O. \begin{DoxyReturn}{Returns}
-The Open positions on the board. 
-\end{DoxyReturn}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59} 
-\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!GetRow@{GetRow}}
-\index{GetRow@{GetRow}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
-\doxysubsubsection{\texorpdfstring{GetRow()}{GetRow()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classSymbol}{Symbol}} $>$ $>$ Board\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_a794b70ae5eb251e7c6e7393c7e130ee3}{enums\+::\+Alignment}}}]{line\+\_\+type }\end{DoxyParamCaption}) const}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9a3a642a4bd5f59fed6b678d6db1dae8}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9a3a642a4bd5f59fed6b678d6db1dae8} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!GetLines@{GetLines}}
+\index{GetLines@{GetLines}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{GetLines()}{GetLines()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classSymbol}{Symbol}} $>$ $>$ Board\+::\+Get\+Lines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_a794b70ae5eb251e7c6e7393c7e130ee3}{enums\+::\+Alignment}}}]{alignment }\end{DoxyParamCaption}) const}
 
 
 
-?? 
+Gets lines of positions. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em line\+\_\+type} & \\
+{\em alignment} & The line alignment \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -134,9 +125,22 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59_icgraph}
+\includegraphics[width=350pt]{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9a3a642a4bd5f59fed6b678d6db1dae8_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af8a81c8554231afdba42ebdcc5e2a0bc}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_af8a81c8554231afdba42ebdcc5e2a0bc} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!GetOpenPositions@{GetOpenPositions}}
+\index{GetOpenPositions@{GetOpenPositions}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}
+\doxysubsubsection{\texorpdfstring{GetOpenPositions()}{GetOpenPositions()}}
+{\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ $>$ Board\+::\+Get\+Open\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the Open Positions on the board. These are the positions where there is no X or O. 
+
+\begin{DoxyReturn}{Returns}
+The Open positions on the board. 
+\end{DoxyReturn}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a6dde21f0a0b92a75981a5ecf7f5cc421}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a6dde21f0a0b92a75981a5ecf7f5cc421} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}!LastPlaced@{LastPlaced}}
 \index{LastPlaced@{LastPlaced}!sophia::monte\_carlo::tic\_tac\_toe::models::Board@{sophia::monte\_carlo::tic\_tac\_toe::models::Board}}

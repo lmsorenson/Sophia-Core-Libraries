@@ -37,13 +37,13 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_af3a9e6d862c03681f632cc7e469d40eb}{\texorpdfstring{$\sim$}{\string~}\+Tic\+Tac\+Toe\+Factory}} () override=default
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a89db0ab284403eb1345b89d9c8f9b34b}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a8e2c87aca0fa98b0ce8faf482aec7791}{Create\+Node}} (std\+::string name) const override
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a new Node. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a89db0ab284403eb1345b89d9c8f9b34b}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_aa6371f8dc4e3c8f3a441a06c53a3ea56}{Create\+Node}} (std\+::string name, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{models\+::\+Game\+State}} game\+\_\+state) const override
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a new Node. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a656e2b0b95bbedd507ee91321cb08682}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_ab50b5c930b959a30dd42672c530df092}{Create\+Action}} (std\+::shared\+\_\+ptr$<$ Node\+Base$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{models\+::\+Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{models\+::\+Position}} $>$ $>$ node, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{models\+::\+Position}} change) const override
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a new Action. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase_a9b33941458eb78f1efe152c0d6dd77b4}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a48177417aac774a54502196d7a6c7e47}{Create\+Strategy}} () const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a new Strategy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base$<$ models\+::\+Game\+State, models\+::\+Position $>$}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -117,7 +117,10 @@ Creates an instance of \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_
 \doxysubsubsection{\texorpdfstring{CreateAction()}{CreateAction()}}
 {\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ Tic\+Tac\+Toe\+Factory\+::\+Create\+Action (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Node\+Base$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{models\+::\+Game\+State}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{models\+::\+Position}} $>$ $>$}]{node,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{models\+::\+Position}}}]{change }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
 
-\hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_autotoc_md2}{}\doxysubsection{\texorpdfstring{Creates a new Action.}{Creates a new Action.}}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_autotoc_md2}
+
+
+Creates a new Action. 
+
 
 \begin{DoxyParams}{Parameters}
 {\em node} & the source node for the action being created. \\
@@ -134,7 +137,10 @@ a shared pointer to a Node
 \doxysubsubsection{\texorpdfstring{CreateNode()}{CreateNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}} $>$ Tic\+Tac\+Toe\+Factory\+::\+Create\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-\hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_autotoc_md0}{}\doxysubsection{\texorpdfstring{Creates a new Node.}{Creates a new Node.}}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_autotoc_md0}
+
+
+Creates a new Node. 
+
 
 \begin{DoxyParams}{Parameters}
 {\em name} & the name of the new Node being created. \\
@@ -153,7 +159,10 @@ Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFact
 \doxysubsubsection{\texorpdfstring{CreateNode()}{CreateNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}} $>$ Tic\+Tac\+Toe\+Factory\+::\+Create\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{models\+::\+Game\+State}}}]{game\+\_\+state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
 
-\hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_autotoc_md1}{}\doxysubsection{\texorpdfstring{Creates a new Node.}{Creates a new Node.}}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_autotoc_md1}
+
+
+Creates a new Node. 
+
 
 \begin{DoxyParams}{Parameters}
 {\em name} & the name of the new Node being created. \\
@@ -170,7 +179,10 @@ a shared pointer to a Node
 \doxysubsubsection{\texorpdfstring{CreateStrategy()}{CreateStrategy()}}
 {\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{Rollout\+Strategy\+Interface}} $>$ Tic\+Tac\+Toe\+Factory\+::\+Create\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-\hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_autotoc_md3}{}\doxysubsection{\texorpdfstring{Creates a new Strategy.}{Creates a new Strategy.}}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_autotoc_md3}
+
+
+Creates a new Strategy. 
+
 \begin{DoxyReturn}{Returns}
 a shared pointer to a Rollout Strategy. 
 \end{DoxyReturn}

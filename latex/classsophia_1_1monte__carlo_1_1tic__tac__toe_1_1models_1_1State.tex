@@ -2,6 +2,11 @@
 \hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}{}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}\index{sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}}
 
 
+The Monte Carlo state node of a Tic Tac Toe game.  
+
+
+
+
 {\ttfamily \#include $<$state.\+h$>$}
 
 
@@ -27,35 +32,54 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a083c33dfabe4de2fc3a27242ce6cc38b}{State}} (const std\+::string \&name, const const\+\_\+factory\+\_\+ptr \&interface)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae417e48301ad82a14381e61ef30a344b}{State}} (const std\+::string \&name, const const\+\_\+factory\+\_\+ptr \&tree\+\_\+factory)
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a3cddf7bb2a1fffa9aee65effede56f87}{State}} (const std\+::string \&name, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} game\+\_\+state, const const\+\_\+factory\+\_\+ptr \&interface)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae6dd79c2d19613375fd21d8bb24fda64}{State}} (const std\+::string \&name, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} game\+\_\+state, const const\+\_\+factory\+\_\+ptr \&tree\+\_\+factory)
 \item 
 std\+::vector$<$ action\+\_\+ptr $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22}{Get\+Available\+Actions}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Gets all available actions that can be made at this given state. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a92a058c4863cdd4f07af0146bff557c4}{Is\+Terminal\+State}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Determines if this state is the end of the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game}. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a0505d2a290fcb28751510b3ee581b4c8}{Value}} () const override
 \item 
 action\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65}{Select\+Action}} (std\+::string action\+\_\+name) override
-\item 
+\begin{DoxyCompactList}\small\item\em Selects the available action with the given name. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51}{Print}} () const override
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+The Monte Carlo state node of a Tic Tac Toe game. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a083c33dfabe4de2fc3a27242ce6cc38b}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a083c33dfabe4de2fc3a27242ce6cc38b} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae417e48301ad82a14381e61ef30a344b}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae417e48301ad82a14381e61ef30a344b} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}!State@{State}}
 \index{State@{State}!sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}}
 \doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{interface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{tree\+\_\+factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a3cddf7bb2a1fffa9aee65effede56f87}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a3cddf7bb2a1fffa9aee65effede56f87} 
+Creates an instance of a Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}{State}. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}{State}. \\
+\hline
+{\em tree\+\_\+factory} & A tree factory that can be used to create the following states. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae6dd79c2d19613375fd21d8bb24fda64}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae6dd79c2d19613375fd21d8bb24fda64} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}!State@{State}}
 \index{State@{State}!sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}}
 \doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}}]{game\+\_\+state,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{interface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}}]{game\+\_\+state,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{tree\+\_\+factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+Creates an instance of a Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}{State}. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}{State}. \\
+\hline
+{\em game\+\_\+state} & A Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. \\
+\hline
+{\em tree\+\_\+factory} & A tree factory that can be used to create the following states. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -65,6 +89,13 @@ void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1
 \doxysubsubsection{\texorpdfstring{GetAvailableActions()}{GetAvailableActions()}}
 {\footnotesize\ttfamily vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ $>$ State\+::\+Get\+Available\+Actions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
+
+
+Gets all available actions that can be made at this given state. 
+
+\begin{DoxyReturn}{Returns}
+A vector of shared pointers to Actions that can be applied at this given state of play. 
+\end{DoxyReturn}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -87,18 +118,37 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{IsTerminalState()}{IsTerminalState()}}
 {\footnotesize\ttfamily bool State\+::\+Is\+Terminal\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
 
+
+
+Determines if this state is the end of the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game}. 
+
+\begin{DoxyReturn}{Returns}
+True if a winner can be determined, False if a winner cannot be determined. 
+\end{DoxyReturn}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}!Print@{Print}}
 \index{Print@{Print}!sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}}
 \doxysubsubsection{\texorpdfstring{Print()}{Print()}}
 {\footnotesize\ttfamily void State\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
 
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65} 
+Prints the board at this state of the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game} to the console. \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}!SelectAction@{SelectAction}}
 \index{SelectAction@{SelectAction}!sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}}
 \doxysubsubsection{\texorpdfstring{SelectAction()}{SelectAction()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{Node\+::action\+\_\+ptr}} State\+::\+Select\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
+
+
+Selects the available action with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action\+\_\+name} & A 2-\/letter name for a move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The action represented by the action name. 
+\end{DoxyReturn}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -113,6 +163,9 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{Value()}{Value()}}
 {\footnotesize\ttfamily double State\+::\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
 
+The value or score of this state for the given owning player. \begin{DoxyReturn}{Returns}
+A double value representing a score for the state. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

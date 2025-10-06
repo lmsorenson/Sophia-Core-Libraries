@@ -135,13 +135,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6dde21f0a0b92a75981a5ecf7f5cc421"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last placed symbol.  <br /></td></tr>
 <tr class="separator:a6dde21f0a0b92a75981a5ecf7f5cc421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8a81c8554231afdba42ebdcc5e2a0bc" id="r_af8a81c8554231afdba42ebdcc5e2a0bc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html">Position</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#af8a81c8554231afdba42ebdcc5e2a0bc">GetOpenPositions</a> () const</td></tr>
+<tr class="memdesc:af8a81c8554231afdba42ebdcc5e2a0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Open Positions on the board. These are the positions where there is no X or O.  <br /></td></tr>
 <tr class="separator:af8a81c8554231afdba42ebdcc5e2a0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a880a1297b0d80d79382483845b40c516" id="r_a880a1297b0d80d79382483845b40c516"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html">Board</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a880a1297b0d80d79382483845b40c516">WithMove</a> (const <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html">Position</a> &amp;position) const</td></tr>
 <tr class="memdesc:a880a1297b0d80d79382483845b40c516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a copy of the board with the given move applied.  <br /></td></tr>
 <tr class="separator:a880a1297b0d80d79382483845b40c516"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa39b9d27dca3906b384afdeacd527e59" id="r_aa39b9d27dca3906b384afdeacd527e59"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893">enums::Symbol</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa39b9d27dca3906b384afdeacd527e59">GetRow</a> (<a class="el" href="namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3">enums::Alignment</a> line_type) const</td></tr>
-<tr class="memdesc:aa39b9d27dca3906b384afdeacd527e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">??  <br /></td></tr>
-<tr class="separator:aa39b9d27dca3906b384afdeacd527e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3a642a4bd5f59fed6b678d6db1dae8" id="r_a9a3a642a4bd5f59fed6b678d6db1dae8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893">enums::Symbol</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a9a3a642a4bd5f59fed6b678d6db1dae8">GetLines</a> (<a class="el" href="namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3">enums::Alignment</a> alignment) const</td></tr>
+<tr class="memdesc:a9a3a642a4bd5f59fed6b678d6db1dae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets lines of positions.  <br /></td></tr>
+<tr class="separator:a9a3a642a4bd5f59fed6b678d6db1dae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2e980e5f14e9dedace99356a52df9cb" id="r_aa2e980e5f14e9dedace99356a52df9cb"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; std::pair&lt; <a class="el" href="namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893">enums::Symbol</a>, bool &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa2e980e5f14e9dedace99356a52df9cb">Winner</a> () const</td></tr>
 <tr class="memdesc:aa2e980e5f14e9dedace99356a52df9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the winner of the game if one exists.  <br /></td></tr>
 <tr class="separator:aa2e980e5f14e9dedace99356a52df9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,6 +240,45 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9a3a642a4bd5f59fed6b678d6db1dae8" name="a9a3a642a4bd5f59fed6b678d6db1dae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a3a642a4bd5f59fed6b678d6db1dae8">&#9670;&#160;</a></span>GetLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="classSymbol.html">Symbol</a> &gt; &gt; Board::GetLines </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3">enums::Alignment</a>&#160;</td>
+          <td class="paramname"><em>alignment</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets lines of positions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alignment</td><td>The line alignment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9a3a642a4bd5f59fed6b678d6db1dae8_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9a3a642a4bd5f59fed6b678d6db1dae8_icgraph" alt=""/></div>
+<map name="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9a3a642a4bd5f59fed6b678d6db1dae8_icgraph" id="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a9a3a642a4bd5f59fed6b678d6db1dae8_icgraph">
+<area shape="rect" title="Gets lines of positions." alt="" coords="416,5,573,60"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa2e980e5f14e9dedace99356a52df9cb" title="Gets the winner of the game if one exists." alt="" coords="211,5,368,60"/>
+<area shape="poly" title=" " alt="" coords="402,35,368,35,368,30,402,30"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#acc99736db92f09dcd68c14366fb53ada" title="Assigns a value of the board state from the perspective of this Player." alt="" coords="5,5,163,60"/>
+<area shape="poly" title=" " alt="" coords="197,35,163,35,163,30,197,30"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="af8a81c8554231afdba42ebdcc5e2a0bc" name="af8a81c8554231afdba42ebdcc5e2a0bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8a81c8554231afdba42ebdcc5e2a0bc">&#9670;&#160;</a></span>GetOpenPositions()</h2>
 
@@ -253,46 +293,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the Open Positions on the board. These are the positions where there is no X or O. </p><dl class="section return"><dt>Returns</dt><dd>The Open positions on the board. </dd></dl>
 
-</div>
-</div>
-<a id="aa39b9d27dca3906b384afdeacd527e59" name="aa39b9d27dca3906b384afdeacd527e59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa39b9d27dca3906b384afdeacd527e59">&#9670;&#160;</a></span>GetRow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="classSymbol.html">Symbol</a> &gt; &gt; Board::GetRow </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3">enums::Alignment</a>&#160;</td>
-          <td class="paramname"><em>line_type</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>?? </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">line_type</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59_icgraph" alt=""/></div>
-<map name="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59_icgraph" id="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa39b9d27dca3906b384afdeacd527e59_icgraph">
-<area shape="rect" title="??" alt="" coords="416,5,573,60"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa2e980e5f14e9dedace99356a52df9cb" title="Gets the winner of the game if one exists." alt="" coords="211,5,368,60"/>
-<area shape="poly" title=" " alt="" coords="402,35,368,35,368,30,402,30"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a2b5d6f3a9e761d1809e760ce921bf685" title=" " alt="" coords="5,5,163,60"/>
-<area shape="poly" title=" " alt="" coords="197,35,163,35,163,30,197,30"/>
-</map>
-</div>
+<p>Returns the Open Positions on the board. These are the positions where there is no X or O. </p>
+<dl class="section return"><dt>Returns</dt><dd>The Open positions on the board. </dd></dl>
 
 </div>
 </div>
@@ -400,7 +403,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536_icgraph" alt=""/></div>
 <map name="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536_icgraph" id="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_a2c9ae9ee3c4237b44ba0afaebd837536_icgraph">
 <area shape="rect" title="Prints the game board to the console." alt="" coords="211,5,368,60"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a74f9cd4901361de082efc572c8e66d66" title=" " alt="" coords="5,5,163,60"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a74f9cd4901361de082efc572c8e66d66" title="Prints the board info for this GameState." alt="" coords="5,5,163,60"/>
 <area shape="poly" title=" " alt="" coords="197,35,163,35,163,30,197,30"/>
 </map>
 </div>
@@ -478,7 +481,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_cgraph" alt=""/></div>
 <map name="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_cgraph" id="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_cgraph">
 <area shape="rect" title="Gets the winner of the game if one exists." alt="" coords="5,5,163,60"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa39b9d27dca3906b384afdeacd527e59" title="??" alt="" coords="211,5,368,60"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a9a3a642a4bd5f59fed6b678d6db1dae8" title="Gets lines of positions." alt="" coords="211,5,368,60"/>
 <area shape="poly" title=" " alt="" coords="163,30,197,30,197,35,163,35"/>
 </map>
 </div>
@@ -488,7 +491,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_icgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_icgraph" alt=""/></div>
 <map name="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_icgraph" id="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board_aa2e980e5f14e9dedace99356a52df9cb_icgraph">
 <area shape="rect" title="Gets the winner of the game if one exists." alt="" coords="211,5,368,60"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a2b5d6f3a9e761d1809e760ce921bf685" title=" " alt="" coords="5,5,163,60"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#acc99736db92f09dcd68c14366fb53ada" title="Assigns a value of the board state from the perspective of this Player." alt="" coords="5,5,163,60"/>
 <area shape="poly" title=" " alt="" coords="197,35,163,35,163,30,197,30"/>
 </map>
 </div>

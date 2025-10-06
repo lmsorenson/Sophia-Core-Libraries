@@ -33,11 +33,11 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human_a375e17247f47d7a89298eab4db1255a8}{Human}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a40d65c06507e91eb2c443f9df90eacb4}{symbol}})
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an instance of a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human}{Human} \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human_a278f45eafc63834da9a0aa2ff5128f36}{Next\+Move}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Prompts the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human}{Human} to make its next move. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human_a1a9239e337aa70d14499f1aec12ecc29}{Update}} (std\+::string message) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the player\textquotesingle{}s knowledge of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Player}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,9 +46,9 @@ void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1
 virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a5c22fcc0472bc58ade5c0b3e5863e805}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()=default
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums\+::\+Symbol}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a40d65c06507e91eb2c443f9df90eacb4}{symbol}} () const
-\item 
-double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a2b5d6f3a9e761d1809e760ce921bf685}{Value}} (class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} board) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \doxylink{classSymbol}{Symbol} used by the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_acc99736db92f09dcd68c14366fb53ada}{Value}} (const class \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \&board) const
+\begin{DoxyCompactList}\small\item\em Assigns a value of the board state from the perspective of this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Player}}}
 \begin{DoxyCompactItemize}
@@ -69,6 +69,15 @@ A human Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1mo
 
 
 
+Creates an instance of a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human}{Human} \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The \doxylink{classSymbol}{Symbol} that this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player} places. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human_a278f45eafc63834da9a0aa2ff5128f36}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human_a278f45eafc63834da9a0aa2ff5128f36} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Human@{sophia::monte\_carlo::tic\_tac\_toe::models::Human}!NextMove@{NextMove}}
@@ -76,6 +85,13 @@ A human Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1mo
 \doxysubsubsection{\texorpdfstring{NextMove()}{NextMove()}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position}{Position}} $>$ Human\+::\+Next\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Prompts the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human}{Human} to make its next move. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the move made. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a8c2ab7a7e57a5ea853dfceff00f43aa3}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Player}}.
@@ -94,6 +110,15 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void Human\+::\+Update (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Updates the player\textquotesingle{}s knowledge of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & A message indicating the move made. Expecting a 2-\/letter string consisting of a letter, indicating the row of the placement, followed by a number, indicating the column of the placement. (i.\+e. \textquotesingle{}B2\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer_a598af9347546429aac205592690c8f1f}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::observer\+::\+Observer}}.

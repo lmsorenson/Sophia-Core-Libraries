@@ -17,15 +17,14 @@ var searchData=
   ['sophia_3a_3amonte_5fcarlo_3a_3atic_5ftac_5ftoe_3a_3amodels_14',['models',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models.html',1,'sophia::monte_carlo::tic_tac_toe']]],
   ['sophia_3a_3amonte_5fcarlo_3a_3atic_5ftac_5ftoe_3a_3aobserver_15',['observer',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer.html',1,'sophia::monte_carlo::tic_tac_toe']]],
   ['source_16',['source',['../classsophia_1_1monte__carlo_1_1models_1_1Action.html#a8dceb7104676c93cbf3834df5c49462b',1,'sophia::monte_carlo::models::Action::Source()'],['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a37f9b1783835e369fa02430468956ea8',1,'sophia::monte_carlo::models::ActionBase::Source()']]],
-  ['state_17',['state',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a083c33dfabe4de2fc3a27242ce6cc38b',1,'sophia::monte_carlo::tic_tac_toe::models::State::State()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a996a0a412a8dd6a0700fcffba6b1de70',1,'sophia::monte_carlo::tic_tac_toe::models::Position::State()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a3cddf7bb2a1fffa9aee65effede56f87',1,'sophia::monte_carlo::tic_tac_toe::models::State::State()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html',1,'sophia::monte_carlo::tic_tac_toe::models::State']]],
+  ['state_17',['state',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#ae417e48301ad82a14381e61ef30a344b',1,'sophia::monte_carlo::tic_tac_toe::models::State::State()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a996a0a412a8dd6a0700fcffba6b1de70',1,'sophia::monte_carlo::tic_tac_toe::models::Position::State()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#ae6dd79c2d19613375fd21d8bb24fda64',1,'sophia::monte_carlo::tic_tac_toe::models::State::State()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html',1,'sophia::monte_carlo::tic_tac_toe::models::State']]],
   ['state_2ecpp_18',['state.cpp',['../state_8cpp.html',1,'']]],
   ['state_2eh_19',['state.h',['../state_8h.html',1,'']]],
   ['state_5fptr_20',['state_ptr',['../classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html#a8310e68e3b30cdd09c8bf4a065450deb',1,'sophia::monte_carlo::factories::TreeFactoryBase']]],
   ['state_5ftests_2ecpp_21',['state_tests.cpp',['../state__tests_8cpp.html',1,'']]],
-  ['strategy_22',['Creates a new Strategy.',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#autotoc_md3',1,'']]],
-  ['subject_23',['Subject',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html',1,'sophia::monte_carlo::tic_tac_toe::observer']]],
-  ['subject_2ecpp_24',['subject.cpp',['../subject_8cpp.html',1,'']]],
-  ['subject_2eh_25',['subject.h',['../subject_8h.html',1,'']]],
-  ['symbol_26',['symbol',['../classSymbol.html',1,'Symbol'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a40d65c06507e91eb2c443f9df90eacb4',1,'sophia::monte_carlo::tic_tac_toe::models::Player::symbol()'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893',1,'sophia::monte_carlo::tic_tac_toe::enums::Symbol']]],
-  ['symbol_2eh_27',['symbol.h',['../symbol_8h.html',1,'']]]
+  ['subject_22',['Subject',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html',1,'sophia::monte_carlo::tic_tac_toe::observer']]],
+  ['subject_2ecpp_23',['subject.cpp',['../subject_8cpp.html',1,'']]],
+  ['subject_2eh_24',['subject.h',['../subject_8h.html',1,'']]],
+  ['symbol_25',['symbol',['../classSymbol.html',1,'Symbol'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a40d65c06507e91eb2c443f9df90eacb4',1,'sophia::monte_carlo::tic_tac_toe::models::Player::symbol()'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893',1,'sophia::monte_carlo::tic_tac_toe::enums::Symbol']]],
+  ['symbol_2eh_26',['symbol.h',['../symbol_8h.html',1,'']]]
 ];

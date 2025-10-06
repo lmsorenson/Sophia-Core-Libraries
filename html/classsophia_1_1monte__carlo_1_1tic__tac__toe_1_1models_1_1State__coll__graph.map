@@ -1,5 +1,5 @@
 <map id="sophia::monte_carlo::tic_tac_toe::models::State" name="sophia::monte_carlo::tic_tac_toe::models::State">
-<area shape="rect" id="Node000001" title=" " alt="" coords="7,133,176,348"/>
+<area shape="rect" id="Node000001" title="The Monte Carlo state node of a Tic Tac Toe game." alt="" coords="7,133,176,348"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,5,177,85"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,99,94,133,89,133,89,99"/>
 </map>

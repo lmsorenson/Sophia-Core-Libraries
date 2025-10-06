@@ -1,11 +1,5 @@
 <map id="sophia::monte_carlo::tic_tac_toe::models::Move" name="sophia::monte_carlo::tic_tac_toe::models::Move">
-<area shape="rect" id="Node000001" title=" " alt="" coords="101,696,295,816"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html" title=" " alt="" coords="109,472,287,647"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,661,201,696,195,696,195,661"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1models_1_1Action.html" title=" " alt="" coords="5,172,196,372"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,384,171,471,166,473,136,386"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="23,5,178,85"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="103,99,103,172,98,172,98,99"/>
-<area shape="rect" id="Node000005" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html" title="Refers to a move that a Player can make in a Tic Tac Toe Game. A position can be empty,..." alt="" coords="221,135,370,409"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="251,410,235,457,230,456,246,409"/>
+<area shape="rect" id="Node000001" title="A move made on the Tic Tac Toe board." alt="" coords="5,133,199,253"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="13,5,191,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,99,105,133,99,133,99,99"/>
 </map>

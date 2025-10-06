@@ -148,9 +148,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c22fcc0472bc58ade5c0b3e5863e805 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player" id="r_a5c22fcc0472bc58ade5c0b3e5863e805"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a5c22fcc0472bc58ade5c0b3e5863e805">~Player</a> ()=default</td></tr>
 <tr class="separator:a5c22fcc0472bc58ade5c0b3e5863e805 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40d65c06507e91eb2c443f9df90eacb4 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player" id="r_a40d65c06507e91eb2c443f9df90eacb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893">enums::Symbol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a40d65c06507e91eb2c443f9df90eacb4">symbol</a> () const</td></tr>
+<tr class="memdesc:a40d65c06507e91eb2c443f9df90eacb4 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classSymbol.html" title="A Tic Tac Toe Symbol is an X, an O, or an empty space.">Symbol</a> used by the <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html" title="A Player in a Tic Tac Toe Game.">Player</a>.  <br /></td></tr>
 <tr class="separator:a40d65c06507e91eb2c443f9df90eacb4 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b5d6f3a9e761d1809e760ce921bf685 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player" id="r_a2b5d6f3a9e761d1809e760ce921bf685"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a2b5d6f3a9e761d1809e760ce921bf685">Value</a> (class <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html">Board</a> board) const</td></tr>
-<tr class="separator:a2b5d6f3a9e761d1809e760ce921bf685 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc99736db92f09dcd68c14366fb53ada inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player" id="r_acc99736db92f09dcd68c14366fb53ada"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#acc99736db92f09dcd68c14366fb53ada">Value</a> (const class <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html">Board</a> &amp;board) const</td></tr>
+<tr class="memdesc:acc99736db92f09dcd68c14366fb53ada inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a value of the board state from the perspective of this <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html" title="A Player in a Tic Tac Toe Game.">Player</a>.  <br /></td></tr>
+<tr class="separator:acc99736db92f09dcd68c14366fb53ada inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -205,7 +207,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a bot. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">symbol</td><td>The symbol that the bot owns. </td></tr>
+    <tr><td class="paramname">symbol</td><td>The symbol that the bot places. </td></tr>
     <tr><td class="paramname">difficulty</td><td>The skill level of the bot a decimal value from 0 to 1. </td></tr>
   </table>
   </dd>
@@ -238,7 +240,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Prompts the bot to make its next move. </p>
-<dl class="section return"><dt>Returns</dt><dd>A shared pointer to the move. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A shared pointer to the move made. </dd></dl>
 
 <p>Implements <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a8c2ab7a7e57a5ea853dfceff00f43aa3">sophia::monte_carlo::tic_tac_toe::models::Player</a>.</p>
 <div class="dynheader">
@@ -246,14 +248,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a1740b1e423571b8883c6948650b0dea1_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a1740b1e423571b8883c6948650b0dea1_cgraph" alt=""/></div>
 <map name="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a1740b1e423571b8883c6948650b0dea1_cgraph" id="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a1740b1e423571b8883c6948650b0dea1_cgraph">
-<area shape="rect" title="Prompts the bot to make its next move." alt="" coords="5,108,163,163"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a300bb565546648de737647917ea9fd92" title=" " alt="" coords="235,29,392,84"/>
-<area shape="poly" title=" " alt="" coords="162,106,221,85,223,90,164,111"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a19c054d633267c4795a670d999114c69" title=" " alt="" coords="228,108,399,163"/>
-<area shape="poly" title=" " alt="" coords="163,133,214,133,214,138,163,138"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#add75e8e0fa2db2b5c6ed1d10d5b1b2a4" title="Runs the Monte Carlo Search algorithm." alt="" coords="211,187,416,227"/>
-<area shape="poly" title=" " alt="" coords="164,157,237,181,235,186,162,162"/>
-<area shape="poly" title=" " alt="" coords="269,29,269,19,277,10,292,5,313,3,339,6,354,14,352,18,338,11,313,8,293,10,280,15,274,21,274,29"/>
+<area shape="rect" title="Prompts the bot to make its next move." alt="" coords="5,84,163,139"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#aff4ed9535dba02b7d62a36a98213cad6" title="Determines if the given move name can be successfully parsed." alt="" coords="235,5,392,60"/>
+<area shape="poly" title=" " alt="" coords="162,82,221,61,223,66,164,87"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a73f2bf0b7a04018d686d3dd392712a90" title="Parses a move from a Move name." alt="" coords="233,84,394,139"/>
+<area shape="poly" title=" " alt="" coords="163,109,219,109,219,114,163,114"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#add75e8e0fa2db2b5c6ed1d10d5b1b2a4" title="Runs the Monte Carlo Search algorithm." alt="" coords="211,163,416,203"/>
+<area shape="poly" title=" " alt="" coords="164,133,237,157,235,162,162,138"/>
 </map>
 </div>
 <div class="dynheader">

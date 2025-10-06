@@ -1,3 +1,25 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classSymbol.html" title="A Tic Tac Toe Symbol is an X, an O, or an empty space." alt="" coords="5,5,76,31"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="16,179,161,219"/>
+<area shape="rect" id="Node000001" href="$classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html" title=" " alt="" coords="220,5,443,75"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="118,167,163,125,219,84,240,73,242,77,221,89,167,129,121,170"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html" title=" " alt="" coords="231,99,432,154"/>
+<area shape="poly" id="edge7_Node000000_Node000003" title=" " alt="" coords="169,172,238,151,240,157,170,177"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1models_1_1Action.html" title=" " alt="" coords="254,179,409,219"/>
+<area shape="poly" id="edge8_Node000000_Node000004" title=" " alt="" coords="175,196,254,196,254,201,175,201"/>
+<area shape="rect" id="Node000006" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html" title=" " alt="" coords="254,243,409,283"/>
+<area shape="poly" id="edge10_Node000000_Node000006" title=" " alt="" coords="175,219,255,240,254,245,174,224"/>
+<area shape="rect" id="Node000008" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html" title="A Player in a Tic Tac Toe Game." alt="" coords="253,307,410,362"/>
+<area shape="poly" id="edge12_Node000000_Node000008" title=" " alt="" coords="125,226,170,260,221,292,254,307,251,312,219,297,167,264,122,230"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html" title="Creates simulation nodes and actions for a Tic Tac Toe game." alt="" coords="501,13,667,67"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="456,37,500,37,500,43,456,43"/>
+<area shape="rect" id="Node000005" href="$classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html" title=" " alt="" coords="505,157,663,211"/>
+<area shape="poly" id="edge9_Node000004_Node000005" title=" " alt="" coords="422,191,504,186,505,191,422,196"/>
+<area shape="rect" id="Node000007" href="$classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html" title=" " alt="" coords="503,235,665,290"/>
+<area shape="poly" id="edge11_Node000006_Node000007" title=" " alt="" coords="422,260,502,260,502,265,422,265"/>
+<area shape="rect" id="Node000009" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html" title="A non&#45;human Tic Tac Toe Player." alt="" coords="491,315,677,355"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="423,332,490,332,490,337,423,337"/>
+<area shape="rect" id="Node000010" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html" title="A human Tic Tac Toe Player." alt="" coords="505,379,663,434"/>
+<area shape="poly" id="edge14_Node000008_Node000010" title=" " alt="" coords="424,358,506,382,504,387,422,363"/>
+<area shape="rect" id="Node000011" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html" title=" " alt="" coords="5,307,172,362"/>
+<area shape="poly" id="edge15_Node000011_Node000008" title=" " alt="" coords="186,332,252,332,252,337,186,337"/>
 </map>

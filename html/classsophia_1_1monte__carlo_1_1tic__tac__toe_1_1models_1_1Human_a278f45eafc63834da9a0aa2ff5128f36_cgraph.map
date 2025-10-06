@@ -1,10 +1,9 @@
 <map id="sophia::monte_carlo::tic_tac_toe::models::Human::NextMove" name="sophia::monte_carlo::tic_tac_toe::models::Human::NextMove">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,163,124"/>
-<area shape="rect" id="Node000002" href="$human_8cpp.html#ae4706ba8d397c3394cbfe45bc88a37ec" title=" " alt="" coords="211,84,375,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,94,197,94,197,99,163,99"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a300bb565546648de737647917ea9fd92" title=" " alt="" coords="429,29,587,84"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="361,81,415,71,416,76,362,87"/>
-<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a19c054d633267c4795a670d999114c69" title=" " alt="" coords="423,108,593,163"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="365,107,410,115,409,120,364,112"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="466,29,466,19,474,10,488,5,508,3,532,6,546,14,543,18,531,11,508,8,489,10,477,15,471,21,471,29"/>
+<area shape="rect" id="Node000001" title="Prompts the Human to make its next move." alt="" coords="5,45,163,100"/>
+<area shape="rect" id="Node000002" href="$human_8cpp.html#ae4706ba8d397c3394cbfe45bc88a37ec" title=" " alt="" coords="211,60,375,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,70,197,70,197,75,163,75"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#aff4ed9535dba02b7d62a36a98213cad6" title="Determines if the given move name can be successfully parsed." alt="" coords="425,5,582,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,57,411,48,412,53,361,63"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a73f2bf0b7a04018d686d3dd392712a90" title="Parses a move from a Move name." alt="" coords="423,84,584,139"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="363,83,409,91,409,97,362,88"/>
 </map>

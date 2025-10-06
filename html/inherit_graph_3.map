@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html" title=" " alt="" coords="5,5,181,45"/>
+<area shape="rect" id="Node000000" href="$classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html" title=" " alt="" coords="5,5,251,45"/>
+<area shape="rect" id="Node000001" href="$classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html" title=" " alt="" coords="299,5,540,45"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="265,23,298,23,298,28,265,28"/>
 </map>

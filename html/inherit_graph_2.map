@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html" title=" " alt="" coords="5,5,251,45"/>
-<area shape="rect" id="Node000001" href="$classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html" title=" " alt="" coords="299,5,540,45"/>
-<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="265,23,298,23,298,28,265,28"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,20,93,45"/>
+<area shape="rect" id="Node000001" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html" title="The Monte Carlo state node of a Tic Tac Toe game." alt="" coords="141,5,299,60"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="107,30,141,30,141,35,107,35"/>
 </map>

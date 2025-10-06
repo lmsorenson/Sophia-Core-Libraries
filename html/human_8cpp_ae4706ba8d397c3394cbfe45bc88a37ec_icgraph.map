@@ -1,5 +1,5 @@
 <map id="process_player_move" name="process_player_move">
 <area shape="rect" id="Node000001" title=" " alt="" coords="211,20,375,45"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#a278f45eafc63834da9a0aa2ff5128f36" title=" " alt="" coords="5,5,163,60"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#a278f45eafc63834da9a0aa2ff5128f36" title="Prompts the Human to make its next move." alt="" coords="5,5,163,60"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,35,163,35,163,30,197,30"/>
 </map>
