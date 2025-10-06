@@ -1,5 +1,5 @@
 <map id="sophia::monte_carlo::tic_tac_toe::observer::Subject" name="sophia::monte_carlo::tic_tac_toe::observer::Subject">
-<area shape="rect" id="Node000001" title=" " alt="" coords="24,5,183,120"/>
+<area shape="rect" id="Node000001" title="The subject in an observer pattern." alt="" coords="24,5,183,120"/>
 <area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html" title="A Tic Tac Toe game." alt="" coords="5,168,201,428"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,134,106,168,101,168,101,134"/>
 </map>

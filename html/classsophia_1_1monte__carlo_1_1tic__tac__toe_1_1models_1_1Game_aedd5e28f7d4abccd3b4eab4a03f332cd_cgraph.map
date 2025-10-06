@@ -1,5 +1,5 @@
 <map id="sophia::monte_carlo::tic_tac_toe::models::Game::Assign" name="sophia::monte_carlo::tic_tac_toe::models::Game::Assign">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,163,60"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a83cf7208251650e5402daa766774e032" title=" " alt="" coords="211,5,385,60"/>
+<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a83cf7208251650e5402daa766774e032" title="Adds an observer to the subject." alt="" coords="211,5,385,60"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,30,197,30,197,35,163,35"/>
 </map>

@@ -108,7 +108,7 @@ Inheritance diagram for sophia::monte_carlo::tic_tac_toe::models::Game:</div>
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game__inherit__graph.png" border="0" usemap="#asophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_inherit__map" alt="Inheritance graph"/></div>
 <map name="asophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_inherit__map" id="asophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_inherit__map">
 <area shape="rect" title="A Tic Tac Toe game." alt="" coords="5,168,201,428"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html" title=" " alt="" coords="24,5,183,120"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html" title="The subject in an observer pattern." alt="" coords="24,5,183,120"/>
 <area shape="poly" title=" " alt="" coords="106,134,106,168,101,168,101,134"/>
 </map>
 </div>
@@ -118,7 +118,7 @@ Collaboration diagram for sophia::monte_carlo::tic_tac_toe::models::Game:</div>
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game__coll__graph.png" border="0" usemap="#asophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_coll__map" alt="Collaboration graph"/></div>
 <map name="asophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_coll__map" id="asophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_coll__map">
 <area shape="rect" title="A Tic Tac Toe game." alt="" coords="5,168,201,428"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html" title=" " alt="" coords="24,5,183,120"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html" title="The subject in an observer pattern." alt="" coords="24,5,183,120"/>
 <area shape="poly" title=" " alt="" coords="106,134,106,168,101,168,101,134"/>
 </map>
 </div>
@@ -166,8 +166,10 @@ Private Attributes</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject')"><img src="closed.png" alt="-"/>&#160;Private Member Functions inherited from <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html">sophia::monte_carlo::tic_tac_toe::observer::Subject</a></td></tr>
 <tr class="memitem:a83cf7208251650e5402daa766774e032 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject" id="r_a83cf7208251650e5402daa766774e032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a83cf7208251650e5402daa766774e032">add_observer</a> (const std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html">Observer</a> &gt; &amp;observer)</td></tr>
+<tr class="memdesc:a83cf7208251650e5402daa766774e032 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an observer to the subject.  <br /></td></tr>
 <tr class="separator:a83cf7208251650e5402daa766774e032 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b58c916cb8756c5eed1fc5510adc998 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject" id="r_a7b58c916cb8756c5eed1fc5510adc998"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998">notify</a> (std::string message) const</td></tr>
+<tr class="memdesc:a7b58c916cb8756c5eed1fc5510adc998 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html" title="The subject in an observer pattern.">Subject</a>'s Observers with a given message.  <br /></td></tr>
 <tr class="separator:a7b58c916cb8756c5eed1fc5510adc998 inherit pub_methods_classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -249,9 +251,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Applies a move to the Tic Tac Toe game." alt="" coords="5,45,169,100"/>
 <area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a3b3d88fdd83ecc8b9e6d59a007f82266" title=" " alt="" coords="222,5,379,60"/>
 <area shape="poly" title=" " alt="" coords="169,55,208,47,209,53,170,60"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998" title=" " alt="" coords="217,84,384,139"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998" title="Notifies the Subject&#39;s Observers with a given message." alt="" coords="217,84,384,139"/>
 <area shape="poly" title=" " alt="" coords="170,85,204,91,203,96,169,90"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html#a598af9347546429aac205592690c8f1f" title=" " alt="" coords="432,84,599,139"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html#a598af9347546429aac205592690c8f1f" title="Updates the observer with the given message." alt="" coords="432,84,599,139"/>
 <area shape="poly" title=" " alt="" coords="385,109,418,109,418,114,385,114"/>
 </map>
 </div>
@@ -311,7 +313,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_aedd5e28f7d4abccd3b4eab4a03f332cd_cgraph.png" border="0" usemap="#aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_aedd5e28f7d4abccd3b4eab4a03f332cd_cgraph" alt=""/></div>
 <map name="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_aedd5e28f7d4abccd3b4eab4a03f332cd_cgraph" id="aclasssophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_aedd5e28f7d4abccd3b4eab4a03f332cd_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,163,60"/>
-<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a83cf7208251650e5402daa766774e032" title=" " alt="" coords="211,5,385,60"/>
+<area shape="rect" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a83cf7208251650e5402daa766774e032" title="Adds an observer to the subject." alt="" coords="211,5,385,60"/>
 <area shape="poly" title=" " alt="" coords="163,30,197,30,197,35,163,35"/>
 </map>
 </div>

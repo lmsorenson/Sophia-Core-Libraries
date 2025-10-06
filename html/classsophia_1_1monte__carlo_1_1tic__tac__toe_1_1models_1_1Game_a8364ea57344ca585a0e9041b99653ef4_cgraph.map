@@ -2,8 +2,8 @@
 <area shape="rect" id="Node000001" title="Applies a move to the Tic Tac Toe game." alt="" coords="5,45,169,100"/>
 <area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a3b3d88fdd83ecc8b9e6d59a007f82266" title=" " alt="" coords="222,5,379,60"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,55,208,47,209,53,170,60"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998" title=" " alt="" coords="217,84,384,139"/>
+<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a7b58c916cb8756c5eed1fc5510adc998" title="Notifies the Subject&#39;s Observers with a given message." alt="" coords="217,84,384,139"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,85,204,91,203,96,169,90"/>
-<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html#a598af9347546429aac205592690c8f1f" title=" " alt="" coords="432,84,599,139"/>
+<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html#a598af9347546429aac205592690c8f1f" title="Updates the observer with the given message." alt="" coords="432,84,599,139"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="385,109,418,109,418,114,385,114"/>
 </map>

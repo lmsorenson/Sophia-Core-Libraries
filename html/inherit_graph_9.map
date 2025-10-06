@@ -20,6 +20,6 @@
 <area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="423,332,490,332,490,337,423,337"/>
 <area shape="rect" id="Node000010" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html" title="A human Tic Tac Toe Player." alt="" coords="505,379,663,434"/>
 <area shape="poly" id="edge14_Node000008_Node000010" title=" " alt="" coords="424,358,506,382,504,387,422,363"/>
-<area shape="rect" id="Node000011" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html" title=" " alt="" coords="5,307,172,362"/>
+<area shape="rect" id="Node000011" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html" title="The Observer in an Observer pattern." alt="" coords="5,307,172,362"/>
 <area shape="poly" id="edge15_Node000011_Node000008" title=" " alt="" coords="186,332,252,332,252,337,186,337"/>
 </map>

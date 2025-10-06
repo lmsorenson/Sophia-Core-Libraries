@@ -2,6 +2,11 @@
 \hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject}{}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject}\index{sophia::monte\_carlo::tic\_tac\_toe::observer::Subject@{sophia::monte\_carlo::tic\_tac\_toe::observer::Subject}}
 
 
+The subject in an observer pattern.  
+
+
+
+
 {\ttfamily \#include $<$subject.\+h$>$}
 
 
@@ -28,15 +33,18 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject_a83cf7208251650e5402daa766774e032}{add\+\_\+observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer}{Observer}} $>$ \&observer)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds an observer to the subject. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject_a7b58c916cb8756c5eed1fc5510adc998}{notify}} (std\+::string message) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Notifies the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject}{Subject}\textquotesingle{}s Observers with a given message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer}{Observer}} $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject_ac8ea2ea5d5ab3b18fa28604b625e3391}{observers\+\_\+}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The subject in an observer pattern. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject_a83cf7208251650e5402daa766774e032}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject_a83cf7208251650e5402daa766774e032} 
@@ -45,6 +53,15 @@ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte
 \doxysubsubsection{\texorpdfstring{add\_observer()}{add\_observer()}}
 {\footnotesize\ttfamily void Subject\+::add\+\_\+observer (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer}{Observer}} $>$ \&}]{observer }\end{DoxyParamCaption})}
 
+
+
+Adds an observer to the subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer to add. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -59,6 +76,15 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{notify()}{notify()}}
 {\footnotesize\ttfamily void Subject\+::notify (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption}) const}
 
+
+
+Notifies the \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject}{Subject}\textquotesingle{}s Observers with a given message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to send to the Observers. \\
+\hline
+\end{DoxyParams}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
