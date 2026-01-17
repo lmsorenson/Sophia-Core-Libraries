@@ -6,6 +6,16 @@
 
 namespace sophia::monte_carlo::models
 {
+    /**
+     * @brief A template base class for implementing the `Node` interface.
+     *
+     * This class provides a generic implementation of a node, using templates to support various
+     * types of states and changes. It manages the state of the node and provides access to a factory
+     * for creating related objects in the tree.
+     *
+     * @tparam TState The type representing the state of the system (e.g., a board configuration).
+     * @tparam TChange The type representing a change that can be applied to a state (e.g., a move).
+     */
     template<typename TState, typename TChange>
     class NodeBase : public Node
     {
@@ -15,11 +25,16 @@ namespace sophia::monte_carlo::models
     public:
         NodeBase(const std::string &name, TState state, const_factory_ptr factory);
 
+        /// @brief Retrieves the state associated with this node.
         TState GetState() const;
 
     protected:
         rollout_strategy_ptr RolloutStrategy() const override;
+
+        /// @brief A factory for creating nodes and actions, specific to the game or problem.
         const_factory_ptr m_factory_;
+
+        /// @brief The state of the system that this node represents.
         TState m_state_;
     };
 }
