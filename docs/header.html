@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$title</title>
+    <style>
+        .header-banner {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-title {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header-subtitle {
+            margin: 5px 0 0 0;
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .header-greek {
+            font-size: 1.5em;
+            opacity: 0.6;
+            margin-left: 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .header-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-banner">
+        <div>
+            <h1 class="header-title">Sophia Decision Engine <span class="header-greek">σοφία</span></h1>
+            <p class="header-subtitle">High-performance C++ framework for intelligent decision-making</p>
+        </div>
+        <div class="nav-links">
+            <a href="https://github.com/lmsorenson/Sophia-Decision-Engine" target="_blank">📖 GitHub</a>
+            <a href="namespaces.html">📚 API Reference</a>
+            <a href="examples.html">💡 Examples</a>
+        </div>
+    </div>
+</body>
+</html>
