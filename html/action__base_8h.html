@@ -8,22 +8,26 @@
         .header-banner {
             background: linear-gradient(135deg, #2c3e50, #3498db);
             color: white;
-            padding: 15px 20px;
+            padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border: none;
         }
         .header-title {
             margin: 0;
             font-size: 2.2em;
             font-weight: 700;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
         .header-subtitle {
-            margin: 5px 0 0 0;
+            margin: 8px 0 0 0;
             font-size: 1.1em;
             font-weight: 300;
             opacity: 0.9;
@@ -31,7 +35,7 @@
         .header-greek {
             font-size: 1.5em;
             opacity: 0.6;
-            margin-left: 15px;
+            font-weight: 300;
         }
         .nav-links {
             display: flex;
@@ -39,16 +43,20 @@
             align-items: center;
         }
         .nav-links a {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 4px;
+            padding: 10px 15px;
+            border-radius: 6px;
             transition: all 0.3s ease;
             font-size: 0.9em;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.2);
         }
         .nav-links a:hover {
             background: rgba(255,255,255,0.1);
             color: white;
+            border-color: rgba(255,255,255,0.3);
+            text-decoration: none;
         }
         @media (max-width: 768px) {
             .header-banner {
