@@ -1,5 +1,0 @@
-<map id="sophia::monte_carlo::tic_tac_toe::observer::Subject::notify" name="sophia::monte_carlo::tic_tac_toe::observer::Subject::notify">
-<area shape="rect" id="Node000001" title="Notifies the Subject&#39;s Observers with a given message." alt="" coords="5,5,172,60"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html#a598af9347546429aac205592690c8f1f" title="Updates the observer with the given message." alt="" coords="220,5,387,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,30,206,30,206,35,173,35"/>
-</map>

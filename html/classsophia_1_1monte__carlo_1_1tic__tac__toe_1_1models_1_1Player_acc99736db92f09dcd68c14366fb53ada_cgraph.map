@@ -1,7 +1,0 @@
-<map id="sophia::monte_carlo::tic_tac_toe::models::Player::Value" name="sophia::monte_carlo::tic_tac_toe::models::Player::Value">
-<area shape="rect" id="Node000001" title="Assigns a value of the board state from the perspective of this Player." alt="" coords="5,5,163,60"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa2e980e5f14e9dedace99356a52df9cb" title="Gets the winner of the game if one exists." alt="" coords="211,5,368,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,30,197,30,197,35,163,35"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a9a3a642a4bd5f59fed6b678d6db1dae8" title="Gets lines of positions." alt="" coords="416,5,573,60"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,30,402,30,402,35,368,35"/>
-</map>

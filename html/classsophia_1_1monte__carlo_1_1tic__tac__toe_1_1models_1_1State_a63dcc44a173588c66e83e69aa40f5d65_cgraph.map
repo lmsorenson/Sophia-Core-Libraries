@@ -1,7 +1,0 @@
-<map id="sophia::monte_carlo::tic_tac_toe::models::State::SelectAction" name="sophia::monte_carlo::tic_tac_toe::models::State::SelectAction">
-<area shape="rect" id="Node000001" title="Selects the available action with the given name." alt="" coords="5,5,163,60"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a8fcd53ac930d1160b69b4d8e9f0f6a22" title="Gets all available actions that can be made at this given state." alt="" coords="211,5,413,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,30,197,30,197,35,163,35"/>
-<area shape="rect" id="Node000003" href="$state_8cpp.html#a137cb05c50e332e74a192d0e2be6f62f" title=" " alt="" coords="461,20,544,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="413,30,447,30,447,35,413,35"/>
-</map>

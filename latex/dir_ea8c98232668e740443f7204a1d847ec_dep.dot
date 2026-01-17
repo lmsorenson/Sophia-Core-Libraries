@@ -1,0 +1,13 @@
+digraph "examples/monte_carlo/tic_tac_toe/include/tic_tac_toe/observer"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  compound=true
+  subgraph clusterdir_886343e0622f8d41aa67fd1bae9bdc60 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="tic_tac_toe", fontname=Inter,fontsize=11,fontname=Inter,fontsize=11 style="filled,dashed", URL="dir_886343e0622f8d41aa67fd1bae9bdc60.html",tooltip=""]
+  dir_ea8c98232668e740443f7204a1d847ec [label="observer", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_ea8c98232668e740443f7204a1d847ec.html",tooltip=""];
+  }
+}

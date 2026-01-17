@@ -1,0 +1,15 @@
+digraph "examples/monte_carlo/tic_tac_toe/src/observer"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,labelfontname=Inter,labelfontsize=11,color=#666666,fontname=Inter,fontsize=11];
+  node [fontname=Inter,fontsize=11,fontname=Inter,fontsize=11,shape=box,style=filled,fillcolor=#f8f9fa,color=#3498db,fontname=Inter,fontsize=11,height=0.3,width=0.5];
+  compound=true
+  subgraph clusterdir_d82f86ccd3f83a2068f162aae422b29c {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="src", fontname=Inter,fontsize=11,fontname=Inter,fontsize=11 style="filled,dashed", URL="dir_d82f86ccd3f83a2068f162aae422b29c.html",tooltip=""]
+  dir_afef98f0db35879bcefa07fab9470866 [label="observer", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_afef98f0db35879bcefa07fab9470866.html",tooltip=""];
+  }
+  dir_4ac5b90547e73adc726b00a33f76b6b6 [label="include", fillcolor="#edf0f7", color="red", style="filled,dashed", URL="dir_4ac5b90547e73adc726b00a33f76b6b6.html",tooltip=""];
+  dir_afef98f0db35879bcefa07fab9470866->dir_4ac5b90547e73adc726b00a33f76b6b6 [headlabel="2", labeldistance=1.5 headhref="dir_000016_000005.html" href="dir_000016_000005.html" color="steelblue1" fontcolor="steelblue1"];
+}

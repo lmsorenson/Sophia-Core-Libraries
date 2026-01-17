@@ -1,9 +1,0 @@
-<map id="sophia::monte_carlo::tic_tac_toe::models::Bot::NextMove" name="sophia::monte_carlo::tic_tac_toe::models::Bot::NextMove">
-<area shape="rect" id="Node000001" title="Prompts the bot to make its next move." alt="" coords="5,84,163,139"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#aff4ed9535dba02b7d62a36a98213cad6" title="Determines if the given move name can be successfully parsed." alt="" coords="235,5,392,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,82,221,61,223,66,164,87"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#a73f2bf0b7a04018d686d3dd392712a90" title="Parses a move from a Move name." alt="" coords="233,84,394,139"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,109,219,109,219,114,163,114"/>
-<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#add75e8e0fa2db2b5c6ed1d10d5b1b2a4" title="Runs the Monte Carlo Search algorithm." alt="" coords="211,163,416,203"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="164,133,237,157,235,162,162,138"/>
-</map>

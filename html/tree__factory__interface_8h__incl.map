@@ -1,7 +1,0 @@
-<map id="include/monte_carlo/factories/tree_factory_interface.h" name="include/monte_carlo/factories/tree_factory_interface.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="6,5,173,60"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,108,83,133"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,61,59,97,54,95,73,59"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="107,108,165,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,59,126,95,121,97,101,61"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="sophia::monte_carlo::models::Node::SelectAction" name="sophia::monte_carlo::models::Node::SelectAction">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,41,215,81"/>
-<area shape="rect" id="Node000002" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2" title=" " alt="" coords="299,5,465,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,45,285,35,286,41,215,50"/>
-<area shape="rect" id="Node000003" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351" title=" " alt="" coords="263,70,501,125"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,73,249,77,249,82,214,78"/>
-<area shape="rect" id="Node000004" href="$classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48dfc98b8e0e68a0682e7dae957328cf" title=" " alt="" coords="549,77,744,117"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="502,95,536,95,536,100,502,100"/>
-</map>
