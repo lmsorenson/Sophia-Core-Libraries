@@ -60,8 +60,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "action_8cpp.html",
-"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#af23f785e7c9d49271672c79c09cfa4e6",
-"namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3a06ce2a25e5d12c166a36f654dbea6012"
+"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#ae6c8d66af1bb70e1d34a704321675975",
+"namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

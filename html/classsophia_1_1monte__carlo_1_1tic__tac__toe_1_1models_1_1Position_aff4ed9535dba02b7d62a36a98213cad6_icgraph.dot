@@ -12,7 +12,5 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Position::IsValid"
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
   Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="process_player_move",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$human_8cpp.html#ae4706ba8d397c3394cbfe45bc88a37ec",tooltip=" "];
-  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="sophia::monte_carlo::tic_tac\l_toe::models::Human::NextMove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#a278f45eafc63834da9a0aa2ff5128f36",tooltip="Prompts the Human to make its next move."];
+  Node4 [id="Node000004",label="sophia::monte_carlo::tic_tac\l_toe::models::Human::NextMove",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#a278f45eafc63834da9a0aa2ff5128f36",tooltip="Prompts the Human to make its next move."];
 }

@@ -4,7 +4,7 @@ var dir_c336665efa9e07943724787a08e324c5 =
     [ "bot.cpp", "bot_8cpp.html", null ],
     [ "game.cpp", "game_8cpp.html", null ],
     [ "game_state.cpp", "game__state_8cpp.html", null ],
-    [ "human.cpp", "human_8cpp.html", "human_8cpp" ],
+    [ "human.cpp", "human_8cpp.html", null ],
     [ "move.cpp", "move_8cpp.html", null ],
     [ "player.cpp", "player_8cpp.html", null ],
     [ "position.cpp", "position_8cpp.html", null ],

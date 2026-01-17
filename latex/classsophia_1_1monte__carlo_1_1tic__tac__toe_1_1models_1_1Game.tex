@@ -20,7 +20,7 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae2b526168a127a7037cbac1f76e0e6b2}{Game}} (const logger\+\_\+ptr \&logger)
 \begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game} with default settings. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae3d112ca6e0e55150d2fdbc704474530}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
 \item 
@@ -44,7 +44,9 @@ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__t
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_acfad8342ff583409465962da41ff876c}{o\+\_\+}} = nullptr
 \begin{DoxyCompactList}\small\item\em The player controlling the Y positions. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} $>$ $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_a951db9a42a0f0c2ecb684be032ebb5ae}{game\+\_\+states\+\_\+}}
-\begin{DoxyCompactList}\small\item\em A list of boards. A board represents a state of play. This list should be ordered. A Tic Tac Toe game will have 9 states at most. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A list of boards. A board represents a state of play. \end{DoxyCompactList}\item 
+logger\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_abbe0e711ae36396da9971c8be4b2c997}{m\+\_\+logger\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The logger instance for the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Private Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::observer\+::\+Subject}}}
 \begin{DoxyCompactItemize}
@@ -59,16 +61,21 @@ void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1
 A Tic Tac Toe game. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ad59df6562a58a614fda24622d3715b65}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ad59df6562a58a614fda24622d3715b65} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae2b526168a127a7037cbac1f76e0e6b2}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae2b526168a127a7037cbac1f76e0e6b2} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!Game@{Game}}
 \index{Game@{Game}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
 \doxysubsubsection{\texorpdfstring{Game()}{Game()}}
-{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{const logger\+\_\+ptr \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
 Constructs a new \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game}{Game} with default settings. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & The logger instance for the game to use. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae3d112ca6e0e55150d2fdbc704474530}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_ae3d112ca6e0e55150d2fdbc704474530} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
 \index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
@@ -181,7 +188,17 @@ Prints the Tic Tac Toe game to the console.
 
 
 
-A list of boards. A board represents a state of play. This list should be ordered. A Tic Tac Toe game will have 9 states at most. 
+A list of boards. A board represents a state of play. 
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_abbe0e711ae36396da9971c8be4b2c997}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_abbe0e711ae36396da9971c8be4b2c997} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!m\_logger\_@{m\_logger\_}}
+\index{m\_logger\_@{m\_logger\_}!sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}}
+\doxysubsubsection{\texorpdfstring{m\_logger\_}{m\_logger\_}}
+{\footnotesize\ttfamily logger\+\_\+ptr sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Game\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The logger instance for the game. 
 
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_acfad8342ff583409465962da41ff876c}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game_acfad8342ff583409465962da41ff876c} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::Game@{sophia::monte\_carlo::tic\_tac\_toe::models::Game}!o\_@{o\_}}

@@ -20,6 +20,8 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Random\+Rollou
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_abf20cd10699ea61b004f48828eab4523}{Random\+Rollout\+Strategy}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} logger\+\_\+ptr \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{logger}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{Random\+Rollout\+Strategy}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{override}}
 \begin{DoxyCompactList}\small\item\em Selects a random action from a vector of available actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}}
@@ -28,6 +30,11 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Random\+Rollou
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+logger\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ac643216f9c5f22c02b0814b68879cb1f}{m\+\_\+logger\+\_\+}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Types inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}}
@@ -41,6 +48,24 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Random\+Rollou
 A concrete implementation of the \doxylink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{Rollout\+Strategy\+Interface} that selects an action randomly. 
 
 This strategy provides a simple and fast way to run simulations by choosing actions uniformly at random from the list of available options. It is often used as a default or baseline strategy in MCTS. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_abf20cd10699ea61b004f48828eab4523}\label{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_abf20cd10699ea61b004f48828eab4523} 
+\index{sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}!RandomRolloutStrategy@{RandomRolloutStrategy}}
+\index{RandomRolloutStrategy@{RandomRolloutStrategy}!sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}}
+\doxysubsubsection{\texorpdfstring{RandomRolloutStrategy()}{RandomRolloutStrategy()}}
+{\footnotesize\ttfamily Random\+Rollout\+Strategy\+::\+Random\+Rollout\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} logger\+\_\+ptr \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{Random\+Rollout\+Strategy}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & The logger instance for the strategy to use. \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}\label{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016} 
@@ -67,6 +92,15 @@ Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStra
 
 Here is the call graph for this function\+:
 % FIG 2
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ac643216f9c5f22c02b0814b68879cb1f}\label{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ac643216f9c5f22c02b0814b68879cb1f} 
+\index{sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}!m\_logger\_@{m\_logger\_}}
+\index{m\_logger\_@{m\_logger\_}!sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}}
+\doxysubsubsection{\texorpdfstring{m\_logger\_}{m\_logger\_}}
+{\footnotesize\ttfamily logger\+\_\+ptr sophia\+::monte\+\_\+carlo\+::models\+::\+Random\+Rollout\+Strategy\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

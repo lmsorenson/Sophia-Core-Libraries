@@ -115,9 +115,9 @@ Collaboration diagram for sophia::monte_carlo::tic_tac_toe::models::Game:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad59df6562a58a614fda24622d3715b65" id="r_ad59df6562a58a614fda24622d3715b65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ad59df6562a58a614fda24622d3715b65">Game</a> ()</td></tr>
-<tr class="memdesc:ad59df6562a58a614fda24622d3715b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html" title="A Tic Tac Toe game.">Game</a> with default settings.  <br /></td></tr>
-<tr class="separator:ad59df6562a58a614fda24622d3715b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2b526168a127a7037cbac1f76e0e6b2" id="r_ae2b526168a127a7037cbac1f76e0e6b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ae2b526168a127a7037cbac1f76e0e6b2">Game</a> (const logger_ptr &amp;logger)</td></tr>
+<tr class="memdesc:ae2b526168a127a7037cbac1f76e0e6b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html" title="A Tic Tac Toe game.">Game</a> with default settings.  <br /></td></tr>
+<tr class="separator:ae2b526168a127a7037cbac1f76e0e6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3d112ca6e0e55150d2fdbc704474530" id="r_ae3d112ca6e0e55150d2fdbc704474530"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a> ()</td></tr>
 <tr class="separator:ae3d112ca6e0e55150d2fdbc704474530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41e0aa399a1bffa1199fa05e6103245" id="r_ac41e0aa399a1bffa1199fa05e6103245"><td class="memTemplParams" colspan="2">template&lt;class TPlayer , typename... Args&gt; </td></tr>
@@ -149,8 +149,11 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:acfad8342ff583409465962da41ff876c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player controlling the Y positions.  <br /></td></tr>
 <tr class="separator:acfad8342ff583409465962da41ff876c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951db9a42a0f0c2ecb684be032ebb5ae" id="r_a951db9a42a0f0c2ecb684be032ebb5ae"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; const <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html">Board</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#a951db9a42a0f0c2ecb684be032ebb5ae">game_states_</a></td></tr>
-<tr class="memdesc:a951db9a42a0f0c2ecb684be032ebb5ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of boards. A board represents a state of play. This list should be ordered. A Tic Tac Toe game will have 9 states at most.  <br /></td></tr>
+<tr class="memdesc:a951db9a42a0f0c2ecb684be032ebb5ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of boards. A board represents a state of play.  <br /></td></tr>
 <tr class="separator:a951db9a42a0f0c2ecb684be032ebb5ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe0e711ae36396da9971c8be4b2c997" id="r_abbe0e711ae36396da9971c8be4b2c997"><td class="memItemLeft" align="right" valign="top">logger_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#abbe0e711ae36396da9971c8be4b2c997">m_logger_</a></td></tr>
+<tr class="memdesc:abbe0e711ae36396da9971c8be4b2c997"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logger instance for the game.  <br /></td></tr>
+<tr class="separator:abbe0e711ae36396da9971c8be4b2c997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -165,22 +168,37 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Tic Tac Toe game. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad59df6562a58a614fda24622d3715b65" name="ad59df6562a58a614fda24622d3715b65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad59df6562a58a614fda24622d3715b65">&#9670;&#160;</a></span>Game()</h2>
+<a id="ae2b526168a127a7037cbac1f76e0e6b2" name="ae2b526168a127a7037cbac1f76e0e6b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2b526168a127a7037cbac1f76e0e6b2">&#9670;&#160;</a></span>Game()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Game::Game </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const logger_ptr &amp;&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Constructs a new <a class="el" href="classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html" title="A Tic Tac Toe game.">Game</a> with default settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logger</td><td>The logger instance for the game to use. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -408,7 +426,31 @@ template&lt;class TPlayer , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>A list of boards. A board represents a state of play. This list should be ordered. A Tic Tac Toe game will have 9 states at most. </p>
+<p>A list of boards. A board represents a state of play. </p>
+
+</div>
+</div>
+<a id="abbe0e711ae36396da9971c8be4b2c997" name="abbe0e711ae36396da9971c8be4b2c997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe0e711ae36396da9971c8be4b2c997">&#9670;&#160;</a></span>m_logger_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">logger_ptr sophia::monte_carlo::tic_tac_toe::models::Game::m_logger_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The logger instance for the game. </p>
 
 </div>
 </div>

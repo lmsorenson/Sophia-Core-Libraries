@@ -1,5 +1,16 @@
 var NAVTREEINDEX2 =
 {
+"namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3":[2,0,0,0,3,1],
+"namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5":[2,0,0,0,3,3],
+"namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15":[2,0,0,0,3,0],
+"namespacesophia_1_1logging.html#a338d737c8ed374345a0a116e369f9881":[2,0,0,0,2],
+"namespacesophia_1_1monte__carlo.html":[2,0,0,1],
+"namespacesophia_1_1monte__carlo_1_1factories.html":[2,0,0,1,0],
+"namespacesophia_1_1monte__carlo_1_1models.html":[2,0,0,1,1],
+"namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html":[2,0,0,1,2],
+"namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html":[2,0,0,1,2,0],
+"namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a43655957d17319782ac5b8ffe4e0734c":[2,0,0,1,2,0,2],
+"namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3":[2,0,0,1,2,0,0],
 "namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3a06ce2a25e5d12c166a36f654dbea6012":[2,0,0,1,2,0,0,1],
 "namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3a9ac677ee4eec25d9e59707a661d2c5e1":[2,0,0,1,2,0,0,2],
 "namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3ac1b5fa03ecdb95d4a45dd1c40b02527f":[2,0,0,1,2,0,0,0],

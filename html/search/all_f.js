@@ -2,7 +2,7 @@ var searchData=
 [
   ['random_5faction_5fstrategy_2ecpp_0',['random_action_strategy.cpp',['../random__action__strategy_8cpp.html',1,'']]],
   ['random_5frollout_5fstrategy_2eh_1',['random_rollout_strategy.h',['../random__rollout__strategy_8h.html',1,'']]],
-  ['randomrolloutstrategy_2',['RandomRolloutStrategy',['../classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html',1,'sophia::monte_carlo::models']]],
+  ['randomrolloutstrategy_2',['randomrolloutstrategy',['../classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html',1,'sophia::monte_carlo::models::RandomRolloutStrategy'],['../classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html#abf20cd10699ea61b004f48828eab4523',1,'sophia::monte_carlo::models::RandomRolloutStrategy::RandomRolloutStrategy()']]],
   ['reference_3',['API Reference',['../index.html#autotoc_md17',1,'']]],
   ['rollout_4',['Rollout',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b',1,'sophia::monte_carlo::models::Node']]],
   ['rollout_20strategy_5',['Custom Rollout Strategy',['../index.html#autotoc_md12',1,'']]],
