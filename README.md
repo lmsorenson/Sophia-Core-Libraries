@@ -1,7 +1,7 @@
 # Sophia Decision Engine
 
-[![CMake](https://github.com/lmsorenson/sophia-decision-engine/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/lmsorenson/sophia-decision-engine/actions/workflows/cmake-multi-platform.yml)
-[![Documentation](https://github.com/lmsorenson/sophia-decision-engine/actions/workflows/doxygen.yml/badge.svg)](https://github.com/lmsorenson/sophia-decision-engine/actions/workflows/doxygen.yml)
+[![CMake](https://github.com/lmsorenson/Sophia-Decision-Engine/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/lmsorenson/Sophia-Decision-Engine/actions/workflows/cmake-multi-platform.yml)
+[![Documentation](https://github.com/lmsorenson/Sophia-Decision-Engine/actions/workflows/doxygen.yml/badge.svg)](https://github.com/lmsorenson/Sophia-Decision-Engine/actions/workflows/doxygen.yml)
 
 **Sophia (σοφία)** means "Wisdom" - A high-performance C++ engine for intelligent decision-making through advanced tree search algorithms.
 
@@ -30,8 +30,8 @@ Sophia Decision Engine is a high-performance C++ framework that provides the com
 
 ```bash
 # Clone the repository
-git clone https://github.com/lmsorenson/sophia-decision-engine.git
-cd sophia-decision-engine
+git clone https://github.com/lmsorenson/Sophia-Decision-Engine.git
+cd Sophia-Decision-Engine
 
 # Create build directory
 mkdir build && cd build
@@ -51,7 +51,7 @@ cmake --install . --prefix /path/to/install
 Add to your `CMakeLists.txt`:
 
 ```cmake
-add_subdirectory(path/to/sophia-decision-engine)
+add_subdirectory(path/to/Sophia-Decision-Engine)
 target_link_libraries(your_target PRIVATE Sophia::DecisionEngine)
 ```
 
@@ -181,8 +181,8 @@ cmake --build . --target docs
 
 ```bash
 # Clone and setup
-git clone https://github.com/lmsorenson/sophia-decision-engine.git
-cd sophia-decision-engine
+git clone https://github.com/lmsorenson/Sophia-Decision-Engine.git
+cd Sophia-Decision-Engine
 
 # Create build directory with development config
 mkdir build && cd build
