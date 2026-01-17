@@ -1,22 +1,22 @@
-# Sophia Core Libraries
+# Sophia Decision Engine
 
-[![CMake](https://github.com/lmsorenson/Sophia-Core-Libraries/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/lmsorenson/Sophia-Core-Libraries/actions/workflows/cmake-multi-platform.yml)
-[![Documentation](https://github.com/lmsorenson/Sophia-Core-Libraries/actions/workflows/doxygen.yml/badge.svg)](https://github.com/lmsorenson/Sophia-Core-Libraries/actions/workflows/doxygen.yml)
+[![CMake](https://github.com/lmsorenson/sophia-decision-engine/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/lmsorenson/sophia-decision-engine/actions/workflows/cmake-multi-platform.yml)
+[![Documentation](https://github.com/lmsorenson/sophia-decision-engine/actions/workflows/doxygen.yml/badge.svg)](https://github.com/lmsorenson/sophia-decision-engine/actions/workflows/doxygen.yml)
 
-**Sophia (σοφία)** means "Wisdom" - A collection of high-performance C++ algorithms and data structures for artificial intelligence and decision-making.
+**Sophia (σοφία)** means "Wisdom" - A high-performance C++ engine for intelligent decision-making through advanced tree search algorithms.
 
 ## Overview
 
-Sophia Core Libraries provides efficient, template-based implementations of advanced algorithms including Monte Carlo Tree Search (MCTS). Designed for performance and extensibility, the library serves as a foundation for AI applications, game development, and optimization problems.
+Sophia Decision Engine is a high-performance C++ framework that provides the computational core for intelligent decision-making systems. Built around advanced tree search algorithms like Monte Carlo Tree Search (MCTS), it serves as the engine that powers AI agents, game-playing systems, and optimization applications.
 
 ## Features
 
-- **Monte Carlo Tree Search (MCTS)**: Complete implementation with customizable rollout strategies
-- **Template-based Design**: High performance with compile-time polymorphism
-- **Extensible Architecture**: Easy to implement custom games, strategies, and evaluation functions
-- **Modern C++**: Built with C++23 features for optimal performance
-- **Comprehensive Testing**: Unit tests ensuring reliability
-- **Cross-platform**: CMake-based build system supporting multiple platforms
+- **Decision Engine Core**: Monte Carlo Tree Search (MCTS) as the computational engine for optimal decisions
+- **Extensible Framework**: Plugin architecture supporting custom games, rollout strategies, and evaluation functions
+- **High-Performance Templates**: Compile-time polymorphism with C++23 optimizations
+- **Tree Search Foundation**: Extensible base for various decision-making algorithms
+- **Comprehensive Testing**: Full unit test coverage ensuring reliability
+- **Cross-Platform**: CMake-based build system supporting multiple compilers and platforms
 
 ## Requirements
 
@@ -30,8 +30,8 @@ Sophia Core Libraries provides efficient, template-based implementations of adva
 
 ```bash
 # Clone the repository
-git clone https://github.com/lmsorenson/Sophia-Core-Libraries.git
-cd Sophia-Core-Libraries
+git clone https://github.com/lmsorenson/sophia-decision-engine.git
+cd sophia-decision-engine
 
 # Create build directory
 mkdir build && cd build
@@ -51,8 +51,8 @@ cmake --install . --prefix /path/to/install
 Add to your `CMakeLists.txt`:
 
 ```cmake
-add_subdirectory(path/to/Sophia-Core-Libraries)
-target_link_libraries(your_target PRIVATE Sophia::MonteCarlo)
+add_subdirectory(path/to/sophia-decision-engine)
+target_link_libraries(your_target PRIVATE Sophia::DecisionEngine)
 ```
 
 ## Quick Start
@@ -181,8 +181,8 @@ cmake --build . --target docs
 
 ```bash
 # Clone and setup
-git clone https://github.com/lmsorenson/Sophia-Core-Libraries.git
-cd Sophia-Core-Libraries
+git clone https://github.com/lmsorenson/sophia-decision-engine.git
+cd sophia-decision-engine
 
 # Create build directory with development config
 mkdir build && cd build
