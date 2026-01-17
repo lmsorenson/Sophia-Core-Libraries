@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['update_0',['update',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#acb2602e5d6563f1f90d2896d507c0f7f',1,'sophia::monte_carlo::tic_tac_toe::models::Bot::Update()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#a1a9239e337aa70d14499f1aec12ecc29',1,'sophia::monte_carlo::tic_tac_toe::models::Human::Update()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html#a598af9347546429aac205592690c8f1f',1,'sophia::monte_carlo::tic_tac_toe::observer::Observer::Update()']]],
-  ['upperconfidencebound_1',['upperconfidencebound',['../classsophia_1_1monte__carlo_1_1models_1_1Action.html#a227a49dcfd5971ca79b5193ecabf580b',1,'sophia::monte_carlo::models::Action::UpperConfidenceBound()'],['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351',1,'sophia::monte_carlo::models::Node::UpperConfidenceBound()']]],
-  ['usage_2',['usage',['../md_docs_2mainpage.html#autotoc_md12',1,'Basic MCTS Usage'],['../md_docs_2mainpage.html#autotoc_md17',1,'Header Usage']]],
-  ['usage_20patterns_3',['Usage Patterns',['../md_docs_2mainpage.html#autotoc_md11',1,'']]]
+  ['winner_0',['winner',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa2e980e5f14e9dedace99356a52df9cb',1,'sophia::monte_carlo::tic_tac_toe::models::Board::Winner()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a1a41f3b32270de2dbf66bf68ddfcac76',1,'sophia::monte_carlo::tic_tac_toe::models::GameState::Winner()']]],
+  ['withmove_1',['WithMove',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a880a1297b0d80d79382483845b40c516',1,'sophia::monte_carlo::tic_tac_toe::models::Board']]],
+  ['withstate_2',['WithState',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#ae6f7a5498b9757691818c38c0194336d',1,'sophia::monte_carlo::tic_tac_toe::models::Position']]]
 ];

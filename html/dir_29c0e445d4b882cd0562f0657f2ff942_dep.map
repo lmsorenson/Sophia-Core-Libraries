@@ -1,8 +1,8 @@
 <map id="examples/monte_carlo" name="examples/monte_carlo">
 <area shape="rect" id="node2" href="dir_9b5fc5c7c88e565369b38a220826950d.html" title="tic_tac_toe" alt="" coords="37,63,131,88"/>
 <area shape="rect" id="node3" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="49,136,119,161"/>
-<area shape="poly" id="edge1" href="dir_000021_000007.html" alt="" coords="87,88,87,122,81,122,81,88"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000021_000007.html" title="18" alt="" coords="84,110,101,125"/>
+<area shape="poly" id="edge1" href="dir_000020_000006.html" alt="" coords="87,88,87,122,81,122,81,88"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000020_000006.html" title="18" alt="" coords="84,110,101,125"/>
 <area shape="rect" id="clust2" href="dir_29c0e445d4b882cd0562f0657f2ff942.html" alt="" coords="27,52,269,99"/>
 <area shape="rect" id="clust1" href="dir_d28a4824dc47e487b107a5db32ef43c4.html" title="examples" alt="" coords="16,16,280,109"/>
 </map>
