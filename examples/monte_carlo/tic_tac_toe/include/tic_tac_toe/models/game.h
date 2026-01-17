@@ -4,9 +4,12 @@
 #include <tic_tac_toe/observer/subject.h>
 #include <memory>
 #include <stdexcept>
+#include <logging/ilogger.h> // Added include for ILogger
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
+    using sophia::logging::logger_ptr; // Added using directive
+
     /**
      * @class Game
      * @brief A Tic Tac Toe game.
@@ -16,8 +19,9 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     public:
         /**
          * @brief Constructs a new Game with default settings.
+         * @param logger The logger instance for the game to use.
          */
-        Game();
+        explicit Game(const logger_ptr& logger);
         ~Game();
 
         /**
@@ -67,9 +71,13 @@ namespace sophia::monte_carlo::tic_tac_toe::models
 
         /**
          * @brief A list of boards.  A board represents a state of play.
-         * This list should be ordered.  A Tic Tac Toe game will have 9 states at most.
          */
         std::vector<std::shared_ptr<const Board>> game_states_;
+
+        /**
+         * @brief The logger instance for the game.
+         */
+        logger_ptr m_logger_;
     };
 
     template<class TPlayer, typename... Args>
@@ -78,11 +86,11 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         switch (symbol)
         {
             case enums::Symbol::X:
-                x_ = std::make_shared<TPlayer>(symbol, args...);
+                x_ = std::make_shared<TPlayer>(symbol, args..., m_logger_); // m_logger_ inserted as last argument
                 add_observer(x_);
                 break;
             case enums::Symbol::O:
-                o_ = std::make_shared<TPlayer>(symbol, args...);
+                o_ = std::make_shared<TPlayer>(symbol, args..., m_logger_); // m_logger_ inserted as last argument
                 add_observer(o_);
                 break;
             default: throw std::invalid_argument("Invalid symbol");

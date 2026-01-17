@@ -13,7 +13,7 @@ using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 
 Bot::Bot(const Symbol symbol, const double difficulty, const logger_ptr& logger)
-: Player(symbol)
+: Player(symbol, logger) // Pass logger to base Player constructor
 , m_logger_(logger)
 {
     if (m_logger_) m_logger_->info("Creating bot with difficulty: {}", difficulty);

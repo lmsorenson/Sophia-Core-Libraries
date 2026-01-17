@@ -2,7 +2,7 @@
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
 #include <tic_tac_toe/models/board.h>
-#include <iostream>
+#include <logging/ilogger.h> // Added include for ILogger
 
 using sophia::monte_carlo::tic_tac_toe::models::Human;
 using sophia::monte_carlo::tic_tac_toe::models::Board;
@@ -12,50 +12,42 @@ using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
 using std::pair;
-using std::string;
+using sophia::logging::logger_ptr; // Added using directive
 
-std::shared_ptr<const Position> process_player_move(Symbol symbol);
-
-Human::Human(const Symbol symbol)
-    : Player(symbol)
+Human::Human(const Symbol symbol, std::function<std::string()> get_move_input_callback, const logger_ptr& logger)
+    : Player(symbol, logger) // Pass logger to base Player constructor
+    , get_move_input_callback_(std::move(get_move_input_callback))
+    , m_logger_(logger)
 {
-    std::cout << "Creating human" << std::endl;
+    if (m_logger_) m_logger_->info("Human player created with symbol {}", static_cast<char>(symbol));
 }
 
 std::shared_ptr<const Position> Human::NextMove() const
 {
     std::shared_ptr<const Position> position = nullptr;
+    std::string move_str;
 
     while (position == nullptr)
     {
-        position = process_player_move(m_player_symbol_);
-    }
+        if (m_logger_) m_logger_->info("Player {} (Human): Enter your move (e.g., A1) : ", static_cast<char>(m_player_symbol_));
+        move_str = get_move_input_callback_(); // Get input from callback
 
+        if (Position::IsValid(move_str))
+        {
+            auto coordinates = Position::ParseMove(move_str);
+            position = std::make_shared<Position>(coordinates, m_player_symbol_);
+        }
+        else
+        {
+            if (m_logger_) m_logger_->warn("Invalid input format '{}'! Expected letter + digit (e.g., A1).", move_str);
+        }
+    }
     return position;
 }
 
 void Human::Update(const std::string message)
 {
-    std::cout << "human received Message: " << message << std::endl;
-}
-
-std::shared_ptr<const Position> process_player_move(Symbol symbol)
-{
-    std::string move;
-    std::cout << "Enter your move : ";
-    std::getline(std::cin, move);
-
-    if (Position::IsValid(move))
-    {
-        auto coordinates = Position::ParseMove(move);
-        const auto position = std::make_shared<Position>(coordinates, symbol);
-        return position;
-    }
-    else
-    {
-        std::cout << "Invalid input format! Expected letter + digit (e.g., A1).\n";
-        return nullptr;
-    }
+    if (m_logger_) m_logger_->info("Human received message: {}", message);
 }
 
 

@@ -5,6 +5,7 @@
 #include <logging/console_logger.h>
 #include <memory>
 #include <utility>
+#include <iostream> // Added for std::cin and std::getline
 
 using sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory;
 using sophia::monte_carlo::tic_tac_toe::models::Game;
@@ -22,11 +23,18 @@ int main()
     const auto logger = make_shared<ConsoleLogger>(LogLevel::DEBUG);
     logger->info("Let's Play Tic Tac Toe!");
 
-    const shared_ptr<Game> game = make_shared<Game>();
+    const shared_ptr<Game> game = make_shared<Game>(logger);
     game->print();
 
-    game->Assign<Human>(Symbol::X);
-    game->Assign<Bot>(Symbol::O, 0.9, logger);
+    // Define the callback for human player input
+    auto get_human_move_input = []() -> std::string {
+        std::string move_input;
+        std::getline(std::cin, move_input);
+        return move_input;
+    };
+
+    game->Assign<Human>(Symbol::X, get_human_move_input); // Pass logger and callback
+    game->Assign<Bot>(Symbol::O, 0.9);
 
     while(game->game_over() == false)
     {

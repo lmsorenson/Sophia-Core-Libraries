@@ -2,10 +2,12 @@
 #define RANDOM_ACTION_STRATEGY_H
 
 #include "rollout_strategy_interface.h"
+#include <logging/ilogger.h> // Added include for ILogger
 
 namespace sophia::monte_carlo::models
 {
     class Action;
+    using sophia::logging::logger_ptr; // Added using directive
 
     /**
      * @brief A concrete implementation of the RolloutStrategyInterface that selects an action randomly.
@@ -18,12 +20,20 @@ namespace sophia::monte_carlo::models
     {
     public:
         /**
+         * @brief Constructs a RandomRolloutStrategy.
+         * @param logger The logger instance for the strategy to use.
+         */
+        explicit RandomRolloutStrategy(const logger_ptr& logger);
+
+        /**
          * @brief Selects a random action from a vector of available actions.
          * @param actions A vector of shared pointers to the available actions.
          * @return A shared pointer to the randomly selected action.
          */
         [[nodiscard]] action_ptr select_action(std::vector<action_ptr> actions) const override;
 
+    protected:
+        logger_ptr m_logger_; // Member to hold the logger instance
     };
 }
 

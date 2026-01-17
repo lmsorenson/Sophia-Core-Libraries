@@ -46,5 +46,5 @@ shared_ptr<Action> TicTacToeFactory::CreateAction(shared_ptr<NodeBase<GameState,
 
 shared_ptr<RolloutStrategyInterface> TicTacToeFactory::CreateStrategy() const
 {
-    return make_shared<RandomRolloutStrategy>();
+    return make_shared<RandomRolloutStrategy>(m_logger_);
 }

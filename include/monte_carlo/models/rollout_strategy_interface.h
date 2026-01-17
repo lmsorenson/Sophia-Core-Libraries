@@ -3,9 +3,7 @@
 
 #include <monte_carlo/models/action.h>
 
-#include <iostream>
 #include <memory>
-#include <ostream>
 #include <vector>
 
 namespace sophia::monte_carlo::models

@@ -2,16 +2,20 @@
 #include <tic_tac_toe/models/board.h>
 #include <memory>
 #include <tic_tac_toe/models/game_state.h>
+#include <logging/ilogger.h> // Added include for logger_ptr
 
 using sophia::monte_carlo::tic_tac_toe::models::Game;
 using sophia::monte_carlo::tic_tac_toe::models::const_player_ptr;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using std::make_shared;
 using std::shared_ptr;
+using sophia::logging::logger_ptr; // Added using directive
 
-Game::Game()
+Game::Game(const logger_ptr& logger)
+: m_logger_(logger)
 {
     game_states_.push_back(make_shared<Board>());
+    if (m_logger_) m_logger_->info("Game initialized.");
 };
 Game::~Game() = default;
 

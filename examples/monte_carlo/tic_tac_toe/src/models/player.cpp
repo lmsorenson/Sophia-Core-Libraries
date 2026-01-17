@@ -1,12 +1,15 @@
 #include <tic_tac_toe/models/player.h>
 #include <tic_tac_toe/models/board.h>
-#include <iostream>
+#include <logging/ilogger.h> // Added include for ILogger
 
 using sophia::monte_carlo::tic_tac_toe::models::Player;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::models::Board; // Added for Value method
+using sophia::logging::logger_ptr; // Added using directive
 
-Player::Player(const Symbol symbol)
+Player::Player(const Symbol symbol, const logger_ptr& logger)
 : m_player_symbol_(symbol)
+, m_logger_(logger)
 {
 }
 
@@ -21,14 +24,14 @@ double Player::Value(const Board &board) const
     {
         if (winner->first == m_player_symbol_)
         {
-            std::cout << "Player " << TileStateToString(m_player_symbol_) << " wins :)" << std::endl;
+            if (m_logger_) m_logger_->info("Player {} wins :)", static_cast<char>(m_player_symbol_));
             return 1.0;
         }
 
-        std::cout << "Player " << TileStateToString(m_player_symbol_) << " loses :(" << std::endl;
+        if (m_logger_) m_logger_->info("Player {} loses :(", static_cast<char>(m_player_symbol_));
         return -1.0;
     }
 
-    std::cout << "It's a draw :/" << std::endl;
+    if (m_logger_) m_logger_->info("It's a draw :/");
     return 0.0;
 }
