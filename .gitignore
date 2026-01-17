@@ -1,0 +1,29 @@
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build directories
+cmake-build-*/
+build/
+bin/
+lib/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation build artifacts
+docs/api/
+docs/.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
