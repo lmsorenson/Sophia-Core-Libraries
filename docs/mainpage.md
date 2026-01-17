@@ -1,28 +1,6 @@
-# Sophia Decision Engine
+# Sophia Decision Engine API Documentation
 
-> **σοφία** - *Wisdom in Computational Decision-Making*
-
-## Overview
-
-**Sophia Decision Engine** is a high-performance C++ framework that provides the computational core for intelligent decision-making systems. Built around advanced tree search algorithms like Monte Carlo Tree Search (MCTS), it serves as the engine that powers AI agents, game-playing systems, and optimization applications.
-
-## Key Features
-
-### 🚀 **High-Performance Engine**
-- Template-based design for compile-time optimization
-- C++23 features for maximum performance
-- Extensible architecture for custom algorithms
-
-### 🧠 **Decision-Making Algorithms**
-- **Monte Carlo Tree Search (MCTS)**: Probabilistic tree search for optimal decisions
-- **Extensible Framework**: Plugin architecture for additional algorithms
-- **Tree Search Foundation**: Base classes for various decision strategies
-
-### 🛠️ **Developer-Friendly**
-- Modern CMake build system
-- Comprehensive unit testing
-- Cross-platform support (Windows, macOS, Linux)
-- Extensive documentation with diagrams
+> **High-performance C++ framework for intelligent decision-making through Monte Carlo Tree Search**
 
 ## Quick Start
 
@@ -30,95 +8,153 @@
 #include <sophia/monte_carlo/tree_search_algorithm.h>
 #include <memory>
 
-// Create your game state (implementing Node interface)
-auto rootNode = std::make_shared<YourGameState>();
+// Create your game state (implement Node interface)
+auto root = std::make_shared<YourGameState>();
 
-// Run MCTS for optimal decision-making
-auto bestAction = sophia::monte_carlo::MonteCarloTreeSearch::run(rootNode, 1000);
+// Run MCTS to find optimal decision
+auto bestAction = sophia::monte_carlo::MonteCarloTreeSearch::run(root, 1000);
 
-// Execute the best action
-bestAction->Execute();
+// Execute the decision
+bestAction->execute();
 ```
 
-## Architecture
+## Core Components
 
-### Core Components
+| Component | Purpose |
+|-----------|---------|
+| [MonteCarloTreeSearch](classsophia_1_1monte__carlo_1_1_monte_carlo_tree_search.html) | Main algorithm implementation |
+| [Node](classsophia_1_1monte__carlo_1_1models_1_1_node.html) | Game state representation |
+| [Action](classsophia_1_1monte__carlo_1_1models_1_1_action.html) | State transition representation |
+| [RolloutStrategy](classsophia_1_1monte__carlo_1_1models_1_1_rollout_strategy_interface.html) | Leaf node evaluation strategy |
 
-| Component | Description |
-|-----------|-------------|
-| **Node** | Represents decision states with MCTS statistics |
-| **Action** | Represents moves/transitions between states |
-| **RolloutStrategy** | Defines how to evaluate leaf nodes |
-| **MonteCarloTreeSearch** | Main algorithm implementation |
+## Architecture Overview
 
-### Design Patterns
+### Decision-Making Pipeline
 
-- **Template Method**: Extensible base classes for customization
-- **Strategy Pattern**: Pluggable evaluation and selection strategies
-- **Factory Pattern**: Object creation for different game types
-- **Observer Pattern**: Event-driven game state management
+1. **Selection**: Traverse tree using UCB formula to find best leaf
+2. **Expansion**: Add new child nodes to promising leaves
+3. **Rollout**: Simulate random playout to terminal state
+4. **Backpropagation**: Update statistics up the tree
 
-## Use Cases
+### Template-Based Design
 
-### 🎮 **Game AI**
-- Chess, Go, and other strategic games
-- Real-time strategy games
-- Board games and puzzles
+The library uses C++ templates for maximum performance:
 
-### 🤖 **Robotics & Planning**
-- Motion planning
-- Path optimization
-- Decision-making under uncertainty
+```cpp
+// NodeBase provides MCTS statistics for any game state type
+template<typename TState, typename TAction>
+class NodeBase : public Node {
+    // MCTS visit count, total reward, etc.
+};
+```
 
-### 📊 **Optimization**
-- Combinatorial optimization
-- Resource allocation
-- Decision support systems
+## Example: Tic-Tac-Toe Integration
 
-## Examples
+```cpp
+#include <sophia/monte_carlo/tic_tac_toe/models/state.h>
+#include <sophia/monte_carlo/tic_tac_toe/models/move.h>
 
-Explore our comprehensive examples:
+// Create game state
+auto gameState = std::make_shared<sophia::monte_carlo::tic_tac_toe::models::State>(
+    "Initial State",
+    initialBoard,
+    factory
+);
 
-- **Tic-Tac-Toe**: Complete game implementation with MCTS AI
-- **Custom Games**: Framework for implementing your own games
-- **Algorithm Comparison**: Performance analysis of different strategies
+// Find best move
+auto mcts = MonteCarloTreeSearch();
+auto bestMove = mcts.run(gameState, 1000);
 
-## Getting Started
+// Apply the move
+bestMove->execute();
+```
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/lmsorenson/Sophia-Decision-Engine.git
-   cd Sophia-Decision-Engine
-   ```
+## Key Classes
 
-2. **Build the project**:
-   ```bash
-   mkdir build && cd build
-   cmake .. -DCMAKE_BUILD_TYPE=Release
-   cmake --build . --config Release
-   ```
+### Algorithm Classes
+- **[MonteCarloTreeSearch](classsophia_1_1monte__carlo_1_1_monte_carlo_tree_search.html)**: Core MCTS implementation
+- **[TreeFactoryBase](classsophia_1_1monte__carlo_1_1factories_1_1_tree_factory_base.html)**: Abstract factory for game-specific objects
 
-3. **Run the examples**:
-   ```bash
-   ./examples/monte_carlo/tic_tac_toe/tic_tac_toe_example
-   ```
+### Model Classes
+- **[Node](classsophia_1_1monte__carlo_1_1models_1_1_node.html)**: Base class for game states
+- **[Action](classsophia_1_1monte__carlo_1_1models_1_1_action.html)**: Base class for state transitions
+- **[RolloutStrategyInterface](classsophia_1_1monte__carlo_1_1models_1_1_rollout_strategy_interface.html)**: Strategy for leaf evaluation
 
-## Documentation Structure
+### Tic-Tac-Toe Example
+- **[State](classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1_state.html)**: Tic-tac-toe game state
+- **[Move](classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1_move.html)**: Tic-tac-toe move action
+- **[TicTacToeFactory](classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1_tic_tac_toe_factory.html)**: Factory for tic-tac-toe objects
 
-- **📚 [API Reference](namespaces.html)**: Complete class and function documentation
-- **💡 [Examples](examples.html)**: Working code samples
-- **🔧 [Getting Started](md_README.html)**: Installation and setup guide
-- **📖 [Architecture](md_docs_2mainpage.html)**: Detailed technical overview
+## Usage Patterns
 
-## Contributing
+### Basic MCTS Usage
+```cpp
+// 1. Implement your game state extending Node
+class MyGameState : public sophia::monte_carlo::models::Node {
+    // Implement required virtual methods
+};
 
-We welcome contributions! See our [Contributing Guide](md_README.html#autotoc_md22) for details.
+// 2. Create factory for your game
+class MyFactory : public sophia::monte_carlo::factories::TreeFactoryBase<GameState, Action> {
+    // Implement factory methods
+};
 
-## License
+// 3. Run MCTS
+auto root = std::make_shared<MyGameState>(initialState, factory);
+auto bestAction = MonteCarloTreeSearch::run(root, iterations);
+```
 
-This project is licensed under the MIT License - see the [LICENSE](md_README.html#autotoc_md25) file for details.
+### Custom Rollout Strategy
+```cpp
+class MyStrategy : public sophia::monte_carlo::models::RolloutStrategyInterface {
+public:
+    double evaluate(const std::shared_ptr<Node>& node) override {
+        // Your custom evaluation logic
+        return score;
+    }
+};
+```
+
+## Performance Considerations
+
+- **Iterations**: Higher iteration counts improve decision quality but increase computation time
+- **Template Instantiation**: Compile-time optimization through templates
+- **Memory Management**: Shared pointers ensure efficient memory usage
+- **Thread Safety**: Single-threaded design (MCTS can be parallelized at higher level)
+
+## Integration Guide
+
+### CMake Integration
+```cmake
+find_package(SophiaDecisionEngine REQUIRED)
+target_link_libraries(your_target Sophia::DecisionEngine)
+```
+
+### Header Usage
+```cpp
+// Core functionality
+#include <sophia/monte_carlo/tree_search_algorithm.h>
+
+// Model interfaces
+#include <sophia/monte_carlo/models/node.h>
+#include <sophia/monte_carlo/models/action.h>
+
+// Factory interfaces
+#include <sophia/monte_carlo/factories/tree_factory_interface.h>
+```
+
+## API Reference
+
+- **[Namespaces](namespaces.html)**: Complete namespace overview
+- **[Classes](classes.html)**: All classes with inheritance diagrams
+- **[Files](files.html)**: Source file documentation
+
+## See Also
+
+- [GitHub Repository](https://github.com/lmsorenson/Sophia-Decision-Engine) - Source code and examples
+- [Getting Started Guide](https://github.com/lmsorenson/Sophia-Decision-Engine/blob/master/README.md) - Project overview and installation
 
 ---
 
-*"The function of wisdom is to discriminate between good and evil."*
-— Cicero
+*"Wisdom is the right use of knowledge. To know is not to be wise. Many men know a great deal, and are all the greater fools for it."*
+— Charles Spurgeon
