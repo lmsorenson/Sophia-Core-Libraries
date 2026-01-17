@@ -13,7 +13,7 @@ using testing::Return;
 
 MockAction::MockAction(shared_ptr<NodeBase<bool, int>> source,
         const std::shared_ptr<const TreeFactoryBase<bool, int>> &factory)
-: ActionBase(source, 0, factory)
+: ActionBase(source, 0, factory, nullptr)
 {
 
 }

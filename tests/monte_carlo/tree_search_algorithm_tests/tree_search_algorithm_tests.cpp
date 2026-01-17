@@ -2,6 +2,8 @@
 #include <monte_carlo/tree_search_algorithm.h>
 #include <mock_tree_factory.h>
 #include <mock_node.h>
+#include <logging/console_logger.h>
+#include <logging/ilogger.h>
 
 namespace sophia::monte_carlo::tree_search_algorithm_tests
 {
@@ -20,6 +22,8 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
 
     TEST_F(MonteCarloTreeSearchFixture, tree_search_algorithm_test)
     {
+        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
+
         const auto factory = make_shared<MockTreeFactory>();
         const auto s0 = factory->CreateNode("s0");
         auto s1 = factory->CreateNode("s1");
@@ -39,7 +43,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
 
         // the tree starts with two actions?
         s0->Expand();
-        const shared_ptr<Action> best_decision = MonteCarloTreeSearch::run(s0, 4);
+        const shared_ptr<Action> best_decision = MonteCarloTreeSearch::run(s0, 4, test_logger);
 
         auto name = best_decision->Name();
 

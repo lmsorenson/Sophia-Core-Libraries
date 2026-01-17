@@ -2,7 +2,7 @@
 #include <tic_tac_toe/models/human.h>
 #include <tic_tac_toe/models/bot.h>
 #include <tic_tac_toe/models/game.h>
-#include <iostream>
+#include <logging/console_logger.h>
 #include <memory>
 #include <utility>
 
@@ -11,19 +11,22 @@ using sophia::monte_carlo::tic_tac_toe::models::Game;
 using sophia::monte_carlo::tic_tac_toe::models::Human;
 using sophia::monte_carlo::tic_tac_toe::models::Bot;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
+using sophia::logging::ConsoleLogger; // New using
+using sophia::logging::LogLevel;       // New using
 using std::make_shared;
 using std::shared_ptr;
 
 
 int main()
 {
-    std::cout << "Let's Play Tic Tac Toe!" << std::endl;
+    const auto logger = make_shared<ConsoleLogger>(LogLevel::DEBUG);
+    logger->info("Let's Play Tic Tac Toe!");
 
     const shared_ptr<Game> game = make_shared<Game>();
     game->print();
 
     game->Assign<Human>(Symbol::X);
-    game->Assign<Bot>(Symbol::O, 0.9);
+    game->Assign<Bot>(Symbol::O, 0.9, logger);
 
     while(game->game_over() == false)
     {

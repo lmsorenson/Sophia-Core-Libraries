@@ -4,7 +4,7 @@
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <cmath>
 #include <utility>
-#include <iostream>
+#include <logging/ilogger.h> // Added include for ILogger
 
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::Action;
@@ -12,9 +12,11 @@ using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::string;
 using std::shared_ptr;
 using std::vector;
+using sophia::logging::logger_ptr; // Added using directive
 
-Node::Node(string name)
+Node::Node(string name, const logger_ptr& logger)
     : m_name_(std::move(name))
+    , m_logger_(logger)
 {
 }
 
@@ -32,8 +34,7 @@ std::shared_ptr<Action> Node::SelectBestAction() const
     {
         const double current_score = child->UpperConfidenceBound(2);
         auto target = child->Target();
-        std::cout<< "UCB(" << target->Name() << ") = " << current_score
-        << std::endl;
+        if (m_logger_) m_logger_->debug("UCB({}) = {}", target->Name(), current_score);
 
         if (best_child == nullptr)
         {
@@ -58,7 +59,7 @@ shared_ptr<Node> Node::Expand()
     {
         child->Generate();
         auto target = child->Target();
-        std::cout << Name() << " adding child " << target->Name() << std::endl;
+        if (m_logger_) m_logger_->debug("{} adding child {}", Name(), target->Name());
         m_child_action_.push_back(child);
         target->SetParent(child);
     }
@@ -76,10 +77,7 @@ double Node::Rollout()
 {
     if (this->IsTerminalState())
     {
-        std::cout
-        << "Rollout " << Name()
-        << " is terminal state."
-        << std::endl;
+        if (m_logger_) m_logger_->debug("Rollout {} is terminal state.", Name());
         this->Print();
         return this->Value();
     }
@@ -122,7 +120,7 @@ void Node::Backpropagate(const double reward)
     m_total_reward_ += reward;
     m_visit_count_++;
 
-    std::cout << Name() << ", t=" << m_total_reward_ << ", n=" << m_visit_count_ << std::endl;
+    if (m_logger_) m_logger_->debug("{}, t={}, n={}", Name(), m_total_reward_, m_visit_count_);
 
     std::shared_ptr<Node> node = nullptr;
     if (const auto sp = m_parent_action_.lock())
@@ -189,8 +187,7 @@ std::shared_ptr<Action> Node::SelectAction()
     {
         const double current_score = child->UpperConfidenceBound(0);
         const auto target = child->Target();
-        std::cout<< "UCB(" << target->Name() << ") = " << current_score
-        << std::endl;
+        if (m_logger_) m_logger_->debug("UCB({}) = {}", target->Name(), current_score);
 
         if (best_child == nullptr)
         {

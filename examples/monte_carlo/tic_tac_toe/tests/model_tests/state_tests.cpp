@@ -2,6 +2,8 @@
 #include <tic_tac_toe/factories/tic_tac_toe_factory.h>
 #include <monte_carlo/models/node.h>
 #include <tic_tac_toe/models/bot.h>
+#include <logging/console_logger.h>
+#include <logging/ilogger.h>
 
 namespace sophia::monte_carlo::tic_tac_toe::model_tests
 {
@@ -16,8 +18,10 @@ namespace sophia::monte_carlo::tic_tac_toe::model_tests
 
     TEST_F(TicTacToeModelsFixture, test)
     {
-        auto bot = std::make_shared<models::Bot>(enums::Symbol::X, 1);
-        const auto factory = make_shared<factories::TicTacToeFactory>(bot);
+        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
+
+        auto bot = std::make_shared<models::Bot>(enums::Symbol::X, 1, test_logger);
+        const auto factory = make_shared<factories::TicTacToeFactory>(bot, test_logger);
 
         auto node = factory->CreateNode("S0");
 

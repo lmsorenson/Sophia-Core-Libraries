@@ -5,9 +5,12 @@
 #include <tic_tac_toe/models/position.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <monte_carlo/models/node_base.h>
+#include <logging/ilogger.h> // Added include for ILogger
 
 namespace sophia::monte_carlo::tic_tac_toe::factories
 {
+    using sophia::logging::logger_ptr; // Added using directive
+
     /**
      * @class TicTacToeFactory
      * @brief Creates simulation nodes and actions for a Tic Tac Toe game.
@@ -25,8 +28,9 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
         /**
          * @brief Creates an instance of TicTacToeFactory
          * @param you a shared pointer to the player that owns the simulation.
+         * @param logger the logger for the factory to use.
          */
-        explicit TicTacToeFactory(models::const_player_ptr you);
+        explicit TicTacToeFactory(models::const_player_ptr you, const logger_ptr& logger);
         ~TicTacToeFactory() override = default;
 
         /**
@@ -60,6 +64,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
 
     private:
         models::const_player_ptr you_;
+        logger_ptr m_logger_; // Member to hold the logger instance
     };
 }
 

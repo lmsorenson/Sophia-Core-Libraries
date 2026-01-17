@@ -4,6 +4,7 @@
 #include <gmock/gmock.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <monte_carlo/models/node_base.h>
+#include <logging/ilogger.h> // Added include for ILogger
 
 
 namespace sophia::monte_carlo::models
@@ -21,11 +22,12 @@ namespace sophia::monte_carlo::mocks
     using std::vector;
     using std::make_shared;
     using std::shared_ptr;
+    using sophia::logging::logger_ptr; // Added using directive
 
     class MockNode : public NodeBase<bool, int>
     {
     public:
-        explicit MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface);
+        explicit MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface, const logger_ptr& logger);
         ~MockNode() override = default;
 
         MOCK_METHOD(vector<shared_ptr<Action>>, GetAvailableActions, (), (override));

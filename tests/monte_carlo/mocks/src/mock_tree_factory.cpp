@@ -4,6 +4,7 @@
 #include <mock_action.h>
 #include <mock_rollout_strategy.h>
 #include <memory>
+#include <logging/ilogger.h> // Include for logger_ptr
 
 using sophia::monte_carlo::mocks::MockTreeFactory;
 using sophia::monte_carlo::models::Node;
@@ -12,16 +13,17 @@ using sophia::monte_carlo::models::RolloutStrategyInterface;
 using std::shared_ptr;
 using std::make_shared;
 using std::string;
+using sophia::logging::logger_ptr; // Using directive for logger_ptr
 
 
 shared_ptr<Node> MockTreeFactory::CreateNode(string name) const
 {
-    return make_shared<MockNode>(name, shared_from_this());
+    return make_shared<MockNode>(name, shared_from_this(), nullptr);
 }
 
 shared_ptr<Node> MockTreeFactory::CreateNode(string name, bool state) const
 {
-    return make_shared<MockNode>(name, shared_from_this());
+    return make_shared<MockNode>(name, shared_from_this(), nullptr);
 }
 
 shared_ptr<Action> MockTreeFactory::CreateAction(shared_ptr<NodeBase<bool, int>> node, int change) const

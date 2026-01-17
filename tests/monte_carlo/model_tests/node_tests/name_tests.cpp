@@ -2,13 +2,16 @@
 #include <gtest/gtest.h>
 #include <mock_node.h>
 
+#include "logging/console_logger.h"
+
 namespace sophia::monte_carlo::model_tests
 {
     using mocks::MockNode;
 
     TEST_F(MonteCarloModelsFixture, node_name_test)
     {
-        const auto n = MockNode("name 1", nullptr);
+        auto test_logger = std::make_shared<sophia::logging::ConsoleLogger>(sophia::logging::LogLevel::ERROR);
+        const auto n = MockNode("name 1", nullptr, test_logger);
 
         const auto name = n.Name();
 

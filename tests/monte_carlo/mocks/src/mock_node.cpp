@@ -2,6 +2,7 @@
 #include <mock_node.h>
 
 #include <monte_carlo/factories/tree_factory_interface.h>
+#include <logging/ilogger.h> // Added include for ILogger
 
 using sophia::monte_carlo::mocks::MockNode;
 using sophia::monte_carlo::models::Node;
@@ -11,9 +12,10 @@ using std::vector;
 using std::shared_ptr;
 using std::string;
 using testing::Return;
+using sophia::logging::logger_ptr; // Added using directive
 
-MockNode::MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface)
-    : NodeBase(std::move(name), true, std::move(interface))
+MockNode::MockNode(const string& name, const shared_ptr<const TreeFactoryBase<bool, int>>& interface, const logger_ptr& logger)
+    : NodeBase(std::move(name), true, std::move(interface), logger)
 {
 }
 

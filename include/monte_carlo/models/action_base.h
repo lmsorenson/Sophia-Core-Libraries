@@ -29,7 +29,7 @@ namespace sophia::monte_carlo::models
         using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
 
     public:
-        ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory);
+        ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory, const logger_ptr& logger);
 
         [[nodiscard]] node_ptr Source() const override;
         [[nodiscard]] node_ptr Target() const override;
@@ -37,6 +37,9 @@ namespace sophia::monte_carlo::models
     protected:
         /// @brief A factory for creating new nodes in the tree.
         const_factory_ptr m_factory_;
+
+        /// @brief The logger instance for this action.
+        logger_ptr m_logger_;
 
         /// @brief A weak pointer to the source node from which this action originates.
         node_base_ref m_source_;

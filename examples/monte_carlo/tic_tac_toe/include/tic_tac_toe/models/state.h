@@ -22,8 +22,9 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param name The name of the State.
          * @param tree_factory A tree factory that can
          * be used to create the following states.
+         * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, const const_factory_ptr& tree_factory);
+        explicit State(const std::string& name, const const_factory_ptr& tree_factory, const logging::logger_ptr& logger);
 
         /**
          * Creates an instance of a Tic Tac Toe State.
@@ -31,8 +32,9 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param game_state A Tic Tac Toe GameState.
          * @param tree_factory A tree factory that can
          * be used to create the following states.
+         * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, GameState game_state, const const_factory_ptr& tree_factory);
+        explicit State(const std::string& name, GameState game_state, const const_factory_ptr& tree_factory, const logging::logger_ptr& logger);
 
         /**
          * @brief Gets all available actions that can be

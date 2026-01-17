@@ -4,9 +4,12 @@
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <vector>
 #include <memory>
+#include <logging/ilogger.h> // Added include for ILogger
 
 namespace sophia::monte_carlo::models
 {
+    using sophia::logging::logger_ptr; // Added using directive
+
     class Action;
 
     /**
@@ -25,7 +28,8 @@ namespace sophia::monte_carlo::models
         using node_ptr = std::shared_ptr<Node>;
 
     public:
-        explicit Node(std::string name);
+        // Updated constructor to accept logger
+        explicit Node(std::string name, const logger_ptr& logger);
         virtual ~Node() = default;
 
         /// @brief Sets the parent action that leads to this node.
@@ -99,7 +103,6 @@ namespace sophia::monte_carlo::models
         /// @brief Prints a representation of the node's state.
         virtual void Print() const = 0;
 
-    protected:
         /// @brief Pure virtual function to get the list of all possible actions from this node's state.
         [[nodiscard]] virtual std::vector<action_ptr> GetAvailableActions() = 0;
 
@@ -118,9 +121,14 @@ namespace sophia::monte_carlo::models
         /// @brief The total reward accumulated from simulations passing through this node.
         double m_total_reward_ = 0;
 
+    protected: // Changed to protected as per common practice for member vars that need to be accessed by derived classes
+        // Member to hold the logger instance, injected via constructor
+        logger_ptr m_logger_;
+
     private:
         std::string m_name_;
     };
 }
 
 #endif //NODE_H
+

@@ -9,8 +9,8 @@ using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::shared_ptr;
 
-Move::Move(const node_base_ptr &source, const Position change, const_factory_ptr factory)
-: ActionBase(source, change, std::move(factory))
+Move::Move(const node_base_ptr &source, const Position change, const_factory_ptr factory, const logger_ptr& logger)
+: ActionBase(source, change, std::move(factory), logger)
 {
 
 }

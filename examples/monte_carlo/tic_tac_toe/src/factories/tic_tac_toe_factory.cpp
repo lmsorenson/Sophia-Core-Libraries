@@ -20,8 +20,9 @@ using sophia::monte_carlo::models::RandomRolloutStrategy;
 using std::make_shared;
 using std::shared_ptr;
 
-TicTacToeFactory::TicTacToeFactory(models::const_player_ptr you)
+TicTacToeFactory::TicTacToeFactory(models::const_player_ptr you, const logger_ptr& logger)
 : you_(std::move(you))
+, m_logger_(logger)
 {
 }
 
@@ -30,17 +31,17 @@ shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name) const
     auto board = make_shared<Board>();
     const auto game_state = make_shared<GameState>(you_, board);
 
-    return make_shared<State>(name, *game_state, shared_from_this());
+    return make_shared<State>(name, *game_state, shared_from_this(), m_logger_);
 }
 
 shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name, GameState game_state) const
 {
-    return make_shared<State>(name, game_state, shared_from_this());
+    return make_shared<State>(name, game_state, shared_from_this(), m_logger_);
 }
 
 shared_ptr<Action> TicTacToeFactory::CreateAction(shared_ptr<NodeBase<GameState, Position>> node, Position change) const
 {
-    return make_shared<Move>(node, change, shared_from_this());
+    return make_shared<Move>(node, change, shared_from_this(), m_logger_);
 }
 
 shared_ptr<RolloutStrategyInterface> TicTacToeFactory::CreateStrategy() const

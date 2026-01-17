@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <string>
+#include <logging/ilogger.h> // Keep include for logger_ptr
 
 namespace sophia::monte_carlo::models
 {
@@ -17,6 +18,8 @@ namespace sophia::monte_carlo::models
 
 namespace sophia::monte_carlo::factories
 {
+    using sophia::logging::logger_ptr; // Using directive for logger_ptr, now in correct namespace
+
     template<typename TState, typename TChange>
     class TreeFactoryBase : public std::enable_shared_from_this<TreeFactoryBase<TState, TChange>>
     {
