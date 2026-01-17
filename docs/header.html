@@ -43,26 +43,45 @@
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
             color: rgba(255,255,255,0.9);
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 8px 14px;
             border-radius: 6px;
             transition: all 0.3s ease;
-            font-size: 0.9em;
+            font-size: 0.85em;
             font-weight: 500;
             border: 1px solid rgba(255,255,255,0.2);
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.15);
             color: white;
-            border-color: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.4);
             text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .nav-links a:active {
+            transform: translateY(0);
+        }
+
+        .nav-primary {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.3);
+            font-weight: 600;
+        }
+
+        .nav-primary:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.5);
         }
 
         @media (max-width: 768px) {
@@ -85,9 +104,12 @@
             <p class="header-subtitle">High-performance C++ framework for intelligent decision-making</p>
         </div>
         <div class="nav-links">
-            <a href="https://github.com/lmsorenson/Sophia-Decision-Engine" target="_blank">📖 GitHub</a>
-            <a href="namespaces.html">📚 API Reference</a>
+            <a href="https://github.com/lmsorenson/Sophia-Decision-Engine" target="_blank" class="nav-primary">📖 GitHub</a>
+            <a href="namespaces.html">📚 Namespaces</a>
+            <a href="classes.html">🏗️ Classes</a>
+            <a href="files.html">📄 Files</a>
             <a href="examples.html">💡 Examples</a>
+            <a href="index.html">🏠 Home</a>
         </div>
     </div>
 </body>
