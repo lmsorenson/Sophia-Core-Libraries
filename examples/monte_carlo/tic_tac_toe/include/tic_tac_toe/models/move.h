@@ -2,6 +2,7 @@
 #define MOVE_H
 
 #include <monte_carlo/models/action_base.h>
+#include <monte_carlo/factories/tree_factory_interface.h>
 
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/position.h>
@@ -9,7 +10,7 @@
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
     using monte_carlo::models::Node;
-    using factories::TreeFactoryBase;
+    using monte_carlo::factories::TreeFactoryBase;
 
     /**
      * @class Move
