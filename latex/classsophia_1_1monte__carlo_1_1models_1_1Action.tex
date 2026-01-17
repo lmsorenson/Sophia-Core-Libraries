@@ -2,6 +2,11 @@
 \hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action}{}\label{classsophia_1_1monte__carlo_1_1models_1_1Action}\index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
 
 
+Represents an action that can be taken from a specific state (\doxylink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}) in the search tree.  
+
+
+
+
 {\ttfamily \#include $<$action.\+h$>$}
 
 
@@ -20,21 +25,26 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Action\+:
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_ac5744085b404e111f8a375ad28384700}{\texorpdfstring{$\sim$}{\string~}\+Action}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1}{Name}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
-\item 
+\begin{DoxyCompactList}\small\item\em Get the name of the action for identification purposes. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a227a49dcfd5971ca79b5193ecabf580b}{Upper\+Confidence\+Bound}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{int}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{c}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}}
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the Upper Confidence Bound (UCB1) for this action. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{void}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a31dbf2c262065b3eb54c841b5a3982f2}{Generate}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Generates the target node that results from taking this action. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b}{Source}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
-\item 
+\begin{DoxyCompactList}\small\item\em Retrieves the source node from which this action originates. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a1ed1fb9b12a952cd2cac018149945026}{Target}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retrieves the target node that results from this action. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}} $>$
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Represents an action that can be taken from a specific state (\doxylink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}) in the search tree. 
+
+An action is a transition from a source node to a target node. It represents a move, a decision, or any other change in the state of the system being modeled. 
 
 \doxysubsection{Member Typedef Documentation}
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b} 
@@ -67,17 +77,29 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Action\+:
 \doxysubsubsection{\texorpdfstring{Generate()}{Generate()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{void}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+
+
+Generates the target node that results from taking this action. 
+
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_aa7f1c91ede054c1828dffb2efcb80ea1} 
 \index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Name@{Name}}
 \index{Name@{Name}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
 \doxysubsubsection{\texorpdfstring{Name()}{Name()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::string sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+
+
+Get the name of the action for identification purposes. 
+
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b}\label{classsophia_1_1monte__carlo_1_1models_1_1Action_a8dceb7104676c93cbf3834df5c49462b} 
 \index{sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}!Source@{Source}}
 \index{Source@{Source}!sophia::monte\_carlo::models::Action@{sophia::monte\_carlo::models::Action}}
 \doxysubsubsection{\texorpdfstring{Source()}{Source()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+::\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the source node from which this action originates. 
 
 
 
@@ -91,6 +113,10 @@ Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionB
 
 
 
+Retrieves the target node that results from this action. 
+
+
+
 Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base$<$ TState, TChange $>$}}.
 
 Here is the caller graph for this function\+:
@@ -101,6 +127,20 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{UpperConfidenceBound()}{UpperConfidenceBound()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} Action\+::\+Upper\+Confidence\+Bound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{int}}}]{c }\end{DoxyParamCaption}) const}
 
+
+
+Calculates the Upper Confidence Bound (UCB1) for this action. 
+
+UCB1 is a formula used to balance exploration and exploitation in MCTS. It\textquotesingle{}s calculated based on the action\textquotesingle{}s value and the number of times it has been visited.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The exploration parameter, which controls the trade-\/off between exploration and exploitation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The UCB1 value for this action. 
+\end{DoxyReturn}
 Here is the call graph for this function\+:
 % FIG 3
 

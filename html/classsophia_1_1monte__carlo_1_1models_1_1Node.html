@@ -101,6 +101,9 @@ $(document).ready(function(){initNavTree('classsophia_1_1monte__carlo_1_1models_
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a node in the Monte Carlo Search Tree. Each node corresponds to a state in the problem space.  
+ <a href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="node_8h_source.html">node.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sophia::monte_carlo::models::Node:</div>
@@ -120,36 +123,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac06be54937bd5bbd0473141d2e44de59" id="r_ac06be54937bd5bbd0473141d2e44de59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ac06be54937bd5bbd0473141d2e44de59">~Node</a> ()=<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">default</a></td></tr>
 <tr class="separator:ac06be54937bd5bbd0473141d2e44de59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0db427e98f2175a37fedffa96b7def7c" id="r_a0db427e98f2175a37fedffa96b7def7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a0db427e98f2175a37fedffa96b7def7c">SetParent</a> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> &amp;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">action</a>)</td></tr>
+<tr class="memdesc:a0db427e98f2175a37fedffa96b7def7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the parent action that leads to this node.  <br /></td></tr>
 <tr class="separator:a0db427e98f2175a37fedffa96b7def7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ce0f76debcad38090914219a5598221" id="r_a8ce0f76debcad38090914219a5598221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ce0f76debcad38090914219a5598221">SelectBestAction</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memdesc:a8ce0f76debcad38090914219a5598221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the best child action based on the UCB1 formula. (Selection Phase) This method is part of the selection phase of MCTS, where the tree is traversed from the root to a leaf node by selecting the most promising actions.  <br /></td></tr>
 <tr class="separator:a8ce0f76debcad38090914219a5598221"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3ecba21ed1d43901db2ad52ee950936" id="r_af3ecba21ed1d43901db2ad52ee950936"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab0abeb571ec63f8fe17d4bcaeb960f13">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af3ecba21ed1d43901db2ad52ee950936">Expand</a> ()</td></tr>
+<tr class="memdesc:af3ecba21ed1d43901db2ad52ee950936"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands the tree by creating a new child node from an untried action. (Expansion Phase) If the current node is not a terminal state and has untried actions, this method will create a new child node for one of those actions.  <br /></td></tr>
 <tr class="separator:af3ecba21ed1d43901db2ad52ee950936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45fdf487eedadd6518798de3d7cb016b" id="r_a45fdf487eedadd6518798de3d7cb016b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b">Rollout</a> ()</td></tr>
+<tr class="memdesc:a45fdf487eedadd6518798de3d7cb016b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollout, this phase estimates the value of the current node by simulating a path to a terminal state, usually with a simple and fast policy.  <br /></td></tr>
 <tr class="separator:a45fdf487eedadd6518798de3d7cb016b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ab17bae40a734dd206b82c78ec0fbe9" id="r_a1ab17bae40a734dd206b82c78ec0fbe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1ab17bae40a734dd206b82c78ec0fbe9">Backpropagate</a> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">reward</a>)</td></tr>
+<tr class="memdesc:a1ab17bae40a734dd206b82c78ec0fbe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) After a simulation, the result (reward) is propagated back up the tree, updating the visit counts and total rewards of the nodes along the path.  <br /></td></tr>
 <tr class="separator:a1ab17bae40a734dd206b82c78ec0fbe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a839863194c78433b294b3c11dcf746c2" id="r_a839863194c78433b294b3c11dcf746c2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a839863194c78433b294b3c11dcf746c2">Name</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memdesc:a839863194c78433b294b3c11dcf746c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the node for identification.  <br /></td></tr>
 <tr class="separator:a839863194c78433b294b3c11dcf746c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a731a6c2e925df83e28eb1cdb117e2351" id="r_a731a6c2e925df83e28eb1cdb117e2351"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351">UpperConfidenceBound</a> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">c</a>) <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memdesc:a731a6c2e925df83e28eb1cdb117e2351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Upper Confidence Bound (UCB1) for this node. This is used in the selection phase to balance exploration and exploitation.  <br /></td></tr>
 <tr class="separator:a731a6c2e925df83e28eb1cdb117e2351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a174e378c4581899275b3f1e601fad062" id="r_a174e378c4581899275b3f1e601fad062"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a174e378c4581899275b3f1e601fad062">IsLeafNode</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memdesc:a174e378c4581899275b3f1e601fad062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this node is a leaf node (i.e., has no children).  <br /></td></tr>
 <tr class="separator:a174e378c4581899275b3f1e601fad062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99c747bf5454aa0f21874deab8c0d1a8" id="r_a99c747bf5454aa0f21874deab8c0d1a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a99c747bf5454aa0f21874deab8c0d1a8">HasBeenSampled</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memdesc:a99c747bf5454aa0f21874deab8c0d1a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this node has been visited during the search.  <br /></td></tr>
 <tr class="separator:a99c747bf5454aa0f21874deab8c0d1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48dfc98b8e0e68a0682e7dae957328cf" id="r_a48dfc98b8e0e68a0682e7dae957328cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48dfc98b8e0e68a0682e7dae957328cf">VisitCount</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memdesc:a48dfc98b8e0e68a0682e7dae957328cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of times this node has been visited.  <br /></td></tr>
 <tr class="separator:a48dfc98b8e0e68a0682e7dae957328cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b2f4bdc1e2d0b247ac2cdad13e7da9b" id="r_a7b2f4bdc1e2d0b247ac2cdad13e7da9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a7b2f4bdc1e2d0b247ac2cdad13e7da9b">TotalReward</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memdesc:a7b2f4bdc1e2d0b247ac2cdad13e7da9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the total reward accumulated at this node.  <br /></td></tr>
 <tr class="separator:a7b2f4bdc1e2d0b247ac2cdad13e7da9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b57c4db3bce104f80944bca5558fa4d" id="r_a3b57c4db3bce104f80944bca5558fa4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a3b57c4db3bce104f80944bca5558fa4d">IsTerminalState</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memdesc:a3b57c4db3bce104f80944bca5558fa4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to check if the node represents a terminal state in the problem space.  <br /></td></tr>
 <tr class="separator:a3b57c4db3bce104f80944bca5558fa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e865e8df5b298f3111c7d372327656" id="r_a48e865e8df5b298f3111c7d372327656"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48e865e8df5b298f3111c7d372327656">Value</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memdesc:a48e865e8df5b298f3111c7d372327656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.).  <br /></td></tr>
 <tr class="separator:a48e865e8df5b298f3111c7d372327656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21d7afbcd694dbf00efa0dc1b8698780" id="r_a21d7afbcd694dbf00efa0dc1b8698780"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a21d7afbcd694dbf00efa0dc1b8698780">SelectAction</a> (std::string <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">action_name</a>)=0</td></tr>
+<tr class="memdesc:a21d7afbcd694dbf00efa0dc1b8698780"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects a specific action by its name.  <br /></td></tr>
 <tr class="separator:a21d7afbcd694dbf00efa0dc1b8698780"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a404072a810c1cf1e201c82e539e0b721" id="r_a404072a810c1cf1e201c82e539e0b721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a404072a810c1cf1e201c82e539e0b721">SelectAction</a> ()</td></tr>
+<tr class="memdesc:a404072a810c1cf1e201c82e539e0b721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects an action, typically used for the simulation phase.  <br /></td></tr>
 <tr class="separator:a404072a810c1cf1e201c82e539e0b721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ade2b382a86e4c36a60caefc196ad82" id="r_a8ade2b382a86e4c36a60caefc196ad82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ade2b382a86e4c36a60caefc196ad82">Print</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memdesc:a8ade2b382a86e4c36a60caefc196ad82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a representation of the node's state.  <br /></td></tr>
 <tr class="separator:a8ade2b382a86e4c36a60caefc196ad82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
@@ -166,19 +185,25 @@ Protected Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab435a2663c9ac64279b9ee684436e7f2" id="r_ab435a2663c9ac64279b9ee684436e7f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> std::vector&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab435a2663c9ac64279b9ee684436e7f2">GetAvailableActions</a> ()=0</td></tr>
+<tr class="memdesc:ab435a2663c9ac64279b9ee684436e7f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the list of all possible actions from this node's state.  <br /></td></tr>
 <tr class="separator:ab435a2663c9ac64279b9ee684436e7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a6b97bf4237e24d26a19027e24e8a55" id="r_a5a6b97bf4237e24d26a19027e24e8a55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#af9e46c99f553335cd366802962fe8875">rollout_strategy_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5a6b97bf4237e24d26a19027e24e8a55">RolloutStrategy</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memdesc:a5a6b97bf4237e24d26a19027e24e8a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual function to get the rollout strategy to be used for the simulation phase.  <br /></td></tr>
 <tr class="separator:a5a6b97bf4237e24d26a19027e24e8a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a678224d9b35cc4935a7ff420e767b8ff" id="r_a678224d9b35cc4935a7ff420e767b8ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#acdd6c0a15177e182fcdaa8137b09c7ca">action_ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a678224d9b35cc4935a7ff420e767b8ff">m_parent_action_</a></td></tr>
+<tr class="memdesc:a678224d9b35cc4935a7ff420e767b8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">A weak pointer to the parent action of this node.  <br /></td></tr>
 <tr class="separator:a678224d9b35cc4935a7ff420e767b8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76c446637890b93646bd5741325280c4" id="r_a76c446637890b93646bd5741325280c4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34">action_ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a76c446637890b93646bd5741325280c4">m_child_action_</a></td></tr>
+<tr class="memdesc:a76c446637890b93646bd5741325280c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of shared pointers to the child actions of this node.  <br /></td></tr>
 <tr class="separator:a76c446637890b93646bd5741325280c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5a08d850097e581881d9c6b9fbd26e3" id="r_ae5a08d850097e581881d9c6b9fbd26e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">unsigned</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">long</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae5a08d850097e581881d9c6b9fbd26e3">m_visit_count_</a> = 0</td></tr>
+<tr class="memdesc:ae5a08d850097e581881d9c6b9fbd26e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of times this node has been visited in the search.  <br /></td></tr>
 <tr class="separator:ae5a08d850097e581881d9c6b9fbd26e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e77bb521e186a4b82c2ef4efec0ebb9" id="r_a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1e77bb521e186a4b82c2ef4efec0ebb9">m_total_reward_</a> = 0</td></tr>
+<tr class="memdesc:a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total reward accumulated from simulations passing through this node.  <br /></td></tr>
 <tr class="separator:a1e77bb521e186a4b82c2ef4efec0ebb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -186,7 +211,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:afcaa239b875c4990dee32d00e50787b9" id="r_afcaa239b875c4990dee32d00e50787b9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html#afcaa239b875c4990dee32d00e50787b9">m_name_</a></td></tr>
 <tr class="separator:afcaa239b875c4990dee32d00e50787b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a node in the Monte Carlo Search Tree. Each node corresponds to a state in the problem space. </p>
+<p>The <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html" title="Represents a node in the Monte Carlo Search Tree. Each node corresponds to a state in the problem spa...">Node</a> class is central to the MCTS algorithm. It stores statistics about the state it represents, such as the number of visits and the total reward. It also provides methods for the four main phases of MCTS: selection, expansion, simulation (rollout), and backpropagation. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae2b93b080abc1c5d74a32d8c68e49c34" name="ae2b93b080abc1c5d74a32d8c68e49c34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2b93b080abc1c5d74a32d8c68e49c34">&#9670;&#160;</a></span>action_ptr</h2>
 
@@ -343,6 +371,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the statistics of the nodes from the current node up to the root. (Backpropagation Phase) After a simulation, the result (reward) is propagated back up the tree, updating the visit counts and total rewards of the nodes along the path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reward</td><td>The reward obtained from the simulation. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -370,6 +406,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Expands the tree by creating a new child node from an untried action. (Expansion Phase) If the current node is not a terminal state and has untried actions, this method will create a new child node for one of those actions. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -400,6 +438,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pure virtual function to get the list of all possible actions from this node's state. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -423,6 +463,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Checks if this node has been visited during the search. </p>
+
 </div>
 </div>
 <a id="a174e378c4581899275b3f1e601fad062" name="a174e378c4581899275b3f1e601fad062"></a>
@@ -439,6 +481,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks if this node is a leaf node (i.e., has no children). </p>
 
 </div>
 </div>
@@ -464,6 +508,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pure virtual function to check if the node represents a terminal state in the problem space. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -486,6 +532,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the name of the node for identification. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -516,6 +564,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Prints a representation of the node's state. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -538,6 +588,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Simulates a path from the current node to a terminal state. (Simulation Phase) Also known as a rollout, this phase estimates the value of the current node by simulating a path to a terminal state, usually with a simple and fast policy. </p>
+<dl class="section return"><dt>Returns</dt><dd>The reward obtained from the simulation. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -574,6 +627,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Pure virtual function to get the rollout strategy to be used for the simulation phase. </p>
+
 <p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a18b71c3bd5e5f4d4ff7198b02612abba">sophia::monte_carlo::models::NodeBase&lt; TState, TChange &gt;</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -605,6 +660,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Selects an action, typically used for the simulation phase. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -637,6 +694,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Selects a specific action by its name. </p>
+
 </div>
 </div>
 <a id="a8ce0f76debcad38090914219a5598221" name="a8ce0f76debcad38090914219a5598221"></a>
@@ -653,6 +712,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Selects the best child action based on the UCB1 formula. (Selection Phase) This method is part of the selection phase of MCTS, where the tree is traversed from the root to a leaf node by selecting the most promising actions. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -676,6 +737,8 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the parent action that leads to this node. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -699,6 +762,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the total reward accumulated at this node. </p>
+
 </div>
 </div>
 <a id="a731a6c2e925df83e28eb1cdb117e2351" name="a731a6c2e925df83e28eb1cdb117e2351"></a>
@@ -716,6 +781,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates the Upper Confidence Bound (UCB1) for this node. This is used in the selection phase to balance exploration and exploitation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>The exploration parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The UCB1 value. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -751,6 +825,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pure virtual function to get the value or outcome of the terminal state (e.g., a score, win/loss outcome, etc.). </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -773,6 +849,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the number of times this node has been visited. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -801,6 +879,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A vector of shared pointers to the child actions of this node. </p>
 
 </div>
 </div>
@@ -846,6 +926,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>A weak pointer to the parent action of this node. </p>
+
 </div>
 </div>
 <a id="a1e77bb521e186a4b82c2ef4efec0ebb9" name="a1e77bb521e186a4b82c2ef4efec0ebb9"></a>
@@ -868,6 +950,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>The total reward accumulated from simulations passing through this node. </p>
+
 </div>
 </div>
 <a id="ae5a08d850097e581881d9c6b9fbd26e3" name="ae5a08d850097e581881d9c6b9fbd26e3"></a>
@@ -889,6 +973,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The number of times this node has been visited in the search. </p>
 
 </div>
 </div>

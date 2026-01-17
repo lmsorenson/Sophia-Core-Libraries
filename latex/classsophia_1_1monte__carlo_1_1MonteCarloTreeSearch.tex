@@ -11,32 +11,36 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::Monte\+Carlo\+Tree\+Sear
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{models\+::\+Action}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch_add75e8e0fa2db2b5c6ed1d10d5b1b2a4}{run}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{models\+::\+Node}} $>$ \&root, int iterations)
-\begin{DoxyCompactList}\small\item\em Runs the Monte Carlo Search algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{models\+::\+Action}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch_a4d9bc8c5ac79cb742441e8bbec66a78c}{run}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{models\+::\+Node}} $>$ \&root, int iterations, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch_add75e8e0fa2db2b5c6ed1d10d5b1b2a4}\label{classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch_add75e8e0fa2db2b5c6ed1d10d5b1b2a4} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch_a4d9bc8c5ac79cb742441e8bbec66a78c}\label{classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch_a4d9bc8c5ac79cb742441e8bbec66a78c} 
 \index{sophia::monte\_carlo::MonteCarloTreeSearch@{sophia::monte\_carlo::MonteCarloTreeSearch}!run@{run}}
 \index{run@{run}!sophia::monte\_carlo::MonteCarloTreeSearch@{sophia::monte\_carlo::MonteCarloTreeSearch}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ Monte\+Carlo\+Tree\+Search\+::run (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{models\+::\+Node}} $>$ \&}]{root,  }\item[{int}]{iterations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ Monte\+Carlo\+Tree\+Search\+::run (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{models\+::\+Node}} $>$ \&}]{root,  }\item[{int}]{iterations,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Runs the Monte Carlo Search algorithm. 
+Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state. 
 
+MCTS is a general-\/purpose search algorithm for decision-\/making processes. It operates in four main phases, which are repeated for a specified number of iterations\+:
+\begin{DoxyEnumerate}
+\item {\bfseries{Selection\+:}} Starting from the {\ttfamily root} node, recursively select child nodes with the highest Upper Confidence Bound (UCB1) until a leaf node (a node with unexpanded potential) is reached.
+\item {\bfseries{Expansion\+:}} If the selected leaf node is not a terminal state, create one or more child nodes representing subsequent states. Select one of these new nodes.
+\item {\bfseries{Simulation (Rollout)\+:}} From the newly created node, perform a simulation (e.\+g., a random walk) until a terminal state is reached. The outcome of this simulation is a reward.
+\item {\bfseries{Backpropagation\+:}} Propagate the reward from the simulation back up the tree, updating the visit counts and total rewards of all nodes and actions along the path to the root.
+\end{DoxyEnumerate}
 
-\begin{DoxyParams}{Parameters}
-{\em root} & \\
-\hline
-{\em iterations} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
-Here is the caller graph for this function\+:
+After all iterations are complete, the algorithm selects the action from the root node that is considered the most promising, typically based on the highest average reward or visit count. \begin{DoxyVerb} @param root A shared pointer to the initial `Node` representing the starting state of the problem.
+ @param iterations The total number of MCTS iterations to perform. Each iteration involves
+                   one cycle of selection, expansion, simulation, and backpropagation.
+ @param verbose If true, print detailed logs of each iteration's phases to standard output. Defaults to false.
+ @return A shared pointer to the `Action` determined to be the best decision from the root state.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
 % FIG 1
 
 

@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('classsophia_1_1monte__carlo_1_1models_
 </div><!--header-->
 <div class="contents">
 
+<p>A concrete implementation of the <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html" title="Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm.">RolloutStrategyInterface</a> that selects an action randomly.  
+ <a href="classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="random__rollout__strategy_8h_source.html">random_rollout_strategy.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sophia::monte_carlo::models::RandomRolloutStrategy:</div>
@@ -112,6 +115,7 @@ Collaboration diagram for sophia::monte_carlo::models::RandomRolloutStrategy:</d
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a625c265aac424fc41dd38d709b110016" id="r_a625c265aac424fc41dd38d709b110016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#ae3c4b9b622024ad5b6cbaa3efe843020">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html#a625c265aac424fc41dd38d709b110016">select_action</a> (std::vector&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#ae3c4b9b622024ad5b6cbaa3efe843020">action_ptr</a> &gt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">actions</a>) <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">override</a></td></tr>
+<tr class="memdesc:a625c265aac424fc41dd38d709b110016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects a random action from a vector of available actions.  <br /></td></tr>
 <tr class="separator:a625c265aac424fc41dd38d709b110016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html">sophia::monte_carlo::models::RolloutStrategyInterface</a></td></tr>
 <tr class="memitem:ac9d57cf832d1c89cbc89c05b79af00e5 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface" id="r_ac9d57cf832d1c89cbc89c05b79af00e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#ac9d57cf832d1c89cbc89c05b79af00e5">RolloutStrategyInterface</a> ()=<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">default</a></td></tr>
@@ -125,7 +129,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ae3c4b9b622024ad5b6cbaa3efe843020 inherit pro_types_classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface" id="r_ae3c4b9b622024ad5b6cbaa3efe843020"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#ae3c4b9b622024ad5b6cbaa3efe843020">action_ptr</a> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a> &gt;</td></tr>
 <tr class="separator:ae3c4b9b622024ad5b6cbaa3efe843020 inherit pro_types_classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A concrete implementation of the <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html" title="Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm.">RolloutStrategyInterface</a> that selects an action randomly. </p>
+<p>This strategy provides a simple and fast way to run simulations by choosing actions uniformly at random from the list of available options. It is often used as a default or baseline strategy in MCTS. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a625c265aac424fc41dd38d709b110016" name="a625c265aac424fc41dd38d709b110016"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a625c265aac424fc41dd38d709b110016">&#9670;&#160;</a></span>select_action()</h2>
 
@@ -149,6 +156,15 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Selects a random action from a vector of available actions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actions</td><td>A vector of shared pointers to the available actions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A shared pointer to the randomly selected action. </dd></dl>
 
 <p>Implements <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#a30fd3a8c0a936c199db07781da87bea6">sophia::monte_carlo::models::RolloutStrategyInterface</a>.</p>
 <div class="dynheader">

@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('classsophia_1_1monte__carlo_1_1models_
 </div><!--header-->
 <div class="contents">
 
+<p>Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm.  
+ <a href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="rollout__strategy__interface_8h_source.html">rollout_strategy_interface.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for sophia::monte_carlo::models::RolloutStrategyInterface:</div>
@@ -117,6 +120,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1eea86fb6bba63f1d52f5e2696b13699" id="r_a1eea86fb6bba63f1d52f5e2696b13699"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#a1eea86fb6bba63f1d52f5e2696b13699">~RolloutStrategyInterface</a> ()=<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">default</a></td></tr>
 <tr class="separator:a1eea86fb6bba63f1d52f5e2696b13699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30fd3a8c0a936c199db07781da87bea6" id="r_a30fd3a8c0a936c199db07781da87bea6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#ae3c4b9b622024ad5b6cbaa3efe843020">action_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#a30fd3a8c0a936c199db07781da87bea6">select_action</a> (std::vector&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#ae3c4b9b622024ad5b6cbaa3efe843020">action_ptr</a> &gt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">actions</a>) <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memdesc:a30fd3a8c0a936c199db07781da87bea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects an action from a vector of available actions based on the implemented strategy.  <br /></td></tr>
 <tr class="separator:a30fd3a8c0a936c199db07781da87bea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
@@ -124,7 +128,10 @@ Protected Types</h2></td></tr>
 <tr class="memitem:ae3c4b9b622024ad5b6cbaa3efe843020" id="r_ae3c4b9b622024ad5b6cbaa3efe843020"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html#ae3c4b9b622024ad5b6cbaa3efe843020">action_ptr</a> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">Action</a> &gt;</td></tr>
 <tr class="separator:ae3c4b9b622024ad5b6cbaa3efe843020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm. </p>
+<p>A rollout (or simulation) is a traversal from a given node to a terminal state of the problem space. The rollout strategy defines how actions are selected during this simulation phase. Different strategies can be implemented to balance exploration and exploitation. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae3c4b9b622024ad5b6cbaa3efe843020" name="ae3c4b9b622024ad5b6cbaa3efe843020"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3c4b9b622024ad5b6cbaa3efe843020">&#9670;&#160;</a></span>action_ptr</h2>
 
@@ -222,6 +229,15 @@ Protected Types</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Selects an action from a vector of available actions based on the implemented strategy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actions</td><td>A vector of shared pointers to the available actions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A shared pointer to the selected action. </dd></dl>
 
 <p>Implemented in <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html#a625c265aac424fc41dd38d709b110016">sophia::monte_carlo::models::RandomRolloutStrategy</a>.</p>
 

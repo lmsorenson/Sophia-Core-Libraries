@@ -13,5 +13,5 @@ digraph "sophia::monte_carlo::models::RolloutStrategyInterface"
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual ~RolloutStrategyInterface<BR ALIGN="LEFT"/>()=default<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">virtual action_ptr select_action<BR ALIGN="LEFT"/>(std::vector&lt; action_ptr &gt; actions)<BR ALIGN="LEFT"/> const =0<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
-,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm."];
 }

@@ -2,6 +2,11 @@
 \hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}\index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
 
 
+Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm.  
+
+
+
+
 {\ttfamily \#include $<$rollout\+\_\+strategy\+\_\+interface.\+h$>$}
 
 
@@ -20,13 +25,18 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Rollout\+Strat
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Selects an action from a vector of available actions based on the implemented strategy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm. 
+
+A rollout (or simulation) is a traversal from a given node to a terminal state of the problem space. The rollout strategy defines how actions are selected during this simulation phase. Different strategies can be implemented to balance exploration and exploitation. 
 
 \doxysubsection{Member Typedef Documentation}
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020} 
@@ -59,6 +69,18 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Rollout\+Strat
 \doxysubsubsection{\texorpdfstring{select\_action()}{select\_action()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+
+
+Selects an action from a vector of available actions based on the implemented strategy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actions} & A vector of shared pointers to the available actions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the selected action. 
+\end{DoxyReturn}
 
 
 Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}{sophia\+::monte\+\_\+carlo\+::models\+::\+Random\+Rollout\+Strategy}}.
