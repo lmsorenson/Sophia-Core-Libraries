@@ -325,25 +325,259 @@ table tr:hover {
     margin: 20px 0 0 0 !important;
 }
 
+/* Improve detailed documentation content */
+.memdoc {
+    background: #fafbfc !important;
+    border: 1px solid #e1e4e8 !important;
+    border-radius: 6px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    line-height: 1.6 !important;
+    color: var(--sophia-text) !important;
+}
+
+.memdoc p {
+    margin: 0 0 16px 0 !important;
+    color: var(--sophia-text) !important;
+}
+
+.memdoc p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.memdoc ul, .memdoc ol {
+    margin: 16px 0 !important;
+    padding-left: 24px !important;
+}
+
+.memdoc li {
+    margin: 8px 0 !important;
+    color: var(--sophia-text) !important;
+}
+
+.memdoc blockquote {
+    border-left: 4px solid var(--sophia-secondary) !important;
+    padding: 12px 16px !important;
+    margin: 16px 0 !important;
+    background: rgba(52, 152, 219, 0.05) !important;
+    border-radius: 0 4px 4px 0 !important;
+    color: var(--sophia-text) !important;
+    font-style: italic !important;
+}
+
+.memdoc pre {
+    background: var(--sophia-code-bg) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+    margin: 16px 0 !important;
+    overflow-x: auto !important;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    font-size: 0.85em !important;
+    line-height: 1.4 !important;
+    color: #24292e !important;
+}
+
+.memdoc code {
+    background: rgba(52, 152, 219, 0.1) !important;
+    color: var(--sophia-primary) !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    font-size: 0.85em !important;
+}
+
+/* Enhance parameter and return descriptions */
+.params .paramname {
+    font-weight: 600 !important;
+    color: var(--sophia-primary) !important;
+    font-family: 'SFMono-Regular', monospace !important;
+}
+
+.params .paramdesc {
+    margin-left: 20px !important;
+    margin-bottom: 12px !important;
+    color: var(--sophia-text) !important;
+}
+
+.retval .paramname {
+    font-weight: 600 !important;
+    color: var(--sophia-secondary) !important;
+    font-style: italic !important;
+}
+
+.retval .paramdesc {
+    margin-left: 20px !important;
+    color: var(--sophia-text) !important;
+}
+
+/* Improve template parameter styling */
+.templParams {
+    background: linear-gradient(to right, #f8f9fa, #ffffff) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+    margin: 12px 0 !important;
+}
+
+.templParams dt {
+    font-weight: 600 !important;
+    color: var(--sophia-primary) !important;
+    margin-bottom: 4px !important;
+}
+
+.templParams dd {
+    margin: 0 0 12px 20px !important;
+    color: var(--sophia-text) !important;
+}
+
+/* Enhance exception specifications */
+.exceptionSpec {
+    background: rgba(231, 76, 60, 0.05) !important;
+    border: 1px solid rgba(231, 76, 60, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    margin: 8px 0 !important;
+    color: #c0392b !important;
+}
+
 /* Improve code fragments */
 .fragment {
     background: var(--sophia-code-bg) !important;
     border: 1px solid var(--sophia-border) !important;
-    border-radius: 4px !important;
+    border-radius: 6px !important;
     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
     font-size: 0.9em !important;
-    line-height: 1.4 !important;
-    margin: 10px 0 !important;
+    line-height: 1.5 !important;
+    margin: 16px 0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
 }
 
 .fragment .line {
-    padding: 2px 8px !important;
+    padding: 4px 12px !important;
     border-left: 3px solid transparent !important;
+    transition: all 0.2s ease !important;
 }
 
 .fragment .line:hover {
+    background: rgba(52, 152, 219, 0.08) !important;
+    border-left-color: var(--sophia-secondary) !important;
+}
+
+/* Style line numbers in code fragments */
+.fragment .lineno {
+    color: var(--sophia-text-light) !important;
+    background: rgba(0,0,0,0.05) !important;
+    padding: 4px 8px !important;
+    border-right: 1px solid var(--sophia-border) !important;
+    user-select: none !important;
+}
+
+/* Improve cross-references and links within documentation */
+.memdoc .el {
+    font-weight: 500 !important;
+    color: var(--sophia-secondary) !important;
+    background: rgba(52, 152, 219, 0.05) !important;
+    padding: 1px 4px !important;
+    border-radius: 3px !important;
+    text-decoration: none !important;
+}
+
+.memdoc .el:hover {
+    background: rgba(52, 152, 219, 0.1) !important;
+    text-decoration: underline !important;
+}
+
+/* Style @note, @warning, @attention boxes */
+.memdoc .note, .memdoc .warning, .memdoc .attention {
+    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    margin: 16px 0 !important;
+    border-left: 4px solid !important;
+}
+
+.memdoc .note {
     background: rgba(52, 152, 219, 0.05) !important;
     border-left-color: var(--sophia-secondary) !important;
+    color: var(--sophia-text) !important;
+}
+
+.memdoc .warning {
+    background: rgba(231, 76, 60, 0.05) !important;
+    border-left-color: #e74c3c !important;
+    color: #c0392b !important;
+}
+
+.memdoc .attention {
+    background: rgba(230, 126, 34, 0.05) !important;
+    border-left-color: #e67e22 !important;
+    color: #d35400 !important;
+}
+
+/* Improve section headers within documentation */
+.memdoc h1, .memdoc h2, .memdoc h3, .memdoc h4, .memdoc h5, .memdoc h6 {
+    color: var(--sophia-primary) !important;
+    font-weight: 600 !important;
+    margin: 24px 0 12px 0 !important;
+    border-bottom: 1px solid var(--sophia-light) !important;
+    padding-bottom: 6px !important;
+}
+
+.memdoc h1 {
+    font-size: 1.5em !important;
+    border-bottom-color: var(--sophia-secondary) !important;
+    border-bottom-width: 2px !important;
+}
+
+/* Style enumerated lists and definition lists */
+.memdoc dl {
+    margin: 16px 0 !important;
+}
+
+.memdoc dt {
+    font-weight: 600 !important;
+    color: var(--sophia-primary) !important;
+    margin: 12px 0 4px 0 !important;
+}
+
+.memdoc dd {
+    margin: 0 0 16px 20px !important;
+    color: var(--sophia-text) !important;
+}
+
+/* Improve table styling within documentation */
+.memdoc table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 16px 0 !important;
+    background: white !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+    border: 1px solid var(--sophia-border) !important;
+}
+
+.memdoc table th {
+    background: var(--sophia-secondary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 12px !important;
+    text-align: left !important;
+    border: none !important;
+}
+
+.memdoc table td {
+    padding: 12px !important;
+    border-bottom: 1px solid var(--sophia-border) !important;
+    border-right: none !important;
+}
+
+.memdoc table tr:last-child td {
+    border-bottom: none !important;
+}
+
+.memdoc table tr:hover {
+    background: var(--sophia-light) !important;
 }
 
 /* Fix index pages */
@@ -377,6 +611,219 @@ a.el {
     border-radius: 4px !important;
     padding: 10px !important;
     font-size: 0.9em !important;
+}
+
+/* Enhance member summary sections */
+.summary {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    margin: 20px 0 !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.summary caption {
+    background: var(--sophia-secondary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 12px 16px !important;
+    text-align: left !important;
+    border-bottom: 1px solid var(--sophia-border) !important;
+    margin-bottom: 0 !important;
+}
+
+.summary td {
+    padding: 10px 12px !important;
+    border-bottom: 1px solid var(--sophia-border) !important;
+    vertical-align: top !important;
+}
+
+.summary tr:last-child td {
+    border-bottom: none !important;
+}
+
+.summary tr:hover {
+    background: var(--sophia-light) !important;
+}
+
+/* Style member names in summary tables */
+.summary .membername {
+    font-weight: 500 !important;
+    color: var(--sophia-primary) !important;
+    font-family: 'SFMono-Regular', monospace !important;
+    font-size: 0.9em !important;
+}
+
+.summary .memname {
+    color: var(--sophia-secondary) !important;
+    font-weight: 500 !important;
+}
+
+/* Improve inheritance and collaboration diagrams */
+.graph {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
+    margin: 16px 0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.graph caption {
+    background: var(--sophia-secondary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 10px 12px !important;
+    border-radius: 4px 4px 0 0 !important;
+    margin-bottom: 12px !important;
+    text-align: left !important;
+}
+
+/* Style text content within diagrams */
+.graph text {
+    font-family: 'Inter', sans-serif !important;
+    fill: var(--sophia-text) !important;
+}
+
+/* Enhance group documentation */
+.groupHeader, .groupheader {
+    background: linear-gradient(135deg, var(--sophia-primary), var(--sophia-secondary)) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 12px 16px !important;
+    border-radius: 6px 6px 0 0 !important;
+    margin: 20px 0 0 0 !important;
+    border: none !important;
+}
+
+.groupText {
+    background: #fafbfc !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-top: none !important;
+    border-radius: 0 0 6px 6px !important;
+    padding: 16px !important;
+    color: var(--sophia-text) !important;
+}
+
+/* Improve anchor links and section navigation */
+.anchor {
+    display: none !important; /* Hide anchor links but keep functionality */
+}
+
+.memtitle {
+    background: linear-gradient(to right, var(--sophia-light), #f1f3f4) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    margin: 16px 0 !important;
+    font-weight: 600 !important;
+    color: var(--sophia-primary) !important;
+    font-size: 1.1em !important;
+}
+
+.memtitle a {
+    color: var(--sophia-primary) !important;
+    text-decoration: none !important;
+}
+
+.memtitle a:hover {
+    text-decoration: underline !important;
+}
+
+/* Style detailed member items */
+.memitem {
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 8px !important;
+    margin: 16px 0 !important;
+    background: white !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+    transition: box-shadow 0.2s ease !important;
+}
+
+.memitem:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
+}
+
+/* Improve separator lines */
+.memSeparator {
+    border-top: 1px solid var(--sophia-border) !important;
+    margin: 16px 0 !important;
+    height: 1px !important;
+}
+
+/* Style file member lists */
+.memlist {
+    background: #fafbfc !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
+    margin: 16px 0 !important;
+}
+
+.memlist li {
+    margin: 8px 0 !important;
+    padding: 8px 12px !important;
+    border-radius: 4px !important;
+    transition: background 0.2s ease !important;
+}
+
+.memlist li:hover {
+    background: rgba(52, 152, 219, 0.05) !important;
+}
+
+/* Enhance namespace member lists */
+.memitem .memname, .memitem .memproto {
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Style detailed description sections */
+.desc {
+    color: var(--sophia-text) !important;
+    line-height: 1.6 !important;
+    margin: 12px 0 !important;
+}
+
+/* Improve visibility of important information */
+.important {
+    background: rgba(230, 126, 34, 0.1) !important;
+    border: 1px solid rgba(230, 126, 34, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+    margin: 12px 0 !important;
+    color: #d35400 !important;
+}
+
+/* Style deprecation notices */
+.deprecated {
+    background: rgba(231, 76, 60, 0.1) !important;
+    border: 1px solid rgba(231, 76, 60, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+    margin: 12px 0 !important;
+    color: #c0392b !important;
+}
+
+/* Improve reference links */
+.reflist {
+    background: var(--sophia-light) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+    margin: 12px 0 !important;
+}
+
+.reflist dt {
+    font-weight: 600 !important;
+    color: var(--sophia-primary) !important;
+    margin: 8px 0 4px 0 !important;
+}
+
+.reflist dd {
+    margin: 0 0 8px 16px !important;
+    color: var(--sophia-text) !important;
 }
 
 /* Fix navigation tabs */
