@@ -239,8 +239,6 @@ Here is the caller graph for this function\+:
 
 Prints a representation of the node\textquotesingle{}s state. 
 
-Here is the caller graph for this function\+:
-% FIG 8
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a45fdf487eedadd6518798de3d7cb016b} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!Rollout@{Rollout}}
 \index{Rollout@{Rollout}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
@@ -255,9 +253,9 @@ Simulates a path from the current node to a terminal state. (Simulation Phase) A
 The reward obtained from the simulation. 
 \end{DoxyReturn}
 Here is the call graph for this function\+:
-% FIG 9
+% FIG 8
 Here is the caller graph for this function\+:
-% FIG 10
+% FIG 9
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!RolloutStrategy@{RolloutStrategy}}
 \index{RolloutStrategy@{RolloutStrategy}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
@@ -273,7 +271,7 @@ Pure virtual function to get the rollout strategy to be used for the simulation 
 Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase_a18b71c3bd5e5f4d4ff7198b02612abba}{sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+Base$<$ TState, TChange $>$}}.
 
 Here is the caller graph for this function\+:
-% FIG 11
+% FIG 10
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a404072a810c1cf1e201c82e539e0b721}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a404072a810c1cf1e201c82e539e0b721} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!SelectAction@{SelectAction}}
 \index{SelectAction@{SelectAction}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
@@ -285,7 +283,7 @@ Here is the caller graph for this function\+:
 Selects an action, typically used for the simulation phase. 
 
 Here is the call graph for this function\+:
-% FIG 12
+% FIG 11
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a21d7afbcd694dbf00efa0dc1b8698780}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a21d7afbcd694dbf00efa0dc1b8698780} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!SelectAction@{SelectAction}}
 \index{SelectAction@{SelectAction}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
@@ -307,7 +305,7 @@ Selects a specific action by its name.
 Selects the best child action based on the UCB1 formula. (Selection Phase) This method is part of the selection phase of MCTS, where the tree is traversed from the root to a leaf node by selecting the most promising actions. 
 
 Here is the call graph for this function\+:
-% FIG 13
+% FIG 12
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2175a37fedffa96b7def7c}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a0db427e98f2175a37fedffa96b7def7c} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!SetParent@{SetParent}}
 \index{SetParent@{SetParent}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
@@ -319,7 +317,7 @@ Here is the call graph for this function\+:
 Sets the parent action that leads to this node. 
 
 Here is the caller graph for this function\+:
-% FIG 14
+% FIG 13
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a7b2f4bdc1e2d0b247ac2cdad13e7da9b}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a7b2f4bdc1e2d0b247ac2cdad13e7da9b} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!TotalReward@{TotalReward}}
 \index{TotalReward@{TotalReward}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
@@ -330,6 +328,8 @@ Here is the caller graph for this function\+:
 
 Gets the total reward accumulated at this node. 
 
+Here is the caller graph for this function\+:
+% FIG 14
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a731a6c2e925df83e28eb1cdb117e2351} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!UpperConfidenceBound@{UpperConfidenceBound}}
 \index{UpperConfidenceBound@{UpperConfidenceBound}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}

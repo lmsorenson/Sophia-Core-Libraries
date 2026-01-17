@@ -125,6 +125,5 @@ digraph "include/logging/ilogger.h"
   Node34 -> Node35 [id="edge84_Node000034_Node000035",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node35 [id="Node000035",label="src/monte_carlo/models/random\l_action_strategy.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$random__action__strategy_8cpp.html",tooltip=" "];
   Node1 -> Node31 [id="edge85_Node000001_Node000031",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node29 [id="edge86_Node000001_Node000029",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node35 [id="edge87_Node000001_Node000035",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node35 [id="edge86_Node000001_Node000035",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }
