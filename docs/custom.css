@@ -11,6 +11,85 @@
     --sophia-light: #ecf0f1;
     --sophia-dark: #1a252f;
     --sophia-code-bg: #f8f9fa;
+    --sophia-border: #dee2e6;
+    --sophia-text: #2c3e50;
+    --sophia-text-light: #6c757d;
+}
+
+/* Global overrides */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--sophia-text);
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix navigation tree styling */
+#nav-tree, #nav-tree * {
+    font-family: 'Inter', sans-serif !important;
+}
+
+#nav-tree .item {
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    margin: 2px 0;
+    border: none !important;
+}
+
+#nav-tree .item:hover {
+    background: var(--sophia-light) !important;
+    color: var(--sophia-primary) !important;
+}
+
+#nav-tree .selected {
+    background: var(--sophia-secondary) !important;
+    color: white !important;
+    font-weight: 500;
+}
+
+/* Fix tab navigation */
+.tablist {
+    background: var(--sophia-light) !important;
+    border-bottom: 2px solid var(--sophia-secondary) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.tablist li {
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+.tablist li.current {
+    background: white !important;
+    border-bottom: 3px solid var(--sophia-secondary) !important;
+}
+
+.tablist a {
+    padding: 12px 20px !important;
+    color: var(--sophia-text) !important;
+    font-weight: 500 !important;
+    border-radius: 0 !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+.tablist a:hover {
+    background: var(--sophia-light) !important;
+    color: var(--sophia-primary) !important;
+}
+
+.tablist li.current a {
+    color: var(--sophia-secondary) !important;
+    font-weight: 600 !important;
 }
 
 /* Overall page styling */
@@ -44,29 +123,335 @@ body {
     opacity: 0.9;
 }
 
-/* Navigation tabs */
+/* Fix titlearea overrides */
+#titlearea * {
+    color: white !important;
+}
+
+/* Fix page content areas for all page types */
+.contents {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+    padding: 25px !important;
+    margin: 20px 0 !important;
+    line-height: 1.6 !important;
+}
+
+/* Namespace and class page styling */
+.contents h1, .contents h2, .contents h3, .contents h4, .contents h5, .contents h6 {
+    color: var(--sophia-primary) !important;
+    font-weight: 600 !important;
+    margin-top: 30px !important;
+    margin-bottom: 15px !important;
+    border-bottom: 2px solid var(--sophia-light) !important;
+    padding-bottom: 8px !important;
+}
+
+.contents h1 {
+    font-size: 2.2em !important;
+    border-bottom-color: var(--sophia-secondary) !important;
+}
+
+/* Improve member documentation */
+.memitem {
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    margin: 15px 0 !important;
+    background: white !important;
+    overflow: hidden !important;
+}
+
+.memproto {
+    background: linear-gradient(to right, var(--sophia-light), white) !important;
+    border-left: 4px solid var(--sophia-secondary) !important;
+    padding: 15px !important;
+    border-radius: 6px 0 0 0 !important;
+    border: none !important;
+}
+
+.memdoc {
+    padding: 15px !important;
+    background: white !important;
+}
+
+.memname {
+    color: var(--sophia-primary) !important;
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+}
+
+/* Directory and file listings */
+.directory {
+    background: var(--sophia-light) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+}
+
+.directory tr:hover {
+    background: rgba(52, 152, 219, 0.1) !important;
+}
+
+/* Improve table styling */
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 15px 0 !important;
+    background: white !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+table th {
+    background: var(--sophia-secondary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 12px !important;
+    text-align: left !important;
+}
+
+table td {
+    padding: 12px !important;
+    border-bottom: 1px solid var(--sophia-border) !important;
+}
+
+table tr:hover {
+    background: var(--sophia-light) !important;
+}
+
+/* Fix search results and other plain elements */
+.searchresult {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+}
+
+.searchresult * {
+    color: var(--sophia-text) !important;
+}
+
+.srItem {
+    border-bottom: 1px solid var(--sophia-border) !important;
+    padding: 10px !important;
+}
+
+.srItem:hover {
+    background: var(--sophia-light) !important;
+}
+
+/* Fix inheritance diagrams */
+.graph {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    padding: 15px !important;
+    margin: 15px 0 !important;
+}
+
+/* Fix parameter/return descriptions */
+.params, .retval {
+    background: var(--sophia-light) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 4px !important;
+    padding: 10px !important;
+    margin: 10px 0 !important;
+}
+
+.params th, .retval th {
+    background: var(--sophia-secondary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 8px !important;
+}
+
+.params td, .retval td {
+    padding: 8px !important;
+    border-bottom: 1px solid var(--sophia-border) !important;
+}
+
+/* Fix source code references */
+.el {
+    font-weight: 500 !important;
+    color: var(--sophia-primary) !important;
+}
+
+.el a {
+    color: var(--sophia-secondary) !important;
+}
+
+/* Fix breadcrumb navigation */
+#nav-path {
+    background: var(--sophia-light) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    margin: 10px 0 !important;
+}
+
+#nav-path ul li {
+    color: var(--sophia-text-light) !important;
+}
+
+#nav-path ul li.navpathsep {
+    color: var(--sophia-text) !important;
+}
+
+/* Fix summary tables */
+.summary {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    margin: 15px 0 !important;
+}
+
+.summary tr:hover {
+    background: var(--sophia-light) !important;
+}
+
+.summary td {
+    padding: 8px 12px !important;
+    border-bottom: 1px solid var(--sophia-border) !important;
+}
+
+/* Fix group headers */
+.groupheader {
+    background: var(--sophia-secondary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 10px 15px !important;
+    border-radius: 4px 4px 0 0 !important;
+    margin: 20px 0 0 0 !important;
+}
+
+/* Improve code fragments */
+.fragment {
+    background: var(--sophia-code-bg) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 4px !important;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    font-size: 0.9em !important;
+    line-height: 1.4 !important;
+    margin: 10px 0 !important;
+}
+
+.fragment .line {
+    padding: 2px 8px !important;
+    border-left: 3px solid transparent !important;
+}
+
+.fragment .line:hover {
+    background: rgba(52, 152, 219, 0.05) !important;
+    border-left-color: var(--sophia-secondary) !important;
+}
+
+/* Fix index pages */
+.index {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    padding: 15px !important;
+}
+
+/* Improve link styling */
+a {
+    color: var(--sophia-secondary) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+a:hover {
+    color: var(--sophia-primary) !important;
+    text-decoration: underline !important;
+}
+
+a.el {
+    font-weight: 500 !important;
+}
+
+/* Fix legend and other small elements */
+.legend {
+    background: var(--sophia-light) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 4px !important;
+    padding: 10px !important;
+    font-size: 0.9em !important;
+}
+
+/* Fix navigation tabs */
+.tablist {
+    background: var(--sophia-light) !important;
+    border-bottom: 2px solid var(--sophia-secondary) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
 .tablist li {
-    background: var(--sophia-light);
-    border-radius: 6px 6px 0 0;
-    margin-right: 2px;
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
 }
 
 .tablist li.current {
-    background: var(--sophia-secondary);
-    color: white;
+    background: white !important;
+    border-bottom: 3px solid var(--sophia-secondary) !important;
+    margin-bottom: -2px !important;
 }
 
 .tablist a {
-    padding: 10px 20px;
-    display: block;
-    border-radius: 6px 6px 0 0;
-    transition: all 0.3s ease;
+    padding: 12px 20px !important;
+    color: var(--sophia-text) !important;
+    font-weight: 500 !important;
+    border-radius: 0 !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: block !important;
 }
 
 .tablist a:hover {
+    background: var(--sophia-light) !important;
+    color: var(--sophia-primary) !important;
+}
+
+.tablist li.current a {
+    color: var(--sophia-secondary) !important;
+    font-weight: 600 !important;
+    background: white !important;
+}
+
+/* Fix side navigation tree */
+#nav-tree {
+    background: var(--sophia-light) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+#nav-tree .item {
+    padding: 8px 12px !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    margin: 2px 8px !important;
+    border: none !important;
+    color: var(--sophia-text) !important;
+}
+
+#nav-tree .item:hover {
+    background: rgba(52, 152, 219, 0.1) !important;
+    color: var(--sophia-primary) !important;
+}
+
+#nav-tree .selected {
     background: var(--sophia-secondary) !important;
     color: white !important;
-    text-decoration: none;
+    font-weight: 500 !important;
+}
+
+#nav-tree .label {
+    font-weight: 500 !important;
 }
 
 /* Content areas */
