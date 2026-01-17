@@ -25,6 +25,29 @@
 var NAVTREE =
 [
   [ "Sophia", "index.html", [
+    [ "Sophia Decision Engine", "md_docs_2mainpage.html", [
+      [ "Overview", "md_docs_2mainpage.html#autotoc_md1", null ],
+      [ "Key Features", "md_docs_2mainpage.html#autotoc_md2", [
+        [ "🚀 <strong>High-Performance Engine</strong>", "md_docs_2mainpage.html#autotoc_md3", null ],
+        [ "🧠 <strong>Decision-Making Algorithms</strong>", "md_docs_2mainpage.html#autotoc_md4", null ],
+        [ "🛠️ <strong>Developer-Friendly</strong>", "md_docs_2mainpage.html#autotoc_md5", null ]
+      ] ],
+      [ "Quick Start", "md_docs_2mainpage.html#autotoc_md6", null ],
+      [ "Architecture", "md_docs_2mainpage.html#autotoc_md7", [
+        [ "Core Components", "md_docs_2mainpage.html#autotoc_md8", null ],
+        [ "Design Patterns", "md_docs_2mainpage.html#autotoc_md9", null ]
+      ] ],
+      [ "Use Cases", "md_docs_2mainpage.html#autotoc_md10", [
+        [ "🎮 <strong>Game AI</strong>", "md_docs_2mainpage.html#autotoc_md11", null ],
+        [ "🤖 <strong>Robotics & Planning</strong>", "md_docs_2mainpage.html#autotoc_md12", null ],
+        [ "📊 <strong>Optimization</strong>", "md_docs_2mainpage.html#autotoc_md13", null ]
+      ] ],
+      [ "Examples", "md_docs_2mainpage.html#autotoc_md14", null ],
+      [ "Getting Started", "md_docs_2mainpage.html#autotoc_md15", null ],
+      [ "Documentation Structure", "md_docs_2mainpage.html#autotoc_md16", null ],
+      [ "Contributing", "md_docs_2mainpage.html#autotoc_md17", null ],
+      [ "License", "md_docs_2mainpage.html#autotoc_md18", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -58,7 +81,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "action_8cpp.html",
-"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ac7b5069cdef89cf8eb60641ff44bcfd4"
+"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ac7b5069cdef89cf8eb60641ff44bcfd4",
+"symbol_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['action_0',['Action',['../classsophia_1_1monte__carlo_1_1models_1_1Action.html',1,'sophia::monte_carlo::models']]],
-  ['actionbase_1',['ActionBase',['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html',1,'sophia::monte_carlo::models']]],
-  ['alignment_2',['Alignment',['../classAlignment.html',1,'']]]
-];
