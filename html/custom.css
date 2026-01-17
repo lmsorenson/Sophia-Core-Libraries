@@ -25,9 +25,517 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--sophia-text);
-    background-color: #ffffff;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
+}
+
+/* Main page layout improvements */
+#doc-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    background: white !important;
+    min-height: calc(100vh - 200px) !important;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08) !important;
+}
+
+#main-content {
+    padding: 30px !important;
+    background: white !important;
+}
+
+/* Improve overall content organization */
+.contents {
+    background: white !important;
+    padding: 30px !important;
+    margin: 20px 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    line-height: 1.7 !important;
+}
+
+/* Better section spacing and organization */
+.contents > .textblock {
+    margin-bottom: 30px !important;
+}
+
+.contents > .textblock:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Improve heading hierarchy and spacing */
+.contents h1 {
+    font-size: 2.5em !important;
+    font-weight: 700 !important;
+    color: var(--sophia-primary) !important;
+    margin: 0 0 20px 0 !important;
+    padding-bottom: 15px !important;
+    border-bottom: 3px solid var(--sophia-secondary) !important;
+    line-height: 1.2 !important;
+}
+
+.contents h2 {
+    font-size: 1.8em !important;
+    font-weight: 600 !important;
+    color: var(--sophia-primary) !important;
+    margin: 40px 0 15px 0 !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid var(--sophia-light) !important;
+    clear: both !important;
+}
+
+.contents h3 {
+    font-size: 1.4em !important;
+    font-weight: 600 !important;
+    color: var(--sophia-primary) !important;
+    margin: 30px 0 12px 0 !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid var(--sophia-light) !important;
+}
+
+.contents h4, .contents h5, .contents h6 {
+    font-size: 1.2em !important;
+    font-weight: 600 !important;
+    color: var(--sophia-primary) !important;
+    margin: 25px 0 10px 0 !important;
+}
+
+/* Better paragraph spacing */
+.contents p {
+    margin: 0 0 20px 0 !important;
+    line-height: 1.7 !important;
+    color: var(--sophia-text) !important;
+}
+
+.contents p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Improve list formatting */
+.contents ul, .contents ol {
+    margin: 20px 0 !important;
+    padding-left: 30px !important;
+}
+
+.contents li {
+    margin: 8px 0 !important;
+    line-height: 1.6 !important;
+    color: var(--sophia-text) !important;
+}
+
+.contents li p {
+    margin: 8px 0 !important;
+}
+
+/* Better spacing for different content types */
+.contents > dl {
+    margin: 25px 0 !important;
+}
+
+.contents > table {
+    margin: 25px 0 !important;
+}
+
+.contents > .image, .contents > .dotgraph {
+    margin: 25px 0 !important;
+}
+
+/* Add visual separators between major sections */
+.contents > .groupHeader + .memitem,
+.contents > .memitem + .memitem {
+    border-top: none !important;
+}
+
+.contents > .memitem:not(:first-child) {
+    margin-top: 30px !important;
+}
+
+/* Improve content flow with better visual hierarchy */
+.contents > .textblock + h2,
+.contents > .textblock + h3,
+.contents > .memitem + h2,
+.contents > .memitem + h3 {
+    margin-top: 50px !important;
+}
+
+/* Better spacing for content sections */
+.contents > .textblock {
+    margin-bottom: 30px !important;
+    padding: 25px !important;
+    background: #fafbfc !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--sophia-border) !important;
+}
+
+.contents > .textblock h1,
+.contents > .textblock h2,
+.contents > .textblock h3,
+.contents > .textblock h4,
+.contents > .textblock h5,
+.contents > .textblock h6 {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+/* Improve content readability with better spacing */
+.contents > .textblock p {
+    margin-bottom: 15px !important;
+    line-height: 1.7 !important;
+}
+
+.contents > .textblock p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.contents > .textblock ul,
+.contents > .textblock ol {
+    margin: 15px 0 !important;
+}
+
+.contents > .textblock li {
+    margin: 5px 0 !important;
+}
+
+/* Better organization for API documentation pages */
+.api-content {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+}
+
+/* Improve section organization */
+.section {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+}
+
+.section h2, .section h3 {
+    margin-top: 0 !important;
+    border-bottom: 2px solid var(--sophia-secondary) !important;
+    padding-bottom: 10px !important;
+}
+
+/* Better spacing for detailed content */
+.detailed-content {
+    background: #fafbfc !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+}
+
+/* Improve content flow indicators */
+.content-flow {
+    position: relative !important;
+    padding-left: 25px !important;
+}
+
+.content-flow::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 3px !important;
+    background: linear-gradient(to bottom, var(--sophia-secondary), var(--sophia-primary)) !important;
+    border-radius: 2px !important;
+}
+
+/* Better responsive content layout */
+@media (max-width: 1024px) {
+    .contents {
+        padding: 20px !important;
+    }
+
+    .contents h1 {
+        font-size: 2.2em !important;
+    }
+
+    .contents h2 {
+        font-size: 1.6em !important;
+    }
+
+    .side-nav {
+        width: 260px !important;
+    }
+
+    #main-content {
+        margin-left: 280px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .contents {
+        padding: 15px !important;
+    }
+
+    .contents h1 {
+        font-size: 1.8em !important;
+    }
+
+    .contents h2 {
+        font-size: 1.4em !important;
+    }
+
+    .contents h3 {
+        font-size: 1.2em !important;
+    }
+
+    .api-content {
+        gap: 20px !important;
+    }
+
+    .side-nav {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--sophia-border) !important;
+        padding: 15px !important;
+    }
+
+    #main-content {
+        margin-left: 0 !important;
+    }
+}
+
+/* Final content organization improvements */
+.page-content {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Improve content section separation */
+.content-section {
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 8px !important;
+    margin: 25px 0 !important;
+    overflow: hidden !important;
+    background: white !important;
+}
+
+.content-section-header {
+    background: linear-gradient(to right, var(--sophia-light), white) !important;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid var(--sophia-border) !important;
+    margin: 0 !important;
+}
+
+.content-section-body {
+    padding: 20px !important;
+}
+
+/* Better visual flow indicators */
+.content-flow-arrow {
+    position: relative !important;
+    padding-left: 30px !important;
+}
+
+.content-flow-arrow::before {
+    content: "→" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    color: var(--sophia-secondary) !important;
+    font-weight: bold !important;
+    font-size: 1.2em !important;
+}
+
+/* Improve content readability with better contrast */
+.high-contrast-text {
+    color: var(--sophia-primary) !important;
+    font-weight: 500 !important;
+}
+
+.subtle-text {
+    color: var(--sophia-text-light) !important;
+    font-size: 0.9em !important;
+}
+
+/* Better organization for long content pages */
+.content-chunk {
+    margin: 30px 0 !important;
+    padding: 20px !important;
+    background: #fafbfc !important;
+    border-radius: 6px !important;
+    border: 1px solid var(--sophia-border) !important;
+}
+
+.content-chunk h3, .content-chunk h4 {
+    margin-top: 0 !important;
+    color: var(--sophia-primary) !important;
+}
+
+/* Final spacing improvements */
+.contents .memitem:last-of-type {
+    margin-bottom: 40px !important;
+}
+
+.contents .textblock:last-of-type {
+    margin-bottom: 40px !important;
+}
+
+/* Improve footer spacing */
+#footer {
+    margin-top: 50px !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+/* Improve member documentation sections */
+.memitem {
+    margin: 25px 0 !important;
+    border-radius: 8px !important;
+    overflow: visible !important;
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+}
+
+.memitem:first-child {
+    margin-top: 0 !important;
+}
+
+.memitem:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Better spacing between documentation sections */
+.memdoc {
+    background: #fafbfc !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 0 0 8px 8px !important;
+    padding: 25px !important;
+    margin: -1px -1px 0 -1px !important;
+    line-height: 1.7 !important;
+}
+
+.memdoc p {
+    margin: 0 0 18px 0 !important;
+    line-height: 1.7 !important;
+}
+
+.memdoc p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Improve spacing for parameter tables */
+.params, .retval {
+    margin: 20px 0 !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+
+.params th, .retval th {
+    padding: 15px !important;
+    font-weight: 600 !important;
+}
+
+.params td, .retval td {
+    padding: 12px 15px !important;
+}
+
+/* Better spacing for inheritance diagrams */
+.graph {
+    margin: 25px 0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.graph caption {
+    margin-bottom: 15px !important;
+    padding: 12px 16px !important;
+}
+
+/* Improve summary table spacing */
+.summary {
+    margin: 25px 0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.summary caption {
+    padding: 15px 16px !important;
+    margin-bottom: 0 !important;
+}
+
+.summary td {
+    padding: 12px 15px !important;
+}
+
+/* Better spacing for directory listings */
+.directory {
+    margin: 25px 0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* Improve fragment spacing */
+.fragment {
+    margin: 20px 0 !important;
+    border-radius: 6px !important;
+}
+
+/* Better spacing for definition lists */
+.contents dl {
+    margin: 20px 0 !important;
+}
+
+.contents dt {
+    font-weight: 600 !important;
+    margin: 15px 0 5px 0 !important;
+    color: var(--sophia-primary) !important;
+}
+
+.contents dd {
+    margin: 0 0 20px 30px !important;
+    color: var(--sophia-text) !important;
+}
+
+/* Improve blockquote spacing */
+.contents blockquote {
+    margin: 20px 0 !important;
+    padding: 15px 20px !important;
+    border-left: 4px solid var(--sophia-secondary) !important;
+    background: rgba(52, 152, 219, 0.03) !important;
+    border-radius: 0 4px 4px 0 !important;
+}
+
+/* Better spacing for nested content */
+.memdoc blockquote {
+    margin: 15px 0 !important;
+    padding: 12px 16px !important;
+}
+
+.memdoc ul, .memdoc ol {
+    margin: 15px 0 !important;
+    padding-left: 25px !important;
+}
+
+.memdoc li {
+    margin: 6px 0 !important;
+}
+
+/* Improve spacing for code blocks in documentation */
+.memdoc pre {
+    margin: 15px 0 !important;
+    padding: 15px !important;
+    border-radius: 4px !important;
+}
+
+/* Better spacing for tables in documentation */
+.memdoc table {
+    margin: 15px 0 !important;
+}
+
+.memdoc table th, .memdoc table td {
+    padding: 10px 12px !important;
 }
 
 /* Fix navigation tree styling */
@@ -869,36 +1377,119 @@ a.el {
     background: white !important;
 }
 
+/* Improve overall page layout with side navigation */
+.side-nav {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background: #f8f9fa !important;
+    border-right: 1px solid var(--sophia-border) !important;
+    overflow-y: auto !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+}
+
+#main-content {
+    margin-left: 300px !important;
+    min-height: 100vh !important;
+    background: white !important;
+}
+
 /* Fix side navigation tree */
 #nav-tree {
-    background: var(--sophia-light) !important;
+    background: white !important;
     border: 1px solid var(--sophia-border) !important;
-    border-radius: 6px !important;
+    border-radius: 8px !important;
     font-family: 'Inter', sans-serif !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
 }
 
 #nav-tree .item {
-    padding: 8px 12px !important;
-    border-radius: 4px !important;
+    padding: 10px 15px !important;
+    border-radius: 6px !important;
     transition: all 0.2s ease !important;
-    margin: 2px 8px !important;
+    margin: 3px 10px !important;
     border: none !important;
     color: var(--sophia-text) !important;
+    font-size: 0.9em !important;
+    line-height: 1.4 !important;
 }
 
 #nav-tree .item:hover {
-    background: rgba(52, 152, 219, 0.1) !important;
+    background: rgba(52, 152, 219, 0.08) !important;
     color: var(--sophia-primary) !important;
+    transform: translateX(2px) !important;
 }
 
 #nav-tree .selected {
     background: var(--sophia-secondary) !important;
     color: white !important;
     font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3) !important;
 }
 
 #nav-tree .label {
     font-weight: 500 !important;
+    display: block !important;
+    padding: 8px 15px !important;
+    margin: 5px 10px !important;
+    color: var(--sophia-primary) !important;
+    font-size: 0.95em !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Better navigation tree structure */
+#nav-tree .children {
+    margin-left: 15px !important;
+}
+
+#nav-tree .children .item {
+    padding-left: 25px !important;
+    font-size: 0.85em !important;
+}
+
+/* Improve navigation tree header */
+#nav-tree .header {
+    padding: 15px !important;
+    background: var(--sophia-secondary) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 6px 6px 0 0 !important;
+    margin: -1px -1px 0 -1px !important;
+    text-align: center !important;
+}
+
+/* Better responsive design */
+@media (max-width: 1200px) {
+    .side-nav {
+        width: 250px !important;
+    }
+
+    #main-content {
+        margin-left: 270px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .side-nav {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--sophia-border) !important;
+    }
+
+    #main-content {
+        margin-left: 0 !important;
+    }
+
+    .contents {
+        padding: 20px !important;
+    }
 }
 
 /* Content areas */
