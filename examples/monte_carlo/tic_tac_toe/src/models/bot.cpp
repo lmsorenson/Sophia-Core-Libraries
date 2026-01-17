@@ -35,8 +35,8 @@ std::shared_ptr<const Position> Bot::NextMove() const
         return nullptr;
     }
 
-    if (m_logger_) m_logger_->info("Bot is thinking...");
-    const shared_ptr<Action> best_action = MonteCarloTreeSearch::run(node_, iterations_, m_logger_);
+    if (m_logger_) m_logger_->info("Bot is responding to move {}", node_->Name());
+    const shared_ptr<Action> best_action = MonteCarloTreeSearch::run(node_, 4, m_logger_);
 
     if (!best_action || !best_action->Target())
     {
