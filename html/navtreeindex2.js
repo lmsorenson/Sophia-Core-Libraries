@@ -1,5 +1,11 @@
 var NAVTREEINDEX2 =
 {
+"namespacemembers_type.html":[2,1,2],
+"namespaces.html":[2,0],
+"namespacesophia.html":[2,0,0],
+"namespacesophia_1_1logging.html":[2,0,0,0],
+"namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8":[2,0,0,0,3],
+"namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277":[2,0,0,0,3,2],
 "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3":[2,0,0,0,3,1],
 "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5":[2,0,0,0,3,3],
 "namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15":[2,0,0,0,3,0],

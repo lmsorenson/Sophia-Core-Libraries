@@ -9,4 +9,7 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Human::Human"
   Node1 [id="Node000001",label="sophia::monte_carlo::tic_tac\l_toe::models::Human::Human",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Creates an instance of a Human Player."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="sophia::monte_carlo::tic_tac\l_toe::models::Player::symbol",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#a40d65c06507e91eb2c443f9df90eacb4",tooltip="The Symbol used by the Player."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="sophia::monte_carlo::tic_tac\l_toe::enums::TileStateToString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a43655957d17319782ac5b8ffe4e0734c",tooltip="Converts a symbol to a string."];
+  Node3 -> Node3 [id="edge3_Node000003_Node000003",color="steelblue1",style="solid",tooltip=" "];
 }

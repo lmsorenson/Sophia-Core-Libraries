@@ -34,6 +34,8 @@ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_
 \begin{DoxyCompactList}\small\item\em The last placed \doxylink{classSymbol}{Symbol}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board}{Board}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a437457f6b544794f2d3ca841a100263e}{Get\+Board}} () const
 \begin{DoxyCompactList}\small\item\em Get the board information for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aea276cf1723e9a0b616f72e8008dcdb6}{Get\+Turn\+Number}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current turn number based on the number of marks on the board. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a74f9cd4901361de082efc572c8e66d66}{Print}} () const
 \begin{DoxyCompactList}\small\item\em Prints the board info for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
@@ -143,6 +145,21 @@ Get\+Open\+Positions.
 \begin{DoxyReturn}{Returns}
 A vector of shared pointers to Positions that don\textquotesingle{}t have a mark yet. 
 \end{DoxyReturn}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aea276cf1723e9a0b616f72e8008dcdb6}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aea276cf1723e9a0b616f72e8008dcdb6} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!GetTurnNumber@{GetTurnNumber}}
+\index{GetTurnNumber@{GetTurnNumber}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
+\doxysubsubsection{\texorpdfstring{GetTurnNumber()}{GetTurnNumber()}}
+{\footnotesize\ttfamily int Game\+State\+::\+Get\+Turn\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current turn number based on the number of marks on the board. 
+
+\begin{DoxyReturn}{Returns}
+The current turn number. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aaafa7f0f2aee3daf9922808c096d1666}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_aaafa7f0f2aee3daf9922808c096d1666} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!LastPlaced@{LastPlaced}}
 \index{LastPlaced@{LastPlaced}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}
@@ -166,8 +183,6 @@ The \doxylink{classSymbol}{Symbol} that was placed last.
 
 Prints the board info for this \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. 
 
-Here is the call graph for this function\+:
-% FIG 2
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a1a41f3b32270de2dbf66bf68ddfcac76}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState_a1a41f3b32270de2dbf66bf68ddfcac76} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}!Winner@{Winner}}
 \index{Winner@{Winner}!sophia::monte\_carlo::tic\_tac\_toe::models::GameState@{sophia::monte\_carlo::tic\_tac\_toe::models::GameState}}

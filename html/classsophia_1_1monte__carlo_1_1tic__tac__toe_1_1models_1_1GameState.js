@@ -6,6 +6,7 @@ var classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState =
     [ "CurrentPlayer", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a878aa6764746fe3d29f4aa3610898d72", null ],
     [ "GetBoard", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a437457f6b544794f2d3ca841a100263e", null ],
     [ "GetOpenPositions", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a362e131dbc2d9f15917b2ba134f8df65", null ],
+    [ "GetTurnNumber", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#aea276cf1723e9a0b616f72e8008dcdb6", null ],
     [ "LastPlaced", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#aaafa7f0f2aee3daf9922808c096d1666", null ],
     [ "Print", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a74f9cd4901361de082efc572c8e66d66", null ],
     [ "Winner", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a1a41f3b32270de2dbf66bf68ddfcac76", null ],

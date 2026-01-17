@@ -74,7 +74,10 @@ digraph "examples/monte_carlo/tic_tac_toe/src/models/move.cpp"
   Node18 -> Node24 [id="edge44_Node000018_Node000024",color="steelblue1",style="solid",tooltip=" "];
   Node24 [id="Node000024",label="tic_tac_toe/enums/alignment.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alignment_8h.html",tooltip=" "];
   Node18 -> Node4 [id="edge45_Node000018_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node2 -> Node20 [id="edge46_Node000002_Node000020",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node21 [id="edge47_Node000001_Node000021",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node7 [id="edge48_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node18 -> Node9 [id="edge46_Node000018_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node20 [id="edge47_Node000002_Node000020",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node21 [id="edge48_Node000001_Node000021",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge49_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge50_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node22 [id="edge51_Node000001_Node000022",color="steelblue1",style="solid",tooltip=" "];
 }

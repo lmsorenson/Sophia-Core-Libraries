@@ -53,5 +53,6 @@ digraph "examples/monte_carlo/tic_tac_toe/include/tic_tac_toe/models/bot.h"
   Node16 -> Node17 [id="edge30_Node000016_Node000017",color="steelblue1",style="solid",tooltip=" "];
   Node17 [id="Node000017",label="tic_tac_toe/enums/alignment.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$alignment_8h.html",tooltip=" "];
   Node16 -> Node3 [id="edge31_Node000016_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node9 [id="edge32_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node16 -> Node9 [id="edge32_Node000016_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node9 [id="edge33_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
 }
