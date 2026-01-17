@@ -1,18 +1,18 @@
 <map id="examples/monte_carlo/tic_tac_toe" name="examples/monte_carlo/tic_tac_toe">
 <area shape="rect" id="node2" href="dir_4ac5b90547e73adc726b00a33f76b6b6.html" title="include" alt="" coords="37,136,107,161"/>
 <area shape="rect" id="node5" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="109,209,179,235"/>
-<area shape="poly" id="edge1" href="dir_000005_000006.html" alt="" coords="86,160,124,198,121,202,82,164"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000005_000006.html" title="7" alt="" coords="121,183,130,198"/>
+<area shape="poly" id="edge1" href="dir_000006_000007.html" alt="" coords="86,160,124,198,121,202,82,164"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000006_000007.html" title="7" alt="" coords="121,183,130,198"/>
 <area shape="rect" id="node3" href="dir_d82f86ccd3f83a2068f162aae422b29c.html" title="src" alt="" coords="38,63,79,88"/>
-<area shape="poly" id="edge2" href="dir_000017_000005.html" alt="" coords="63,88,70,122,65,123,58,89"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000017_000005.html" title="28" alt="" coords="66,109,83,124"/>
-<area shape="poly" id="edge3" href="dir_000017_000006.html" alt="" coords="76,86,99,107,121,135,135,165,143,195,137,197,130,167,116,137,95,111,72,90"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000017_000006.html" title="8" alt="" coords="143,182,152,197"/>
+<area shape="poly" id="edge2" href="dir_000018_000006.html" alt="" coords="63,88,70,122,65,123,58,89"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000018_000006.html" title="28" alt="" coords="66,109,83,124"/>
+<area shape="poly" id="edge3" href="dir_000018_000007.html" alt="" coords="76,86,99,107,121,135,135,165,143,195,137,197,130,167,116,137,95,111,72,90"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000018_000007.html" title="8" alt="" coords="143,182,152,197"/>
 <area shape="rect" id="node4" href="dir_0cebf3d37342b2cb3944189466bc8973.html" title="tests" alt="" coords="103,63,158,88"/>
-<area shape="poly" id="edge4" href="dir_000019_000005.html" alt="" coords="123,90,92,127,88,124,119,87"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000019_000005.html" title="4" alt="" coords="95,120,104,135"/>
-<area shape="poly" id="edge5" href="dir_000019_000006.html" alt="" coords="141,87,155,108,165,135,169,159,165,183,160,198,155,196,160,182,164,159,160,137,150,111,137,90"/>
-<area shape="rect" id="edge5-headlabel" href="dir_000019_000006.html" title="3" alt="" coords="163,190,172,204"/>
+<area shape="poly" id="edge4" href="dir_000020_000006.html" alt="" coords="123,90,92,127,88,124,119,87"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000020_000006.html" title="4" alt="" coords="95,120,104,135"/>
+<area shape="poly" id="edge5" href="dir_000020_000007.html" alt="" coords="141,87,155,108,165,135,169,159,165,183,160,198,155,196,160,182,164,159,160,137,150,111,137,90"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000020_000007.html" title="3" alt="" coords="163,190,172,204"/>
 <area shape="rect" id="clust2" href="dir_9b5fc5c7c88e565369b38a220826950d.html" alt="" coords="27,52,287,172"/>
 <area shape="rect" id="clust1" href="dir_29c0e445d4b882cd0562f0657f2ff942.html" title="monte_carlo" alt="" coords="16,16,297,183"/>
 </map>

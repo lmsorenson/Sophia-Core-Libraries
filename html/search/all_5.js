@@ -13,5 +13,6 @@ var searchData=
   ['getboard_10',['GetBoard',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a437457f6b544794f2d3ca841a100263e',1,'sophia::monte_carlo::tic_tac_toe::models::GameState']]],
   ['getlines_11',['GetLines',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a9a3a642a4bd5f59fed6b678d6db1dae8',1,'sophia::monte_carlo::tic_tac_toe::models::Board']]],
   ['getopenpositions_12',['getopenpositions',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#af8a81c8554231afdba42ebdcc5e2a0bc',1,'sophia::monte_carlo::tic_tac_toe::models::Board::GetOpenPositions()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a362e131dbc2d9f15917b2ba134f8df65',1,'sophia::monte_carlo::tic_tac_toe::models::GameState::GetOpenPositions()']]],
-  ['getstate_13',['GetState',['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a1457cd27400e746c075e0d1851ad00df',1,'sophia::monte_carlo::models::NodeBase']]]
+  ['getstate_13',['GetState',['../classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html#a1457cd27400e746c075e0d1851ad00df',1,'sophia::monte_carlo::models::NodeBase']]],
+  ['guide_14',['Integration Guide',['../md_docs_2mainpage.html#autotoc_md15',1,'']]]
 ];
