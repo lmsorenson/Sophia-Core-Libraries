@@ -10,9 +10,14 @@ var searchData=
   ['actionbase_7',['actionbase',['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html',1,'sophia::monte_carlo::models::ActionBase&lt; TState, TChange &gt;'],['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a01da784f22c49d11e22fd795cc8e6b8a',1,'sophia::monte_carlo::models::ActionBase::ActionBase()']]],
   ['active_5fplayer_8',['active_player',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ae5fdf69ae58480776a505b9d67d0566e',1,'sophia::monte_carlo::tic_tac_toe::models::Game']]],
   ['add_5fobserver_9',['add_observer',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html#a83cf7208251650e5402daa766774e032',1,'sophia::monte_carlo::tic_tac_toe::observer::Subject']]],
-  ['alignment_10',['alignment',['../classAlignment.html',1,'Alignment'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3',1,'sophia::monte_carlo::tic_tac_toe::enums::Alignment']]],
-  ['alignment_2eh_11',['alignment.h',['../alignment_8h.html',1,'']]],
-  ['alternate_12',['Alternate',['../state_8cpp.html#a137cb05c50e332e74a192d0e2be6f62f',1,'state.cpp']]],
-  ['applymove_13',['ApplyMove',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a6dc854b0b8d20bf45c7c369747bd8ead',1,'sophia::monte_carlo::tic_tac_toe::models::GameState']]],
-  ['assign_14',['assign',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ac41e0aa399a1bffa1199fa05e6103245',1,'sophia::monte_carlo::tic_tac_toe::models::Game::Assign(enums::Symbol symbol, Args... args)'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#aedd5e28f7d4abccd3b4eab4a03f332cd',1,'sophia::monte_carlo::tic_tac_toe::models::Game::Assign(enums::Symbol symbol, Args ... args)']]]
+  ['algorithm_20classes_10',['Algorithm Classes',['../index.html#autotoc_md7',1,'']]],
+  ['alignment_11',['alignment',['../classAlignment.html',1,'Alignment'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3',1,'sophia::monte_carlo::tic_tac_toe::enums::Alignment']]],
+  ['alignment_2eh_12',['alignment.h',['../alignment_8h.html',1,'']]],
+  ['also_13',['See Also',['../index.html#autotoc_md18',1,'']]],
+  ['alternate_14',['Alternate',['../state_8cpp.html#a137cb05c50e332e74a192d0e2be6f62f',1,'state.cpp']]],
+  ['api_20documentation_15',['Sophia Decision Engine API Documentation',['../index.html',1,'']]],
+  ['api_20reference_16',['API Reference',['../index.html#autotoc_md17',1,'']]],
+  ['applymove_17',['ApplyMove',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a6dc854b0b8d20bf45c7c369747bd8ead',1,'sophia::monte_carlo::tic_tac_toe::models::GameState']]],
+  ['architecture_20overview_18',['Architecture Overview',['../index.html#autotoc_md2',1,'']]],
+  ['assign_19',['assign',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ac41e0aa399a1bffa1199fa05e6103245',1,'sophia::monte_carlo::tic_tac_toe::models::Game::Assign(enums::Symbol symbol, Args... args)'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#aedd5e28f7d4abccd3b4eab4a03f332cd',1,'sophia::monte_carlo::tic_tac_toe::models::Game::Assign(enums::Symbol symbol, Args ... args)']]]
 ];

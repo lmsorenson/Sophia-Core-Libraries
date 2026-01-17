@@ -1,0 +1,173 @@
+\chapter{Sophia Decision Engine API Documentation}
+\hypertarget{index}{}\label{index}\index{Sophia Decision Engine API Documentation@{Sophia Decision Engine API Documentation}}
+High-\/performance C++ framework for intelligent decision-\/making through Monte Carlo Tree Search.
+
+High-\/performance C++ framework for intelligent decision-\/making through Monte Carlo Tree Search\hypertarget{index_intro}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_intro}
+Welcome to the Sophia Decision Engine API documentation. This library provides efficient implementations of Monte Carlo Tree Search (MCTS) and related algorithms for intelligent decision-\/making. \texorpdfstring{$\ast$}{*}/\hypertarget{index_autotoc_md0}{}\doxysubsection{\texorpdfstring{Quick Start}{Quick Start}}\label{index_autotoc_md0}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <sophia/monte\_carlo/tree\_search\_algorithm.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ your\ game\ state\ (implement\ Node\ interface)}}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ root\ =\ std::make\_shared<YourGameState>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Run\ MCTS\ to\ find\ optimal\ decision}}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ bestAction\ =\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch_add75e8e0fa2db2b5c6ed1d10d5b1b2a4}{sophia::monte\_carlo::MonteCarloTreeSearch::run}}(root,\ 1000);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Execute\ the\ decision}}
+\DoxyCodeLine{bestAction-\/>execute();}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md1}{}\doxysubsection{\texorpdfstring{Core Components}{Core Components}}\label{index_autotoc_md1}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Component   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Component   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose    }\\\cline{1-2}
+\endhead
+\href{classsophia_1_1monte__carlo_1_1_monte_carlo_tree_search.html}{\texttt{ Monte\+Carlo\+Tree\+Search}}   &Main algorithm implementation    \\\cline{1-2}
+\href{classsophia_1_1monte__carlo_1_1models_1_1_node.html}{\texttt{ Node}}   &Game state representation    \\\cline{1-2}
+\href{classsophia_1_1monte__carlo_1_1models_1_1_action.html}{\texttt{ Action}}   &State transition representation    \\\cline{1-2}
+\href{classsophia_1_1monte__carlo_1_1models_1_1_rollout_strategy_interface.html}{\texttt{ Rollout\+Strategy}}   &Leaf node evaluation strategy   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Architecture Overview}{Architecture Overview}}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Decision-\/\+Making Pipeline}{Decision-Making Pipeline}}\label{index_autotoc_md3}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Selection}}\+: Traverse tree using UCB formula to find best leaf
+\item {\bfseries{Expansion}}\+: Add new child nodes to promising leaves
+\item {\bfseries{Rollout}}\+: Simulate random playout to terminal state
+\item {\bfseries{Backpropagation}}\+: Update statistics up the tree
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Template-\/\+Based Design}{Template-Based Design}}\label{index_autotoc_md4}
+The library uses C++ templates for maximum performance\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ NodeBase\ provides\ MCTS\ statistics\ for\ any\ game\ state\ type}}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TAction>}
+\DoxyCodeLine{\textcolor{keyword}{class\ }NodeBase\ :\ \textcolor{keyword}{public}\ Node\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ MCTS\ visit\ count,\ total\ reward,\ etc.}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Example\+: Tic-\/\+Tac-\/\+Toe Integration}{Example: Tic-Tac-Toe Integration}}\label{index_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <sophia/monte\_carlo/tic\_tac\_toe/models/state.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <sophia/monte\_carlo/tic\_tac\_toe/models/move.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ game\ state}}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ gameState\ =\ std::make\_shared<sophia::monte\_carlo::tic\_tac\_toe::models::State>(}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Initial\ State"{}},}
+\DoxyCodeLine{\ \ \ \ initialBoard,}
+\DoxyCodeLine{\ \ \ \ factory}
+\DoxyCodeLine{);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Find\ best\ move}}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ mcts\ =\ MonteCarloTreeSearch();}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ bestMove\ =\ mcts.run(gameState,\ 1000);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Apply\ the\ move}}
+\DoxyCodeLine{bestMove-\/>execute();}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Key Classes}{Key Classes}}\label{index_autotoc_md6}
+\hypertarget{index_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Algorithm Classes}{Algorithm Classes}}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item {\bfseries{\href{classsophia_1_1monte__carlo_1_1_monte_carlo_tree_search.html}{\texttt{ Monte\+Carlo\+Tree\+Search}}}}\+: Core MCTS implementation
+\item {\bfseries{\href{classsophia_1_1monte__carlo_1_1factories_1_1_tree_factory_base.html}{\texttt{ Tree\+Factory\+Base}}}}\+: Abstract factory for game-\/specific objects
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Model Classes}{Model Classes}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item {\bfseries{\href{classsophia_1_1monte__carlo_1_1models_1_1_node.html}{\texttt{ Node}}}}\+: Base class for game states
+\item {\bfseries{\href{classsophia_1_1monte__carlo_1_1models_1_1_action.html}{\texttt{ Action}}}}\+: Base class for state transitions
+\item {\bfseries{\href{classsophia_1_1monte__carlo_1_1models_1_1_rollout_strategy_interface.html}{\texttt{ Rollout\+Strategy\+Interface}}}}\+: Strategy for leaf evaluation
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{Tic-\/\+Tac-\/\+Toe Example}{Tic-Tac-Toe Example}}\label{index_autotoc_md9}
+
+\begin{DoxyItemize}
+\item {\bfseries{\href{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1_state.html}{\texttt{ State}}}}\+: Tic-\/tac-\/toe game state
+\item {\bfseries{\href{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1_move.html}{\texttt{ Move}}}}\+: Tic-\/tac-\/toe move action
+\item {\bfseries{\href{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1_tic_tac_toe_factory.html}{\texttt{ Tic\+Tac\+Toe\+Factory}}}}\+: Factory for tic-\/tac-\/toe objects
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{Usage Patterns}{Usage Patterns}}\label{index_autotoc_md10}
+\hypertarget{index_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Basic MCTS Usage}{Basic MCTS Usage}}\label{index_autotoc_md11}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ 1.\ Implement\ your\ game\ state\ extending\ Node}}
+\DoxyCodeLine{\textcolor{keyword}{class\ }MyGameState\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{sophia::monte\_carlo::models::Node}}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Implement\ required\ virtual\ methods}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ 2.\ Create\ factory\ for\ your\ game}}
+\DoxyCodeLine{\textcolor{keyword}{class\ }MyFactory\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia::monte\_carlo::factories::TreeFactoryBase}}<GameState,\ Action>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Implement\ factory\ methods}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ 3.\ Run\ MCTS}}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ root\ =\ std::make\_shared<MyGameState>(initialState,\ factory);}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ bestAction\ =\ MonteCarloTreeSearch::run(root,\ iterations);}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{Custom Rollout Strategy}{Custom Rollout Strategy}}\label{index_autotoc_md12}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }MyStrategy\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia::monte\_carlo::models::RolloutStrategyInterface}}\ \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{double}\ evaluate(\textcolor{keyword}{const}\ std::shared\_ptr<Node>\&\ node)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Your\ custom\ evaluation\ logic}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ score;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md13}{}\doxysubsection{\texorpdfstring{Performance Considerations}{Performance Considerations}}\label{index_autotoc_md13}
+
+\begin{DoxyItemize}
+\item {\bfseries{Iterations}}\+: Higher iteration counts improve decision quality but increase computation time
+\item {\bfseries{Template Instantiation}}\+: Compile-\/time optimization through templates
+\item {\bfseries{Memory Management}}\+: Shared pointers ensure efficient memory usage
+\item {\bfseries{Thread Safety}}\+: Single-\/threaded design (MCTS can be parallelized at higher level)
+\end{DoxyItemize}\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{Integration Guide}{Integration Guide}}\label{index_autotoc_md14}
+\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{CMake Integration}{CMake Integration}}\label{index_autotoc_md15}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{find\_package(SophiaDecisionEngine\ REQUIRED)}
+\DoxyCodeLine{target\_link\_libraries(your\_target\ Sophia::DecisionEngine)}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{Header Usage}{Header Usage}}\label{index_autotoc_md16}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Core\ functionality}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <sophia/monte\_carlo/tree\_search\_algorithm.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Model\ interfaces}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <sophia/monte\_carlo/models/node.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <sophia/monte\_carlo/models/action.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Factory\ interfaces}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <sophia/monte\_carlo/factories/tree\_factory\_interface.h>}}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md17}{}\doxysubsection{\texorpdfstring{API Reference}{API Reference}}\label{index_autotoc_md17}
+
+\begin{DoxyItemize}
+\item {\bfseries{\href{namespaces.html}{\texttt{ Namespaces}}}}\+: Complete namespace overview
+\item {\bfseries{\href{classes.html}{\texttt{ Classes}}}}\+: All classes with inheritance diagrams
+\item {\bfseries{\href{files.html}{\texttt{ Files}}}}\+: Source file documentation
+\end{DoxyItemize}\hypertarget{index_autotoc_md18}{}\doxysubsection{\texorpdfstring{See Also}{See Also}}\label{index_autotoc_md18}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/lmsorenson/Sophia-Decision-Engine}{\texttt{ Git\+Hub Repository}} -\/ Source code and examples
+\item \href{https://github.com/lmsorenson/Sophia-Decision-Engine/blob/master/README.md}{\texttt{ Getting Started Guide}} -\/ Project overview and installation
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+\texorpdfstring{$\ast$}{*}"{}\+Wisdom is the right use of knowledge. To know is not to be wise. Many men know a great deal, and are all the greater fools for it."{}\texorpdfstring{$\ast$}{*} — Charles Spurgeon 
