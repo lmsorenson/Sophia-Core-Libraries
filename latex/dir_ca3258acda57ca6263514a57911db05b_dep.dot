@@ -10,4 +10,6 @@ digraph "include/monte_carlo/factories"
     graph [ bgcolor="#edf0f7", pencolor="grey50", label="monte_carlo", fontname=Inter,fontsize=11,fontname=Inter,fontsize=11 style="filled,dashed", URL="dir_9b76fddbf433e1d10a556504853c7551.html",tooltip=""]
   dir_ca3258acda57ca6263514a57911db05b [label="factories", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_ca3258acda57ca6263514a57911db05b.html",tooltip=""];
   }
+  dir_7188461832bb92671066220d237ea5f7 [label="logging", fillcolor="#edf0f7", color="grey50", style="filled", URL="dir_7188461832bb92671066220d237ea5f7.html",tooltip=""];
+  dir_ca3258acda57ca6263514a57911db05b->dir_7188461832bb92671066220d237ea5f7 [headlabel="1", labeldistance=1.5 headhref="dir_000004_000007.html" href="dir_000004_000007.html" color="steelblue1" fontcolor="steelblue1"];
 }

@@ -60,8 +60,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "action_8cpp.html",
-"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html#ac7b5069cdef89cf8eb60641ff44bcfd4",
-"symbol_8h.html#ad271066ca69237626526b52311574893a6adf97f83acf6453d4a6a4b1070f3754"
+"classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#af23f785e7c9d49271672c79c09cfa4e6",
+"namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3a06ce2a25e5d12c166a36f654dbea6012"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

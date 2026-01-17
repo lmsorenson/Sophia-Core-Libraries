@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['winner_0',['winner',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#aa2e980e5f14e9dedace99356a52df9cb',1,'sophia::monte_carlo::tic_tac_toe::models::Board::Winner()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState.html#a1a41f3b32270de2dbf66bf68ddfcac76',1,'sophia::monte_carlo::tic_tac_toe::models::GameState::Winner()']]],
-  ['withmove_1',['WithMove',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Board.html#a880a1297b0d80d79382483845b40c516',1,'sophia::monte_carlo::tic_tac_toe::models::Board']]],
-  ['withstate_2',['WithState',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html#ae6f7a5498b9757691818c38c0194336d',1,'sophia::monte_carlo::tic_tac_toe::models::Position']]]
+  ['value_0',['value',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48e865e8df5b298f3111c7d372327656',1,'sophia::monte_carlo::models::Node::Value()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player.html#acc99736db92f09dcd68c14366fb53ada',1,'sophia::monte_carlo::tic_tac_toe::models::Player::Value()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State.html#a0505d2a290fcb28751510b3ee581b4c8',1,'sophia::monte_carlo::tic_tac_toe::models::State::Value()']]],
+  ['visitcount_1',['VisitCount',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a48dfc98b8e0e68a0682e7dae957328cf',1,'sophia::monte_carlo::models::Node']]]
 ];

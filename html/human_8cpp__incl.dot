@@ -49,7 +49,13 @@ digraph "examples/monte_carlo/tic_tac_toe/src/models/human.cpp"
   Node14 -> Node11 [id="edge25_Node000014_Node000011",color="steelblue1",style="solid",tooltip=" "];
   Node13 -> Node11 [id="edge26_Node000013_Node000011",color="steelblue1",style="solid",tooltip=" "];
   Node13 -> Node4 [id="edge27_Node000013_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node15 [id="edge28_Node000001_Node000015",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node10 [id="edge29_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node17 [id="edge30_Node000001_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node18 [id="edge28_Node000013_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="logging/ilogger.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$ilogger_8h.html",tooltip=" "];
+  Node18 -> Node8 [id="edge29_Node000018_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node18 -> Node4 [id="edge30_Node000018_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node18 -> Node19 [id="edge31_Node000018_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="format",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node15 [id="edge32_Node000001_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge33_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node17 [id="edge34_Node000001_Node000017",color="steelblue1",style="solid",tooltip=" "];
 }

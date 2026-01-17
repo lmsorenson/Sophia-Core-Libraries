@@ -20,7 +20,7 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Node\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_afceb8877cfab44e0eda5ae3a88513242}{Node}} (std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{name}})
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ad952d18e84552c45f37d32314d3cb3f5}{Node}} (std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{name}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} logger\+\_\+ptr \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{logger}})
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ac06be54937bd5bbd0473141d2e44de59}{\texorpdfstring{$\sim$}{\string~}\+Node}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
 \item 
@@ -55,7 +55,22 @@ std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a83
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a404072a810c1cf1e201c82e539e0b721}{Select\+Action}} ()
 \begin{DoxyCompactList}\small\item\em Selects an action, typically used for the simulation phase. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{void}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a8ade2b382a86e4c36a60caefc196ad82}{Print}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
-\begin{DoxyCompactList}\small\item\em Prints a representation of the node\textquotesingle{}s state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Prints a representation of the node\textquotesingle{}s state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ab435a2663c9ac64279b9ee684436e7f2}{Get\+Available\+Actions}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_af9e46c99f553335cd366802962fe8875}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55}{Rollout\+Strategy}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the rollout strategy to be used for the simulation phase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_acdd6c0a15177e182fcdaa8137b09c7ca}{action\+\_\+ref}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a678224d9b35cc4935a7ff420e767b8ff}{m\+\_\+parent\+\_\+action\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A weak pointer to the parent action of this node. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a76c446637890b93646bd5741325280c4}{m\+\_\+child\+\_\+action\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A vector of shared pointers to the child actions of this node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{unsigned}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{long}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae5a08d850097e581881d9c6b9fbd26e3}{m\+\_\+visit\+\_\+count\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em The number of times this node has been visited in the search. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a1e77bb521e186a4b82c2ef4efec0ebb9}{m\+\_\+total\+\_\+reward\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em The total reward accumulated from simulations passing through this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,24 +82,11 @@ std\+::string \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a83
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ab0abeb571ec63f8fe17d4bcaeb960f13}{node\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node}} $>$
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ab435a2663c9ac64279b9ee684436e7f2}{Get\+Available\+Actions}} ()=0
-\begin{DoxyCompactList}\small\item\em Pure virtual function to get the list of all possible actions from this node\textquotesingle{}s state. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_af9e46c99f553335cd366802962fe8875}{rollout\+\_\+strategy\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a5a6b97bf4237e24d26a19027e24e8a55}{Rollout\+Strategy}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
-\begin{DoxyCompactList}\small\item\em Pure virtual function to get the rollout strategy to be used for the simulation phase. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_acdd6c0a15177e182fcdaa8137b09c7ca}{action\+\_\+ref}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a678224d9b35cc4935a7ff420e767b8ff}{m\+\_\+parent\+\_\+action\+\_\+}}
-\begin{DoxyCompactList}\small\item\em A weak pointer to the parent action of this node. \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a76c446637890b93646bd5741325280c4}{m\+\_\+child\+\_\+action\+\_\+}}
-\begin{DoxyCompactList}\small\item\em A vector of shared pointers to the child actions of this node. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{unsigned}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{long}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae5a08d850097e581881d9c6b9fbd26e3}{m\+\_\+visit\+\_\+count\+\_\+}} = 0
-\begin{DoxyCompactList}\small\item\em The number of times this node has been visited in the search. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a1e77bb521e186a4b82c2ef4efec0ebb9}{m\+\_\+total\+\_\+reward\+\_\+}} = 0
-\begin{DoxyCompactList}\small\item\em The total reward accumulated from simulations passing through this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+logger\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_a7ab5b029a025caaa763b0b56dbcc8265}{m\+\_\+logger\+\_\+}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -125,11 +127,11 @@ The \doxylink{classsophia_1_1monte__carlo_1_1models_1_1Node}{Node} class is cent
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_afceb8877cfab44e0eda5ae3a88513242}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_afceb8877cfab44e0eda5ae3a88513242} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_ad952d18e84552c45f37d32314d3cb3f5}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_ad952d18e84552c45f37d32314d3cb3f5} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!Node@{Node}}
 \index{Node@{Node}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
 \doxysubsubsection{\texorpdfstring{Node()}{Node()}}
-{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} logger\+\_\+ptr \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_ac06be54937bd5bbd0473141d2e44de59}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_ac06be54937bd5bbd0473141d2e44de59} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!````~Node@{\texorpdfstring{$\sim$}{\string~}Node}}
@@ -175,7 +177,7 @@ Here is the call graph for this function\+:
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!GetAvailableActions@{GetAvailableActions}}
 \index{GetAvailableActions@{GetAvailableActions}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
 \doxysubsubsection{\texorpdfstring{GetAvailableActions()}{GetAvailableActions()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}} $>$ sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::\+Get\+Available\+Actions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}} $>$ sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::\+Get\+Available\+Actions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -260,7 +262,7 @@ Here is the caller graph for this function\+:
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!RolloutStrategy@{RolloutStrategy}}
 \index{RolloutStrategy@{RolloutStrategy}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
 \doxysubsubsection{\texorpdfstring{RolloutStrategy()}{RolloutStrategy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_af9e46c99f553335cd366802962fe8875}{rollout\+\_\+strategy\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::\+Rollout\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_af9e46c99f553335cd366802962fe8875}{rollout\+\_\+strategy\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::\+Rollout\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -381,11 +383,17 @@ Here is the caller graph for this function\+:
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!m\_child\_action\_@{m\_child\_action\_}}
 \index{m\_child\_action\_@{m\_child\_action\_}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
 \doxysubsubsection{\texorpdfstring{m\_child\_action\_}{m\_child\_action\_}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}}$>$ sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+child\+\_\+action\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_ae2b93b080abc1c5d74a32d8c68e49c34}{action\+\_\+ptr}}$>$ sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+child\+\_\+action\+\_\+}
 
 
 
 A vector of shared pointers to the child actions of this node. 
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_a7ab5b029a025caaa763b0b56dbcc8265}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_a7ab5b029a025caaa763b0b56dbcc8265} 
+\index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!m\_logger\_@{m\_logger\_}}
+\index{m\_logger\_@{m\_logger\_}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
+\doxysubsubsection{\texorpdfstring{m\_logger\_}{m\_logger\_}}
+{\footnotesize\ttfamily logger\+\_\+ptr sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1Node_afcaa239b875c4990dee32d00e50787b9}\label{classsophia_1_1monte__carlo_1_1models_1_1Node_afcaa239b875c4990dee32d00e50787b9} 
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!m\_name\_@{m\_name\_}}
@@ -397,7 +405,7 @@ A vector of shared pointers to the child actions of this node.
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!m\_parent\_action\_@{m\_parent\_action\_}}
 \index{m\_parent\_action\_@{m\_parent\_action\_}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
 \doxysubsubsection{\texorpdfstring{m\_parent\_action\_}{m\_parent\_action\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_acdd6c0a15177e182fcdaa8137b09c7ca}{action\+\_\+ref}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+parent\+\_\+action\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node_acdd6c0a15177e182fcdaa8137b09c7ca}{action\+\_\+ref}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+parent\+\_\+action\+\_\+}
 
 
 
@@ -407,7 +415,7 @@ A weak pointer to the parent action of this node.
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!m\_total\_reward\_@{m\_total\_reward\_}}
 \index{m\_total\_reward\_@{m\_total\_reward\_}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
 \doxysubsubsection{\texorpdfstring{m\_total\_reward\_}{m\_total\_reward\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+total\+\_\+reward\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{double}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+total\+\_\+reward\+\_\+ = 0}
 
 
 
@@ -417,7 +425,7 @@ The total reward accumulated from simulations passing through this node.
 \index{sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}!m\_visit\_count\_@{m\_visit\_count\_}}
 \index{m\_visit\_count\_@{m\_visit\_count\_}!sophia::monte\_carlo::models::Node@{sophia::monte\_carlo::models::Node}}
 \doxysubsubsection{\texorpdfstring{m\_visit\_count\_}{m\_visit\_count\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{unsigned}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{long}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+visit\+\_\+count\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{unsigned}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{long}} sophia\+::monte\+\_\+carlo\+::models\+::\+Node\+::m\+\_\+visit\+\_\+count\+\_\+ = 0}
 
 
 

@@ -20,7 +20,7 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Action\+Base\t
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a01da784f22c49d11e22fd795cc8e6b8a}{Action\+Base}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ac23a86ce906eb00affa971a53a9dce72}{node\+\_\+base\+\_\+ptr}} \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{state}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{change}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ad5bfc872c5d437e27d73f1e57535e0b1}{const\+\_\+factory\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{factory}})
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4208059e099694922aef1c403e7f36e6}{Action\+Base}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ac23a86ce906eb00affa971a53a9dce72}{node\+\_\+base\+\_\+ptr}} \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{state}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{change}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ad5bfc872c5d437e27d73f1e57535e0b1}{const\+\_\+factory\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{factory}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} logger\+\_\+ptr \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{logger}})
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{Source}} () \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{override}}
 \begin{DoxyCompactList}\small\item\em Retrieves the source node from which this action originates. \end{DoxyCompactList}\item 
@@ -58,6 +58,8 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Action\+Base\t
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ad5bfc872c5d437e27d73f1e57535e0b1}{const\+\_\+factory\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a842c231b04df89b33d2a703e7f66f260}{m\+\_\+factory\+\_\+}}
 \begin{DoxyCompactList}\small\item\em A factory for creating new nodes in the tree. \end{DoxyCompactList}\item 
+logger\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a1c259fe7400a22d14629ba06fb4f052d}{m\+\_\+logger\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The logger instance for this action. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4fdbd67b8a9ad98d8a07d730c04ad099}{node\+\_\+base\+\_\+ref}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a40c4ff890160e24a6b5284665aa56dcc}{m\+\_\+source\+\_\+}}
 \begin{DoxyCompactList}\small\item\em A weak pointer to the source node from which this action originates. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_aaea9315ff9798302c0140beefdc8e06a}{m\+\_\+target\+\_\+}}
@@ -107,12 +109,12 @@ This class provides a generic implementation of an action, using templates to al
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a01da784f22c49d11e22fd795cc8e6b8a}\label{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a01da784f22c49d11e22fd795cc8e6b8a} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4208059e099694922aef1c403e7f36e6}\label{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4208059e099694922aef1c403e7f36e6} 
 \index{sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$}!ActionBase@{ActionBase}}
 \index{ActionBase@{ActionBase}!sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$}}
 \doxysubsubsection{\texorpdfstring{ActionBase()}{ActionBase()}}
 {\footnotesize\ttfamily template$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{typename}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TState}} , \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{typename}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}} $>$ \\
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TState}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}} $>$\+::\+Action\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ac23a86ce906eb00affa971a53a9dce72}{node\+\_\+base\+\_\+ptr}} \&}]{state,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}}}]{change,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ad5bfc872c5d437e27d73f1e57535e0b1}{const\+\_\+factory\+\_\+ptr}}}]{factory }\end{DoxyParamCaption})}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TState}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}} $>$\+::\+Action\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ac23a86ce906eb00affa971a53a9dce72}{node\+\_\+base\+\_\+ptr}} \&}]{state,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}}}]{change,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ad5bfc872c5d437e27d73f1e57535e0b1}{const\+\_\+factory\+\_\+ptr}}}]{factory,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} logger\+\_\+ptr \&}]{logger }\end{DoxyParamCaption})}
 
 
 
@@ -171,6 +173,17 @@ The change in state that this action represents.
 
 
 A factory for creating new nodes in the tree. 
+
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a1c259fe7400a22d14629ba06fb4f052d}\label{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a1c259fe7400a22d14629ba06fb4f052d} 
+\index{sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$}!m\_logger\_@{m\_logger\_}}
+\index{m\_logger\_@{m\_logger\_}!sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$}}
+\doxysubsubsection{\texorpdfstring{m\_logger\_}{m\_logger\_}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{typename}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TState}} , \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{typename}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}} $>$ \\
+logger\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{sophia\+::monte\+\_\+carlo\+::models\+::\+Action\+Base}}$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TState}}, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}} $>$\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The logger instance for this action. 
 
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a40c4ff890160e24a6b5284665aa56dcc}\label{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a40c4ff890160e24a6b5284665aa56dcc} 
 \index{sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$@{sophia::monte\_carlo::models::ActionBase$<$ TState, TChange $>$}!m\_source\_@{m\_source\_}}

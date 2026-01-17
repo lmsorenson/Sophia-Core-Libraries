@@ -9,8 +9,8 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::State"
 <HR/>
 <TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
 <HR/>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">State(const std::string &amp;name,<BR ALIGN="LEFT"/> const const_factory_ptr &amp;tree_factory)<BR ALIGN="LEFT"/></TD></TR>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">State(const std::string &amp;name,<BR ALIGN="LEFT"/> GameState game_state, const const<BR ALIGN="LEFT"/>_factory_ptr &amp;tree_factory)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">State(const std::string &amp;name,<BR ALIGN="LEFT"/> const const_factory_ptr &amp;tree<BR ALIGN="LEFT"/>_factory, const logging::logger<BR ALIGN="LEFT"/>_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">State(const std::string &amp;name,<BR ALIGN="LEFT"/> GameState game_state, const const<BR ALIGN="LEFT"/>_factory_ptr &amp;tree_factory, const<BR ALIGN="LEFT"/> logging::logger_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">std::vector&lt; action_ptr &gt; GetAvailable<BR ALIGN="LEFT"/>Actions() override<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">bool IsTerminalState() const<BR ALIGN="LEFT"/> override<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">double Value() const override<BR ALIGN="LEFT"/></TD></TR>

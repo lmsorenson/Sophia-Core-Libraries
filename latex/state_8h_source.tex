@@ -17,22 +17,22 @@
 \DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}{State}}\ :\ \textcolor{keyword}{public}\ NodeBase<GameState,\ Position>}
 \DoxyCodeLine{00018\ \ \ \ \ \{}
 \DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae417e48301ad82a14381e61ef30a344b}{State}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ const\_factory\_ptr\&\ tree\_factory);}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae6dd79c2d19613375fd21d8bb24fda64}{State}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}\ game\_state,\ \textcolor{keyword}{const}\ const\_factory\_ptr\&\ tree\_factory);}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<action\_ptr>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22}{GetAvailableActions}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a92a058c4863cdd4f07af0146bff557c4}{IsTerminalState}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a0505d2a290fcb28751510b3ee581b4c8}{Value}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ action\_ptr\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65}{SelectAction}}(std::string\ action\_name)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51}{Print}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00072\ \ \ \ \ \};}
-\DoxyCodeLine{00073\ \}}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//STATE\_H}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_abf2eb55814335967a68dc173342193b4}{State}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ const\_factory\_ptr\&\ tree\_factory,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{logging::logger\_ptr}}\&\ logger);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_af4086184a79a7aa5bee60d5f20c8e055}{State}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{GameState}}\ game\_state,\ \textcolor{keyword}{const}\ const\_factory\_ptr\&\ tree\_factory,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{logging::logger\_ptr}}\&\ logger);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<action\_ptr>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22}{GetAvailableActions}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a92a058c4863cdd4f07af0146bff557c4}{IsTerminalState}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a0505d2a290fcb28751510b3ee581b4c8}{Value}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ action\_ptr\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a63dcc44a173588c66e83e69aa40f5d65}{SelectAction}}(std::string\ action\_name)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ad5b38320d950b27e32014092f2cdbb51}{Print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00074\ \ \ \ \ \};}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//STATE\_H}}
 
 \end{DoxyCode}

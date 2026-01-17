@@ -1,0 +1,107 @@
+\doxysection{sophia\+::logging\+::Console\+Logger Class Reference}
+\hypertarget{classsophia_1_1logging_1_1ConsoleLogger}{}\label{classsophia_1_1logging_1_1ConsoleLogger}\index{sophia::logging::ConsoleLogger@{sophia::logging::ConsoleLogger}}
+
+
+A concrete logger implementation that writes messages to the console (std\+::cout).  
+
+
+
+
+{\ttfamily \#include $<$console\+\_\+logger.\+h$>$}
+
+
+
+Inheritance diagram for sophia\+::logging\+::Console\+Logger\+:
+% FIG 0
+
+
+Collaboration diagram for sophia\+::logging\+::Console\+Logger\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_afcf72eaca4476d856ba973b4c30654fa}{Console\+Logger}} (\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} min\+\_\+level=\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3}{Log\+Level\+::\+INFO}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger} with a minimum log level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{sophia\+::logging\+::\+ILogger}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca}{\texorpdfstring{$\sim$}{\string~}\+ILogger}} ()=default
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a6776658107b8446b71d1304d260235b7}{debug}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with DEBUG severity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977}{info}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with INFO severity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b}{warn}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with WARN severity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a5f5fd591a5540b85c8165fa5d57d8fe1}{error}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with ERROR severity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_affdf8c6ac6500caf40a3b80efe8771fe}{log}} (\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} level, const std\+::string \&message) override
+\begin{DoxyCompactList}\small\item\em The core logging function that concrete loggers must implement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_a6fb1c57d188e3b72b56ff8956045a381}{min\+\_\+level\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A concrete logger implementation that writes messages to the console (std\+::cout). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1logging_1_1ConsoleLogger_afcf72eaca4476d856ba973b4c30654fa}\label{classsophia_1_1logging_1_1ConsoleLogger_afcf72eaca4476d856ba973b4c30654fa} 
+\index{sophia::logging::ConsoleLogger@{sophia::logging::ConsoleLogger}!ConsoleLogger@{ConsoleLogger}}
+\index{ConsoleLogger@{ConsoleLogger}!sophia::logging::ConsoleLogger@{sophia::logging::ConsoleLogger}}
+\doxysubsubsection{\texorpdfstring{ConsoleLogger()}{ConsoleLogger()}}
+{\footnotesize\ttfamily sophia\+::logging\+::\+Console\+Logger\+::\+Console\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}}}]{min\+\_\+level = {\ttfamily \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3}{Log\+Level\+::\+INFO}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger} with a minimum log level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+\_\+level} & The minimum severity level to log. Messages below this level will be ignored. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1logging_1_1ConsoleLogger_affdf8c6ac6500caf40a3b80efe8771fe}\label{classsophia_1_1logging_1_1ConsoleLogger_affdf8c6ac6500caf40a3b80efe8771fe} 
+\index{sophia::logging::ConsoleLogger@{sophia::logging::ConsoleLogger}!log@{log}}
+\index{log@{log}!sophia::logging::ConsoleLogger@{sophia::logging::ConsoleLogger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void sophia\+::logging\+::\+Console\+Logger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}}}]{level,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+The core logging function that concrete loggers must implement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The severity level of the message. \\
+\hline
+{\em message} & The fully formatted message to be logged. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aed4fc8b72c100d90081fe9c1458587ce}{sophia\+::logging\+::\+ILogger}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsophia_1_1logging_1_1ConsoleLogger_a6fb1c57d188e3b72b56ff8956045a381}\label{classsophia_1_1logging_1_1ConsoleLogger_a6fb1c57d188e3b72b56ff8956045a381} 
+\index{sophia::logging::ConsoleLogger@{sophia::logging::ConsoleLogger}!min\_level\_@{min\_level\_}}
+\index{min\_level\_@{min\_level\_}!sophia::logging::ConsoleLogger@{sophia::logging::ConsoleLogger}}
+\doxysubsubsection{\texorpdfstring{min\_level\_}{min\_level\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} sophia\+::logging\+::\+Console\+Logger\+::min\+\_\+level\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/logging/\mbox{\hyperlink{console__logger_8h}{console\+\_\+logger.\+h}}\item 
+src/logging/\mbox{\hyperlink{console__logger_8cpp}{console\+\_\+logger.\+cpp}}\end{DoxyCompactItemize}

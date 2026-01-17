@@ -106,13 +106,13 @@ Collaboration diagram for sophia::monte_carlo::MonteCarloTreeSearch:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4d9bc8c5ac79cb742441e8bbec66a78c" id="r_a4d9bc8c5ac79cb742441e8bbec66a78c"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">models::Action</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#a4d9bc8c5ac79cb742441e8bbec66a78c">run</a> (const std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">models::Node</a> &gt; &amp;root, int iterations, bool verbose=false)</td></tr>
-<tr class="memdesc:a4d9bc8c5ac79cb742441e8bbec66a78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state.  <br /></td></tr>
-<tr class="separator:a4d9bc8c5ac79cb742441e8bbec66a78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c4e65e9fef376e72814a79e8c61456" id="r_a18c4e65e9fef376e72814a79e8c61456"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">models::Action</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1MonteCarloTreeSearch.html#a18c4e65e9fef376e72814a79e8c61456">run</a> (const std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">models::Node</a> &gt; &amp;root, int iterations, const <a class="el" href="namespacesophia_1_1logging.html#a338d737c8ed374345a0a116e369f9881">logging::logger_ptr</a> &amp;logger=nullptr)</td></tr>
+<tr class="memdesc:a18c4e65e9fef376e72814a79e8c61456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the Monte Carlo Tree Search (MCTS) algorithm to find the best action from a given root state.  <br /></td></tr>
+<tr class="separator:a18c4e65e9fef376e72814a79e8c61456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4d9bc8c5ac79cb742441e8bbec66a78c" name="a4d9bc8c5ac79cb742441e8bbec66a78c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d9bc8c5ac79cb742441e8bbec66a78c">&#9670;&#160;</a></span>run()</h2>
+<a id="a18c4e65e9fef376e72814a79e8c61456" name="a18c4e65e9fef376e72814a79e8c61456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c4e65e9fef376e72814a79e8c61456">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,8 +135,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verbose</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacesophia_1_1logging.html#a338d737c8ed374345a0a116e369f9881">logging::logger_ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>logger</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,12 +158,17 @@ Static Public Member Functions</h2></td></tr>
 <li><b>Simulation (Rollout):</b> From the newly created node, perform a simulation (e.g., a random walk) until a terminal state is reached. The outcome of this simulation is a reward.</li>
 <li><b>Backpropagation:</b> Propagate the reward from the simulation back up the tree, updating the visit counts and total rewards of all nodes and actions along the path to the root.</li>
 </ol>
-<p>After all iterations are complete, the algorithm selects the action from the root node that is considered the most promising, typically based on the highest average reward or visit count. </p><pre class="fragment"> @param root A shared pointer to the initial `Node` representing the starting state of the problem.
- @param iterations The total number of MCTS iterations to perform. Each iteration involves
-                   one cycle of selection, expansion, simulation, and backpropagation.
- @param verbose If true, print detailed logs of each iteration's phases to standard output. Defaults to false.
- @return A shared pointer to the `Action` determined to be the best decision from the root state.
-</pre> <div class="dynheader">
+<p>After all iterations are complete, the algorithm selects the action from the root node that is considered the most promising, typically based on the highest average reward or visit count.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>A shared pointer to the initial <code>Node</code> representing the starting state of the problem. </td></tr>
+    <tr><td class="paramname">iterations</td><td>The total number of MCTS iterations to perform. Each iteration involves one cycle of selection, expansion, simulation, and backpropagation. </td></tr>
+    <tr><td class="paramname">logger</td><td>An optional logger instance to trace the execution of the algorithm. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A shared pointer to the <code>Action</code> determined to be the best decision from the root state. </dd></dl>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><!-- SVG 1 --></div>

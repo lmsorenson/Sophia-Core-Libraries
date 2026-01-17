@@ -9,7 +9,7 @@ digraph "sophia::monte_carlo::tic_tac_toe::models::Move"
 <HR/>
 <TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
 <HR/>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Move(const std::shared_ptr<BR ALIGN="LEFT"/>&lt; NodeBase&lt; GameState, Position<BR ALIGN="LEFT"/> &gt; &gt; &amp;source, Position change,<BR ALIGN="LEFT"/> std::shared_ptr&lt; const TreeFactoryBase<BR ALIGN="LEFT"/>&lt; GameState, Position &gt; &gt; factory)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">Move(const std::shared_ptr<BR ALIGN="LEFT"/>&lt; NodeBase&lt; GameState, Position<BR ALIGN="LEFT"/> &gt; &gt; &amp;source, Position change,<BR ALIGN="LEFT"/> std::shared_ptr&lt; const TreeFactoryBase<BR ALIGN="LEFT"/>&lt; GameState, Position &gt; &gt; factory, const<BR ALIGN="LEFT"/> logger_ptr &amp;logger)<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">std::string Name() const override<BR ALIGN="LEFT"/></TD></TR>
 <TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">void Generate() override<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>

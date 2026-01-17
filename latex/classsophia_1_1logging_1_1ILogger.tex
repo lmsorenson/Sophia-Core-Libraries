@@ -1,0 +1,164 @@
+\doxysection{sophia\+::logging\+::ILogger Class Reference}
+\hypertarget{classsophia_1_1logging_1_1ILogger}{}\label{classsophia_1_1logging_1_1ILogger}\index{sophia::logging::ILogger@{sophia::logging::ILogger}}
+
+
+An interface for a generic, type-\/safe, and performant logger.  
+
+
+
+
+{\ttfamily \#include $<$ilogger.\+h$>$}
+
+
+
+Inheritance diagram for sophia\+::logging\+::ILogger\+:
+% FIG 0
+
+
+Collaboration diagram for sophia\+::logging\+::ILogger\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca}{\texorpdfstring{$\sim$}{\string~}\+ILogger}} ()=default
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a6776658107b8446b71d1304d260235b7}{debug}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with DEBUG severity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977}{info}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with INFO severity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b}{warn}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with WARN severity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a5f5fd591a5540b85c8165fa5d57d8fe1}{error}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with ERROR severity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_aed4fc8b72c100d90081fe9c1458587ce}{log}} (\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} level, const std\+::string \&message)=0
+\begin{DoxyCompactList}\small\item\em The core logging function that concrete loggers must implement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface for a generic, type-\/safe, and performant logger. 
+
+This interface uses std\+::format for type-\/safe message formatting and defers the formatting until after the log level has been checked, providing performance benefits.
+
+Concrete implementations (e.\+g., \doxylink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger}, File\+Logger) must implement the private virtual {\ttfamily log} method. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca}\label{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca} 
+\index{sophia::logging::ILogger@{sophia::logging::ILogger}!````~ILogger@{\texorpdfstring{$\sim$}{\string~}ILogger}}
+\index{````~ILogger@{\texorpdfstring{$\sim$}{\string~}ILogger}!sophia::logging::ILogger@{sophia::logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ILogger()}{\string~ILogger()}}
+{\footnotesize\ttfamily virtual sophia\+::logging\+::\+ILogger\+::\texorpdfstring{$\sim$}{\string~}\+ILogger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsophia_1_1logging_1_1ILogger_a6776658107b8446b71d1304d260235b7}\label{classsophia_1_1logging_1_1ILogger_a6776658107b8446b71d1304d260235b7} 
+\index{sophia::logging::ILogger@{sophia::logging::ILogger}!debug@{debug}}
+\index{debug@{debug}!sophia::logging::ILogger@{sophia::logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void sophia\+::logging\+::\+ILogger\+::debug (\begin{DoxyParamCaption}\item[{std\+::format\+\_\+string$<$ Args... $>$}]{fmt,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs a message with DEBUG severity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & A std\+::format-\/compatible format string. \\
+\hline
+{\em args} & The arguments to be formatted. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{classsophia_1_1logging_1_1ILogger_a5f5fd591a5540b85c8165fa5d57d8fe1}\label{classsophia_1_1logging_1_1ILogger_a5f5fd591a5540b85c8165fa5d57d8fe1} 
+\index{sophia::logging::ILogger@{sophia::logging::ILogger}!error@{error}}
+\index{error@{error}!sophia::logging::ILogger@{sophia::logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void sophia\+::logging\+::\+ILogger\+::error (\begin{DoxyParamCaption}\item[{std\+::format\+\_\+string$<$ Args... $>$}]{fmt,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs a message with ERROR severity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & A std\+::format-\/compatible format string. \\
+\hline
+{\em args} & The arguments to be formatted. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977}\label{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977} 
+\index{sophia::logging::ILogger@{sophia::logging::ILogger}!info@{info}}
+\index{info@{info}!sophia::logging::ILogger@{sophia::logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void sophia\+::logging\+::\+ILogger\+::info (\begin{DoxyParamCaption}\item[{std\+::format\+\_\+string$<$ Args... $>$}]{fmt,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs a message with INFO severity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & A std\+::format-\/compatible format string. \\
+\hline
+{\em args} & The arguments to be formatted. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{classsophia_1_1logging_1_1ILogger_aed4fc8b72c100d90081fe9c1458587ce}\label{classsophia_1_1logging_1_1ILogger_aed4fc8b72c100d90081fe9c1458587ce} 
+\index{sophia::logging::ILogger@{sophia::logging::ILogger}!log@{log}}
+\index{log@{log}!sophia::logging::ILogger@{sophia::logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily virtual void sophia\+::logging\+::\+ILogger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}}}]{level,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+
+
+The core logging function that concrete loggers must implement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The severity level of the message. \\
+\hline
+{\em message} & The fully formatted message to be logged. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_affdf8c6ac6500caf40a3b80efe8771fe}{sophia\+::logging\+::\+Console\+Logger}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b}\label{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b} 
+\index{sophia::logging::ILogger@{sophia::logging::ILogger}!warn@{warn}}
+\index{warn@{warn}!sophia::logging::ILogger@{sophia::logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{warn()}{warn()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void sophia\+::logging\+::\+ILogger\+::warn (\begin{DoxyParamCaption}\item[{std\+::format\+\_\+string$<$ Args... $>$}]{fmt,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs a message with WARN severity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & A std\+::format-\/compatible format string. \\
+\hline
+{\em args} & The arguments to be formatted. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/logging/\mbox{\hyperlink{ilogger_8h}{ilogger.\+h}}\end{DoxyCompactItemize}

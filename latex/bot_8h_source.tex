@@ -11,25 +11,29 @@
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{board_8h}{board.h}}"{}}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models}{sophia::monte\_carlo::tic\_tac\_toe::models}}}
-\DoxyCodeLine{00012\ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot}{Bot}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}}}
-\DoxyCodeLine{00018\ \ \ \ \ \{}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot}{Bot}}(\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums::Symbol}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a40d65c06507e91eb2c443f9df90eacb4}{symbol}},\ \textcolor{keywordtype}{double}\ difficulty);}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Position>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a1740b1e423571b8883c6948650b0dea1}{NextMove}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_acb2602e5d6563f1f90d2896d507c0f7f}{Update}}(std::string\ message)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::shared\_ptr<monte\_carlo::models::Node>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a22868ba708f11ff9da8a2152dcdbe9ee}{node\_}};}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ae21d5d7d0075f6bb27f87ffc7166195c}{iterations\_}};}
-\DoxyCodeLine{00047\ \ \ \ \ \};}
-\DoxyCodeLine{00048\ \}}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOT\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ilogger_8h}{logging/ilogger.h}}>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models}{sophia::monte\_carlo::tic\_tac\_toe::models}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{sophia::logging::logger\_ptr}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot}{Bot}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player}{Player}}}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot}{Bot}}(\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums_ad271066ca69237626526b52311574893}{enums::Symbol}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Player_a40d65c06507e91eb2c443f9df90eacb4}{symbol}},\ \textcolor{keywordtype}{double}\ difficulty,\ \textcolor{keyword}{const}\ logger\_ptr\&\ logger);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<const\ Position>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a1740b1e423571b8883c6948650b0dea1}{NextMove}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_acb2602e5d6563f1f90d2896d507c0f7f}{Update}}(std::string\ message)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::shared\_ptr<monte\_carlo::models::Node>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_a22868ba708f11ff9da8a2152dcdbe9ee}{node\_}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_ae21d5d7d0075f6bb27f87ffc7166195c}{iterations\_}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ logger\_ptr\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot_adc50615f67835e5f08a8fd02a337b174}{m\_logger\_}};}
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BOT\_H}}
 
 \end{DoxyCode}

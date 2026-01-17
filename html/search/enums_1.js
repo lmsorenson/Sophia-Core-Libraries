@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['symbol_0',['Symbol',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#ad271066ca69237626526b52311574893',1,'sophia::monte_carlo::tic_tac_toe::enums']]]
+  ['loglevel_0',['LogLevel',['../namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8',1,'sophia::logging']]]
 ];

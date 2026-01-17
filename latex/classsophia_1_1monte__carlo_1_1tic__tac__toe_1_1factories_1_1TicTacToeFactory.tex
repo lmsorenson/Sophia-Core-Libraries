@@ -20,7 +20,7 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a8437a6f8ec0a380e8ddf2b61f0bfba0b}{Tic\+Tac\+Toe\+Factory}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{models\+::const\+\_\+player\+\_\+ptr}} you)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_aea755d686d878f9919c5d1976f5850f7}{Tic\+Tac\+Toe\+Factory}} (\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{models\+::const\+\_\+player\+\_\+ptr}} you, const logger\+\_\+ptr \&logger)
 \begin{DoxyCompactList}\small\item\em Creates an instance of \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory}{Tic\+Tac\+Toe\+Factory}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_af3a9e6d862c03681f632cc7e469d40eb}{\texorpdfstring{$\sim$}{\string~}\+Tic\+Tac\+Toe\+Factory}} () override=default
 \item 
@@ -45,6 +45,8 @@ virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactory
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{models\+::const\+\_\+player\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a7545de809c05a0c15082a101768ca35e}{you\+\_\+}}
+\item 
+logger\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_aca2b5597a137f9383d0cb9ea84d69711}{m\+\_\+logger\+\_\+}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Types inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{sophia\+::monte\+\_\+carlo\+::factories\+::\+Tree\+Factory\+Base$<$ models\+::\+Game\+State, models\+::\+Position $>$}}}
@@ -75,11 +77,11 @@ Example\+:
  
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a8437a6f8ec0a380e8ddf2b61f0bfba0b}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a8437a6f8ec0a380e8ddf2b61f0bfba0b} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_aea755d686d878f9919c5d1976f5850f7}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_aea755d686d878f9919c5d1976f5850f7} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory@{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory}!TicTacToeFactory@{TicTacToeFactory}}
 \index{TicTacToeFactory@{TicTacToeFactory}!sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory@{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory}}
 \doxysubsubsection{\texorpdfstring{TicTacToeFactory()}{TicTacToeFactory()}}
-{\footnotesize\ttfamily Tic\+Tac\+Toe\+Factory\+::\+Tic\+Tac\+Toe\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{models\+::const\+\_\+player\+\_\+ptr}}}]{you }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily Tic\+Tac\+Toe\+Factory\+::\+Tic\+Tac\+Toe\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_a1ffeda86a4895fb149509da286721e1c}{models\+::const\+\_\+player\+\_\+ptr}}}]{you,  }\item[{const logger\+\_\+ptr \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
@@ -88,6 +90,8 @@ Creates an instance of \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_
 
 \begin{DoxyParams}{Parameters}
 {\em you} & a shared pointer to the player that owns the simulation. \\
+\hline
+{\em logger} & the logger for the factory to use. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_af3a9e6d862c03681f632cc7e469d40eb}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_af3a9e6d862c03681f632cc7e469d40eb} 
@@ -181,6 +185,12 @@ Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFact
 
 
 \doxysubsection{Member Data Documentation}
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_aca2b5597a137f9383d0cb9ea84d69711}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_aca2b5597a137f9383d0cb9ea84d69711} 
+\index{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory@{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory}!m\_logger\_@{m\_logger\_}}
+\index{m\_logger\_@{m\_logger\_}!sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory@{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory}}
+\doxysubsubsection{\texorpdfstring{m\_logger\_}{m\_logger\_}}
+{\footnotesize\ttfamily logger\+\_\+ptr sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::factories\+::\+Tic\+Tac\+Toe\+Factory\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
 \Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a7545de809c05a0c15082a101768ca35e}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory_a7545de809c05a0c15082a101768ca35e} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory@{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory}!you\_@{you\_}}
 \index{you\_@{you\_}!sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory@{sophia::monte\_carlo::tic\_tac\_toe::factories::TicTacToeFactory}}

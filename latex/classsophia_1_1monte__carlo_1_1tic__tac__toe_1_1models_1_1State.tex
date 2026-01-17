@@ -20,9 +20,9 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae417e48301ad82a14381e61ef30a344b}{State}} (const std\+::string \&name, const const\+\_\+factory\+\_\+ptr \&tree\+\_\+factory)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_abf2eb55814335967a68dc173342193b4}{State}} (const std\+::string \&name, const const\+\_\+factory\+\_\+ptr \&tree\+\_\+factory, const \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{logging\+::logger\+\_\+ptr}} \&logger)
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae6dd79c2d19613375fd21d8bb24fda64}{State}} (const std\+::string \&name, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} game\+\_\+state, const const\+\_\+factory\+\_\+ptr \&tree\+\_\+factory)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_af4086184a79a7aa5bee60d5f20c8e055}{State}} (const std\+::string \&name, \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} game\+\_\+state, const const\+\_\+factory\+\_\+ptr \&tree\+\_\+factory, const \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{logging\+::logger\+\_\+ptr}} \&logger)
 \item 
 std\+::vector$<$ action\+\_\+ptr $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_a8fcd53ac930d1160b69b4d8e9f0f6a22}{Get\+Available\+Actions}} () override
 \begin{DoxyCompactList}\small\item\em Gets all available actions that can be made at this given state. \end{DoxyCompactList}\item 
@@ -40,11 +40,11 @@ void \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1
 The Monte Carlo state node of a Tic Tac Toe game. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae417e48301ad82a14381e61ef30a344b}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae417e48301ad82a14381e61ef30a344b} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_abf2eb55814335967a68dc173342193b4}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_abf2eb55814335967a68dc173342193b4} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}!State@{State}}
 \index{State@{State}!sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}}
 \doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{tree\+\_\+factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{tree\+\_\+factory,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{logging\+::logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 Creates an instance of a Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}{State}. 
 \begin{DoxyParams}{Parameters}
@@ -52,12 +52,14 @@ Creates an instance of a Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1ti
 \hline
 {\em tree\+\_\+factory} & A tree factory that can be used to create the following states. \\
 \hline
+{\em logger} & The logger to be used by this node. \\
+\hline
 \end{DoxyParams}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae6dd79c2d19613375fd21d8bb24fda64}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_ae6dd79c2d19613375fd21d8bb24fda64} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_af4086184a79a7aa5bee60d5f20c8e055}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State_af4086184a79a7aa5bee60d5f20c8e055} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}!State@{State}}
 \index{State@{State}!sophia::monte\_carlo::tic\_tac\_toe::models::State@{sophia::monte\_carlo::tic\_tac\_toe::models::State}}
 \doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}}]{game\+\_\+state,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{tree\+\_\+factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}}]{game\+\_\+state,  }\item[{const const\+\_\+factory\+\_\+ptr \&}]{tree\+\_\+factory,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{logging\+::logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 Creates an instance of a Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1State}{State}. 
 \begin{DoxyParams}{Parameters}
@@ -66,6 +68,8 @@ Creates an instance of a Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1ti
 {\em game\+\_\+state} & A Tic Tac Toe \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}. \\
 \hline
 {\em tree\+\_\+factory} & A tree factory that can be used to create the following states. \\
+\hline
+{\em logger} & The logger to be used by this node. \\
 \hline
 \end{DoxyParams}
 

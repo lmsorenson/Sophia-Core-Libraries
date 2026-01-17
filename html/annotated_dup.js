@@ -1,6 +1,10 @@
 var annotated_dup =
 [
     [ "sophia", "namespacesophia.html", [
+      [ "logging", "namespacesophia_1_1logging.html", [
+        [ "ConsoleLogger", "classsophia_1_1logging_1_1ConsoleLogger.html", "classsophia_1_1logging_1_1ConsoleLogger" ],
+        [ "ILogger", "classsophia_1_1logging_1_1ILogger.html", "classsophia_1_1logging_1_1ILogger" ]
+      ] ],
       [ "monte_carlo", "namespacesophia_1_1monte__carlo.html", [
         [ "factories", "namespacesophia_1_1monte__carlo_1_1factories.html", [
           [ "TreeFactoryBase", "classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html", "classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase" ]

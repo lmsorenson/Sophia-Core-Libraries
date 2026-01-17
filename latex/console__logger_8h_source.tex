@@ -1,0 +1,27 @@
+\doxysection{console\+\_\+logger.\+h}
+\hypertarget{console__logger_8h_source}{}\label{console__logger_8h_source}\index{include/logging/console\_logger.h@{include/logging/console\_logger.h}}
+\mbox{\hyperlink{console__logger_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SOPHIA\_CONSOLE\_LOGGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SOPHIA\_CONSOLE\_LOGGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ilogger_8h}{logging/ilogger.h}}>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1logging}{sophia::logging}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger}{ConsoleLogger}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger}{ConsoleLogger}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ min\_level\ =\ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3}{LogLevel::INFO}});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_affdf8c6ac6500caf40a3b80efe8771fe}{log}}(\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ level,\ \textcolor{keyword}{const}\ std::string\&\ message)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{LogLevel}}\ \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_a6fb1c57d188e3b72b56ff8956045a381}{min\_level\_}};}
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \}\ \textcolor{comment}{//\ namespace\ sophia::logging}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SOPHIA\_CONSOLE\_LOGGER\_H}}
+
+\end{DoxyCode}

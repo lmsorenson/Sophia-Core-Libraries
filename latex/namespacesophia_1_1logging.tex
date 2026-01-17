@@ -1,0 +1,67 @@
+\doxysection{sophia\+::logging Namespace Reference}
+\hypertarget{namespacesophia_1_1logging}{}\label{namespacesophia_1_1logging}\index{sophia::logging@{sophia::logging}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger}{Console\+Logger}}
+\begin{DoxyCompactList}\small\item\em A concrete logger implementation that writes messages to the console (std\+::cout). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}
+\begin{DoxyCompactList}\small\item\em An interface for a generic, type-\/safe, and performant logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{logger\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}} $>$
+\begin{DoxyCompactList}\small\item\em A shared pointer to an \doxylink{classsophia_1_1logging_1_1ILogger}{ILogger} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} \{ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3}{INFO}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277}{WARN}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the severity levels for log messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}\label{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881} 
+\index{sophia::logging@{sophia::logging}!logger\_ptr@{logger\_ptr}}
+\index{logger\_ptr@{logger\_ptr}!sophia::logging@{sophia::logging}}
+\doxysubsubsection{\texorpdfstring{logger\_ptr}{logger\_ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{sophia\+::logging\+::logger\+\_\+ptr}} = typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{ILogger}}$>$}
+
+
+
+A shared pointer to an \doxylink{classsophia_1_1logging_1_1ILogger}{ILogger} instance. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8} 
+\index{sophia::logging@{sophia::logging}!LogLevel@{LogLevel}}
+\index{LogLevel@{LogLevel}!sophia::logging@{sophia::logging}}
+\doxysubsubsection{\texorpdfstring{LogLevel}{LogLevel}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{sophia\+::logging\+::\+Log\+Level}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Defines the severity levels for log messages. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!DEBUG@{DEBUG}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15} 
+DEBUG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFO@{INFO}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!INFO@{INFO}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3} 
+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WARN@{WARN}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!WARN@{WARN}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277} 
+WARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!ERROR@{ERROR}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5} 
+ERROR&\\
+\hline
+
+\end{DoxyEnumFields}
