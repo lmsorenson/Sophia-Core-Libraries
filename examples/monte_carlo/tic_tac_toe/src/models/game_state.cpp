@@ -51,6 +51,11 @@ Board GameState::GetBoard() const
     return *m_board_;
 }
 
+int GameState::GetTurnNumber() const
+{
+    return m_board_->GetMarkCount();
+}
+
 void GameState::Print() const
 {
     m_board_->Print();

@@ -14,7 +14,7 @@ using sophia::logging::logger_ptr; // Added using directive
 Game::Game(const logger_ptr& logger)
 : m_logger_(logger)
 {
-    game_states_.push_back(make_shared<Board>());
+    game_states_.push_back(make_shared<Board>(m_logger_)); // Pass logger to Board constructor
     if (m_logger_) m_logger_->info("Game initialized.");
 };
 Game::~Game() = default;
@@ -25,7 +25,10 @@ bool Game::game_over() const
 
     const auto current_state = game_states_.back();
 
-    return current_state->Winner() != nullptr;
+    auto winner_decided = current_state->Winner() != nullptr;
+    auto open_positions = current_state->GetOpenPositions().size();
+
+    return winner_decided || open_positions <= 0;
 }
 
 const_player_ptr Game::active_player() const

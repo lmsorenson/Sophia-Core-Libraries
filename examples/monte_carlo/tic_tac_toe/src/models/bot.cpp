@@ -23,7 +23,7 @@ Bot::Bot(const Symbol symbol, const double difficulty, const logger_ptr& logger)
         throw std::invalid_argument("Difficulty must be a percentage between 0 and 1.");
     }
 
-    iterations_ = std::max(1, static_cast<int>(std::round(20000 * difficulty)));
+    iterations_ = std::max(1, static_cast<int>(std::round(90 * difficulty)));
     if (m_logger_) m_logger_->info("Bot will perform {} iterations per move.", iterations_);
 }
 
@@ -36,7 +36,7 @@ std::shared_ptr<const Position> Bot::NextMove() const
     }
 
     if (m_logger_) m_logger_->info("Bot is responding to move {}", node_->Name());
-    const shared_ptr<Action> best_action = MonteCarloTreeSearch::run(node_, 4, m_logger_);
+    const shared_ptr<Action> best_action = MonteCarloTreeSearch::run(node_, iterations_, m_logger_);
 
     if (!best_action || !best_action->Target())
     {
@@ -44,8 +44,7 @@ std::shared_ptr<const Position> Bot::NextMove() const
         return nullptr;
     }
 
-    const auto target_node = best_action->Target();
-    const std::string move_name = target_node->Name();
+    const std::string move_name = best_action->Name();
 
     if (m_logger_) m_logger_->info("Bot chose move: {}", move_name);
 

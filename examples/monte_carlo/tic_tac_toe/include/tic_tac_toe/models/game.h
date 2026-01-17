@@ -86,11 +86,11 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         switch (symbol)
         {
             case enums::Symbol::X:
-                x_ = std::make_shared<TPlayer>(symbol, args..., m_logger_); // m_logger_ inserted as last argument
+                x_ = std::make_shared<TPlayer>(symbol, args..., m_logger_);
                 add_observer(x_);
                 break;
             case enums::Symbol::O:
-                o_ = std::make_shared<TPlayer>(symbol, args..., m_logger_); // m_logger_ inserted as last argument
+                o_ = std::make_shared<TPlayer>(symbol, args..., m_logger_);
                 add_observer(o_);
                 break;
             default: throw std::invalid_argument("Invalid symbol");

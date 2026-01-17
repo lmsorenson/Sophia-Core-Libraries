@@ -1,9 +1,9 @@
 #include <tic_tac_toe/models/board.h>
 #include <tic_tac_toe/models/position.h>
 #include <unordered_set>
-#include <iostream>
 #include <vector>
-
+#include <logging/ilogger.h> // Added for logger_ptr
+#include <sstream> // For building print string
 
 using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
@@ -15,9 +15,10 @@ using std::make_shared;
 using std::shared_ptr;
 using std::vector;
 using std::pair;
+using sophia::logging::logger_ptr; // Added for logger_ptr
 
-
-Board::Board()
+Board::Board(const logger_ptr& logger)
+: m_logger_(logger)
 {
     for(int row = 0; row < 3; row++)
     {
@@ -31,17 +32,20 @@ Board::Board()
 
         m_tiles_.push_back(row_positions);
     }
+    if (m_logger_) m_logger_->debug("Board created.");
 }
 
 Board::Board(const Board &other)
 : m_tiles_(other.m_tiles_)
 , last_placed_(other.last_placed_)
+, m_logger_(other.m_logger_) // Copy logger
 {
 }
 
 Board::Board(Board &&other) noexcept
 : m_tiles_(std::move(other.m_tiles_))
 , last_placed_(other.last_placed_)
+, m_logger_(std::move(other.m_logger_)) // Move logger
 {
 }
 
@@ -51,6 +55,7 @@ Board & Board::operator=(const Board &other)
         return *this;
     m_tiles_ = other.m_tiles_;
     last_placed_ = other.last_placed_;
+    m_logger_ = other.m_logger_; // Assign logger
     return *this;
 }
 
@@ -60,8 +65,10 @@ Board & Board::operator=(Board &&other) noexcept
         return *this;
     m_tiles_ = std::move(other.m_tiles_);
     last_placed_ = other.last_placed_;
+    m_logger_ = std::move(other.m_logger_); // Move assign logger
     return *this;
 }
+
 
 void Board::SetPosition(const Position &new_position)
 {
@@ -82,6 +89,7 @@ void Board::SetPosition(const Position &new_position)
     auto placed_state = new_position.State();
     m_tiles_[row][column] = make_shared<Position>(std::pair( row, column ), placed_state);
     last_placed_ = placed_state;
+    if (m_logger_) m_logger_->debug("Set position {} to {}.", new_position.Name(), enums::TileStateToString(placed_state));
 }
 
 Symbol Board::LastPlaced() const
@@ -107,11 +115,28 @@ vector<shared_ptr<const Position>> Board::GetOpenPositions() const
     return open_positions;
 }
 
+int Board::GetMarkCount() const
+{
+    int count = 0;
+    for (const auto& row : m_tiles_)
+    {
+        for (const auto& position : row)
+        {
+            if (position->State() != Symbol::None)
+            {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+
 shared_ptr<const Board> Board::WithMove(const Position &position) const
 {
     try
     {
-        Board newBoard = *this;
+        Board newBoard = *this; // Create a copy, which also copies the logger
 
         newBoard.SetPosition(position);
 
@@ -119,7 +144,7 @@ shared_ptr<const Board> Board::WithMove(const Position &position) const
     }
     catch (const std::invalid_argument &e)
     {
-        std::cerr << "Invalid move exception: " << e.what() << std::endl;
+        if (m_logger_) m_logger_->error("Invalid move exception in WithMove: {}", e.what());
         return nullptr;
     }
 }
@@ -149,49 +174,40 @@ shared_ptr<std::pair<Symbol, bool>> Board::Winner() const
 
 void Board::Print() const
 {
-    std::vector<std::string> rows_strings;
+    if (!m_logger_) return; // Don't print if no logger
+
+    std::stringstream ss;
+    ss << "    1   2   3 " << std::endl;
     auto column_letter = { "A", "B", "C" };
     auto itr = column_letter.begin();
+    bool first_row = true;
 
     for (const auto& row : m_tiles_)
     {
-        std::string row_str;
+        if (!first_row)
+        {
+            ss << "   ---+---+---" << std::endl;
+        }
+        first_row = false;
+
+        ss << " " << *itr << " ";
+        itr++;
+
+        bool first_col = true;
         for (const auto& position : row)
         {
-            if (!row_str.empty())
+            if (!first_col)
             {
-                row_str.append("|");
+                ss << "|";
             }
-            else
-            {
-                row_str.append(" ");
-                row_str.append(*itr);
-                row_str.append(" ");
-                itr++;
-            }
-
-            row_str.append(" ");
-            row_str.append(TileStateToString(position->State()));
-            row_str.append(" ");
+            first_col = false;
+            ss << " " << enums::TileStateToString(position->State()) << " ";
         }
-
-        rows_strings.push_back(row_str);
+        ss << std::endl;
     }
-
-    if (auto it = rows_strings.begin(); it != rows_strings.end())
-    {
-        std::cout << "    1   2   3 " << std::endl;
-        do
-        {
-            std::cout << *it << std::endl;
-            if (it++ + 1 != rows_strings.end())
-            {
-                std::cout << "   ---+---+---" << std::endl;
-            }
-        }
-        while (it != rows_strings.end());
-    }
+    m_logger_->info("Board state:\n{}", ss.str());
 }
+
 
 std::vector<std::vector<Symbol>> Board::GetLines(const Alignment alignment) const
 {

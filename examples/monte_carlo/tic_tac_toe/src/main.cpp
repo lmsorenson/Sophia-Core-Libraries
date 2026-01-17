@@ -34,9 +34,9 @@ int main()
     };
 
     game->Assign<Human>(Symbol::X, get_human_move_input); // Pass logger and callback
-    game->Assign<Bot>(Symbol::O, 0.9);
+    game->Assign<Bot>(Symbol::O, 1.0);
 
-    while(game->game_over() == false)
+    while(!game->game_over())
     {
         const auto current_player = game->active_player();
 
@@ -52,5 +52,6 @@ int main()
         game->print();
     }
 
+    logger->info("Game Over!");
     return 0;
 }

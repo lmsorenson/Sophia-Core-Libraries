@@ -28,7 +28,7 @@ TicTacToeFactory::TicTacToeFactory(models::const_player_ptr you, const logger_pt
 
 shared_ptr<Node> TicTacToeFactory::CreateNode(std::string name) const
 {
-    auto board = make_shared<Board>();
+    auto board = make_shared<Board>(m_logger_); // Pass m_logger_ to Board constructor
     const auto game_state = make_shared<GameState>(you_, board);
 
     return make_shared<State>(name, *game_state, shared_from_this(), m_logger_);

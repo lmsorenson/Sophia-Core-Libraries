@@ -73,6 +73,12 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         [[nodiscard]] Board GetBoard() const;
 
         /**
+         * @brief Gets the current turn number based on the number of marks on the board.
+         * @return The current turn number.
+         */
+        [[nodiscard]] int GetTurnNumber() const;
+
+        /**
          * @brief Prints the board info for this GameState.
          */
         void Print() const;

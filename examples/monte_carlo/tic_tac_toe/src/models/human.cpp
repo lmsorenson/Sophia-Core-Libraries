@@ -12,14 +12,14 @@ using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
 using std::pair;
-using sophia::logging::logger_ptr; // Added using directive
+using sophia::logging::logger_ptr;
 
 Human::Human(const Symbol symbol, std::function<std::string()> get_move_input_callback, const logger_ptr& logger)
     : Player(symbol, logger) // Pass logger to base Player constructor
     , get_move_input_callback_(std::move(get_move_input_callback))
     , m_logger_(logger)
 {
-    if (m_logger_) m_logger_->info("Human player created with symbol {}", static_cast<char>(symbol));
+    if (m_logger_) m_logger_->info("Human player created with symbol {}", enums::TileStateToString(symbol));
 }
 
 std::shared_ptr<const Position> Human::NextMove() const
@@ -29,7 +29,7 @@ std::shared_ptr<const Position> Human::NextMove() const
 
     while (position == nullptr)
     {
-        if (m_logger_) m_logger_->info("Player {} (Human): Enter your move (e.g., A1) : ", static_cast<char>(m_player_symbol_));
+        if (m_logger_) m_logger_->info("Player {} (Human): Enter your move (e.g., A1) : ", enums::TileStateToString(m_player_symbol_));
         move_str = get_move_input_callback_(); // Get input from callback
 
         if (Position::IsValid(move_str))

@@ -24,11 +24,11 @@ double Player::Value(const Board &board) const
     {
         if (winner->first == m_player_symbol_)
         {
-            if (m_logger_) m_logger_->info("Player {} wins :)", static_cast<char>(m_player_symbol_));
+            if (m_logger_) m_logger_->info("Player {} wins :)", enums::TileStateToString(m_player_symbol_));
             return 1.0;
         }
 
-        if (m_logger_) m_logger_->info("Player {} loses :(", static_cast<char>(m_player_symbol_));
+        if (m_logger_) m_logger_->info("Player {} loses :(", enums::TileStateToString(m_player_symbol_));
         return -1.0;
     }
 
