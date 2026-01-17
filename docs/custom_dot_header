@@ -1,0 +1,83 @@
+// Sophia Decision Engine - Custom DOT styling for beautiful diagrams
+digraph G {
+  // Global graph styling
+  graph [
+    bgcolor="#ffffff",
+    fontname="Inter",
+    fontsize="12",
+    fontcolor="#2c3e50",
+    pad="0.5",
+    ranksep="0.75",
+    nodesep="0.5"
+  ];
+
+  // Default node styling
+  node [
+    fontname="Inter",
+    fontsize="11",
+    fontcolor="#2c3e50",
+    fillcolor="#f8f9fa",
+    color="#3498db",
+    style="filled,rounded",
+    shape="box",
+    height="0.4",
+    width="1.0",
+    margin="0.1,0.05"
+  ];
+
+  // Default edge styling
+  edge [
+    fontname="Inter",
+    fontsize="10",
+    fontcolor="#666666",
+    color="#95a5a6",
+    arrowsize="0.8",
+    style="solid"
+  ];
+
+  // Class node styling
+  class [
+    fillcolor="#e8f4fd",
+    color="#3498db"
+  ];
+
+  // Interface/struct styling
+  interface [
+    fillcolor="#fff3cd",
+    color="#856404"
+  ];
+
+  // Template class styling
+  template [
+    fillcolor="#d1ecf1",
+    color="#0c5460"
+  ];
+
+  // Inheritance edges (solid arrows)
+  inheritance [
+    color="#27ae60",
+    style="solid",
+    arrowhead="empty"
+  ];
+
+  // Composition edges (filled diamonds)
+  composition [
+    color="#e74c3c",
+    style="solid",
+    arrowhead="diamond"
+  ];
+
+  // Aggregation edges (empty diamonds)
+  aggregation [
+    color="#f39c12",
+    style="dashed",
+    arrowhead="odiamond"
+  ];
+
+  // Association edges (regular arrows)
+  association [
+    color="#9b59b6",
+    style="solid",
+    arrowhead="open"
+  ];
+}
