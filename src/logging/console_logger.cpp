@@ -15,6 +15,9 @@ namespace sophia::logging
         const char* level_str;
         switch (level)
         {
+            case LogLevel::TRACE:
+                level_str = "[TRACE]";
+                break;
             case LogLevel::DEBUG:
                 level_str = "[DEBUG]";
                 break;

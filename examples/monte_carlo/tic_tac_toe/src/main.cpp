@@ -20,7 +20,7 @@ using std::shared_ptr;
 
 int main()
 {
-    const auto logger = make_shared<ConsoleLogger>(LogLevel::DEBUG);
+    const auto logger = make_shared<ConsoleLogger>(LogLevel::TRACE);
     logger->info("Let's Play Tic Tac Toe!");
 
     const shared_ptr<Game> game = make_shared<Game>(logger);
