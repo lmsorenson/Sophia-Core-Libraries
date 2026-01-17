@@ -30,19 +30,58 @@ body {
     padding: 0;
 }
 
-/* Main page layout improvements */
+/* Main page layout improvements - more compact */
 #doc-content {
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 20px !important;
-    background: white !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f8f9fa !important;
     min-height: calc(100vh - 200px) !important;
-    box-shadow: 0 0 20px rgba(0,0,0,0.08) !important;
 }
 
 #main-content {
-    padding: 30px !important;
+    padding: 0 !important;
+    background: #f8f9fa !important;
+    display: flex !important;
+    min-height: calc(100vh - 140px) !important;
+}
+
+/* Compact side navigation */
+.side-nav {
+    position: fixed !important;
+    left: 0 !important;
+    top: 140px !important; /* Account for header height */
+    width: 250px !important;
+    height: calc(100vh - 140px) !important;
     background: white !important;
+    border-right: 1px solid var(--sophia-border) !important;
+    overflow-y: auto !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.05) !important;
+}
+
+/* Main content area - optimized layout */
+#main-content-wrapper {
+    margin-left: 250px !important;
+    flex: 1 !important;
+    background: white !important;
+    min-height: calc(100vh - 140px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Compact main content */
+.contents {
+    flex: 1 !important;
+    padding: 20px 30px !important;
+    background: white !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    line-height: 1.6 !important;
+    max-width: none !important;
 }
 
 /* Improve overall content organization */
@@ -386,6 +425,214 @@ body {
 #footer {
     margin-top: 50px !important;
     border-radius: 8px 8px 0 0 !important;
+}
+
+/* Elegant namespace/class/file listings - eliminate whitespace */
+.directory-list, .classindex, .fileindex {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+    gap: 20px !important;
+    margin: 25px 0 !important;
+    padding: 0 !important;
+}
+
+.directory-list > li, .classindex > li, .fileindex > li {
+    background: linear-gradient(135deg, #fafbfc, white) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.directory-list > li::before, .classindex > li::before, .fileindex > li::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, var(--sophia-secondary), var(--sophia-primary)) !important;
+}
+
+.directory-list > li:hover, .classindex > li:hover, .fileindex > li:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+    border-color: var(--sophia-secondary) !important;
+}
+
+.directory-list a, .classindex a, .fileindex a {
+    display: block !important;
+    color: var(--sophia-primary) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    margin-bottom: 10px !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.directory-list .desc, .classindex .desc, .fileindex .desc {
+    color: var(--sophia-text) !important;
+    font-size: 0.9em !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Elegant namespace page styling */
+.namespaceindex {
+    background: white !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+}
+
+.namespace-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 18px !important;
+    margin: 25px 0 !important;
+    padding: 0 !important;
+}
+
+.namespace-list > li {
+    background: linear-gradient(135deg, #fafbfc, #ffffff) !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+}
+
+.namespace-list > li::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, transparent, var(--sophia-secondary), transparent) !important;
+    border-radius: 0 0 10px 10px !important;
+}
+
+.namespace-list > li:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+    border-color: var(--sophia-secondary) !important;
+}
+
+.namespace-list > li:hover::after {
+    background: linear-gradient(90deg, transparent, var(--sophia-primary), transparent) !important;
+}
+
+.namespace-list a {
+    color: var(--sophia-primary) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1.05em !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+}
+
+.namespace-list .desc {
+    color: var(--sophia-text-light) !important;
+    font-size: 0.9em !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Compact member listings */
+.memlist, .functionlist {
+    background: #fafbfc !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+}
+
+.memlist h2, .functionlist h2 {
+    margin-top: 0 !important;
+    color: var(--sophia-primary) !important;
+    font-size: 1.3em !important;
+    border-bottom: 2px solid var(--sophia-secondary) !important;
+    padding-bottom: 8px !important;
+}
+
+.memlist ul, .functionlist ul {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 10px !important;
+    margin: 15px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+.memlist li, .functionlist li {
+    background: white !important;
+    border: 1px solid var(--sophia-border) !important;
+    border-radius: 6px !important;
+    padding: 12px 15px !important;
+    list-style: none !important;
+    font-size: 0.9em !important;
+    transition: all 0.2s ease !important;
+}
+
+.memlist li:hover, .functionlist li:hover {
+    background: rgba(52, 152, 219, 0.03) !important;
+    border-color: var(--sophia-secondary) !important;
+    transform: translateX(2px) !important;
+}
+
+.memlist a, .functionlist a {
+    color: var(--sophia-secondary) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+}
+
+.memlist a:hover, .functionlist a:hover {
+    color: var(--sophia-primary) !important;
+}
+
+/* Optimize responsive design for compact layouts */
+@media (max-width: 1200px) {
+    .directory-list, .classindex, .fileindex {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+        gap: 15px !important;
+    }
+
+    .namespace-list {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    }
+
+    .memlist ul, .functionlist ul {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .directory-list, .classindex, .fileindex {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .namespace-list {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .memlist ul, .functionlist ul {
+        grid-template-columns: 1fr !important;
+    }
+
+    .namespaceindex {
+        padding: 20px !important;
+        margin: 15px 0 !important;
+    }
 }
 
 /* Improve member documentation sections */
