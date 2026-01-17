@@ -1,20 +1,72 @@
-/* Sophia Decision Engine - Custom Doxygen Styling */
+/* Sophia Decision Engine - Minimal Custom Styling */
+/* Only customizes header/footer branding, uses default Doxygen layouts */
 
-/* Import a modern font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Color scheme inspired by wisdom/intelligence */
 :root {
     --sophia-primary: #2c3e50;
     --sophia-secondary: #3498db;
     --sophia-accent: #e74c3c;
     --sophia-light: #ecf0f1;
-    --sophia-dark: #1a252f;
     --sophia-code-bg: #f8f9fa;
-    --sophia-border: #dee2e6;
-    --sophia-text: #2c3e50;
-    --sophia-text-light: #6c757d;
 }
+
+/* Use Inter font throughout for better readability */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Custom header styling - keep the Sophia branding */
+#titlearea {
+    background: linear-gradient(135deg, var(--sophia-primary), var(--sophia-secondary)) !important;
+    color: white !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+    border: none !important;
+}
+
+#titlearea * {
+    color: white !important;
+}
+
+#projectname {
+    font-size: 2.5em !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+#projectbrief {
+    font-size: 1.2em !important;
+    font-weight: 300 !important;
+    margin: 10px 0 0 0 !important;
+    opacity: 0.9 !important;
+}
+
+/* Custom footer styling - keep the Sophia branding */
+#footer {
+    background: var(--sophia-primary) !important;
+    color: white !important;
+    text-align: center !important;
+    padding: 20px !important;
+    border-radius: 8px 8px 0 0 !important;
+    margin-top: 40px !important;
+}
+
+#footer * {
+    color: white !important;
+}
+
+/* Subtle improvements that don't change layout */
+#MSearchBox {
+    border-radius: 20px !important;
+    border: 1px solid #ddd !important;
+    padding: 6px 12px !important;
+}
+
+/* That's it - let Doxygen use its default layouts for everything else */
 
 /* Global overrides */
 * {
