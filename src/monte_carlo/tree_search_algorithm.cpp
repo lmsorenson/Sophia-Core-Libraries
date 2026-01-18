@@ -1,7 +1,7 @@
 #include <monte_carlo/tree_search_algorithm.h>
 #include <monte_carlo/models/node.h>
 #include <logging/colors.h>
-#include <iomanip>
+#include <cmath>
 #include <monte_carlo/common_aliases.h>
 #include <monte_carlo/models/action.h>
 
