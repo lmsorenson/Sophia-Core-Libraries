@@ -2,6 +2,7 @@
 #include <monte_carlo/models/action.h>
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
+#include <logging/colors.h>
 #include <cmath>
 #include <utility>
 #include <sstream> // For stringstream to format UCB logs
@@ -40,7 +41,7 @@ std::shared_ptr<Action> Node::SelectBestAction() const
 
     if (m_logger_)
     {
-        m_logger_->trace("Evaluating actions from '{}':", Name());
+        m_logger_->trace("Evaluating actions from {}:", sophia::logging::colors::highlight_node(Name()));
         for (const auto& child : m_child_action_)
         {
             const double current_score = child->UpperConfidenceBound(2);
@@ -49,11 +50,15 @@ std::shared_ptr<Action> Node::SelectBestAction() const
                 const double avg_reward = target->VisitCount() > 0 ? target->TotalReward() / target->VisitCount() : 0.0;
                 const std::string avg_str = target->VisitCount() > 0 ? std::format("{:.4f}", avg_reward) : "N/A";
                 const std::string ucb_str = std::isinf(current_score) ? "inf" : std::format("{:.4f}", current_score);
-                m_logger_->trace("  {} -> {} | visits={:3} | total={:7.4f} | avg={:6} | UCB={:>8}", 
-                    child->Name(), target->Name(), target->VisitCount(), target->TotalReward(), avg_str, ucb_str);
+                const auto visits_str = sophia::logging::colors::highlight_visits(std::format("{}", target->VisitCount()));
+                const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+                m_logger_->trace("  {} -> {} | visits={} | total={:7.4f} | avg={:6} | UCB={}", 
+                    child->Name(), sophia::logging::colors::highlight_node(target->Name()), 
+                    visits_str, target->TotalReward(), avg_str, ucb_colored);
             } else {
                 const std::string ucb_str = std::isinf(current_score) ? "inf" : std::format("{:.4f}", current_score);
-                m_logger_->trace("  {} -> (null) | UCB={:>8}", child->Name(), ucb_str);
+                const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+                m_logger_->trace("  {} -> (null) | UCB={}", child->Name(), ucb_colored);
             }
         }
     }
@@ -70,7 +75,9 @@ std::shared_ptr<Action> Node::SelectBestAction() const
     if (m_logger_ && best_child && best_child->Target()) 
     {
         const std::string ucb_str = std::isinf(best_score) ? "inf" : std::format("{:.4f}", best_score);
-        m_logger_->debug("Selected: {} -> {} (UCB={})", best_child->Name(), best_child->Target()->Name(), ucb_str);
+        const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+        m_logger_->debug("Selected: {} -> {} (UCB={})", 
+            best_child->Name(), sophia::logging::colors::highlight_node(best_child->Target()->Name()), ucb_colored);
     }
     return best_child;
 }
@@ -99,7 +106,9 @@ shared_ptr<Node> Node::Expand()
             target->SetParent(child);
             if (m_logger_) 
             {
-                m_logger_->trace("  Created: {} → {} (visits=0, reward=0.0)", Name(), target->Name());
+                m_logger_->trace("  Created: {} → {}", 
+                    sophia::logging::colors::highlight_node(Name()), 
+                    sophia::logging::colors::highlight_node(target->Name()));
             }
         } else {
             if (m_logger_) m_logger_->error("  Node '{}' generated a null target for action '{}'", Name(), child->Name());
@@ -111,7 +120,9 @@ shared_ptr<Node> Node::Expand()
     if (!m_child_action_.empty()) {
         if (m_logger_ && m_child_action_.front()->Target()) 
         {
-            m_logger_->debug("Expanded '{}' → first child: '{}'", Name(), m_child_action_.front()->Target()->Name());
+            m_logger_->debug("Expanded {} → first child: {}", 
+                sophia::logging::colors::highlight_node(Name()), 
+                sophia::logging::colors::highlight_node(m_child_action_.front()->Target()->Name()));
         }
         return m_child_action_.front()->Target();
     }
@@ -191,8 +202,15 @@ void Node::Backpropagate(const double reward)
 
     if (m_logger_) 
     {
-        m_logger_->trace("  {}: visits {}→{} | reward {:.4f}→{:.4f} (Δ{:.4f})", 
-            Name(), visit_count_before, m_visit_count_, total_reward_before, m_total_reward_, reward);
+        const auto visits_before_str = sophia::logging::colors::highlight_visits(std::format("{}", visit_count_before));
+        const auto visits_after_str = sophia::logging::colors::highlight_visits(std::format("{}", m_visit_count_));
+        const auto reward_before_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", total_reward_before));
+        const auto reward_after_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", m_total_reward_));
+        const auto reward_delta_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", reward));
+        m_logger_->trace("  {}: visits {}→{} | reward {}→{} (Δ{})", 
+            sophia::logging::colors::highlight_node(Name()), 
+            visits_before_str, visits_after_str, 
+            reward_before_str, reward_after_str, reward_delta_str);
     }
 
     if (const auto sp = m_parent_action_.lock())

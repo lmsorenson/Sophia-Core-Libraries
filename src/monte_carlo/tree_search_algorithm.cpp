@@ -1,6 +1,7 @@
 #include <monte_carlo/tree_search_algorithm.h>
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/models/action.h>
+#include <logging/colors.h>
 #include <iomanip> // For std::setw, std::left
 #include <cmath>   // For std::isinf
 
@@ -44,7 +45,7 @@ std::shared_ptr<Action> MonteCarloTreeSearch::run(
         double iteration_reward = 0.0;
 
         // --- 1. Selection ---
-        if (logger) logger->info("Phase 1: Selection");
+        if (logger) logger->info("{}", sophia::logging::colors::phase_selection("Phase 1: Selection"));
         while (!current->IsLeafNode())
         {
             const auto action = current->SelectBestAction();
@@ -56,10 +57,10 @@ std::shared_ptr<Action> MonteCarloTreeSearch::run(
             }
             current = action->Target();
         }
-        if (logger) logger->debug("Selection finished at node: '{}'", current->Name());
+        if (logger) logger->debug("Selection finished at node: {}", sophia::logging::colors::highlight_node(current->Name()));
 
         // --- 2. Expansion ---
-        if (logger) logger->info("Phase 2: Expansion");
+        if (logger) logger->info("{}", sophia::logging::colors::phase_expansion("Phase 2: Expansion"));
         if (current->HasBeenSampled() && !current->IsTerminalState())
         {
             if (logger) logger->debug("Node '{}' has been sampled. Expanding...", current->Name());
@@ -86,20 +87,26 @@ std::shared_ptr<Action> MonteCarloTreeSearch::run(
         }
 
         // --- 3. Rollout (Simulation) ---
-        if (logger) logger->info("Phase 3: Rollout (Simulation)");
+        if (logger) logger->info("{}", sophia::logging::colors::phase_rollout("Phase 3: Rollout (Simulation)"));
         const double reward = current->Rollout();
         iteration_reward = reward;
-        if (logger) logger->debug("Rollout from '{}' → reward: {:.4f}", current->Name(), reward);
+        if (logger) 
+        {
+            auto reward_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", reward));
+            logger->debug("Rollout from {} → reward: {}", 
+                sophia::logging::colors::highlight_node(current->Name()), reward_str);
+        }
 
         // --- 4. Backpropagation ---
-        if (logger) logger->info("Phase 4: Backpropagation");
+        if (logger) logger->info("{}", sophia::logging::colors::phase_backprop("Phase 4: Backpropagation"));
         current->Backpropagate(reward);
         
         // Iteration summary
         if (logger) 
         {
-            logger->debug("Iteration {} summary: expanded={}, rollout_reward={:.4f}, final_node='{}'", 
-                i + 1, expanded ? "yes" : "no", iteration_reward, current->Name());
+            const auto reward_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", iteration_reward));
+            logger->debug("Iteration {} summary: expanded={}, rollout_reward={}, final_node={}", 
+                i + 1, expanded ? "yes" : "no", reward_str, sophia::logging::colors::highlight_node(current->Name()));
         }
     }
 
@@ -125,15 +132,21 @@ std::shared_ptr<Action> MonteCarloTreeSearch::run(
                 bool is_selected = (best_action && best_action == action);
                 std::string selected_str = is_selected ? "✓" : "";
                 
+                const auto visits_str = sophia::logging::colors::highlight_visits(std::format("{}", target->VisitCount()));
+                const auto reward_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", target->TotalReward()));
+                const auto avg_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", avg_reward));
+                
                 if (std::isinf(ucb_value))
                 {
-                    logger->info("{:<25} | {:<12} | {:<15.4f} | {:<15.4f} | {:<12} | {:<10}", 
-                        action_name, target->VisitCount(), target->TotalReward(), avg_reward, "inf", selected_str);
+                    const auto ucb_str = sophia::logging::colors::highlight_ucb("inf");
+                    logger->info("{:<25} | {:<12} | {:<15} | {:<15} | {:<12} | {:<10}", 
+                        action_name, visits_str, reward_str, avg_str, ucb_str, selected_str);
                 }
                 else
                 {
-                    logger->info("{:<25} | {:<12} | {:<15.4f} | {:<15.4f} | {:<12.4f} | {:<10}", 
-                        action_name, target->VisitCount(), target->TotalReward(), avg_reward, ucb_value, selected_str);
+                    const auto ucb_str = sophia::logging::colors::highlight_ucb(std::format("{:.4f}", ucb_value));
+                    logger->info("{:<25} | {:<12} | {:<15} | {:<15} | {:<12} | {:<10}", 
+                        action_name, visits_str, reward_str, avg_str, ucb_str, selected_str);
                 }
             }
             else
@@ -151,8 +164,12 @@ std::shared_ptr<Action> MonteCarloTreeSearch::run(
     {
         auto target = best_action->Target();
         double avg_reward = target->VisitCount() > 0 ? target->TotalReward() / target->VisitCount() : 0.0;
-        logger->info("=> Best Action Selected: '{}' -> '{}' (visits={}, total_reward={:.4f}, avg_reward={:.4f})", 
-            best_action->Name(), target->Name(), target->VisitCount(), target->TotalReward(), avg_reward);
+        const auto visits_str = sophia::logging::colors::highlight_visits(std::format("{}", target->VisitCount()));
+        const auto total_reward_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", target->TotalReward()));
+        const auto avg_reward_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", avg_reward));
+        logger->info("=> Best Action Selected: '{}' -> {} (visits={}, total_reward={}, avg_reward={})", 
+            best_action->Name(), sophia::logging::colors::highlight_node(target->Name()), 
+            visits_str, total_reward_str, avg_reward_str);
     } else if (logger)
     {
         logger->warn("=> No best action could be selected.");
