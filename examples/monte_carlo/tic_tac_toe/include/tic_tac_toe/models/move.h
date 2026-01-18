@@ -30,7 +30,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          */
         explicit Move(const node_base_ptr<GameState, Position> &source,
             Position change,
-            std::shared_ptr<const TreeFactoryBase<GameState, Position>> factory,
+            const_factory_ptr<GameState, Position> factory,
             const logger_ptr& logger);
 
         /**

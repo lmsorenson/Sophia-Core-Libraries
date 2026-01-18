@@ -10,7 +10,8 @@
 using sophia::monte_carlo::tic_tac_toe::models::State;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::models::Node;
-// Removed using sophia::monte_carlo::models::Action;
+using sophia::monte_carlo::action_ptr;
+using sophia::monte_carlo::const_factory_ptr;
 using std::shared_ptr;
 using std::vector;
 using std::string;
@@ -26,20 +27,20 @@ Symbol Alternate(const Symbol last_placed)
     }
 }
 
-State::State(const string &name, const shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory, const sophia::monte_carlo::logger_ptr& logger)
+State::State(const string &name, const const_factory_ptr<GameState, Position> &tree_factory, const logger_ptr& logger)
     : NodeBase(name, GameState(nullptr, nullptr), tree_factory, logger)
 {
 }
 
 State::State(const std::string &name, GameState game_state,
-    const std::shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory, const sophia::monte_carlo::logger_ptr& logger)
+    const std::shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory, const logger_ptr& logger)
 : NodeBase(name, std::move(game_state), tree_factory, logger)
 {
 }
 
-std::vector<sophia::monte_carlo::action_ptr> State::GetAvailableActions()
+std::vector<action_ptr> State::GetAvailableActions()
 {
-    std::vector<sophia::monte_carlo::action_ptr> actions;
+    std::vector<action_ptr> actions;
 
     const auto open_positions = m_state_.GetOpenPositions();
     const auto last_placed = m_state_.LastPlaced();

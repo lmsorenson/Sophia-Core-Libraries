@@ -3,7 +3,7 @@
 using sophia::monte_carlo::tic_tac_toe::observer::Subject;
 using sophia::monte_carlo::tic_tac_toe::observer::Observer;
 
-void Subject::add_observer(const std::shared_ptr<Observer> &observer)
+void Subject::add_observer(const observer_ptr &observer)
 {
     observers_.push_back(observer);
 }

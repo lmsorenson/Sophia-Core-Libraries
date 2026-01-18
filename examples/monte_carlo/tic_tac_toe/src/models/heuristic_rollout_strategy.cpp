@@ -1,6 +1,7 @@
 #include <tic_tac_toe/models/heuristic_rollout_strategy.h>
 
 using sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy;
+using sophia::monte_carlo::action_ptr;
 using sophia::monte_carlo::models::Action;
 
 
@@ -9,8 +10,7 @@ HeuristicRolloutStrategy::HeuristicRolloutStrategy(GameState current_game_state,
 {
 }
 
-std::shared_ptr<Action> HeuristicRolloutStrategy::select_action(
-    std::vector<action_ptr> actions) const
+action_ptr HeuristicRolloutStrategy::select_action(std::vector<action_ptr> actions) const
 {
     return actions[0];
 }

@@ -6,27 +6,31 @@ using sophia::monte_carlo::tic_tac_toe::models::GameState;
 using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::Player;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::const_game_state_ptr;
+using sophia::monte_carlo::tic_tac_toe::const_board_ptr;
+using sophia::monte_carlo::tic_tac_toe::const_position_ptr;
+using sophia::monte_carlo::tic_tac_toe::const_player_ptr;
 
-GameState::GameState(::tic_tac_toe::const_player_ptr you, std::shared_ptr<const Board> board)
+GameState::GameState(const_player_ptr you, const_board_ptr board)
     : m_you_(std::move(you))
     , m_board_(std::move(board))
 {
 }
 
-GameState::GameState(::tic_tac_toe::const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed)
+GameState::GameState(const_player_ptr you, const_board_ptr board, Symbol last_placed)
     : m_you_(std::move(you))
     , m_board_(std::move(board))
 {
 }
 
-std::shared_ptr<const GameState> GameState::ApplyMove(const Position &position) const
+const_game_state_ptr GameState::ApplyMove(const Position &position) const
 {
     auto new_board = m_board_->WithMove(position);
 
     return std::make_shared<GameState>(m_you_, new_board, position.State());
 }
 
-std::shared_ptr<const Player> GameState::You() const
+const_player_ptr GameState::You() const
 {
     return m_you_;
 }
@@ -36,7 +40,7 @@ std::shared_ptr<std::pair<Symbol, bool>> GameState::Winner() const
     return m_board_->Winner();
 }
 
-std::vector<std::shared_ptr<const sophia::monte_carlo::tic_tac_toe::models::Position>> GameState::GetOpenPositions() const
+std::vector<const_position_ptr> GameState::GetOpenPositions() const
 {
     return m_board_->GetOpenPositions();
 }

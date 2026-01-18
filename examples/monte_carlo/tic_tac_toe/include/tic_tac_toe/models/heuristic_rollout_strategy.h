@@ -33,8 +33,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param actions A vector of shared pointers to the available actions. These are expected to be TicTacToe Move objects.
          * @return A shared pointer to the selected action (Move).
          */
-        [[nodiscard]] action_ptr select_action(
-            std::vector<action_ptr> actions) const override;
+        [[nodiscard]] action_ptr select_action(std::vector<action_ptr> actions) const override;
 
     private:
         GameState m_current_game_state_;

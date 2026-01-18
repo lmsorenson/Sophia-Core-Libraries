@@ -9,12 +9,13 @@
 using sophia::monte_carlo::tic_tac_toe::models::Bot;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::const_position_ptr;
 using sophia::monte_carlo::MonteCarloTreeSearch;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
 
 Bot::Bot(const Symbol symbol, const double difficulty, const sophia::monte_carlo::logger_ptr& logger)
-: Player(symbol, logger) // Pass logger to base Player constructor
+: Player(symbol, logger)
 , m_logger_(logger)
 {
     if (m_logger_) m_logger_->info("Creating bot with difficulty: {}", difficulty);
@@ -28,7 +29,7 @@ Bot::Bot(const Symbol symbol, const double difficulty, const sophia::monte_carlo
     if (m_logger_) m_logger_->info("Bot will perform {} iterations per move.", iterations_);
 }
 
-std::shared_ptr<const Position> Bot::NextMove() const
+const_position_ptr Bot::NextMove() const
 {
     if (node_ == nullptr)
     {
@@ -37,7 +38,7 @@ std::shared_ptr<const Position> Bot::NextMove() const
     }
 
     if (m_logger_) m_logger_->info("Bot is responding to move {}", node_->Name());
-    const sophia::monte_carlo::action_ptr best_action = MonteCarloTreeSearch::run(node_, iterations_, m_logger_);
+    const action_ptr best_action = MonteCarloTreeSearch::run(node_, iterations_, m_logger_);
 
     if (!best_action || !best_action->Target())
     {

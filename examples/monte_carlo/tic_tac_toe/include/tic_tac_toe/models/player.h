@@ -6,6 +6,8 @@
 #include <tic_tac_toe/observer/observer.h>
 #include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
+#include "common_aliases.h"
+
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
     /**
@@ -28,7 +30,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Prompts the Player to make its next move.
          * @return A shared pointer to the move made.
          */
-        [[nodiscard]] virtual std::shared_ptr<const Position> NextMove() const = 0;
+        [[nodiscard]] virtual const_position_ptr NextMove() const = 0;
 
         /**
          * @brief Assigns a value of the board state from the perspective of this Player.

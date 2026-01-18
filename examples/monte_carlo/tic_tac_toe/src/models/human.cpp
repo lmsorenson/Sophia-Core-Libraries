@@ -8,6 +8,7 @@ using sophia::monte_carlo::tic_tac_toe::models::Human;
 using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
+using sophia::monte_carlo::tic_tac_toe::const_position_ptr;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
@@ -21,9 +22,9 @@ Human::Human(const Symbol symbol, std::function<std::string()> get_move_input_ca
     if (m_logger_) m_logger_->info("Human player created with symbol {}", enums::TileStateToString(symbol));
 }
 
-std::shared_ptr<const Position> Human::NextMove() const
+const_position_ptr Human::NextMove() const
 {
-    std::shared_ptr<const Position> position = nullptr;
+    const_position_ptr position = nullptr;
     std::string move_str;
 
     while (position == nullptr)

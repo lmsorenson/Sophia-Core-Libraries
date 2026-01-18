@@ -43,7 +43,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Gets the current active player.
          * @return A shared pointer to the active player of the game.
          */
-        [[nodiscard]] ::tic_tac_toe::const_player_ptr active_player() const;
+        [[nodiscard]] const_player_ptr active_player() const;
 
         /**
          * @brief Applies a move to the Tic Tac Toe game.
@@ -60,17 +60,17 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         /**
          * @brief The player controlling the X positions.
          */
-        std::shared_ptr<Player> x_ = nullptr;
+        player_ptr x_ = nullptr;
 
         /**
          * @brief The player controlling the Y positions.
          */
-        std::shared_ptr<Player> o_ = nullptr;
+        player_ptr o_ = nullptr;
 
         /**
          * @brief A list of boards.  A board represents a state of play.
          */
-        std::vector<std::shared_ptr<const Board>> game_states_;
+        std::vector<const_board_ptr> game_states_;
 
         /**
          * @brief The logger instance for the game.

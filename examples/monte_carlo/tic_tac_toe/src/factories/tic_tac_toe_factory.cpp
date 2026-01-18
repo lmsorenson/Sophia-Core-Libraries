@@ -16,7 +16,7 @@ using sophia::monte_carlo::models::RandomRolloutStrategy;
 using std::make_shared;
 using std::shared_ptr;
 
-TicTacToeFactory::TicTacToeFactory(::tic_tac_toe::const_player_ptr you, const sophia::monte_carlo::logger_ptr& logger)
+TicTacToeFactory::TicTacToeFactory(const_player_ptr you, const logger_ptr& logger)
 : you_(std::move(you))
 , m_logger_(logger)
 {
@@ -24,18 +24,18 @@ TicTacToeFactory::TicTacToeFactory(::tic_tac_toe::const_player_ptr you, const so
 
 sophia::monte_carlo::node_ptr TicTacToeFactory::CreateNode(std::string name) const
 {
-    auto board = make_shared<Board>(m_logger_); // Pass m_logger_ to Board constructor
+    auto board = make_shared<Board>(m_logger_);
     const auto game_state = make_shared<GameState>(you_, board);
 
-    return std::static_pointer_cast<sophia::monte_carlo::models::Node>(make_shared<State>(name, *game_state, shared_from_this(), m_logger_));
+    return std::static_pointer_cast<models::Node>(make_shared<State>(name, *game_state, shared_from_this(), m_logger_));
 }
 
 sophia::monte_carlo::node_ptr TicTacToeFactory::CreateNode(std::string name, GameState game_state) const
 {
-    return std::static_pointer_cast<sophia::monte_carlo::models::Node>(make_shared<State>(name, game_state, shared_from_this(), m_logger_));
+    return std::static_pointer_cast<models::Node>(make_shared<State>(name, game_state, shared_from_this(), m_logger_));
 }
 
-sophia::monte_carlo::action_ptr TicTacToeFactory::CreateAction(sophia::monte_carlo::node_base_ptr<GameState, Position> node, Position change) const
+sophia::monte_carlo::action_ptr TicTacToeFactory::CreateAction(node_base_ptr<GameState, Position> node, Position change) const
 {
     return make_shared<Move>(node, change, shared_from_this(), m_logger_);
 }

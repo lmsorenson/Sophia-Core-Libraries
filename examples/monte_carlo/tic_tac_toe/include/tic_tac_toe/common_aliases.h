@@ -2,9 +2,9 @@
 
 #include <memory>
 
-#include "fwd.h"
+#include <tic_tac_toe/fwd.h>
 
-namespace tic_tac_toe {
+namespace sophia::monte_carlo::tic_tac_toe {
     // Aliases for shared pointers to game components
     using board_ptr = std::shared_ptr<sophia::monte_carlo::tic_tac_toe::models::Board>;
     using const_board_ptr = std::shared_ptr<const sophia::monte_carlo::tic_tac_toe::models::Board>;
