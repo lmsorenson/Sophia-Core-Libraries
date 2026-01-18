@@ -1,5 +1,10 @@
 \doxysection{sophia\+::logging Namespace Reference}
 \hypertarget{namespacesophia_1_1logging}{}\label{namespacesophia_1_1logging}\index{sophia::logging@{sophia::logging}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors}{colors}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,12 +20,20 @@ using \mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum class \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} \{ \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}}
+enum class \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8}{Log\+Level}} \{ \newline
+\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a2d3e4144aa384b18849ab9a8abad74d6}{TRACE}}
+, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}}
 , \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a551b723eafd6a31d444fcb2f5920fbd3}{INFO}}
 , \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a32bd8a1db2275458673903bdb84cb277}{WARN}}
-, \mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}
+, \newline
+\mbox{\hyperlink{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}
  \}
 \begin{DoxyCompactList}\small\item\em Defines the severity levels for log messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespacesophia_1_1logging_a9fcf81d93fb709276f773178203573f3}{is\+\_\+terminal}} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
@@ -48,6 +61,10 @@ A shared pointer to an \doxylink{classsophia_1_1logging_1_1ILogger}{ILogger} ins
 Defines the severity levels for log messages. 
 
 \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRACE@{TRACE}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!TRACE@{TRACE}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a2d3e4144aa384b18849ab9a8abad74d6}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8a2d3e4144aa384b18849ab9a8abad74d6} 
+TRACE&\\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!sophia::logging@{sophia::logging}}\index{sophia::logging@{sophia::logging}!DEBUG@{DEBUG}}}\Hypertarget{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15}\label{namespacesophia_1_1logging_a183f242c85daa28ed2018d65b73112d8adc30ec20708ef7b0f641ef78b7880a15} 
 DEBUG&\\
 \hline
@@ -65,3 +82,14 @@ ERROR&\\
 \hline
 
 \end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesophia_1_1logging_a9fcf81d93fb709276f773178203573f3}\label{namespacesophia_1_1logging_a9fcf81d93fb709276f773178203573f3} 
+\index{sophia::logging@{sophia::logging}!is\_terminal@{is\_terminal}}
+\index{is\_terminal@{is\_terminal}!sophia::logging@{sophia::logging}}
+\doxysubsubsection{\texorpdfstring{is\_terminal()}{is\_terminal()}}
+{\footnotesize\ttfamily static bool sophia\+::logging\+::is\+\_\+terminal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+% FIG 0

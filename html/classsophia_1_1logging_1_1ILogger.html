@@ -117,6 +117,10 @@ Collaboration diagram for sophia::logging::ILogger:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acec879bd2f823d25efe3aa46813150ca" id="r_acec879bd2f823d25efe3aa46813150ca"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#acec879bd2f823d25efe3aa46813150ca">~ILogger</a> ()=default</td></tr>
 <tr class="separator:acec879bd2f823d25efe3aa46813150ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704562826cbdc5af0e36f298ae600809" id="r_a704562826cbdc5af0e36f298ae600809"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a704562826cbdc5af0e36f298ae600809"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a704562826cbdc5af0e36f298ae600809">trace</a> (std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a704562826cbdc5af0e36f298ae600809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with TRACE severity (most verbose).  <br /></td></tr>
+<tr class="separator:a704562826cbdc5af0e36f298ae600809"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6776658107b8446b71d1304d260235b7" id="r_a6776658107b8446b71d1304d260235b7"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a6776658107b8446b71d1304d260235b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsophia_1_1logging_1_1ILogger.html#a6776658107b8446b71d1304d260235b7">debug</a> (std::format_string&lt; Args... &gt; fmt, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a6776658107b8446b71d1304d260235b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a message with DEBUG severity.  <br /></td></tr>
@@ -379,6 +383,58 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a704562826cbdc5af0e36f298ae600809" name="a704562826cbdc5af0e36f298ae600809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704562826cbdc5af0e36f298ae600809">&#9670;&#160;</a></span>trace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sophia::logging::ILogger::trace </td>
+          <td>(</td>
+          <td class="paramtype">std::format_string&lt; Args... &gt;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a message with TRACE severity (most verbose). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>A std::format-compatible format string. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments to be formatted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 6 --></div>
+</div>
+
+</div>
+</div>
 <a id="a483a95e5343c5367d639a972a0a5b37b" name="a483a95e5343c5367d639a972a0a5b37b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a483a95e5343c5367d639a972a0a5b37b">&#9670;&#160;</a></span>warn()</h2>
 
@@ -426,7 +482,7 @@ template&lt;typename... Args&gt; </div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><!-- SVG 6 --></div>
+<div class="center"><!-- SVG 7 --></div>
 </div>
 
 </div>

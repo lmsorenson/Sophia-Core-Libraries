@@ -22,6 +22,8 @@ Collaboration diagram for sophia\+::logging\+::ILogger\+:
 \item 
 virtual \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_acec879bd2f823d25efe3aa46813150ca}{\texorpdfstring{$\sim$}{\string~}\+ILogger}} ()=default
 \item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809}{trace}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Logs a message with TRACE severity (most verbose). \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a6776658107b8446b71d1304d260235b7}{debug}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
 \begin{DoxyCompactList}\small\item\em Logs a message with DEBUG severity. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger_a13228bc2ebd6aae123f494f29becd977}{info}} (std\+::format\+\_\+string$<$ Args... $>$ fmt, Args \&\&... args)
@@ -137,6 +139,26 @@ Implemented in \mbox{\hyperlink{classsophia_1_1logging_1_1ConsoleLogger_affdf8c6
 
 Here is the caller graph for this function\+:
 % FIG 5
+\Hypertarget{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809}\label{classsophia_1_1logging_1_1ILogger_a704562826cbdc5af0e36f298ae600809} 
+\index{sophia::logging::ILogger@{sophia::logging::ILogger}!trace@{trace}}
+\index{trace@{trace}!sophia::logging::ILogger@{sophia::logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{trace()}{trace()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void sophia\+::logging\+::\+ILogger\+::trace (\begin{DoxyParamCaption}\item[{std\+::format\+\_\+string$<$ Args... $>$}]{fmt,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logs a message with TRACE severity (most verbose). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fmt} & A std\+::format-\/compatible format string. \\
+\hline
+{\em args} & The arguments to be formatted. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
 \Hypertarget{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b}\label{classsophia_1_1logging_1_1ILogger_a483a95e5343c5367d639a972a0a5b37b} 
 \index{sophia::logging::ILogger@{sophia::logging::ILogger}!warn@{warn}}
 \index{warn@{warn}!sophia::logging::ILogger@{sophia::logging::ILogger}}
@@ -156,7 +178,7 @@ Logs a message with WARN severity.
 \hline
 \end{DoxyParams}
 Here is the call graph for this function\+:
-% FIG 6
+% FIG 7
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

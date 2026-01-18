@@ -2,8 +2,19 @@ var searchData=
 [
   ['hasbeensampled_0',['HasBeenSampled',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a99c747bf5454aa0f21874deab8c0d1a8',1,'sophia::monte_carlo::models::Node']]],
   ['header_20usage_1',['Header Usage',['../index.html#autotoc_md16',1,'']]],
-  ['horizontal_2',['Horizontal',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3ac1b5fa03ecdb95d4a45dd1c40b02527f',1,'sophia::monte_carlo::tic_tac_toe::enums']]],
-  ['human_3',['human',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html',1,'sophia::monte_carlo::tic_tac_toe::models::Human'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#aa209e6652f23fe431900f2837a9ed13b',1,'sophia::monte_carlo::tic_tac_toe::models::Human::Human()']]],
-  ['human_2ecpp_4',['human.cpp',['../human_8cpp.html',1,'']]],
-  ['human_2eh_5',['human.h',['../human_8h.html',1,'']]]
+  ['heuristic_5frollout_5fstrategy_2ecpp_2',['heuristic_rollout_strategy.cpp',['../heuristic__rollout__strategy_8cpp.html',1,'']]],
+  ['heuristic_5frollout_5fstrategy_2eh_3',['heuristic_rollout_strategy.h',['../heuristic__rollout__strategy_8h.html',1,'']]],
+  ['heuristicrolloutstrategy_4',['heuristicrolloutstrategy',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html',1,'sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html#a8a54f7169aeffa93f844db4c068794a7',1,'sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy::HeuristicRolloutStrategy()']]],
+  ['highlight_5fnode_5',['highlight_node',['../namespacesophia_1_1logging_1_1colors.html#adea695b45a8157a51e5bc4fcba898b73',1,'sophia::logging::colors::HIGHLIGHT_NODE'],['../namespacesophia_1_1logging_1_1colors.html#ac44bdd7ca4e76634886c2b902bbc3fa1',1,'sophia::logging::colors::highlight_node(const std::string &amp;text)']]],
+  ['highlight_5freward_6',['highlight_reward',['../namespacesophia_1_1logging_1_1colors.html#a6c5a6aaab8e77512185d4ae1de4a545b',1,'sophia::logging::colors::highlight_reward(const std::string &amp;text)'],['../namespacesophia_1_1logging_1_1colors.html#af634f7873260215e0140a19f680e62c5',1,'sophia::logging::colors::HIGHLIGHT_REWARD']]],
+  ['highlight_5freward_5ffmt_7',['highlight_reward_fmt',['../namespacesophia_1_1logging_1_1colors.html#a3e15359379b77f90a9360f8e154a50be',1,'sophia::logging::colors']]],
+  ['highlight_5fucb_8',['highlight_ucb',['../namespacesophia_1_1logging_1_1colors.html#a4ee67fead5f71260d6dccd702d06e204',1,'sophia::logging::colors::highlight_ucb(const std::string &amp;text)'],['../namespacesophia_1_1logging_1_1colors.html#a08d0a6d2afd154fa1d14e25c87b345f5',1,'sophia::logging::colors::HIGHLIGHT_UCB']]],
+  ['highlight_5fucb_5ffmt_9',['highlight_ucb_fmt',['../namespacesophia_1_1logging_1_1colors.html#a55c1f974e6719d93ef549fd40ddc2ebc',1,'sophia::logging::colors']]],
+  ['highlight_5fvalue_10',['HIGHLIGHT_VALUE',['../namespacesophia_1_1logging_1_1colors.html#a56bf8b30fc9bcaf87c12b649bf3a808e',1,'sophia::logging::colors']]],
+  ['highlight_5fvisits_11',['highlight_visits',['../namespacesophia_1_1logging_1_1colors.html#a8d015ac7fd53c889de8a700d7a9f348d',1,'sophia::logging::colors::HIGHLIGHT_VISITS'],['../namespacesophia_1_1logging_1_1colors.html#abffdbbc698d634aa8c9e971bebee34aa',1,'sophia::logging::colors::highlight_visits(const std::string &amp;text)']]],
+  ['highlight_5fvisits_5ffmt_12',['highlight_visits_fmt',['../namespacesophia_1_1logging_1_1colors.html#ae5e7239c41663d2cfaea3985cd8452e3',1,'sophia::logging::colors']]],
+  ['horizontal_13',['Horizontal',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a794b70ae5eb251e7c6e7393c7e130ee3ac1b5fa03ecdb95d4a45dd1c40b02527f',1,'sophia::monte_carlo::tic_tac_toe::enums']]],
+  ['human_14',['human',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#aa209e6652f23fe431900f2837a9ed13b',1,'sophia::monte_carlo::tic_tac_toe::models::Human::Human()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html',1,'sophia::monte_carlo::tic_tac_toe::models::Human']]],
+  ['human_2ecpp_15',['human.cpp',['../human_8cpp.html',1,'']]],
+  ['human_2eh_16',['human.h',['../human_8h.html',1,'']]]
 ];

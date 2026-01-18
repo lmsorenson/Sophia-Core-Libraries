@@ -4,6 +4,7 @@ var dir_f688e7d862bed6c4da8e8f8e41131d44 =
     [ "bot.h", "bot_8h.html", "bot_8h" ],
     [ "game.h", "game_8h.html", "game_8h" ],
     [ "game_state.h", "game__state_8h.html", "game__state_8h" ],
+    [ "heuristic_rollout_strategy.h", "heuristic__rollout__strategy_8h.html", "heuristic__rollout__strategy_8h" ],
     [ "human.h", "human_8h.html", "human_8h" ],
     [ "move.h", "move_8h.html", "move_8h" ],
     [ "player.h", "player_8h.html", "player_8h" ],

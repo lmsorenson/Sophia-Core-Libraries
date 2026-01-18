@@ -1,0 +1,60 @@
+\doxysection{colors.\+h}
+\hypertarget{colors_8h_source}{}\label{colors_8h_source}\index{include/logging/colors.h@{include/logging/colors.h}}
+\mbox{\hyperlink{colors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SOPHIA\_COLORS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SOPHIA\_COLORS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <format>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors}{sophia::logging::colors}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ ANSI\ color\ codes}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a7db54cc85cb167ce8367a8107750b0cc}{BOLD}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[1m"{}};}
+\DoxyCodeLine{00012\ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Phase\ colors}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_ad68eb626478bec61ba43e1f8dad6e1c0}{PHASE\_SELECTION}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[94m"{}};\ \ \ \ \ \ \textcolor{comment}{//\ Light\ blue}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a2ef76c248f18c9fbd98cc69ae88e3b09}{PHASE\_EXPANSION}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[92m"{}};\ \ \ \ \ \ \textcolor{comment}{//\ Light\ green}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a1b079813f08bd9011825e76caab80c81}{PHASE\_ROLLOUT}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[95m"{}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Light\ magenta}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_ab124f37e12299474cb781995a21b2efe}{PHASE\_BACKPROP}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[93m"{}};\ \ \ \ \ \ \ \textcolor{comment}{//\ Light\ yellow}}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Highlight\ colors}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a56bf8b30fc9bcaf87c12b649bf3a808e}{HIGHLIGHT\_VALUE}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[96m"{}};\ \ \ \ \ \ \ \textcolor{comment}{//\ Bright\ cyan}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a08d0a6d2afd154fa1d14e25c87b345f5}{HIGHLIGHT\_UCB}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[91m"{}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bright\ red}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_af634f7873260215e0140a19f680e62c5}{HIGHLIGHT\_REWARD}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[92m"{}};\ \ \ \ \ \textcolor{comment}{//\ Green}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a8d015ac7fd53c889de8a700d7a9f348d}{HIGHLIGHT\_VISITS}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[93m"{}};\ \ \ \ \ \textcolor{comment}{//\ Yellow}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_adea695b45a8157a51e5bc4fcba898b73}{HIGHLIGHT\_NODE}}\ =\ \textcolor{stringliteral}{"{}\(\backslash\)033[97m"{}};\ \ \ \ \ \ \textcolor{comment}{//\ White/bright}}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Helper\ functions\ to\ wrap\ text\ with\ colors}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_aeacc685dc11c30c2c8e8a0c5fea83b9b}{phase\_selection}}(\textcolor{keyword}{const}\ std::string\&\ text)\ \{\ \textcolor{keywordflow}{return}\ std::string(\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_ad68eb626478bec61ba43e1f8dad6e1c0}{PHASE\_SELECTION}})\ +\ text\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}};\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a66287a1db0a6d813158546217965c932}{phase\_expansion}}(\textcolor{keyword}{const}\ std::string\&\ text)\ \{\ \textcolor{keywordflow}{return}\ std::string(\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a2ef76c248f18c9fbd98cc69ae88e3b09}{PHASE\_EXPANSION}})\ +\ text\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}};\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a3e07741e365446b2f5fd7f15a203a9b5}{phase\_rollout}}(\textcolor{keyword}{const}\ std::string\&\ text)\ \{\ \textcolor{keywordflow}{return}\ std::string(\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a1b079813f08bd9011825e76caab80c81}{PHASE\_ROLLOUT}})\ +\ text\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}};\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a2466bc3b47d3fb09719483f2c2c23b70}{phase\_backprop}}(\textcolor{keyword}{const}\ std::string\&\ text)\ \{\ \textcolor{keywordflow}{return}\ std::string(\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_ab124f37e12299474cb781995a21b2efe}{PHASE\_BACKPROP}})\ +\ text\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}};\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a4ee67fead5f71260d6dccd702d06e204}{highlight\_ucb}}(\textcolor{keyword}{const}\ std::string\&\ text)\ \{\ \textcolor{keywordflow}{return}\ std::string(\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a08d0a6d2afd154fa1d14e25c87b345f5}{HIGHLIGHT\_UCB}})\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a7db54cc85cb167ce8367a8107750b0cc}{BOLD}}\ +\ text\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}};\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a6c5a6aaab8e77512185d4ae1de4a545b}{highlight\_reward}}(\textcolor{keyword}{const}\ std::string\&\ text)\ \{\ \textcolor{keywordflow}{return}\ std::string(\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_af634f7873260215e0140a19f680e62c5}{HIGHLIGHT\_REWARD}})\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a7db54cc85cb167ce8367a8107750b0cc}{BOLD}}\ +\ text\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}};\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_abffdbbc698d634aa8c9e971bebee34aa}{highlight\_visits}}(\textcolor{keyword}{const}\ std::string\&\ text)\ \{\ \textcolor{keywordflow}{return}\ std::string(\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a8d015ac7fd53c889de8a700d7a9f348d}{HIGHLIGHT\_VISITS}})\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a7db54cc85cb167ce8367a8107750b0cc}{BOLD}}\ +\ text\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}};\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_ac44bdd7ca4e76634886c2b902bbc3fa1}{highlight\_node}}(\textcolor{keyword}{const}\ std::string\&\ text)\ \{\ \textcolor{keywordflow}{return}\ std::string(\mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_adea695b45a8157a51e5bc4fcba898b73}{HIGHLIGHT\_NODE}})\ +\ text\ +\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a9d55220b1d26f3996d5574e356110488}{RESET}};\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Format\ helpers\ that\ return\ colored\ strings}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a55c1f974e6719d93ef549fd40ddc2ebc}{highlight\_ucb\_fmt}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a4ee67fead5f71260d6dccd702d06e204}{highlight\_ucb}}(std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a3e15359379b77f90a9360f8e154a50be}{highlight\_reward\_fmt}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a6c5a6aaab8e77512185d4ae1de4a545b}{highlight\_reward}}(std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_ae5e7239c41663d2cfaea3985cd8452e3}{highlight\_visits\_fmt}}(std::format\_string<Args...>\ fmt,\ Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_abffdbbc698d634aa8c9e971bebee34aa}{highlight\_visits}}(std::format(fmt,\ std::forward<Args>(args)...));}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SOPHIA\_COLORS\_H}}
+
+\end{DoxyCode}

@@ -29,7 +29,11 @@ digraph "include/monte_carlo/models/node_base.h"
   Node11 [id="Node000011",label="include/monte_carlo/models\l/action_base.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$action__base_8h.html",tooltip=" "];
   Node11 -> Node12 [id="edge12_Node000011_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node12 [id="Node000012",label="examples/monte_carlo/tic_tac\l_toe/include/tic_tac_toe/models/move.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$move_8h.html",tooltip=" "];
-  Node12 -> Node3 [id="edge13_Node000012_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node12 -> Node13 [id="edge14_Node000012_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node13 [id="Node000013",label="examples/monte_carlo/tic_tac\l_toe/src/models/move.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$move_8cpp.html",tooltip=" "];
+  Node12 -> Node13 [id="edge13_Node000012_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="examples/monte_carlo/tic_tac\l_toe/include/tic_tac_toe/models\l/heuristic_rollout_strategy.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$heuristic__rollout__strategy_8h.html",tooltip=" "];
+  Node13 -> Node14 [id="edge14_Node000013_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="examples/monte_carlo/tic_tac\l_toe/src/models/heuristic_rollout\l_strategy.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$heuristic__rollout__strategy_8cpp.html",tooltip=" "];
+  Node12 -> Node3 [id="edge15_Node000012_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node15 [id="edge16_Node000012_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="examples/monte_carlo/tic_tac\l_toe/src/models/move.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$move_8cpp.html",tooltip=" "];
 }

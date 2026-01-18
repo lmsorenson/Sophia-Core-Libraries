@@ -34,7 +34,8 @@ var hierarchy =
     ] ],
     [ "sophia::monte_carlo::tic_tac_toe::models::Position", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Position.html", null ],
     [ "sophia::monte_carlo::models::RolloutStrategyInterface", "classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface.html", [
-      [ "sophia::monte_carlo::models::RandomRolloutStrategy", "classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html", null ]
+      [ "sophia::monte_carlo::models::RandomRolloutStrategy", "classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy.html", null ],
+      [ "sophia::monte_carlo::tic_tac_toe::models::HeuristicRolloutStrategy", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy.html", null ]
     ] ],
     [ "sophia::monte_carlo::tic_tac_toe::observer::Subject", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Subject.html", [
       [ "sophia::monte_carlo::tic_tac_toe::models::Game", "classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Game.html", null ]

@@ -14,5 +14,7 @@ digraph "sophia::logging::ILogger::log"
   Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node4 [id="Node000004",label="sophia::logging::ILogger::info",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ILogger.html#a13228bc2ebd6aae123f494f29becd977",tooltip="Logs a message with INFO severity."];
   Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node5 [id="Node000005",label="sophia::logging::ILogger::warn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ILogger.html#a483a95e5343c5367d639a972a0a5b37b",tooltip="Logs a message with WARN severity."];
+  Node5 [id="Node000005",label="sophia::logging::ILogger::trace",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ILogger.html#a704562826cbdc5af0e36f298ae600809",tooltip="Logs a message with TRACE severity (most verbose)."];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="sophia::logging::ILogger::warn",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsophia_1_1logging_1_1ILogger.html#a483a95e5343c5367d639a972a0a5b37b",tooltip="Logs a message with WARN severity."];
 }

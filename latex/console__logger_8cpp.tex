@@ -2,6 +2,7 @@
 \hypertarget{console__logger_8cpp}{}\label{console__logger_8cpp}\index{src/logging/console\_logger.cpp@{src/logging/console\_logger.cpp}}
 {\ttfamily \#include $<$logging/console\+\_\+logger.\+h$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
 Include dependency graph for console\+\_\+logger.\+cpp\+:
 % FIG 0
 \doxysubsubsection*{Namespaces}
@@ -10,4 +11,24 @@ Include dependency graph for console\+\_\+logger.\+cpp\+:
 namespace \mbox{\hyperlink{namespacesophia}{sophia}}
 \item 
 namespace \mbox{\hyperlink{namespacesophia_1_1logging}{sophia\+::logging}}
+\item 
+namespace \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors}{sophia\+::logging\+::colors}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{namespacesophia_1_1logging_a9fcf81d93fb709276f773178203573f3}{sophia\+::logging\+::is\+\_\+terminal}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_a5d05cd365cd9e3aab3d08077288de11c}{sophia\+::logging\+::colors\+::\+TRACE}} = "{}\textbackslash{}033\mbox{[}90m"{}
+\item 
+constexpr const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_aaba0b77299e9a215826b01503b504450}{sophia\+::logging\+::colors\+::\+DEBUG}} = "{}\textbackslash{}033\mbox{[}36m"{}
+\item 
+constexpr const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_ad15f3fd5cff2acbdad073ae373b15fe0}{sophia\+::logging\+::colors\+::\+INFO}} = "{}\textbackslash{}033\mbox{[}34m"{}
+\item 
+constexpr const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_ad7fb64e359d4fe4e72dc53215f0b974d}{sophia\+::logging\+::colors\+::\+WARN}} = "{}\textbackslash{}033\mbox{[}33m"{}
+\item 
+constexpr const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespacesophia_1_1logging_1_1colors_aa6b8196de59e4ba0ce8effb9c40c9cd7}{sophia\+::logging\+::colors\+::\+ERROR}} = "{}\textbackslash{}033\mbox{[}31m"{}
 \end{DoxyCompactItemize}
