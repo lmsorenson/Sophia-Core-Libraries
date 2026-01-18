@@ -4,12 +4,10 @@
 #include <tic_tac_toe/observer/subject.h>
 #include <memory>
 #include <stdexcept>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @class Game
      * @brief A Tic Tac Toe game.
@@ -62,17 +60,17 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         /**
          * @brief The player controlling the X positions.
          */
-        std::shared_ptr<Player> x_ = nullptr;
+        player_ptr x_ = nullptr;
 
         /**
          * @brief The player controlling the Y positions.
          */
-        std::shared_ptr<Player> o_ = nullptr;
+        player_ptr o_ = nullptr;
 
         /**
          * @brief A list of boards.  A board represents a state of play.
          */
-        std::vector<std::shared_ptr<const Board>> game_states_;
+        std::vector<const_board_ptr> game_states_;
 
         /**
          * @brief The logger instance for the game.

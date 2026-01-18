@@ -1,4 +1,6 @@
 add_library(sophia_monte_carlo_examples_tic_tac_toe
+        ../include/tic_tac_toe/fwd.h
+        ../include/tic_tac_toe/common_aliases.h
         ../include/tic_tac_toe/models/game.h
         models/game.cpp
         ../include/tic_tac_toe/observer/subject.h
@@ -7,6 +9,7 @@ target_link_libraries(sophia_monte_carlo_examples_tic_tac_toe sophia_monte_carlo
 target_include_directories(sophia_monte_carlo_examples_tic_tac_toe
         PUBLIC
         ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/include
+        ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/include/tic_tac_toe
         ${CMAKE_SOURCE_DIR}/include
 )
 
@@ -20,5 +23,6 @@ target_link_libraries(tic_tac_toe_game
 target_include_directories(tic_tac_toe_game
         PUBLIC
         ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/include
+        ${CMAKE_SOURCE_DIR}/examples/monte_carlo/tic_tac_toe/include/tic_tac_toe
         ${CMAKE_SOURCE_DIR}/include
 )

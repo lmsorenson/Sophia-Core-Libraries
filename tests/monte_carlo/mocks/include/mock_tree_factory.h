@@ -2,19 +2,14 @@
 #define MOCK_TREE_FACTORY_H
 
 #include <monte_carlo/factories/tree_factory_interface.h>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <logging/ilogger.h>
+#include <monte_carlo/common_aliases.h>
 
-namespace sophia::monte_carlo::models
-{
-    class Node;
-}
 
 namespace sophia::monte_carlo::mocks
 {
-    using models::Node;
     using models::RolloutStrategyInterface;
     using factories::TreeFactoryBase;
-    using sophia::logging::logger_ptr; // Added using directive
 
     class MockRolloutStrategy;
 
@@ -25,7 +20,7 @@ namespace sophia::monte_carlo::mocks
 
         [[nodiscard]] node_ptr CreateNode(std::string name) const override;
         [[nodiscard]] node_ptr CreateNode(std::string name, bool state) const override;
-        [[nodiscard]] action_ptr CreateAction(node_base_ptr node, int change) const override;
+        [[nodiscard]] action_ptr CreateAction(node_base_ptr<bool, int> node, int change) const override;
         [[nodiscard]] rollout_strategy_ptr CreateStrategy() const override;
     };
 }

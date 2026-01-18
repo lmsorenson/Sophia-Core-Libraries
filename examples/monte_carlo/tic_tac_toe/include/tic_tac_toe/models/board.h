@@ -5,17 +5,11 @@
 #include <tic_tac_toe/models/player.h>
 #include <tic_tac_toe/models/position.h>
 #include <tic_tac_toe/enums/alignment.h>
-#include <memory>
-#include <logging/ilogger.h> // Added include for ILogger
+#include "tic_tac_toe/common_aliases.h" // Centralized tic_tac_toe aliases
 
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
-    class Position;
-    using player_ptr = std::shared_ptr<Player>;
-    using const_player_ptr = std::shared_ptr<const Player>;
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @class Board
      * @brief A Tic Tac Toe board.
@@ -71,14 +65,14 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Returns the Open Positions on the board.  These are the positions where there is no X or O.
          * @return The Open positions on the board.
          */
-        [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
+        [[nodiscard]] std::vector<const_position_ptr> GetOpenPositions() const;
 
         /**
          * @brief Creates a copy of the board with the given move applied.
          * @param position The position to apply.
          * @return The new board with the position applied.
          */
-        [[nodiscard]] std::shared_ptr<const Board> WithMove(const Position& position) const;
+        [[nodiscard]] const_board_ptr WithMove(const Position& position) const;
 
         /**
          * @brief Gets lines of positions
@@ -105,7 +99,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         void Print() const;
 
     private:
-        std::vector<std::vector<std::shared_ptr<const Position>>> m_tiles_;
+        std::vector<std::vector<const_position_ptr>> m_tiles_;
         enums::Symbol last_placed_ = enums::Symbol::None;
         logger_ptr m_logger_; // Member to hold the logger instance
     };

@@ -4,6 +4,8 @@
 #include <memory>
 #include <vector>
 
+#include <tic_tac_toe/common_aliases.h>
+
 namespace sophia::monte_carlo::tic_tac_toe::observer
 {
     /**
@@ -17,7 +19,7 @@ namespace sophia::monte_carlo::tic_tac_toe::observer
          * @brief Adds an observer to the subject.
          * @param observer The observer to add.
          */
-        void add_observer(const std::shared_ptr<Observer>& observer);
+        void add_observer(const observer_ptr& observer);
 
         /**
          * @brief Notifies the Subject's Observers with a given message.

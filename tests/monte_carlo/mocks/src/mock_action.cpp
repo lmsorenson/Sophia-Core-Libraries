@@ -11,8 +11,7 @@ using std::shared_ptr;
 using std::string;
 using testing::Return;
 
-MockAction::MockAction(shared_ptr<NodeBase<bool, int>> source,
-        const std::shared_ptr<const TreeFactoryBase<bool, int>> &factory)
+MockAction::MockAction(node_base_ptr<bool, int> source, const const_factory_ptr<bool, int> &factory)
 : ActionBase(source, 0, factory, nullptr)
 {
 

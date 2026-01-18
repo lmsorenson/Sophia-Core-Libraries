@@ -2,13 +2,11 @@
 #define HUMAN_H
 #include <tic_tac_toe/models/player.h>
 #include <tic_tac_toe/models/board.h>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 #include <functional> // Added include for std::function
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @class Human
      * @brief A human Tic Tac Toe Player
@@ -28,7 +26,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Prompts the Human to make its next move.
          * @return A shared pointer to the move made.
          */
-        [[nodiscard]] std::shared_ptr<const Position> NextMove() const override;
+        [[nodiscard]] const_position_ptr NextMove() const override;
 
         /**
          * @brief Updates the player's knowledge of the game.

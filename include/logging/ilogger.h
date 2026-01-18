@@ -98,9 +98,6 @@ namespace sophia::logging
         virtual void log(LogLevel level, const std::string& message) = 0;
     };
 
-    /// @brief A shared pointer to an ILogger instance.
-    using logger_ptr = std::shared_ptr<ILogger>;
-
 } // namespace sophia::logging
 
 #endif //SOPHIA_ILOGGER_H

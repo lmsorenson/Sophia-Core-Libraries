@@ -3,12 +3,10 @@
 
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::models
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @brief A template base class for implementing the `Node` interface.
      *
@@ -23,10 +21,10 @@ namespace sophia::monte_carlo::models
     class NodeBase : public Node
     {
     protected:
-        using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
+        // Removed using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
 
     public:
-        NodeBase(const std::string &name, TState state, const_factory_ptr factory, const logger_ptr& logger);
+        NodeBase(const std::string &name, TState state, sophia::monte_carlo::const_factory_ptr<TState, TChange> factory, const sophia::monte_carlo::logger_ptr& logger);
 
         /// @brief Retrieves the state associated with this node.
         TState GetState() const;
@@ -35,7 +33,7 @@ namespace sophia::monte_carlo::models
         rollout_strategy_ptr RolloutStrategy() const override;
 
         /// @brief A factory for creating nodes and actions, specific to the game or problem.
-        const_factory_ptr m_factory_;
+        sophia::monte_carlo::const_factory_ptr<TState, TChange> m_factory_;
 
         /// @brief The state of the system that this node represents.
         TState m_state_;

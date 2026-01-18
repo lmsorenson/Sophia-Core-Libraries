@@ -2,12 +2,11 @@
 #define RANDOM_ACTION_STRATEGY_H
 
 #include "rollout_strategy_interface.h"
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::models
 {
     class Action;
-    using sophia::logging::logger_ptr; // Added using directive
 
     /**
      * @brief A concrete implementation of the RolloutStrategyInterface that selects an action randomly.

@@ -1,10 +1,9 @@
 #ifndef ACTION_SELECTION_STRATEGY_INTERFACE_H
 #define ACTION_SELECTION_STRATEGY_INTERFACE_H
 
-#include <monte_carlo/models/action.h>
-
 #include <memory>
 #include <vector>
+#include <monte_carlo/common_aliases.h>
 
 namespace sophia::monte_carlo::models
 {
@@ -17,9 +16,6 @@ namespace sophia::monte_carlo::models
      */
     class RolloutStrategyInterface
     {
-    protected:
-        using action_ptr = std::shared_ptr<Action>;
-
     public:
         RolloutStrategyInterface() = default;
         virtual ~RolloutStrategyInterface() = default;

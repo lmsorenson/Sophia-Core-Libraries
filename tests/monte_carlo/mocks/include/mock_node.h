@@ -22,7 +22,6 @@ namespace sophia::monte_carlo::mocks
     using std::vector;
     using std::make_shared;
     using std::shared_ptr;
-    using sophia::logging::logger_ptr; // Added using directive
 
     class MockNode : public NodeBase<bool, int>
     {

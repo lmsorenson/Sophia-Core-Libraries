@@ -4,14 +4,13 @@
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/move.h>
-#include <logging/ilogger.h>
+#include <monte_carlo/common_aliases.h>
 
 #include <memory>
 #include <vector>
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
-    using sophia::logging::logger_ptr;
 
     /**
      * @brief A heuristic rollout strategy for Tic-Tac-Toe.
@@ -19,7 +18,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
      * This strategy attempts to select the best action based on simple heuristic rules
      * to guide the Monte Carlo simulations towards more promising outcomes.
      */
-    class HeuristicRolloutStrategy : public sophia::monte_carlo::models::RolloutStrategyInterface
+    class HeuristicRolloutStrategy : public monte_carlo::models::RolloutStrategyInterface
     {
     public:
         /**
@@ -34,8 +33,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param actions A vector of shared pointers to the available actions. These are expected to be TicTacToe Move objects.
          * @return A shared pointer to the selected action (Move).
          */
-        [[nodiscard]] action_ptr select_action(
-            std::vector<action_ptr> actions) const override;
+        [[nodiscard]] action_ptr select_action(std::vector<action_ptr> actions) const override;
 
     private:
         GameState m_current_game_state_;

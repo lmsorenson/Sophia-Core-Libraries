@@ -1,19 +1,19 @@
 #include <monte_carlo/models/random_rollout_strategy.h>
 #include <random>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/models/action.h>
+#include <monte_carlo/common_aliases.h>
 
 using sophia::monte_carlo::models::RandomRolloutStrategy;
-using sophia::monte_carlo::models::Action;
+using sophia::monte_carlo::action_ptr;
 using std::shared_ptr;
 using std::vector;
-using sophia::logging::logger_ptr; // Added using directive
 
 RandomRolloutStrategy::RandomRolloutStrategy(const logger_ptr& logger)
 : m_logger_(logger)
 {
 }
 
-shared_ptr<Action> RandomRolloutStrategy::select_action(vector<shared_ptr<Action>> actions) const
+action_ptr RandomRolloutStrategy::select_action(std::vector<action_ptr> actions) const
 {
     if (actions.empty())
     {

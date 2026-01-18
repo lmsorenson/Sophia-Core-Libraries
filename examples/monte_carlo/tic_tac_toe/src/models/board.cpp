@@ -8,21 +8,21 @@
 using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::models::Player;
-using sophia::monte_carlo::tic_tac_toe::models::player_ptr;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::tic_tac_toe::enums::Alignment;
+using sophia::monte_carlo::tic_tac_toe::const_position_ptr;
+using sophia::monte_carlo::tic_tac_toe::const_board_ptr;
 using std::make_shared;
 using std::shared_ptr;
 using std::vector;
 using std::pair;
-using sophia::logging::logger_ptr; // Added for logger_ptr
 
 Board::Board(const logger_ptr& logger)
 : m_logger_(logger)
 {
     for(int row = 0; row < 3; row++)
     {
-        vector<shared_ptr<const Position>> row_positions;
+        vector<const_position_ptr> row_positions;
 
         for (int col = 0; col < 3; col++)
         {
@@ -96,9 +96,9 @@ Symbol Board::LastPlaced() const
     return last_placed_;
 }
 
-vector<shared_ptr<const Position>> Board::GetOpenPositions() const
+vector<const_position_ptr> Board::GetOpenPositions() const
 {
-    std::vector<shared_ptr<const Position>> open_positions = {};
+    std::vector<const_position_ptr> open_positions = {};
 
     for(const auto& row : m_tiles_)
     {
@@ -131,7 +131,7 @@ int Board::GetMarkCount() const
 }
 
 
-shared_ptr<const Board> Board::WithMove(const Position &position) const
+const_board_ptr Board::WithMove(const Position &position) const
 {
     try
     {

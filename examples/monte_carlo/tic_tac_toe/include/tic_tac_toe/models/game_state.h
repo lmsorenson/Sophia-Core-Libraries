@@ -34,19 +34,19 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param position The move that will be applied.
          * @return A shared pointer to a new GameState with the move applied.
          */
-        [[nodiscard]] std::shared_ptr<const GameState> ApplyMove(const Position& position) const;
+        [[nodiscard]] const_game_state_ptr ApplyMove(const Position& position) const;
 
         /**
          * @brief Gets the current player of the game.
          * @return A shared pointer to the Player whose turn it is to move.
          */
-        [[nodiscard]] std::shared_ptr<const Player> CurrentPlayer() const;
+        [[nodiscard]] const_player_ptr CurrentPlayer() const;
 
         /**
          * @brief Gets the owning Player of the GameState.
          * @return A shared pointer to the owning player of the GameState.
          */
-        [[nodiscard]] std::shared_ptr<const Player> You() const;
+        [[nodiscard]] const_player_ptr You() const;
 
         /**
          * @brief Gets the winner of the game.
@@ -58,7 +58,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief GetOpenPositions
          * @return A vector of shared pointers to Positions that don't have a mark yet.
          */
-        [[nodiscard]] std::vector<std::shared_ptr<const Position>> GetOpenPositions() const;
+        [[nodiscard]] std::vector<const_position_ptr> GetOpenPositions() const;
 
         /**
          * @brief The last placed Symbol.
@@ -84,8 +84,8 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         void Print() const;
 
     private:
-        std::shared_ptr<const Board> m_board_;
-        std::shared_ptr<const Player> m_you_;
+        const_board_ptr m_board_;
+        const_player_ptr m_you_;
     };
 }
 

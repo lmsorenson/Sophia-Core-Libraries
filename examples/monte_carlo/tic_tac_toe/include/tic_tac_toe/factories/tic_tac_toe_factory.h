@@ -5,12 +5,9 @@
 #include <tic_tac_toe/models/position.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <monte_carlo/models/node_base.h>
-#include <logging/ilogger.h> // Added include for ILogger
 
 namespace sophia::monte_carlo::tic_tac_toe::factories
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @class TicTacToeFactory
      * @brief Creates simulation nodes and actions for a Tic Tac Toe game.
@@ -30,7 +27,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          * @param you a shared pointer to the player that owns the simulation.
          * @param logger the logger for the factory to use.
          */
-        explicit TicTacToeFactory(models::const_player_ptr you, const logger_ptr& logger);
+        explicit TicTacToeFactory(const_player_ptr you, const logger_ptr& logger);
         ~TicTacToeFactory() override = default;
 
         /**
@@ -54,7 +51,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          * @param change the change being applied to the source node.
          * @returns a shared pointer to a Node
          */
-        [[nodiscard]] action_ptr CreateAction(std::shared_ptr<NodeBase<models::GameState, models::Position>> node, models::Position change) const override;
+        [[nodiscard]] action_ptr CreateAction(node_base_ptr<models::GameState, models::Position> node, models::Position change) const override;
 
         /**
          * @brief Creates a new Strategy.
@@ -63,7 +60,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
         [[nodiscard]] rollout_strategy_ptr CreateStrategy() const override;
 
     private:
-        models::const_player_ptr you_;
+        const_player_ptr you_;
         logger_ptr m_logger_; // Member to hold the logger instance
     };
 }
