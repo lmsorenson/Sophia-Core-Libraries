@@ -4,12 +4,10 @@
 #include <tic_tac_toe/observer/subject.h>
 #include <memory>
 #include <stdexcept>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @class Game
      * @brief A Tic Tac Toe game.
@@ -21,7 +19,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Constructs a new Game with default settings.
          * @param logger The logger instance for the game to use.
          */
-        explicit Game(const logger_ptr& logger);
+        explicit Game(const sophia::monte_carlo::logger_ptr& logger);
         ~Game();
 
         /**
@@ -77,7 +75,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         /**
          * @brief The logger instance for the game.
          */
-        logger_ptr m_logger_;
+        sophia::monte_carlo::logger_ptr m_logger_;
     };
 
     template<class TPlayer, typename... Args>

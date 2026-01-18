@@ -2,13 +2,11 @@
 #define HUMAN_H
 #include <tic_tac_toe/models/player.h>
 #include <tic_tac_toe/models/board.h>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 #include <functional> // Added include for std::function
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @class Human
      * @brief A human Tic Tac Toe Player
@@ -22,7 +20,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param logger The logger instance for the player to use.
          * @param get_move_input_callback A callback function to get move input from the user.
          */
-        explicit Human(enums::Symbol symbol, std::function<std::string()> get_move_input_callback, const logger_ptr& logger);
+        explicit Human(enums::Symbol symbol, std::function<std::string()> get_move_input_callback, const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * @brief Prompts the Human to make its next move.
@@ -41,7 +39,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         void Update(std::string message) override;
 
     private:
-        logger_ptr m_logger_; // Member to hold the logger instance
+        sophia::monte_carlo::logger_ptr m_logger_; // Member to hold the logger instance
         std::function<std::string()> get_move_input_callback_; // Member to hold the input callback
     };
 }

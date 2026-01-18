@@ -7,12 +7,10 @@
 #include <memory>
 
 #include "board.h"
-#include <logging/ilogger.h>
+#include <monte_carlo/common_aliases.h>
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
-    using sophia::logging::logger_ptr;
-
     /**
      * @class Bot
      * @brief A non-human Tic Tac Toe Player
@@ -27,7 +25,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param difficulty The skill level of the bot a decimal value from 0 to 1.
          * @param logger The logger instance for the bot to use.
          */
-        explicit Bot(enums::Symbol symbol, double difficulty, const logger_ptr& logger);
+        explicit Bot(enums::Symbol symbol, double difficulty, const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * @brief Prompts the bot to make its next move.
@@ -48,7 +46,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     private:
         std::shared_ptr<monte_carlo::models::Node> node_;
         int iterations_;
-        logger_ptr m_logger_;
+        sophia::monte_carlo::logger_ptr m_logger_;
     };
 }
 

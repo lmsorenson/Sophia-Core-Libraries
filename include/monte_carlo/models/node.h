@@ -4,12 +4,10 @@
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <vector>
 #include <memory>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::models
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     class Action;
 
     /**
@@ -29,7 +27,7 @@ namespace sophia::monte_carlo::models
 
     public:
         // Updated constructor to accept logger
-        explicit Node(std::string name, const logger_ptr& logger);
+        explicit Node(std::string name, const sophia::monte_carlo::logger_ptr& logger);
         virtual ~Node() = default;
 
         /// @brief Sets the parent action that leads to this node.
@@ -123,7 +121,7 @@ namespace sophia::monte_carlo::models
 
     protected: // Changed to protected as per common practice for member vars that need to be accessed by derived classes
         // Member to hold the logger instance, injected via constructor
-        logger_ptr m_logger_;
+        sophia::monte_carlo::logger_ptr m_logger_;
 
     private:
         std::string m_name_;

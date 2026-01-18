@@ -4,14 +4,13 @@
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/move.h>
-#include <logging/ilogger.h>
+#include <monte_carlo/common_aliases.h>
 
 #include <memory>
 #include <vector>
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
-    using sophia::logging::logger_ptr;
 
     /**
      * @brief A heuristic rollout strategy for Tic-Tac-Toe.
@@ -27,7 +26,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param current_game_state The current game state from which the rollout will start.
          * @param logger The logger instance.
          */
-        explicit HeuristicRolloutStrategy(GameState current_game_state, const logger_ptr& logger);
+        explicit HeuristicRolloutStrategy(GameState current_game_state, const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * @brief Selects an action from a vector of available actions based on heuristic rules.
@@ -39,7 +38,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
 
     private:
         GameState m_current_game_state_;
-        logger_ptr m_logger_;
+        sophia::monte_carlo::logger_ptr m_logger_;
     };
 } // namespace sophia::monte_carlo::tic_tac_toe::models
 

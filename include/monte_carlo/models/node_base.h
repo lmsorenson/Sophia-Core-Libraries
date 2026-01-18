@@ -3,12 +3,10 @@
 
 #include <monte_carlo/models/node.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::models
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @brief A template base class for implementing the `Node` interface.
      *
@@ -26,7 +24,7 @@ namespace sophia::monte_carlo::models
         using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
 
     public:
-        NodeBase(const std::string &name, TState state, const_factory_ptr factory, const logger_ptr& logger);
+        NodeBase(const std::string &name, TState state, const_factory_ptr factory, const sophia::monte_carlo::logger_ptr& logger);
 
         /// @brief Retrieves the state associated with this node.
         TState GetState() const;

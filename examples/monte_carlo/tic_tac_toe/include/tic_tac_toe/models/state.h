@@ -4,6 +4,7 @@
 #include <monte_carlo/models/node_base.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <tic_tac_toe/models/game_state.h>
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
@@ -24,7 +25,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * be used to create the following states.
          * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, const const_factory_ptr& tree_factory, const logging::logger_ptr& logger);
+        explicit State(const std::string& name, const const_factory_ptr& tree_factory, const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * Creates an instance of a Tic Tac Toe State.
@@ -34,7 +35,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * be used to create the following states.
          * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, GameState game_state, const const_factory_ptr& tree_factory, const logging::logger_ptr& logger);
+        explicit State(const std::string& name, GameState game_state, const const_factory_ptr& tree_factory, const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * @brief Gets all available actions that can be

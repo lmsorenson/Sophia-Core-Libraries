@@ -6,7 +6,7 @@
 #include <tic_tac_toe/models/position.h>
 #include <tic_tac_toe/enums/alignment.h>
 #include <memory>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 
 namespace sophia::monte_carlo::tic_tac_toe::models
@@ -14,7 +14,6 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     class Position;
     using player_ptr = std::shared_ptr<Player>;
     using const_player_ptr = std::shared_ptr<const Player>;
-    using sophia::logging::logger_ptr; // Added using directive
 
     /**
      * @class Board
@@ -27,7 +26,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Creates a default Tic Tac Toe board.
          * @param logger The logger instance for the board to use.
          */
-        explicit Board(const logger_ptr& logger);
+        explicit Board(const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * @brief creates a copy of a Tic Tac Toe board.
@@ -107,7 +106,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     private:
         std::vector<std::vector<std::shared_ptr<const Position>>> m_tiles_;
         enums::Symbol last_placed_ = enums::Symbol::None;
-        logger_ptr m_logger_; // Member to hold the logger instance
+        sophia::monte_carlo::logger_ptr m_logger_; // Member to hold the logger instance
     };
 }
 
