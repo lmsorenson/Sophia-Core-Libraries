@@ -2,6 +2,7 @@
 #include <monte_carlo/models/action.h>
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
+#include <logging/colors.h>
 #include <cmath>
 #include <utility>
 #include <sstream> // For stringstream to format UCB logs
@@ -20,7 +21,6 @@ Node::Node(string name, const logger_ptr& logger)
     : m_name_(std::move(name))
     , m_logger_(logger)
 {
-    if (m_logger_) m_logger_->debug("Node created: {}", m_name_);
 }
 
 void Node::SetParent(const std::shared_ptr<Action>& action)
@@ -41,20 +41,26 @@ std::shared_ptr<Action> Node::SelectBestAction() const
 
     if (m_logger_)
     {
-        std::stringstream ss;
-        ss << "  Node '" << Name() << "' - Candidate Actions UCB scores (c=2):" << std::endl;
+        m_logger_->trace("Evaluating actions from {}:", sophia::logging::colors::highlight_node(Name()));
         for (const auto& child : m_child_action_)
         {
             const double current_score = child->UpperConfidenceBound(2);
             if (auto target = child->Target())
             {
-                ss << "    - Action leading to '" << target->Name()
-                   << std::format("(T:{:.4f} N:{}) UCB: {:.4f}", target->TotalReward(), target->VisitCount(), current_score) << std::endl;
+                const double avg_reward = target->VisitCount() > 0 ? target->TotalReward() / target->VisitCount() : 0.0;
+                const std::string avg_str = target->VisitCount() > 0 ? std::format("{:.4f}", avg_reward) : "N/A";
+                const std::string ucb_str = std::isinf(current_score) ? "inf" : std::format("{:.4f}", current_score);
+                const auto visits_str = sophia::logging::colors::highlight_visits(std::format("{}", target->VisitCount()));
+                const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+                m_logger_->trace("  {} -> {} | visits={} | total={:7.4f} | avg={:6} | UCB={}", 
+                    child->Name(), sophia::logging::colors::highlight_node(target->Name()), 
+                    visits_str, target->TotalReward(), avg_str, ucb_colored);
             } else {
-                 ss << "    - Action leading to (nullptr) UCB: " << std::format("{:.4f}", current_score) << std::endl;
+                const std::string ucb_str = std::isinf(current_score) ? "inf" : std::format("{:.4f}", current_score);
+                const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+                m_logger_->trace("  {} -> (null) | UCB={}", child->Name(), ucb_colored);
             }
         }
-        m_logger_->debug("{}", ss.str());
     }
 
     for (const auto& child : m_child_action_)
@@ -66,7 +72,13 @@ std::shared_ptr<Action> Node::SelectBestAction() const
             best_child = child;
         }
     }
-    if (m_logger_ && best_child && best_child->Target()) m_logger_->debug("  Node '{}' selected action leading to '{}' with UCB score: {:.4f}", Name(), best_child->Target()->Name(), best_score);
+    if (m_logger_ && best_child && best_child->Target()) 
+    {
+        const std::string ucb_str = std::isinf(best_score) ? "inf" : std::format("{:.4f}", best_score);
+        const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+        m_logger_->debug("Selected: {} -> {} (UCB={})", 
+            best_child->Name(), sophia::logging::colors::highlight_node(best_child->Target()->Name()), ucb_colored);
+    }
     return best_child;
 }
 
@@ -80,14 +92,24 @@ shared_ptr<Node> Node::Expand()
     }
 
     // Add all available actions as children
+    if (m_logger_) 
+    {
+        m_logger_->trace("Expanding '{}' (creating {} child node(s))", Name(), child_actions.size());
+    }
+    
     for(const auto& child : child_actions)
     {
         child->Generate(); // Generate the target node if not already
         auto target = child->Target();
         if (target) {
-            if (m_logger_) m_logger_->debug("  Node '{}' adding child action leading to '{}'", Name(), target->Name());
             m_child_action_.push_back(child);
             target->SetParent(child);
+            if (m_logger_) 
+            {
+                m_logger_->trace("  Created: {} → {}", 
+                    sophia::logging::colors::highlight_node(Name()), 
+                    sophia::logging::colors::highlight_node(target->Name()));
+            }
         } else {
             if (m_logger_) m_logger_->error("  Node '{}' generated a null target for action '{}'", Name(), child->Name());
         }
@@ -96,7 +118,12 @@ shared_ptr<Node> Node::Expand()
     // After adding all, we can return the first child's target node for simulation
     // This is typical for an immediate rollout after expansion.
     if (!m_child_action_.empty()) {
-        if (m_logger_ && m_child_action_.front()->Target()) m_logger_->debug("  Node '{}' expanded. First new child is '{}'", Name(), m_child_action_.front()->Target()->Name());
+        if (m_logger_ && m_child_action_.front()->Target()) 
+        {
+            m_logger_->debug("Expanded {} → first child: {}", 
+                sophia::logging::colors::highlight_node(Name()), 
+                sophia::logging::colors::highlight_node(m_child_action_.front()->Target()->Name()));
+        }
         return m_child_action_.front()->Target();
     }
     
@@ -108,8 +135,8 @@ double Node::Rollout()
 {
     if (this->IsTerminalState())
     {
-        if (m_logger_) m_logger_->debug("  Rollout: Node '{}' is terminal. Value: {:.4f}", Name(), this->Value());
-        return this->Value();
+        const double terminal_value = this->Value();
+        return terminal_value;
     }
 
     auto select_strategy = RolloutStrategy();
@@ -125,7 +152,7 @@ double Node::Rollout()
 
     if (actions_for_rollout.empty())
     {
-        if (m_logger_) m_logger_->warn("  Rollout: Node '{}' has no available actions during simulation. Returning 0.0.", Name());
+        if (m_logger_) m_logger_->warn("Rollout: Node '{}' has no available actions during simulation. Returning 0.0.", Name());
         return 0.0; // If no moves, then game might be blocked or draw.
     }
 
@@ -134,24 +161,28 @@ double Node::Rollout()
         selected_action->Generate(); // Ensure the target node exists
         if (auto new_node = selected_action->Target())
         {
-            if (m_logger_) m_logger_->debug("  Rollout: Node '{}' selecting action leading to '{}'", Name(), new_node->Name());
-            return new_node->Rollout();
+            const double reward = new_node->Rollout();
+            return reward;
         }
         else
         {
-            if (m_logger_) m_logger_->error("  Rollout: Action '{}' generated a null target node.", selected_action->Name());
+            if (m_logger_) m_logger_->error("Rollout: Action '{}' generated a null target node.", selected_action->Name());
             return 0.0;
         }
     }
     else
     {
-        if (m_logger_) m_logger_->warn("  Rollout: Rollout strategy failed to select an action from node '{}'. Returning 0.0.", Name());
+        if (m_logger_) m_logger_->warn("Rollout: Rollout strategy failed to select an action from node '{}'. Returning 0.0.", Name());
         return 0.0;
     }
 }
 
 void Node::Backpropagate(const double reward)
 {
+    // Capture before values for logging
+    const unsigned long visit_count_before = m_visit_count_;
+    const double total_reward_before = m_total_reward_;
+    
     if (m_visit_count_ + 1 == 0) // Check for overflow before incrementing (unsigned long max + 1 = 0)
     {
         if (m_logger_) m_logger_->error("Visit count overflow detected for node '{}'", Name());
@@ -169,7 +200,18 @@ void Node::Backpropagate(const double reward)
     m_total_reward_ += reward;
     m_visit_count_++;
 
-    if (m_logger_) m_logger_->debug("  Backpropagating on '{}'. New Total Reward: {:.4f}, New Visit Count: {}", Name(), m_total_reward_, m_visit_count_);
+    if (m_logger_) 
+    {
+        const auto visits_before_str = sophia::logging::colors::highlight_visits(std::format("{}", visit_count_before));
+        const auto visits_after_str = sophia::logging::colors::highlight_visits(std::format("{}", m_visit_count_));
+        const auto reward_before_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", total_reward_before));
+        const auto reward_after_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", m_total_reward_));
+        const auto reward_delta_str = sophia::logging::colors::highlight_reward(std::format("{:.4f}", reward));
+        m_logger_->trace("  {}: visits {}→{} | reward {}→{} (Δ{})", 
+            sophia::logging::colors::highlight_node(Name()), 
+            visits_before_str, visits_after_str, 
+            reward_before_str, reward_after_str, reward_delta_str);
+    }
 
     if (const auto sp = m_parent_action_.lock())
     {
@@ -207,10 +249,12 @@ double Node::UpperConfidenceBound(const int c) const
         return std::numeric_limits<double>::infinity();
     }
 
-    const double value_term = m_total_reward_ / m_visit_count_;
+    const double avg_reward = m_total_reward_ / m_visit_count_;
+    const double value_term = avg_reward;
     const double exploration_term = c * std::sqrt(std::log(static_cast<double>(parent_node->VisitCount())) / m_visit_count_);
+    const double ucb_value = value_term + exploration_term;
     
-    return value_term + exploration_term;
+    return ucb_value;
 }
 
 bool Node::IsLeafNode() const

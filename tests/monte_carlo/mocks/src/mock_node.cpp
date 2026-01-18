@@ -35,7 +35,7 @@ void MockNode::Setup(const vector<shared_ptr<Node>> &node_expansion )
 
     EXPECT_CALL(*this, GetAvailableActions())
         .Times(::testing::AnyNumber())
-        .WillOnce(Return(actions));
+        .WillRepeatedly(Return(actions));
 }
 
 void MockNode::Setup( const double value ) const

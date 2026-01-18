@@ -89,7 +89,6 @@ void Board::SetPosition(const Position &new_position)
     auto placed_state = new_position.State();
     m_tiles_[row][column] = make_shared<Position>(std::pair( row, column ), placed_state);
     last_placed_ = placed_state;
-    if (m_logger_) m_logger_->debug("Set position {} to {}.", new_position.Name(), enums::TileStateToString(placed_state));
 }
 
 Symbol Board::LastPlaced() const
