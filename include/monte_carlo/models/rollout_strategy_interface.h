@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <vector>
-#include <monte_carlo/common_aliases.h> // Centralized action_ptr alias
+#include <monte_carlo/common_aliases.h>
 
 namespace sophia::monte_carlo::models
 {
@@ -16,9 +16,6 @@ namespace sophia::monte_carlo::models
      */
     class RolloutStrategyInterface
     {
-    protected:
-        // Removed using action_ptr = std::shared_ptr<Action>;
-
     public:
         RolloutStrategyInterface() = default;
         virtual ~RolloutStrategyInterface() = default;
@@ -28,7 +25,7 @@ namespace sophia::monte_carlo::models
          * @param actions A vector of shared pointers to the available actions.
          * @return A shared pointer to the selected action.
          */
-        [[nodiscard]] virtual sophia::monte_carlo::action_ptr select_action(std::vector<sophia::monte_carlo::action_ptr> actions) const = 0;
+        [[nodiscard]] virtual action_ptr select_action(std::vector<action_ptr> actions) const = 0;
     };
 }
 

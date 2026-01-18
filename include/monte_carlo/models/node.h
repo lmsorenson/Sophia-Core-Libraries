@@ -18,16 +18,12 @@ namespace sophia::monte_carlo::models
      */
     class Node : public std::enable_shared_from_this<Node>
     {
-    protected:
-        using rollout_strategy_ptr = std::shared_ptr<RolloutStrategyInterface>;
-
     public:
-        // Updated constructor to accept logger
-        explicit Node(std::string name, const sophia::monte_carlo::logger_ptr& logger);
+        explicit Node(std::string name, const logger_ptr& logger);
         virtual ~Node() = default;
 
         /// @brief Sets the parent action that leads to this node.
-        void SetParent(const sophia::monte_carlo::action_ptr& action);
+        void SetParent(const action_ptr& action);
 
         /**
          * @brief Selects the best child action based on the UCB1 formula. (Selection Phase)
@@ -124,4 +120,3 @@ namespace sophia::monte_carlo::models
 }
 
 #endif //NODE_H
-

@@ -6,7 +6,7 @@ using rollout_strategy_ptr = std::shared_ptr<RolloutStrategyInterface>;
 
 template<typename TState, typename TChange>
 NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, const_factory_ptr factory, const logger_ptr& logger)
-    : Node(name, logger) // Pass logger to base Node constructor
+    : Node(name, logger)
     , m_state_(state)
     , m_factory_(factory)
 {

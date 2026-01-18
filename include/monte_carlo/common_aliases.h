@@ -2,8 +2,8 @@
 #define SOPHIA_MONTE_CARLO_COMMON_ALIASES_H
 
 #include <logging/ilogger.h>
-#include <memory> // Required for std::shared_ptr
-#include <monte_carlo/fwd.h> // Centralized forward declarations
+#include <memory>
+#include <monte_carlo/fwd.h>
 
 namespace sophia::monte_carlo
 {
@@ -13,6 +13,7 @@ namespace sophia::monte_carlo
     using const_node_ptr = std::shared_ptr<const models::Node>;
     using action_ptr = std::shared_ptr<models::Action>;
     using const_action_ptr = std::shared_ptr<const models::Action>;
+    using rollout_strategy_ptr = std::shared_ptr<models::RolloutStrategyInterface>;
 }
 
 #endif // SOPHIA_MONTE_CARLO_COMMON_ALIASES_H

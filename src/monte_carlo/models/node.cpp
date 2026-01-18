@@ -4,32 +4,32 @@
 #include <logging/colors.h>
 #include <cmath>
 #include <utility>
-#include <sstream> // For stringstream to format UCB logs
-#include <limits>  // For std::numeric_limits
-#include <format>  // Added for std::format
-#include <monte_carlo/models/action.h> // Required for full definition of Action
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr and action_ptr aliases
+#include <sstream>
+#include <limits>
+#include <format>
+#include <monte_carlo/models/action.h>
+#include <monte_carlo/common_aliases.h>
 
 using sophia::monte_carlo::models::Node;
-// Removed using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::factories::TreeFactoryBase;
+using sophia::monte_carlo::node_ptr;
+using sophia::monte_carlo::action_ptr;
 using std::string;
 using std::shared_ptr;
 using std::vector;
-// Removed using sophia::logging::logger_ptr;
 
-Node::Node(string name, const sophia::monte_carlo::logger_ptr& logger)
+Node::Node(string name, const logger_ptr& logger)
     : m_name_(std::move(name))
     , m_logger_(logger)
 {
 }
 
-void Node::SetParent(const sophia::monte_carlo::action_ptr& action)
+void Node::SetParent(const action_ptr& action)
 {
     m_parent_action_ = action;
 }
 
-sophia::monte_carlo::action_ptr Node::SelectBestAction() const
+action_ptr Node::SelectBestAction() const
 {
     if (m_child_action_.empty())
     {
@@ -37,12 +37,12 @@ sophia::monte_carlo::action_ptr Node::SelectBestAction() const
         return nullptr;
     }
 
-    double best_score = 0; // UCB scores are non-negative, so -1.0 is safe.
-    sophia::monte_carlo::action_ptr best_child = nullptr;
+    double best_score = 0;
+    action_ptr best_child = nullptr;
 
     if (m_logger_)
     {
-        m_logger_->trace("Evaluating actions from {}:", sophia::logging::colors::highlight_node(Name()));
+        m_logger_->trace("Evaluating actions from {}:", logging::colors::highlight_node(Name()));
         for (const auto& child : m_child_action_)
         {
             const double current_score = child->UpperConfidenceBound(2);
@@ -51,14 +51,14 @@ sophia::monte_carlo::action_ptr Node::SelectBestAction() const
                 const double avg_reward = target->VisitCount() > 0 ? target->TotalReward() / target->VisitCount() : 0.0;
                 const std::string avg_str = target->VisitCount() > 0 ? std::format("{:.4f}", avg_reward) : "N/A";
                 const std::string ucb_str = std::isinf(current_score) ? "inf" : std::format("{:.4f}", current_score);
-                const auto visits_str = sophia::logging::colors::highlight_visits(std::format("{}", target->VisitCount()));
-                const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+                const auto visits_str = logging::colors::highlight_visits(std::format("{}", target->VisitCount()));
+                const auto ucb_colored = logging::colors::highlight_ucb(ucb_str);
                 m_logger_->trace("  {} -> {} | visits={} | total={:7.4f} | avg={:6} | UCB={}", 
-                    child->Name(), sophia::logging::colors::highlight_node(target->Name()), 
+                    child->Name(), logging::colors::highlight_node(target->Name()),
                     visits_str, target->TotalReward(), avg_str, ucb_colored);
             } else {
                 const std::string ucb_str = std::isinf(current_score) ? "inf" : std::format("{:.4f}", current_score);
-                const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+                const auto ucb_colored = logging::colors::highlight_ucb(ucb_str);
                 m_logger_->trace("  {} -> (null) | UCB={}", child->Name(), ucb_colored);
             }
         }
@@ -76,16 +76,16 @@ sophia::monte_carlo::action_ptr Node::SelectBestAction() const
     if (m_logger_ && best_child && best_child->Target()) 
     {
         const std::string ucb_str = std::isinf(best_score) ? "inf" : std::format("{:.4f}", best_score);
-        const auto ucb_colored = sophia::logging::colors::highlight_ucb(ucb_str);
+        const auto ucb_colored = logging::colors::highlight_ucb(ucb_str);
         m_logger_->debug("Selected: {} -> {} (UCB={})", 
-            best_child->Name(), sophia::logging::colors::highlight_node(best_child->Target()->Name()), ucb_colored);
+            best_child->Name(), logging::colors::highlight_node(best_child->Target()->Name()), ucb_colored);
     }
     return best_child;
 }
 
-shared_ptr<Node> Node::Expand()
+node_ptr Node::Expand()
 {
-    const vector<sophia::monte_carlo::action_ptr> child_actions = this->GetAvailableActions();
+    const vector<action_ptr> child_actions = this->GetAvailableActions();
     if (child_actions.empty())
     {
         if (m_logger_) m_logger_->info("  Node '{}' has no available actions to expand.", Name());
@@ -100,7 +100,7 @@ shared_ptr<Node> Node::Expand()
     
     for(const auto& child : child_actions)
     {
-        child->Generate(); // Generate the target node if not already
+        child->Generate();
         auto target = child->Target();
         if (target) {
             m_child_action_.push_back(child);
@@ -108,8 +108,8 @@ shared_ptr<Node> Node::Expand()
             if (m_logger_) 
             {
                 m_logger_->trace("  Created: {} → {}", 
-                    sophia::logging::colors::highlight_node(Name()), 
-                    sophia::logging::colors::highlight_node(target->Name()));
+                    logging::colors::highlight_node(Name()),
+                    logging::colors::highlight_node(target->Name()));
             }
         } else {
             if (m_logger_) m_logger_->error("  Node '{}' generated a null target for action '{}'", Name(), child->Name());
@@ -122,8 +122,8 @@ shared_ptr<Node> Node::Expand()
         if (m_logger_ && m_child_action_.front()->Target()) 
         {
             m_logger_->debug("Expanded {} → first child: {}", 
-                sophia::logging::colors::highlight_node(Name()), 
-                sophia::logging::colors::highlight_node(m_child_action_.front()->Target()->Name()));
+                logging::colors::highlight_node(Name()),
+                logging::colors::highlight_node(m_child_action_.front()->Target()->Name()));
         }
         return m_child_action_.front()->Target();
     }
@@ -278,7 +278,7 @@ double Node::TotalReward() const
     return m_total_reward_;
 }
 
-sophia::monte_carlo::action_ptr Node::SelectAction()
+action_ptr Node::SelectAction()
 {
     if (m_child_action_.empty())
     {
@@ -287,7 +287,7 @@ sophia::monte_carlo::action_ptr Node::SelectAction()
     }
     
     // Select the child action that has been visited most often (exploitation)
-    sophia::monte_carlo::action_ptr best_child = nullptr;
+    action_ptr best_child = nullptr;
     int max_visits = -1;
 
     if (m_logger_) {

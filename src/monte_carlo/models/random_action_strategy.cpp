@@ -1,20 +1,19 @@
 #include <monte_carlo/models/random_rollout_strategy.h>
 #include <random>
-#include <monte_carlo/models/action.h> // Required for full definition of Action
-#include <monte_carlo/common_aliases.h> // Centralized aliases
+#include <monte_carlo/models/action.h>
+#include <monte_carlo/common_aliases.h>
 
 using sophia::monte_carlo::models::RandomRolloutStrategy;
-// Removed using sophia::monte_carlo::models::Action;
-using std::shared_ptr; // Keep as shared_ptr is a standard library type
-using std::vector; // Keep as vector is a standard library type
-// Removed using sophia::logging::logger_ptr; // Now using sophia::monte_carlo::logger_ptr
+using sophia::monte_carlo::action_ptr;
+using std::shared_ptr;
+using std::vector;
 
-RandomRolloutStrategy::RandomRolloutStrategy(const sophia::monte_carlo::logger_ptr& logger)
+RandomRolloutStrategy::RandomRolloutStrategy(const logger_ptr& logger)
 : m_logger_(logger)
 {
 }
 
-sophia::monte_carlo::action_ptr RandomRolloutStrategy::select_action(std::vector<sophia::monte_carlo::action_ptr> actions) const
+action_ptr RandomRolloutStrategy::select_action(std::vector<action_ptr> actions) const
 {
     if (actions.empty())
     {

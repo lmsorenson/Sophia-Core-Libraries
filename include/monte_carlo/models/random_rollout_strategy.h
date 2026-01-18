@@ -22,7 +22,7 @@ namespace sophia::monte_carlo::models
          * @brief Constructs a RandomRolloutStrategy.
          * @param logger The logger instance for the strategy to use.
          */
-        explicit RandomRolloutStrategy(const sophia::monte_carlo::logger_ptr& logger);
+        explicit RandomRolloutStrategy(const logger_ptr& logger);
 
         /**
          * @brief Selects a random action from a vector of available actions.
@@ -32,7 +32,7 @@ namespace sophia::monte_carlo::models
         [[nodiscard]] action_ptr select_action(std::vector<action_ptr> actions) const override;
 
     protected:
-        sophia::monte_carlo::logger_ptr m_logger_; // Member to hold the logger instance
+        logger_ptr m_logger_; // Member to hold the logger instance
     };
 }
 
