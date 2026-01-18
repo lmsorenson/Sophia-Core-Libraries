@@ -4,8 +4,7 @@
 
 using sophia::monte_carlo::tic_tac_toe::models::Player;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
-using sophia::monte_carlo::tic_tac_toe::models::Board; // Added for Value method
-using sophia::logging::logger_ptr; // Added using directive
+using sophia::monte_carlo::tic_tac_toe::models::Board;
 
 Player::Player(const Symbol symbol, const logger_ptr& logger)
 : m_player_symbol_(symbol)

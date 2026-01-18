@@ -3,7 +3,7 @@
 using sophia::monte_carlo::models::ActionBase;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::models::RolloutStrategyInterface;
-using node_ptr = std::shared_ptr<Node>;
+using sophia::monte_carlo::node_ptr;
 
 template<typename TState, typename TChange>
 ActionBase<TState, TChange>::ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory, const logger_ptr& logger)

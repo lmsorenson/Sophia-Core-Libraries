@@ -3,7 +3,6 @@
 using sophia::monte_carlo::models::NodeBase;
 using sophia::monte_carlo::models::RolloutStrategyInterface;
 using rollout_strategy_ptr = std::shared_ptr<RolloutStrategyInterface>;
-using sophia::logging::logger_ptr; // Added using directive
 
 template<typename TState, typename TChange>
 NodeBase<TState, TChange>::NodeBase(const std::string &name, TState state, const_factory_ptr factory, const logger_ptr& logger)

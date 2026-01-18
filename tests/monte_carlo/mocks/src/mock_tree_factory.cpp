@@ -13,7 +13,6 @@ using sophia::monte_carlo::models::RolloutStrategyInterface;
 using std::shared_ptr;
 using std::make_shared;
 using std::string;
-using sophia::logging::logger_ptr; // Using directive for logger_ptr
 
 
 shared_ptr<Node> MockTreeFactory::CreateNode(string name) const

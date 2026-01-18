@@ -15,7 +15,6 @@ using std::make_shared;
 using std::shared_ptr;
 using std::vector;
 using std::pair;
-using sophia::logging::logger_ptr; // Added for logger_ptr
 
 Board::Board(const logger_ptr& logger)
 : m_logger_(logger)

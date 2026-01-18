@@ -4,13 +4,14 @@
 #include <mock_node.h>
 #include <logging/console_logger.h>
 #include <logging/ilogger.h>
+#include <monte_carlo/models/action.h> // Required for full definition of Action
+#include <monte_carlo/common_aliases.h> // For action_ptr, const_action_ptr, logger_ptr
 
 namespace sophia::monte_carlo::tree_search_algorithm_tests
 {
     using mocks::MockNode;
     using mocks::MockTreeFactory;
     using models::Node;
-    using models::Action;
     using std::dynamic_pointer_cast;
     using std::shared_ptr;
     using std::make_shared;
@@ -43,7 +44,7 @@ namespace sophia::monte_carlo::tree_search_algorithm_tests
 
         // the tree starts with two actions?
         s0->Expand();
-        const shared_ptr<Action> best_decision = MonteCarloTreeSearch::run(s0, 4, test_logger);
+        const action_ptr best_decision = MonteCarloTreeSearch::run(s0, 4, test_logger);
 
         auto name = best_decision->Name();
 

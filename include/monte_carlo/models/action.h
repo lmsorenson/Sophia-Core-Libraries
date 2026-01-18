@@ -2,12 +2,10 @@
 #define ACTION_H
 
 #include <memory>
-#include <ostream>
+#include <monte_carlo/common_aliases.h>
 
 namespace sophia::monte_carlo::models
 {
-    class Node;
-
     /**
      * @brief Represents an action that can be taken from a specific state (Node) in the search tree.
      *
@@ -16,9 +14,6 @@ namespace sophia::monte_carlo::models
      */
     class Action : public std::enable_shared_from_this<Action>
     {
-    protected:
-        using node_ptr = std::shared_ptr<Node>;
-
     public:
         Action() = default;
         virtual ~Action() = default;

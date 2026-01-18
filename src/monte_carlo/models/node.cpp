@@ -1,5 +1,4 @@
 #include <monte_carlo/models/node.h>
-#include <monte_carlo/models/action.h>
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <logging/colors.h>
@@ -8,27 +7,29 @@
 #include <sstream> // For stringstream to format UCB logs
 #include <limits>  // For std::numeric_limits
 #include <format>  // Added for std::format
+#include <monte_carlo/models/action.h> // Required for full definition of Action
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr and action_ptr aliases
 
 using sophia::monte_carlo::models::Node;
-using sophia::monte_carlo::models::Action;
+// Removed using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::string;
 using std::shared_ptr;
 using std::vector;
-using sophia::logging::logger_ptr; // Added using directive
+// Removed using sophia::logging::logger_ptr;
 
-Node::Node(string name, const logger_ptr& logger)
+Node::Node(string name, const sophia::monte_carlo::logger_ptr& logger)
     : m_name_(std::move(name))
     , m_logger_(logger)
 {
 }
 
-void Node::SetParent(const std::shared_ptr<Action>& action)
+void Node::SetParent(const sophia::monte_carlo::action_ptr& action)
 {
     m_parent_action_ = action;
 }
 
-std::shared_ptr<Action> Node::SelectBestAction() const
+sophia::monte_carlo::action_ptr Node::SelectBestAction() const
 {
     if (m_child_action_.empty())
     {
@@ -37,7 +38,7 @@ std::shared_ptr<Action> Node::SelectBestAction() const
     }
 
     double best_score = 0; // UCB scores are non-negative, so -1.0 is safe.
-    shared_ptr<Action> best_child = nullptr;
+    sophia::monte_carlo::action_ptr best_child = nullptr;
 
     if (m_logger_)
     {
@@ -84,7 +85,7 @@ std::shared_ptr<Action> Node::SelectBestAction() const
 
 shared_ptr<Node> Node::Expand()
 {
-    const vector<shared_ptr<Action>> child_actions = this->GetAvailableActions();
+    const vector<sophia::monte_carlo::action_ptr> child_actions = this->GetAvailableActions();
     if (child_actions.empty())
     {
         if (m_logger_) m_logger_->info("  Node '{}' has no available actions to expand.", Name());
@@ -146,7 +147,7 @@ double Node::Rollout()
         return 0.0; // Or throw, depending on error handling policy
     }
 
-    vector<shared_ptr<Action>> actions_for_rollout;
+    vector<sophia::monte_carlo::action_ptr> actions_for_rollout;
     // In rollout, we should typically consider all possible actions, not just sampled children
     actions_for_rollout = this->GetAvailableActions();
 
@@ -277,7 +278,7 @@ double Node::TotalReward() const
     return m_total_reward_;
 }
 
-std::shared_ptr<Action> Node::SelectAction()
+sophia::monte_carlo::action_ptr Node::SelectAction()
 {
     if (m_child_action_.empty())
     {
@@ -286,7 +287,7 @@ std::shared_ptr<Action> Node::SelectAction()
     }
     
     // Select the child action that has been visited most often (exploitation)
-    shared_ptr<Action> best_child = nullptr;
+    sophia::monte_carlo::action_ptr best_child = nullptr;
     int max_visits = -1;
 
     if (m_logger_) {

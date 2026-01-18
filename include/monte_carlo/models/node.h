@@ -4,12 +4,11 @@
 #include <monte_carlo/models/rollout_strategy_interface.h>
 #include <vector>
 #include <memory>
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
+#include <monte_carlo/common_aliases.h>
+#include <monte_carlo/fwd.h>
 
 namespace sophia::monte_carlo::models
 {
-    class Action;
-
     /**
      * @brief Represents a node in the Monte Carlo Search Tree. Each node corresponds to a state in the problem space.
      *
@@ -21,9 +20,6 @@ namespace sophia::monte_carlo::models
     {
     protected:
         using rollout_strategy_ptr = std::shared_ptr<RolloutStrategyInterface>;
-        using action_ref = std::weak_ptr<Action>;
-        using action_ptr = std::shared_ptr<Action>;
-        using node_ptr = std::shared_ptr<Node>;
 
     public:
         // Updated constructor to accept logger
@@ -31,7 +27,7 @@ namespace sophia::monte_carlo::models
         virtual ~Node() = default;
 
         /// @brief Sets the parent action that leads to this node.
-        void SetParent(const action_ptr& action);
+        void SetParent(const sophia::monte_carlo::action_ptr& action);
 
         /**
          * @brief Selects the best child action based on the UCB1 formula. (Selection Phase)
@@ -67,7 +63,7 @@ namespace sophia::monte_carlo::models
         [[nodiscard]] std::string Name() const;
 
         /**
-         * @brief Calculates the Upper Confidence Bound (UCB1) for this node.
+         * @brief Calculates the Upper Confidence Bound (UCB1) for this node..
          * This is used in the selection phase to balance exploration and exploitation.
          * @param c The exploration parameter.
          * @return The UCB1 value.
@@ -108,7 +104,7 @@ namespace sophia::monte_carlo::models
         virtual rollout_strategy_ptr RolloutStrategy() const = 0;
 
         /// @brief A weak pointer to the parent action of this node.
-        action_ref m_parent_action_;
+        std::weak_ptr<Action> m_parent_action_;
 
         /// @brief A vector of shared pointers to the child actions of this node.
         std::vector<action_ptr> m_child_action_;
@@ -119,9 +115,8 @@ namespace sophia::monte_carlo::models
         /// @brief The total reward accumulated from simulations passing through this node.
         double m_total_reward_ = 0;
 
-    protected: // Changed to protected as per common practice for member vars that need to be accessed by derived classes
-        // Member to hold the logger instance, injected via constructor
-        sophia::monte_carlo::logger_ptr m_logger_;
+    protected:
+        logger_ptr m_logger_;
 
     private:
         std::string m_name_;

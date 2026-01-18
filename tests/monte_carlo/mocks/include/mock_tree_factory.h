@@ -2,19 +2,14 @@
 #define MOCK_TREE_FACTORY_H
 
 #include <monte_carlo/factories/tree_factory_interface.h>
-#include <logging/ilogger.h> // Added include for ILogger
+#include <logging/ilogger.h>
+#include <monte_carlo/common_aliases.h>
 
-namespace sophia::monte_carlo::models
-{
-    class Node;
-}
 
 namespace sophia::monte_carlo::mocks
 {
-    using models::Node;
     using models::RolloutStrategyInterface;
     using factories::TreeFactoryBase;
-    using sophia::logging::logger_ptr; // Added using directive
 
     class MockRolloutStrategy;
 

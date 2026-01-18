@@ -12,7 +12,6 @@ using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using std::shared_ptr;
 using std::pair;
-using sophia::logging::logger_ptr;
 
 Human::Human(const Symbol symbol, std::function<std::string()> get_move_input_callback, const logger_ptr& logger)
     : Player(symbol, logger) // Pass logger to base Player constructor

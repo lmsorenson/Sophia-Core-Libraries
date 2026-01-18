@@ -8,6 +8,7 @@
 #include <monte_carlo/factories/tree_factory_interface.h>
 
 #include "node_base.h"
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::models
 {
@@ -29,7 +30,7 @@ namespace sophia::monte_carlo::models
         using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
 
     public:
-        ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory, const logger_ptr& logger);
+        ActionBase(const node_base_ptr &state, TChange change, const_factory_ptr factory, const sophia::monte_carlo::logger_ptr& logger);
 
         [[nodiscard]] node_ptr Source() const override;
         [[nodiscard]] node_ptr Target() const override;

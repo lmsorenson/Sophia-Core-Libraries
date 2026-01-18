@@ -9,7 +9,6 @@ using sophia::monte_carlo::tic_tac_toe::models::const_player_ptr;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using std::make_shared;
 using std::shared_ptr;
-using sophia::logging::logger_ptr; // Added using directive
 
 Game::Game(const logger_ptr& logger)
 : m_logger_(logger)

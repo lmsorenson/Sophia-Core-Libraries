@@ -9,8 +9,6 @@
 
 namespace sophia::monte_carlo::tic_tac_toe::factories
 {
-    using sophia::logging::logger_ptr; // Added using directive
-
     /**
      * @class TicTacToeFactory
      * @brief Creates simulation nodes and actions for a Tic Tac Toe game.

@@ -6,6 +6,7 @@
 
 #include <tic_tac_toe/models/game_state.h>
 #include <tic_tac_toe/models/position.h>
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
@@ -26,7 +27,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param factory A shared pointer to the Tree Factory.
          */
         explicit Move(const std::shared_ptr<NodeBase<GameState, Position>> &source, Position change,
-                      std::shared_ptr<const TreeFactoryBase<GameState, Position>> factory, const logger_ptr& logger);
+                      std::shared_ptr<const TreeFactoryBase<GameState, Position>> factory, const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * @brief The Name of the move.

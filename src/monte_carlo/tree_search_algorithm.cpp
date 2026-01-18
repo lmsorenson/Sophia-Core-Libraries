@@ -1,20 +1,21 @@
 #include <monte_carlo/tree_search_algorithm.h>
 #include <monte_carlo/models/node.h>
-#include <monte_carlo/models/action.h>
 #include <logging/colors.h>
 #include <iomanip> // For std::setw, std::left
 #include <cmath>   // For std::isinf
+#include <monte_carlo/common_aliases.h> // Centralized action_ptr and logger_ptr aliases
+#include <monte_carlo/models/action.h> // Required for full definition of Action
 
 using sophia::monte_carlo::MonteCarloTreeSearch;
 using sophia::monte_carlo::models::Node;
-using sophia::monte_carlo::models::Action;
-using sophia::logging::logger_ptr;
+// Removed using sophia::monte_carlo::models::Action;
+// Removed using sophia::logging::logger_ptr;
 using std::shared_ptr;
 
-std::shared_ptr<Action> MonteCarloTreeSearch::run(
+sophia::monte_carlo::action_ptr MonteCarloTreeSearch::run(
     const std::shared_ptr<models::Node> &root,
     int iterations,
-    const logger_ptr& logger)
+    const sophia::monte_carlo::logger_ptr& logger)
 {
     if (!root)
     {

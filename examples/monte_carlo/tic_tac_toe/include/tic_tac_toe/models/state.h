@@ -17,6 +17,9 @@ namespace sophia::monte_carlo::tic_tac_toe::models
      */
     class State : public NodeBase<GameState, Position>
     {
+    protected:
+        using NodeBase<GameState, Position>::const_factory_ptr; // Bring const_factory_ptr into scope
+
     public:
         /**
          * Creates an instance of a Tic Tac Toe State.
@@ -43,7 +46,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A vector of shared pointers to Actions
          * that can be applied at this given state of play.
          */
-        [[nodiscard]] std::vector<action_ptr> GetAvailableActions() override;
+        [[nodiscard]] std::vector<sophia::monte_carlo::action_ptr> GetAvailableActions() override;
 
         /**
          * @brief Determines if this state is the end of the Game.
@@ -65,7 +68,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param action_name A 2-letter name for a move.
          * @return The action represented by the action name.
          */
-        action_ptr SelectAction(std::string action_name) override;
+        sophia::monte_carlo::action_ptr SelectAction(std::string action_name) override;
 
         /**
          * Prints the board at this state of the Game to the

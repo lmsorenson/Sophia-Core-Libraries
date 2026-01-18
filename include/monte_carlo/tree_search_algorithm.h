@@ -2,7 +2,7 @@
 #define TREE_SEARCH_ALGORITHM_H
 
 #include <monte_carlo/models/node.h>
-#include <logging/ilogger.h>
+#include <monte_carlo/common_aliases.h> // Centralized action_ptr and logger_ptr aliases
 
 namespace sophia::monte_carlo
 {
@@ -35,13 +35,13 @@ namespace sophia::monte_carlo
          * @param logger An optional logger instance to trace the execution of the algorithm.
          * @return A shared pointer to the `Action` determined to be the best decision from the root state.
          */
-        static std::shared_ptr<models::Action> run(
+        static sophia::monte_carlo::action_ptr run(
 
-            const std::shared_ptr<models::Node>& root,
+            const node_ptr& root,
 
             int iterations,
 
-            const logging::logger_ptr& logger = nullptr);
+            const sophia::monte_carlo::logger_ptr& logger = nullptr);
 
     };
 }

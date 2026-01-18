@@ -44,9 +44,9 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         void Update(std::string message) override;
 
     private:
-        std::shared_ptr<monte_carlo::models::Node> node_;
+        node_ptr node_;
         int iterations_;
-        sophia::monte_carlo::logger_ptr m_logger_;
+        logger_ptr m_logger_;
     };
 }
 

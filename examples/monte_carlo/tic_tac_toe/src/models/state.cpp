@@ -4,11 +4,13 @@
 #include <utility>
 #include <tic_tac_toe/models/bot.h>
 #include <tic_tac_toe/models/human.h>
+#include <monte_carlo/models/action.h> // Required for full definition of Action
+#include <monte_carlo/common_aliases.h> // Centralized logger_ptr and action_ptr aliases
 
 using sophia::monte_carlo::tic_tac_toe::models::State;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::models::Node;
-using sophia::monte_carlo::models::Action;
+// Removed using sophia::monte_carlo::models::Action;
 using std::shared_ptr;
 using std::vector;
 using std::string;
@@ -24,20 +26,20 @@ Symbol Alternate(const Symbol last_placed)
     }
 }
 
-State::State(const string &name, const shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory, const logger_ptr& logger)
+State::State(const string &name, const shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory, const sophia::monte_carlo::logger_ptr& logger)
     : NodeBase(name, GameState(nullptr, nullptr), tree_factory, logger)
 {
 }
 
 State::State(const std::string &name, GameState game_state,
-    const std::shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory, const logger_ptr& logger)
+    const std::shared_ptr<const TreeFactoryBase<GameState, Position>> &tree_factory, const sophia::monte_carlo::logger_ptr& logger)
 : NodeBase(name, std::move(game_state), tree_factory, logger)
 {
 }
 
-vector<shared_ptr<Action>> State::GetAvailableActions()
+std::vector<sophia::monte_carlo::action_ptr> State::GetAvailableActions()
 {
-    vector<shared_ptr<Action>> actions;
+    std::vector<sophia::monte_carlo::action_ptr> actions;
 
     const auto open_positions = m_state_.GetOpenPositions();
     const auto last_placed = m_state_.LastPlaced();
@@ -79,7 +81,7 @@ double State::Value() const
     return you->Value(board);
 }
 
-Node::action_ptr State::SelectAction(const std::string action_name)
+sophia::monte_carlo::action_ptr State::SelectAction(const std::string action_name)
 {
     std::string desired_name = action_name;
     for (char &c : desired_name)
@@ -99,7 +101,7 @@ Node::action_ptr State::SelectAction(const std::string action_name)
 
     // 2. If not found in existing children, generate all possible actions for the current state.
     //    These will be new action/node pairs.
-    const vector<action_ptr> newly_generated_actions = GetAvailableActions();
+    const std::vector<sophia::monte_carlo::action_ptr> newly_generated_actions = GetAvailableActions();
 
     for (const auto& new_action : newly_generated_actions)
     {
