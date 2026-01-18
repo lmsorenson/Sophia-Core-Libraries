@@ -7,13 +7,13 @@ using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::Player;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 
-GameState::GameState(const_player_ptr you, std::shared_ptr<const Board> board)
+GameState::GameState(::tic_tac_toe::const_player_ptr you, std::shared_ptr<const Board> board)
     : m_you_(std::move(you))
     , m_board_(std::move(board))
 {
 }
 
-GameState::GameState(const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed)
+GameState::GameState(::tic_tac_toe::const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed)
     : m_you_(std::move(you))
     , m_board_(std::move(board))
 {

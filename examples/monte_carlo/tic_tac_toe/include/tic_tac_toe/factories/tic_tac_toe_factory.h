@@ -27,7 +27,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          * @param you a shared pointer to the player that owns the simulation.
          * @param logger the logger for the factory to use.
          */
-        explicit TicTacToeFactory(models::const_player_ptr you, const logger_ptr& logger);
+        explicit TicTacToeFactory(::tic_tac_toe::const_player_ptr you, const logger_ptr& logger);
         ~TicTacToeFactory() override = default;
 
         /**
@@ -60,7 +60,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
         [[nodiscard]] rollout_strategy_ptr CreateStrategy() const override;
 
     private:
-        models::const_player_ptr you_;
+        ::tic_tac_toe::const_player_ptr you_;
         logger_ptr m_logger_; // Member to hold the logger instance
     };
 }

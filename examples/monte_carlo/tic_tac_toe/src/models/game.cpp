@@ -5,7 +5,7 @@
 #include <logging/ilogger.h> // Added include for logger_ptr
 
 using sophia::monte_carlo::tic_tac_toe::models::Game;
-using sophia::monte_carlo::tic_tac_toe::models::const_player_ptr;
+using ::tic_tac_toe::const_player_ptr;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using std::make_shared;
 using std::shared_ptr;

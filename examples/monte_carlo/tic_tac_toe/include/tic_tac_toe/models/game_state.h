@@ -19,7 +19,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param you The owning Player of the state.
          * @param board The board info in the given state.
          */
-        explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board);
+        explicit GameState(::tic_tac_toe::const_player_ptr you, std::shared_ptr<const Board> board);
 
         /**
          * Creates an instance of GameState
@@ -27,7 +27,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param board The board info in the given state.
          * @param last_placed The Symbol last placed.
          */
-        explicit GameState(const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed);
+        explicit GameState(::tic_tac_toe::const_player_ptr you, std::shared_ptr<const Board> board, enums::Symbol last_placed);
 
         /**
          * @brief Creates a copy of the GameState with the given move applied.

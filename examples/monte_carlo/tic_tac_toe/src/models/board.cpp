@@ -8,7 +8,7 @@
 using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::models::Player;
-using sophia::monte_carlo::tic_tac_toe::models::player_ptr;
+using ::tic_tac_toe::player_ptr;
 using sophia::monte_carlo::tic_tac_toe::enums::Symbol;
 using sophia::monte_carlo::tic_tac_toe::enums::Alignment;
 using std::make_shared;

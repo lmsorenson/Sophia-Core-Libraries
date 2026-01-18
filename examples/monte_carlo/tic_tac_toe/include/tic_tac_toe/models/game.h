@@ -43,7 +43,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Gets the current active player.
          * @return A shared pointer to the active player of the game.
          */
-        [[nodiscard]] const_player_ptr active_player() const;
+        [[nodiscard]] ::tic_tac_toe::const_player_ptr active_player() const;
 
         /**
          * @brief Applies a move to the Tic Tac Toe game.

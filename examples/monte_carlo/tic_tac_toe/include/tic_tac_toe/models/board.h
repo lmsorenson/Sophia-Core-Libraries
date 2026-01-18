@@ -5,15 +5,12 @@
 #include <tic_tac_toe/models/player.h>
 #include <tic_tac_toe/models/position.h>
 #include <tic_tac_toe/enums/alignment.h>
-#include <memory>
-#include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
+#include "tic_tac_toe/common_aliases.h" // Centralized tic_tac_toe aliases
 
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
     class Position;
-    using player_ptr = std::shared_ptr<Player>;
-    using const_player_ptr = std::shared_ptr<const Player>;
 
     /**
      * @class Board
@@ -26,7 +23,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Creates a default Tic Tac Toe board.
          * @param logger The logger instance for the board to use.
          */
-        explicit Board(const logger_ptr& logger);
+        explicit Board(const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * @brief creates a copy of a Tic Tac Toe board.

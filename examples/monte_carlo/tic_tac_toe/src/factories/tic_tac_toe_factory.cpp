@@ -12,14 +12,11 @@ using sophia::monte_carlo::tic_tac_toe::models::Board;
 using sophia::monte_carlo::tic_tac_toe::models::GameState;
 using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::tic_tac_toe::models::Move;
-// Removed using sophia::monte_carlo::models::Node;
-// Removed using sophia::monte_carlo::models::Action;
-// Removed using sophia::monte_carlo::models::RolloutStrategyInterface;
-using sophia::monte_carlo::models::RandomRolloutStrategy; // Keep using for concrete class
+using sophia::monte_carlo::models::RandomRolloutStrategy;
 using std::make_shared;
-using std::shared_ptr; // Keep for standard library type
+using std::shared_ptr;
 
-TicTacToeFactory::TicTacToeFactory(models::const_player_ptr you, const sophia::monte_carlo::logger_ptr& logger)
+TicTacToeFactory::TicTacToeFactory(::tic_tac_toe::const_player_ptr you, const sophia::monte_carlo::logger_ptr& logger)
 : you_(std::move(you))
 , m_logger_(logger)
 {
