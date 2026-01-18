@@ -5,11 +5,13 @@
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <tic_tac_toe/models/game_state.h>
 #include <monte_carlo/common_aliases.h> // Centralized logger_ptr alias
+#include <monte_carlo/fwd.h> // Centralized forward declarations
 
 namespace sophia::monte_carlo::tic_tac_toe::models
 {
     using monte_carlo::factories::TreeFactoryBase;
     using monte_carlo::models::Action;
+    using sophia::monte_carlo::models::NodeBase; // Import NodeBase into current namespace
 
     /**
      * @class State
@@ -18,7 +20,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     class State : public NodeBase<GameState, Position>
     {
     protected:
-        using NodeBase<GameState, Position>::const_factory_ptr; // Bring const_factory_ptr into scope
+        // Removed using NodeBase<GameState, Position>::const_factory_ptr;
 
     public:
         /**
@@ -28,7 +30,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * be used to create the following states.
          * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, const const_factory_ptr& tree_factory, const sophia::monte_carlo::logger_ptr& logger);
+        explicit State(const std::string& name, const sophia::monte_carlo::const_factory_ptr<GameState, Position>& tree_factory, const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * Creates an instance of a Tic Tac Toe State.
@@ -38,7 +40,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * be used to create the following states.
          * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, GameState game_state, const const_factory_ptr& tree_factory, const sophia::monte_carlo::logger_ptr& logger);
+        explicit State(const std::string& name, GameState game_state, const sophia::monte_carlo::const_factory_ptr<GameState, Position>& tree_factory, const sophia::monte_carlo::logger_ptr& logger);
 
         /**
          * @brief Gets all available actions that can be

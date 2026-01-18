@@ -14,6 +14,15 @@ namespace sophia::monte_carlo
     using action_ptr = std::shared_ptr<models::Action>;
     using const_action_ptr = std::shared_ptr<const models::Action>;
     using rollout_strategy_ptr = std::shared_ptr<models::RolloutStrategyInterface>;
+
+    template<typename TState, typename TChange>
+    using node_base_ptr = std::shared_ptr<models::NodeBase<TState, TChange>>;
+
+    template<typename TState, typename TChange>
+    using node_base_ref = std::weak_ptr<models::NodeBase<TState, TChange>>;
+
+    template<typename TState, typename TChange>
+    using const_factory_ptr = std::shared_ptr<const factories::TreeFactoryBase<TState, TChange>>;
 }
 
 #endif // SOPHIA_MONTE_CARLO_COMMON_ALIASES_H

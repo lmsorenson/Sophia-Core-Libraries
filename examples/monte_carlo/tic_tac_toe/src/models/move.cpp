@@ -6,13 +6,19 @@
 #include <tic_tac_toe/enums/symbol.h> // Added for TileStateToString
 
 using sophia::monte_carlo::tic_tac_toe::models::Move;
+using sophia::monte_carlo::tic_tac_toe::enums::TileStateToString;
+using sophia::monte_carlo::tic_tac_toe::models::GameState;
+using sophia::monte_carlo::tic_tac_toe::models::Position;
 using sophia::monte_carlo::models::Action;
 using sophia::monte_carlo::models::Node;
 using sophia::monte_carlo::factories::TreeFactoryBase;
 using std::shared_ptr;
-using sophia::monte_carlo::tic_tac_toe::enums::TileStateToString; // Added for TileStateToString
 
-Move::Move(const node_base_ptr &source, const Position change, const_factory_ptr factory, const logger_ptr& logger)
+Move::Move(
+    const node_base_ptr<GameState, Position> &source,
+    const Position change,
+    const_factory_ptr<GameState, Position> factory,
+    const logger_ptr& logger)
 : ActionBase(source, change, std::move(factory), logger)
 {
 

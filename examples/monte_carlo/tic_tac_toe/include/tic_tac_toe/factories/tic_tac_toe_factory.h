@@ -5,7 +5,6 @@
 #include <tic_tac_toe/models/position.h>
 #include <monte_carlo/factories/tree_factory_interface.h>
 #include <monte_carlo/models/node_base.h>
-#include <logging/ilogger.h> // Added include for ILogger
 
 namespace sophia::monte_carlo::tic_tac_toe::factories
 {
@@ -52,7 +51,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          * @param change the change being applied to the source node.
          * @returns a shared pointer to a Node
          */
-        [[nodiscard]] action_ptr CreateAction(std::shared_ptr<NodeBase<models::GameState, models::Position>> node, models::Position change) const override;
+        [[nodiscard]] action_ptr CreateAction(std::shared_ptr<monte_carlo::models::NodeBase<models::GameState, models::Position>> node, models::Position change) const override;
 
         /**
          * @brief Creates a new Strategy.
