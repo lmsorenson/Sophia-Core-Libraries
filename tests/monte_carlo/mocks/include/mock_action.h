@@ -20,7 +20,7 @@ namespace sophia::monte_carlo::mocks
     class MockAction : public ActionBase<bool, int>
     {
     public:
-        explicit MockAction(shared_ptr<NodeBase<bool, int>> source,
+        explicit MockAction(node_base_ptr<bool, int> source,
         const std::shared_ptr<const TreeFactoryBase<bool, int>> &factory);
         ~MockAction() override = default;
 
