@@ -20,29 +20,23 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a8a54f7169aeffa93f844db4c068794a7}{Heuristic\+Rollout\+Strategy}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} current\+\_\+game\+\_\+state, const logger\+\_\+ptr \&logger)
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a8a54f7169aeffa93f844db4c068794a7}{Heuristic\+Rollout\+Strategy}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} current\+\_\+game\+\_\+state, const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy}{Heuristic\+Rollout\+Strategy}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_acd0aab985e581776954d623eca677903}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$ actions) const override
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a3cb6b9da614bfcb52c824b6e7b08ab22}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ actions) const override
 \begin{DoxyCompactList}\small\item\em Selects an action from a vector of available actions based on heuristic rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=default
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=default
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a9026905b0dfb69900fe567c857f4cabc}{m\+\_\+current\+\_\+game\+\_\+state\+\_\+}}
 \item 
-logger\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_aa9ff91f10dc0b99c7756c53ddfbd5520}{m\+\_\+logger\+\_\+}}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_aa9ff91f10dc0b99c7756c53ddfbd5520}{m\+\_\+logger\+\_\+}}
 \end{DoxyCompactItemize}
 
 
@@ -56,7 +50,7 @@ This strategy attempts to select the best action based on simple heuristic rules
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy@{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy}!HeuristicRolloutStrategy@{HeuristicRolloutStrategy}}
 \index{HeuristicRolloutStrategy@{HeuristicRolloutStrategy}!sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy@{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy}}
 \doxysubsubsection{\texorpdfstring{HeuristicRolloutStrategy()}{HeuristicRolloutStrategy()}}
-{\footnotesize\ttfamily Heuristic\+Rollout\+Strategy\+::\+Heuristic\+Rollout\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}}]{current\+\_\+game\+\_\+state,  }\item[{const logger\+\_\+ptr \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily Heuristic\+Rollout\+Strategy\+::\+Heuristic\+Rollout\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1GameState}{Game\+State}}}]{current\+\_\+game\+\_\+state,  }\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
@@ -72,11 +66,11 @@ Constructs a \doxylink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_acd0aab985e581776954d623eca677903}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_acd0aab985e581776954d623eca677903} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a3cb6b9da614bfcb52c824b6e7b08ab22}\label{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a3cb6b9da614bfcb52c824b6e7b08ab22} 
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy@{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy}!select\_action@{select\_action}}
 \index{select\_action@{select\_action}!sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy@{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy}}
 \doxysubsubsection{\texorpdfstring{select\_action()}{select\_action()}}
-{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ Heuristic\+Rollout\+Strategy\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} Heuristic\+Rollout\+Strategy\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -107,7 +101,7 @@ Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStra
 \index{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy@{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy}!m\_logger\_@{m\_logger\_}}
 \index{m\_logger\_@{m\_logger\_}!sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy@{sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy}}
 \doxysubsubsection{\texorpdfstring{m\_logger\_}{m\_logger\_}}
-{\footnotesize\ttfamily logger\+\_\+ptr sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Heuristic\+Rollout\+Strategy\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Heuristic\+Rollout\+Strategy\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

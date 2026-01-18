@@ -9,7 +9,7 @@ digraph "sophia::monte_carlo::MonteCarloTreeSearch"
 <HR/>
 <TR><TD COLSPAN="2" CELLPADDING="1" CELLSPACING="0">&nbsp;</TD></TR>
 <HR/>
-<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">static std::shared_ptr&lt; models<BR ALIGN="LEFT"/>::Action &gt; run(const std::shared<BR ALIGN="LEFT"/>_ptr&lt; models::Node &gt; &amp;root, int<BR ALIGN="LEFT"/> iterations, const logging::logger<BR ALIGN="LEFT"/>_ptr &amp;logger=nullptr)<BR ALIGN="LEFT"/></TD></TR>
+<TR><TD VALIGN="top" CELLPADDING="1" CELLSPACING="0">+</TD><TD VALIGN="top" ALIGN="LEFT" CELLPADDING="1" CELLSPACING="0">static sophia::monte_carlo<BR ALIGN="LEFT"/>::action_ptr run(const node<BR ALIGN="LEFT"/>_ptr &amp;root, int iterations, const<BR ALIGN="LEFT"/> sophia::monte_carlo::logger_ptr<BR ALIGN="LEFT"/> &amp;logger=nullptr)<BR ALIGN="LEFT"/></TD></TR>
 </TABLE>>
 ,height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
 }

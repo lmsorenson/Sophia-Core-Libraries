@@ -1,0 +1,39 @@
+\doxysection{include/monte\+\_\+carlo/common\+\_\+aliases.h File Reference}
+\hypertarget{include_2monte__carlo_2common__aliases_8h}{}\label{include_2monte__carlo_2common__aliases_8h}\index{include/monte\_carlo/common\_aliases.h@{include/monte\_carlo/common\_aliases.h}}
+{\ttfamily \#include $<$logging/ilogger.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$monte\+\_\+carlo/fwd.\+h$>$}\newline
+Include dependency graph for common\+\_\+aliases.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesophia}{sophia}}
+\item 
+namespace \mbox{\hyperlink{namespacesophia_1_1monte__carlo}{sophia\+::monte\+\_\+carlo}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{sophia\+::monte\+\_\+carlo\+::logger\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{logging\+::\+ILogger}} $>$
+\item 
+using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a7b359f49f47abca726022b56252e6404}{sophia\+::monte\+\_\+carlo\+::const\+\_\+logger\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1logging_1_1ILogger}{logging\+::\+ILogger}} $>$
+\item 
+using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia\+::monte\+\_\+carlo\+::node\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{models\+::\+Node}} $>$
+\item 
+using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a66aa4147134e234d007f758b6a7653b2}{sophia\+::monte\+\_\+carlo\+::const\+\_\+node\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Node}{models\+::\+Node}} $>$
+\item 
+using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{sophia\+::monte\+\_\+carlo\+::action\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{models\+::\+Action}} $>$
+\item 
+using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_acdb2025c00022d862c4d9fe0bcca578d}{sophia\+::monte\+\_\+carlo\+::const\+\_\+action\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{models\+::\+Action}} $>$
+\item 
+using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_ad1c0c7a77be02794856652a0964b4439}{sophia\+::monte\+\_\+carlo\+::rollout\+\_\+strategy\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{models\+::\+Rollout\+Strategy\+Interface}} $>$
+\item 
+{\footnotesize template$<$typename TState , typename TChange $>$ }\\using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{sophia\+::monte\+\_\+carlo\+::node\+\_\+base\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{models\+::\+Node\+Base}}$<$ TState, TChange $>$ $>$
+\item 
+{\footnotesize template$<$typename TState , typename TChange $>$ }\\using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_aad61556d1f87078251b04696f8075c63}{sophia\+::monte\+\_\+carlo\+::node\+\_\+base\+\_\+ref}} = std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{models\+::\+Node\+Base}}$<$ TState, TChange $>$ $>$
+\item 
+{\footnotesize template$<$typename TState , typename TChange $>$ }\\using \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia\+::monte\+\_\+carlo\+::const\+\_\+factory\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase}{factories\+::\+Tree\+Factory\+Base}}$<$ TState, TChange $>$ $>$
+\end{DoxyCompactItemize}

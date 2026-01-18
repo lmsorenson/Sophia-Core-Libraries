@@ -20,27 +20,21 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Random\+Rollou
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_abf20cd10699ea61b004f48828eab4523}{Random\+Rollout\+Strategy}} (\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} logger\+\_\+ptr \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{logger}})
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_abf20cd10699ea61b004f48828eab4523}{Random\+Rollout\+Strategy}} (const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&logger)
 \begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{Random\+Rollout\+Strategy}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{override}}
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ab01d64d4e8be588fde650551b60815f6}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ actions) const override
 \begin{DoxyCompactList}\small\item\em Selects a random action from a vector of available actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=default
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=default
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-logger\+\_\+ptr \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ac643216f9c5f22c02b0814b68879cb1f}{m\+\_\+logger\+\_\+}}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Types inherited from \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$
+\mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ac643216f9c5f22c02b0814b68879cb1f}{m\+\_\+logger\+\_\+}}
 \end{DoxyCompactItemize}
 
 
@@ -54,7 +48,7 @@ This strategy provides a simple and fast way to run simulations by choosing acti
 \index{sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}!RandomRolloutStrategy@{RandomRolloutStrategy}}
 \index{RandomRolloutStrategy@{RandomRolloutStrategy}!sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}}
 \doxysubsubsection{\texorpdfstring{RandomRolloutStrategy()}{RandomRolloutStrategy()}}
-{\footnotesize\ttfamily Random\+Rollout\+Strategy\+::\+Random\+Rollout\+Strategy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} logger\+\_\+ptr \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily Random\+Rollout\+Strategy\+::\+Random\+Rollout\+Strategy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} \&}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
@@ -68,11 +62,11 @@ Constructs a \doxylink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStr
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}\label{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016} 
+\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ab01d64d4e8be588fde650551b60815f6}\label{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ab01d64d4e8be588fde650551b60815f6} 
 \index{sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}!select\_action@{select\_action}}
 \index{select\_action@{select\_action}!sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}}
 \doxysubsubsection{\texorpdfstring{select\_action()}{select\_action()}}
-{\footnotesize\ttfamily shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$ Random\+Rollout\+Strategy\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} Random\+Rollout\+Strategy\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -90,8 +84,6 @@ A shared pointer to the randomly selected action.
 
 Implements \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface}}.
 
-Here is the call graph for this function\+:
-% FIG 2
 
 
 \doxysubsection{Member Data Documentation}
@@ -99,7 +91,7 @@ Here is the call graph for this function\+:
 \index{sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}!m\_logger\_@{m\_logger\_}}
 \index{m\_logger\_@{m\_logger\_}!sophia::monte\_carlo::models::RandomRolloutStrategy@{sophia::monte\_carlo::models::RandomRolloutStrategy}}
 \doxysubsubsection{\texorpdfstring{m\_logger\_}{m\_logger\_}}
-{\footnotesize\ttfamily logger\+\_\+ptr sophia\+::monte\+\_\+carlo\+::models\+::\+Random\+Rollout\+Strategy\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Random\+Rollout\+Strategy\+::m\+\_\+logger\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

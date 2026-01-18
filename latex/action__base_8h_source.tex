@@ -12,38 +12,39 @@
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tree__factory__interface_8h}{monte\_carlo/factories/tree\_factory\_interface.h}}>}}
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{node__base_8h}{node\_base.h}}"{}}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1models}{sophia::monte\_carlo::models}}}
-\DoxyCodeLine{00013\ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange>}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{ActionBase}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}}}
-\DoxyCodeLine{00025\ \ \ \ \ \{}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ac23a86ce906eb00affa971a53a9dce72}{node\_base\_ptr}}\ =\ std::shared\_ptr<NodeBase<TState,\ TChange>>;}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4fdbd67b8a9ad98d8a07d730c04ad099}{node\_base\_ref}}\ =\ std::weak\_ptr<NodeBase<TState,\ TChange>>;}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ad5bfc872c5d437e27d73f1e57535e0b1}{const\_factory\_ptr}}\ =\ std::shared\_ptr<const\ factories::TreeFactoryBase<TState,\ TChange>>;}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4208059e099694922aef1c403e7f36e6}{ActionBase}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ac23a86ce906eb00affa971a53a9dce72}{node\_base\_ptr}}\ \&\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{state}},\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{change}},\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ad5bfc872c5d437e27d73f1e57535e0b1}{const\_factory\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{factory}},\ \textcolor{keyword}{const}\ logger\_ptr\&\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{logger}});}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ [[\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{nodiscard}}]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a37f9b1783835e369fa02430468956ea8}{Source}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ [[\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{nodiscard}}]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a2db0ae7c3921d6cc9f2f1b4903104915}{Target}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ad5bfc872c5d437e27d73f1e57535e0b1}{const\_factory\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a842c231b04df89b33d2a703e7f66f260}{m\_factory\_}};}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ logger\_ptr\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a1c259fe7400a22d14629ba06fb4f052d}{m\_logger\_}};}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4fdbd67b8a9ad98d8a07d730c04ad099}{node\_base\_ref}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a40c4ff890160e24a6b5284665aa56dcc}{m\_source\_}};}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action_a0069c948a86d801f31342244ddbc632b}{node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_aaea9315ff9798302c0140beefdc8e06a}{m\_target\_}};}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{TChange}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4da8508812df2144666eb5919f7bd3ef}{m\_change\_}};}
-\DoxyCodeLine{00052\ \ \ \ \ \};}
-\DoxyCodeLine{00053\ \}}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ <monte\_carlo/models/action\_base.tpp>}}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACTION\_BASE\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{include_2monte__carlo_2common__aliases_8h}{monte\_carlo/common\_aliases.h}}>}\ \textcolor{comment}{//\ Centralized\ logger\_ptr\ alias}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1models}{sophia::monte\_carlo::models}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TState,\ \textcolor{keyword}{typename}\ TChange>}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase}{ActionBase}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}}}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Removed\ using\ node\_base\_ptr\ =\ std::shared\_ptr<NodeBase<TState,\ TChange>>;}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Removed\ using\ node\_base\_ref\ =\ std::weak\_ptr<NodeBase<TState,\ TChange>>;}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Removed\ using\ const\_factory\_ptr\ =\ std::shared\_ptr<const\ factories::TreeFactoryBase<TState,\ TChange>>;}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a03b8207a9efb3b9d9384ea592763f1e8}{ActionBase}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a35bc3fd4811a61909c8823d8cfb31cdb}{sophia::monte\_carlo::node\_base\_ptr<TState,\ TChange>}}\ \&state,\ TChange\ change,\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia::monte\_carlo::const\_factory\_ptr<TState,\ TChange>}}\ factory,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{sophia::monte\_carlo::logger\_ptr}}\&\ logger);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia::monte\_carlo::node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_ae5948c64be535af2c459d96de73979ce}{Source}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia::monte\_carlo::node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a601d922eca84b369c428b087ca68c88d}{Target}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a1f2359b04e07d52d001434b7c58e5c2c}{sophia::monte\_carlo::const\_factory\_ptr<TState,\ TChange>}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a72e5eee90fcc6ca607924bdf33928b77}{m\_factory\_}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{sophia::monte\_carlo::logger\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a267111fa7200f8a709268a2457847660}{m\_logger\_}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_aad61556d1f87078251b04696f8075c63}{sophia::monte\_carlo::node\_base\_ref<TState,\ TChange>}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a56d1bd5a5dce105c4e5770b257f60cd5}{m\_source\_}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a8126db1f4d34b356315583cd052fedf5}{sophia::monte\_carlo::node\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_aee5b4460a324d2e0d0761a9dd11da2d7}{m\_target\_}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ TChange\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1ActionBase_a4da8508812df2144666eb5919f7bd3ef}{m\_change\_}};}
+\DoxyCodeLine{00053\ \ \ \ \ \};}
+\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ <monte\_carlo/models/action\_base.tpp>}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ACTION\_BASE\_H}}
 
 \end{DoxyCode}

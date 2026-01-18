@@ -1,13 +1,9 @@
 var classsophia_1_1monte__carlo_1_1models_1_1Node =
 [
-    [ "action_ptr", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae2b93b080abc1c5d74a32d8c68e49c34", null ],
-    [ "action_ref", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#acdd6c0a15177e182fcdaa8137b09c7ca", null ],
-    [ "node_ptr", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab0abeb571ec63f8fe17d4bcaeb960f13", null ],
-    [ "rollout_strategy_ptr", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#af9e46c99f553335cd366802962fe8875", null ],
     [ "Node", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ad952d18e84552c45f37d32314d3cb3f5", null ],
     [ "~Node", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ac06be54937bd5bbd0473141d2e44de59", null ],
     [ "Backpropagate", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1ab17bae40a734dd206b82c78ec0fbe9", null ],
-    [ "Expand", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#af3ecba21ed1d43901db2ad52ee950936", null ],
+    [ "Expand", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a6be3943af70c9e7334d913393fb1b37d", null ],
     [ "GetAvailableActions", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ab435a2663c9ac64279b9ee684436e7f2", null ],
     [ "HasBeenSampled", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a99c747bf5454aa0f21874deab8c0d1a8", null ],
     [ "IsLeafNode", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a174e378c4581899275b3f1e601fad062", null ],
@@ -16,9 +12,9 @@ var classsophia_1_1monte__carlo_1_1models_1_1Node =
     [ "Print", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ade2b382a86e4c36a60caefc196ad82", null ],
     [ "Rollout", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a45fdf487eedadd6518798de3d7cb016b", null ],
     [ "RolloutStrategy", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a5a6b97bf4237e24d26a19027e24e8a55", null ],
-    [ "SelectAction", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a404072a810c1cf1e201c82e539e0b721", null ],
+    [ "SelectAction", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#aa6cd35e140cc104fc316d693f145eea9", null ],
     [ "SelectAction", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a21d7afbcd694dbf00efa0dc1b8698780", null ],
-    [ "SelectBestAction", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a8ce0f76debcad38090914219a5598221", null ],
+    [ "SelectBestAction", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ad7d997f7be749039001b5fd37eacc496", null ],
     [ "SetParent", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a0db427e98f2175a37fedffa96b7def7c", null ],
     [ "TotalReward", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a7b2f4bdc1e2d0b247ac2cdad13e7da9b", null ],
     [ "UpperConfidenceBound", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351", null ],
@@ -27,7 +23,7 @@ var classsophia_1_1monte__carlo_1_1models_1_1Node =
     [ "m_child_action_", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a76c446637890b93646bd5741325280c4", null ],
     [ "m_logger_", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a7ab5b029a025caaa763b0b56dbcc8265", null ],
     [ "m_name_", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#afcaa239b875c4990dee32d00e50787b9", null ],
-    [ "m_parent_action_", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a678224d9b35cc4935a7ff420e767b8ff", null ],
+    [ "m_parent_action_", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a7b5eaa5668b4314063a8e712ff0028f1", null ],
     [ "m_total_reward_", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#a1e77bb521e186a4b82c2ef4efec0ebb9", null ],
     [ "m_visit_count_", "classsophia_1_1monte__carlo_1_1models_1_1Node.html#ae5a08d850097e581881d9c6b9fbd26e3", null ]
 ];

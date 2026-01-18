@@ -20,32 +20,18 @@ Collaboration diagram for sophia\+::monte\+\_\+carlo\+::models\+::Rollout\+Strat
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}{Rollout\+Strategy\+Interface}} ()=default
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{default}}
+virtual \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a1eea86fb6bba63f1d52f5e2696b13699}{\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface}} ()=default
 \item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}}) \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{const}} =0
+virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_a30fd3a8c0a936c199db07781da87bea6}{select\+\_\+action}} (std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$ actions) const =0
 \begin{DoxyCompactList}\small\item\em Selects an action from a vector of available actions based on the implemented strategy. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Types}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}} $>$
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Interface for defining a rollout strategy in the Monte Carlo Tree Search (MCTS) algorithm. 
 
 A rollout (or simulation) is a traversal from a given node to a terminal state of the problem space. The rollout strategy defines how actions are selected during this simulation phase. Different strategies can be implemented to balance exploration and exploitation. 
-
-\doxysubsection{Member Typedef Documentation}
-\Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020} 
-\index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}!action\_ptr@{action\_ptr}}
-\index{action\_ptr@{action\_ptr}!sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
-\doxysubsubsection{\texorpdfstring{action\_ptr}{action\_ptr}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{using}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::action\+\_\+ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1Action}{Action}}$>$\hspace{0.3cm}{\ttfamily [protected]}}
-
-
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5}\label{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ac9d57cf832d1c89cbc89c05b79af00e5} 
@@ -58,7 +44,7 @@ A rollout (or simulation) is a traversal from a given node to a terminal state o
 \index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}!````~RolloutStrategyInterface@{\texorpdfstring{$\sim$}{\string~}RolloutStrategyInterface}}
 \index{````~RolloutStrategyInterface@{\texorpdfstring{$\sim$}{\string~}RolloutStrategyInterface}!sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RolloutStrategyInterface()}{\string~RolloutStrategyInterface()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+{\footnotesize\ttfamily virtual sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::\texorpdfstring{$\sim$}{\string~}\+Rollout\+Strategy\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
@@ -67,7 +53,7 @@ A rollout (or simulation) is a traversal from a given node to a terminal state o
 \index{sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}!select\_action@{select\_action}}
 \index{select\_action@{select\_action}!sophia::monte\_carlo::models::RolloutStrategyInterface@{sophia::monte\_carlo::models::RolloutStrategyInterface}}
 \doxysubsubsection{\texorpdfstring{select\_action()}{select\_action()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{virtual}} \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} sophia\+::monte\+\_\+carlo\+::models\+::\+Rollout\+Strategy\+Interface\+::select\+\_\+action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\+\_\+ptr}} $>$}]{actions }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -83,7 +69,7 @@ A shared pointer to the selected action.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_acd0aab985e581776954d623eca677903}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Heuristic\+Rollout\+Strategy}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}{sophia\+::monte\+\_\+carlo\+::models\+::\+Random\+Rollout\+Strategy}}.
+Implemented in \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1HeuristicRolloutStrategy_a3cb6b9da614bfcb52c824b6e7b08ab22}{sophia\+::monte\+\_\+carlo\+::tic\+\_\+tac\+\_\+toe\+::models\+::\+Heuristic\+Rollout\+Strategy}}, and \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ab01d64d4e8be588fde650551b60815f6}{sophia\+::monte\+\_\+carlo\+::models\+::\+Random\+Rollout\+Strategy}}.
 
 
 

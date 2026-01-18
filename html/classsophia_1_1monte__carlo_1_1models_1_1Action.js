@@ -1,6 +1,5 @@
 var classsophia_1_1monte__carlo_1_1models_1_1Action =
 [
-    [ "node_ptr", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a0069c948a86d801f31342244ddbc632b", null ],
     [ "Action", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a42932491acbd29bf0e2f4e2864fd3036", null ],
     [ "~Action", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#ac5744085b404e111f8a375ad28384700", null ],
     [ "Generate", "classsophia_1_1monte__carlo_1_1models_1_1Action.html#a31dbf2c262065b3eb54c841b5a3982f2", null ],

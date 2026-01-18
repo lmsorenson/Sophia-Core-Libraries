@@ -6,25 +6,24 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RANDOM\_ACTION\_STRATEGY\_H}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rollout__strategy__interface_8h}{rollout\_strategy\_interface.h}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ilogger_8h}{logging/ilogger.h}}>}\ \textcolor{comment}{//\ Added\ include\ for\ ILogger}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{include_2monte__carlo_2common__aliases_8h}{monte\_carlo/common\_aliases.h}}>}\ \textcolor{comment}{//\ Centralized\ logger\_ptr\ alias}}
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1models}{sophia::monte\_carlo::models}}}
 \DoxyCodeLine{00008\ \{}
 \DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }Action;}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1logging_a338d737c8ed374345a0a116e369f9881}{sophia::logging::logger\_ptr}};\ \textcolor{comment}{//\ Added\ using\ directive}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{RandomRolloutStrategy}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{final}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{RolloutStrategyInterface}}}
-\DoxyCodeLine{00020\ \ \ \ \ \{}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{RandomRolloutStrategy}}(\textcolor{keyword}{const}\ logger\_ptr\&\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{logger}});}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ [[\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{nodiscard}}]]\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface_ae3c4b9b622024ad5b6cbaa3efe843020}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_a625c265aac424fc41dd38d709b110016}{select\_action}}(std::vector<action\_ptr>\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1NodeBase}{actions}})\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ logger\_ptr\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ac643216f9c5f22c02b0814b68879cb1f}{m\_logger\_}};\ \textcolor{comment}{//\ Member\ to\ hold\ the\ logger\ instance}}
-\DoxyCodeLine{00037\ \ \ \ \ \};}
-\DoxyCodeLine{00038\ \}}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//RANDOM\_ACTION\_STRATEGY\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{RandomRolloutStrategy}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RolloutStrategyInterface}{RolloutStrategyInterface}}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy}{RandomRolloutStrategy}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\&\ logger);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a3ef3290edc6cb68dbc906cf5ad80c976}{action\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ab01d64d4e8be588fde650551b60815f6}{select\_action}}(std::vector<action\_ptr>\ actions)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacesophia_1_1monte__carlo_a538cd21762bd4484338b7d8bb24d0ee5}{logger\_ptr}}\ \mbox{\hyperlink{classsophia_1_1monte__carlo_1_1models_1_1RandomRolloutStrategy_ac643216f9c5f22c02b0814b68879cb1f}{m\_logger\_}};\ \textcolor{comment}{//\ Member\ to\ hold\ the\ logger\ instance}}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//RANDOM\_ACTION\_STRATEGY\_H}}
 
 \end{DoxyCode}

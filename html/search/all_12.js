@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['update_0',['update',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Bot.html#acb2602e5d6563f1f90d2896d507c0f7f',1,'sophia::monte_carlo::tic_tac_toe::models::Bot::Update()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1models_1_1Human.html#a1a9239e337aa70d14499f1aec12ecc29',1,'sophia::monte_carlo::tic_tac_toe::models::Human::Update()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1observer_1_1Observer.html#a598af9347546429aac205592690c8f1f',1,'sophia::monte_carlo::tic_tac_toe::observer::Observer::Update()']]],
-  ['upperconfidencebound_1',['upperconfidencebound',['../classsophia_1_1monte__carlo_1_1models_1_1Action.html#a227a49dcfd5971ca79b5193ecabf580b',1,'sophia::monte_carlo::models::Action::UpperConfidenceBound()'],['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a731a6c2e925df83e28eb1cdb117e2351',1,'sophia::monte_carlo::models::Node::UpperConfidenceBound()']]],
-  ['usage_2',['usage',['../index.html#autotoc_md11',1,'Basic MCTS Usage'],['../index.html#autotoc_md16',1,'Header Usage']]],
-  ['usage_20patterns_3',['Usage Patterns',['../index.html#autotoc_md10',1,'']]]
+  ['tac_20toe_20example_0',['Tic-Tac-Toe Example',['../index.html#autotoc_md9',1,'']]],
+  ['tac_20toe_20integration_1',['Example: Tic-Tac-Toe Integration',['../index.html#autotoc_md5',1,'']]],
+  ['target_2',['target',['../classsophia_1_1monte__carlo_1_1models_1_1Action.html#a1ed1fb9b12a952cd2cac018149945026',1,'sophia::monte_carlo::models::Action::Target()'],['../classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a601d922eca84b369c428b087ca68c88d',1,'sophia::monte_carlo::models::ActionBase::Target()']]],
+  ['template_20based_20design_3',['Template-Based Design',['../index.html#autotoc_md4',1,'']]],
+  ['test_5ff_4',['test_f',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests.html#a7d4bd94e3fad1bf648ee4bf789539563',1,'sophia::monte_carlo::tic_tac_toe::model_tests::TEST_F(TicTacToeModelsFixture, simulation_test)'],['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests.html#a08365fa814ec6e9e57f875bf64786c02',1,'sophia::monte_carlo::tic_tac_toe::model_tests::TEST_F(TicTacToeModelsFixture, test)']]],
+  ['tic_20tac_20toe_20example_5',['Tic-Tac-Toe Example',['../index.html#autotoc_md9',1,'']]],
+  ['tic_20tac_20toe_20integration_6',['Example: Tic-Tac-Toe Integration',['../index.html#autotoc_md5',1,'']]],
+  ['tic_5ftac_5ftoe_5ffactory_2ecpp_7',['tic_tac_toe_factory.cpp',['../tic__tac__toe__factory_8cpp.html',1,'']]],
+  ['tic_5ftac_5ftoe_5ffactory_2eh_8',['tic_tac_toe_factory.h',['../tic__tac__toe__factory_8h.html',1,'']]],
+  ['tic_5ftac_5ftoe_5ftree_5ffactory_5fbase_5fptr_9',['tic_tac_toe_tree_factory_base_ptr',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe.html#ae61fa557740c3e9bdf8906608336be60',1,'sophia::monte_carlo::tic_tac_toe']]],
+  ['tictactoefactory_10',['tictactoefactory',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html#a46cc8e8c54be6b7e9972ca260e03a69d',1,'sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory::TicTacToeFactory()'],['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1factories_1_1TicTacToeFactory.html',1,'sophia::monte_carlo::tic_tac_toe::factories::TicTacToeFactory']]],
+  ['tictactoemodelsfixture_11',['TicTacToeModelsFixture',['../classsophia_1_1monte__carlo_1_1tic__tac__toe_1_1model__tests_1_1TicTacToeModelsFixture.html',1,'sophia::monte_carlo::tic_tac_toe::model_tests']]],
+  ['tilestatetostring_12',['TileStateToString',['../namespacesophia_1_1monte__carlo_1_1tic__tac__toe_1_1enums.html#a43655957d17319782ac5b8ffe4e0734c',1,'sophia::monte_carlo::tic_tac_toe::enums']]],
+  ['toe_20example_13',['Tic-Tac-Toe Example',['../index.html#autotoc_md9',1,'']]],
+  ['toe_20integration_14',['Example: Tic-Tac-Toe Integration',['../index.html#autotoc_md5',1,'']]],
+  ['totalreward_15',['TotalReward',['../classsophia_1_1monte__carlo_1_1models_1_1Node.html#a7b2f4bdc1e2d0b247ac2cdad13e7da9b',1,'sophia::monte_carlo::models::Node']]],
+  ['trace_16',['trace',['../classsophia_1_1logging_1_1ILogger.html#a704562826cbdc5af0e36f298ae600809',1,'sophia::logging::ILogger::trace()'],['../namespacesophia_1_1logging_1_1colors.html#a5d05cd365cd9e3aab3d08077288de11c',1,'sophia::logging::colors::TRACE'],['../namespacesophia_1_1logging.html#a183f242c85daa28ed2018d65b73112d8a2d3e4144aa384b18849ab9a8abad74d6',1,'sophia::logging::TRACE']]],
+  ['tree_5ffactory_5finterface_2eh_17',['tree_factory_interface.h',['../tree__factory__interface_8h.html',1,'']]],
+  ['tree_5fsearch_5falgorithm_2ecpp_18',['tree_search_algorithm.cpp',['../tree__search__algorithm_8cpp.html',1,'']]],
+  ['tree_5fsearch_5falgorithm_2eh_19',['tree_search_algorithm.h',['../tree__search__algorithm_8h.html',1,'']]],
+  ['treefactorybase_20',['TreeFactoryBase',['../classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html',1,'sophia::monte_carlo::factories']]],
+  ['treefactorybase_3c_20models_3a_3agamestate_2c_20models_3a_3aposition_20_3e_21',['TreeFactoryBase&lt; models::GameState, models::Position &gt;',['../classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html',1,'sophia::monte_carlo::factories']]]
 ];

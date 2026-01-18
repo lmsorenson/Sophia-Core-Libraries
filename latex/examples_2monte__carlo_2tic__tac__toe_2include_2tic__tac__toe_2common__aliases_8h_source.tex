@@ -1,0 +1,49 @@
+\doxysection{common\+\_\+aliases.\+h}
+\hypertarget{examples_2monte__carlo_2tic__tac__toe_2include_2tic__tac__toe_2common__aliases_8h_source}{}\label{examples_2monte__carlo_2tic__tac__toe_2include_2tic__tac__toe_2common__aliases_8h_source}\index{examples/monte\_carlo/tic\_tac\_toe/include/tic\_tac\_toe/common\_aliases.h@{examples/monte\_carlo/tic\_tac\_toe/include/tic\_tac\_toe/common\_aliases.h}}
+\mbox{\hyperlink{examples_2monte__carlo_2tic__tac__toe_2include_2tic__tac__toe_2common__aliases_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{examples_2monte__carlo_2tic__tac__toe_2include_2tic__tac__toe_2fwd_8h}{tic\_tac\_toe/fwd.h}}>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe}{sophia::monte\_carlo::tic\_tac\_toe}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ Aliases\ for\ shared\ pointers\ to\ game\ components}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a9c5f828a33722d9fd670dfceac25117a}{board\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::Board>;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_af39e4b666fa0319227cbfea4c738b919}{const\_board\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::Board>;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a1a020f1e32ffbe47bab493a6d696e80b}{bot\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::Bot>;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad2b9836ba54e987047c2d454a5051d75}{const\_bot\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::Bot>;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a378b0b23706f7f4570e59819cc71b089}{game\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::Game>;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_aa0c0ed02ccf27849efc367aa96b00158}{const\_game\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::Game>;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ae0c03b1fd1b82c18a9a9b9c6bfbd44f2}{game\_state\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::GameState>;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ac77fc1178175eaa1b57da5c105cfb7d4}{const\_game\_state\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::GameState>;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ae2c2f6490f99bc2fb87c0bc767cc6153}{heuristic\_rollout\_strategy\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy>;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_aeca2736a7820a56eec3b9228bbfc80a8}{const\_heuristic\_rollout\_strategy\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::HeuristicRolloutStrategy>;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a84bff24697c7c3daf0794242c2c0c548}{human\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::Human>;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a4dba81d432e402bde9504bd89a4b4260}{const\_human\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::Human>;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ab125fead8a93c01c083f5ead8073ab96}{move\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::Move>;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a6b079f39550217878ee89a58bedcb79b}{const\_move\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::Move>;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a36e0bf081cdf7e2586686833b8e35ec5}{player\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::Player>;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ad14733836aa0aac6482dc75a56f3b5ba}{const\_player\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::Player>;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a7e6c3ce9d7e192122c893bd2dd4ba62b}{position\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::Position>;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a2daf69afec382bd3d1c852a95035fbcc}{const\_position\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::Position>;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ace0fa5ffb5d5c4ce202f76f8ae9c5389}{state\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::models::State>;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_af44bd7c2e0929e0e656ef4f7ac04447d}{const\_state\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::models::State>;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_ae61fa557740c3e9bdf8906608336be60}{tic\_tac\_toe\_tree\_factory\_base\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::factories::TreeFactoryBase<sophia::monte\_carlo::tic\_tac\_toe::models::GameState,\ sophia::monte\_carlo::tic\_tac\_toe::models::Position>>;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_aca120a4587d2159e7cf6c7a7025053a2}{observer\_ptr}}\ =\ std::shared\_ptr<sophia::monte\_carlo::tic\_tac\_toe::observer::Observer>;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacesophia_1_1monte__carlo_1_1tic__tac__toe_a4141d6fc7dfd597dc18ceb7e25fdc248}{const\_observer\_ptr}}\ =\ std::shared\_ptr<const\ sophia::monte\_carlo::tic\_tac\_toe::observer::Observer>;}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

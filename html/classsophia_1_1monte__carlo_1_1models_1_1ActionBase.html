@@ -92,7 +92,6 @@ $(document).ready(function(){initNavTree('classsophia_1_1monte__carlo_1_1models_
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">sophia::monte_carlo::models::ActionBase&lt; TState, TChange &gt; Class Template Reference</div></div>
@@ -116,61 +115,49 @@ Collaboration diagram for sophia::monte_carlo::models::ActionBase&lt; TState, TC
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4208059e099694922aef1c403e7f36e6" id="r_a4208059e099694922aef1c403e7f36e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a4208059e099694922aef1c403e7f36e6">ActionBase</a> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ac23a86ce906eb00affa971a53a9dce72">node_base_ptr</a> &amp;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">state</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">change</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ad5bfc872c5d437e27d73f1e57535e0b1">const_factory_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">factory</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> logger_ptr &amp;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">logger</a>)</td></tr>
-<tr class="separator:a4208059e099694922aef1c403e7f36e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37f9b1783835e369fa02430468956ea8" id="r_a37f9b1783835e369fa02430468956ea8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a0069c948a86d801f31342244ddbc632b">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a37f9b1783835e369fa02430468956ea8">Source</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">override</a></td></tr>
-<tr class="memdesc:a37f9b1783835e369fa02430468956ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the source node from which this action originates.  <br /></td></tr>
-<tr class="separator:a37f9b1783835e369fa02430468956ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db0ae7c3921d6cc9f2f1b4903104915" id="r_a2db0ae7c3921d6cc9f2f1b4903104915"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a0069c948a86d801f31342244ddbc632b">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a2db0ae7c3921d6cc9f2f1b4903104915">Target</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">override</a></td></tr>
-<tr class="memdesc:a2db0ae7c3921d6cc9f2f1b4903104915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the target node that results from this action.  <br /></td></tr>
-<tr class="separator:a2db0ae7c3921d6cc9f2f1b4903104915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b8207a9efb3b9d9384ea592763f1e8" id="r_a03b8207a9efb3b9d9384ea592763f1e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a03b8207a9efb3b9d9384ea592763f1e8">ActionBase</a> (const <a class="el" href="namespacesophia_1_1monte__carlo.html#a35bc3fd4811a61909c8823d8cfb31cdb">sophia::monte_carlo::node_base_ptr</a>&lt; TState, TChange &gt; &amp;state, TChange change, <a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">sophia::monte_carlo::const_factory_ptr</a>&lt; TState, TChange &gt; factory, const <a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">sophia::monte_carlo::logger_ptr</a> &amp;logger)</td></tr>
+<tr class="separator:a03b8207a9efb3b9d9384ea592763f1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5948c64be535af2c459d96de73979ce" id="r_ae5948c64be535af2c459d96de73979ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">sophia::monte_carlo::node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ae5948c64be535af2c459d96de73979ce">Source</a> () const override</td></tr>
+<tr class="memdesc:ae5948c64be535af2c459d96de73979ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the source node from which this action originates.  <br /></td></tr>
+<tr class="separator:ae5948c64be535af2c459d96de73979ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601d922eca84b369c428b087ca68c88d" id="r_a601d922eca84b369c428b087ca68c88d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">sophia::monte_carlo::node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a601d922eca84b369c428b087ca68c88d">Target</a> () const override</td></tr>
+<tr class="memdesc:a601d922eca84b369c428b087ca68c88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the target node that results from this action.  <br /></td></tr>
+<tr class="separator:a601d922eca84b369c428b087ca68c88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">sophia::monte_carlo::models::Action</a></td></tr>
-<tr class="memitem:a42932491acbd29bf0e2f4e2864fd3036 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_a42932491acbd29bf0e2f4e2864fd3036"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a42932491acbd29bf0e2f4e2864fd3036">Action</a> ()=<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">default</a></td></tr>
+<tr class="memitem:a42932491acbd29bf0e2f4e2864fd3036 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_a42932491acbd29bf0e2f4e2864fd3036"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a42932491acbd29bf0e2f4e2864fd3036">Action</a> ()=default</td></tr>
 <tr class="separator:a42932491acbd29bf0e2f4e2864fd3036 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5744085b404e111f8a375ad28384700 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_ac5744085b404e111f8a375ad28384700"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#ac5744085b404e111f8a375ad28384700">~Action</a> ()=<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">default</a></td></tr>
+<tr class="memitem:ac5744085b404e111f8a375ad28384700 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_ac5744085b404e111f8a375ad28384700"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#ac5744085b404e111f8a375ad28384700">~Action</a> ()=default</td></tr>
 <tr class="separator:ac5744085b404e111f8a375ad28384700 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7f1c91ede054c1828dffb2efcb80ea1 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_aa7f1c91ede054c1828dffb2efcb80ea1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#aa7f1c91ede054c1828dffb2efcb80ea1">Name</a> () <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> =0</td></tr>
+<tr class="memitem:aa7f1c91ede054c1828dffb2efcb80ea1 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_aa7f1c91ede054c1828dffb2efcb80ea1"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#aa7f1c91ede054c1828dffb2efcb80ea1">Name</a> () const =0</td></tr>
 <tr class="memdesc:aa7f1c91ede054c1828dffb2efcb80ea1 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the action for identification purposes.  <br /></td></tr>
 <tr class="separator:aa7f1c91ede054c1828dffb2efcb80ea1 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a227a49dcfd5971ca79b5193ecabf580b inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_a227a49dcfd5971ca79b5193ecabf580b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a227a49dcfd5971ca79b5193ecabf580b">UpperConfidenceBound</a> (<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">int</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">c</a>) <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a></td></tr>
+<tr class="memitem:a227a49dcfd5971ca79b5193ecabf580b inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_a227a49dcfd5971ca79b5193ecabf580b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a227a49dcfd5971ca79b5193ecabf580b">UpperConfidenceBound</a> (int c) const</td></tr>
 <tr class="memdesc:a227a49dcfd5971ca79b5193ecabf580b inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Upper Confidence Bound (UCB1) for this action.  <br /></td></tr>
 <tr class="separator:a227a49dcfd5971ca79b5193ecabf580b inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31dbf2c262065b3eb54c841b5a3982f2 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_a31dbf2c262065b3eb54c841b5a3982f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">virtual</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a31dbf2c262065b3eb54c841b5a3982f2">Generate</a> ()=0</td></tr>
+<tr class="memitem:a31dbf2c262065b3eb54c841b5a3982f2 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_a31dbf2c262065b3eb54c841b5a3982f2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a31dbf2c262065b3eb54c841b5a3982f2">Generate</a> ()=0</td></tr>
 <tr class="memdesc:a31dbf2c262065b3eb54c841b5a3982f2 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the target node that results from taking this action.  <br /></td></tr>
 <tr class="separator:a31dbf2c262065b3eb54c841b5a3982f2 inherit pub_methods_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
-Protected Types</h2></td></tr>
-<tr class="memitem:ac23a86ce906eb00affa971a53a9dce72" id="r_ac23a86ce906eb00affa971a53a9dce72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ac23a86ce906eb00affa971a53a9dce72">node_base_ptr</a> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">NodeBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; &gt;</td></tr>
-<tr class="separator:ac23a86ce906eb00affa971a53a9dce72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fdbd67b8a9ad98d8a07d730c04ad099" id="r_a4fdbd67b8a9ad98d8a07d730c04ad099"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a4fdbd67b8a9ad98d8a07d730c04ad099">node_base_ref</a> = std::weak_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">NodeBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; &gt;</td></tr>
-<tr class="separator:a4fdbd67b8a9ad98d8a07d730c04ad099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5bfc872c5d437e27d73f1e57535e0b1" id="r_ad5bfc872c5d437e27d73f1e57535e0b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ad5bfc872c5d437e27d73f1e57535e0b1">const_factory_ptr</a> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">factories::TreeFactoryBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; &gt;</td></tr>
-<tr class="separator:ad5bfc872c5d437e27d73f1e57535e0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_types_classsophia_1_1monte__carlo_1_1models_1_1Action"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classsophia_1_1monte__carlo_1_1models_1_1Action')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html">sophia::monte_carlo::models::Action</a></td></tr>
-<tr class="memitem:a0069c948a86d801f31342244ddbc632b inherit pro_types_classsophia_1_1monte__carlo_1_1models_1_1Action" id="r_a0069c948a86d801f31342244ddbc632b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a0069c948a86d801f31342244ddbc632b">node_ptr</a> = std::shared_ptr&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Node.html">Node</a> &gt;</td></tr>
-<tr class="separator:a0069c948a86d801f31342244ddbc632b inherit pro_types_classsophia_1_1monte__carlo_1_1models_1_1Action"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a842c231b04df89b33d2a703e7f66f260" id="r_a842c231b04df89b33d2a703e7f66f260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ad5bfc872c5d437e27d73f1e57535e0b1">const_factory_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a842c231b04df89b33d2a703e7f66f260">m_factory_</a></td></tr>
-<tr class="memdesc:a842c231b04df89b33d2a703e7f66f260"><td class="mdescLeft">&#160;</td><td class="mdescRight">A factory for creating new nodes in the tree.  <br /></td></tr>
-<tr class="separator:a842c231b04df89b33d2a703e7f66f260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c259fe7400a22d14629ba06fb4f052d" id="r_a1c259fe7400a22d14629ba06fb4f052d"><td class="memItemLeft" align="right" valign="top">logger_ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a1c259fe7400a22d14629ba06fb4f052d">m_logger_</a></td></tr>
-<tr class="memdesc:a1c259fe7400a22d14629ba06fb4f052d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logger instance for this action.  <br /></td></tr>
-<tr class="separator:a1c259fe7400a22d14629ba06fb4f052d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40c4ff890160e24a6b5284665aa56dcc" id="r_a40c4ff890160e24a6b5284665aa56dcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a4fdbd67b8a9ad98d8a07d730c04ad099">node_base_ref</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a40c4ff890160e24a6b5284665aa56dcc">m_source_</a></td></tr>
-<tr class="memdesc:a40c4ff890160e24a6b5284665aa56dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A weak pointer to the source node from which this action originates.  <br /></td></tr>
-<tr class="separator:a40c4ff890160e24a6b5284665aa56dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaea9315ff9798302c0140beefdc8e06a" id="r_aaea9315ff9798302c0140beefdc8e06a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a0069c948a86d801f31342244ddbc632b">node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#aaea9315ff9798302c0140beefdc8e06a">m_target_</a></td></tr>
-<tr class="memdesc:aaea9315ff9798302c0140beefdc8e06a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A shared pointer to the target node that results from this action.  <br /></td></tr>
-<tr class="separator:aaea9315ff9798302c0140beefdc8e06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4da8508812df2144666eb5919f7bd3ef" id="r_a4da8508812df2144666eb5919f7bd3ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a4da8508812df2144666eb5919f7bd3ef">m_change_</a></td></tr>
+<tr class="memitem:a72e5eee90fcc6ca607924bdf33928b77" id="r_a72e5eee90fcc6ca607924bdf33928b77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">sophia::monte_carlo::const_factory_ptr</a>&lt; TState, TChange &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a72e5eee90fcc6ca607924bdf33928b77">m_factory_</a></td></tr>
+<tr class="memdesc:a72e5eee90fcc6ca607924bdf33928b77"><td class="mdescLeft">&#160;</td><td class="mdescRight">A factory for creating new nodes in the tree.  <br /></td></tr>
+<tr class="separator:a72e5eee90fcc6ca607924bdf33928b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267111fa7200f8a709268a2457847660" id="r_a267111fa7200f8a709268a2457847660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">sophia::monte_carlo::logger_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a267111fa7200f8a709268a2457847660">m_logger_</a></td></tr>
+<tr class="memdesc:a267111fa7200f8a709268a2457847660"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logger instance for this action.  <br /></td></tr>
+<tr class="separator:a267111fa7200f8a709268a2457847660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d1bd5a5dce105c4e5770b257f60cd5" id="r_a56d1bd5a5dce105c4e5770b257f60cd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#aad61556d1f87078251b04696f8075c63">sophia::monte_carlo::node_base_ref</a>&lt; TState, TChange &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a56d1bd5a5dce105c4e5770b257f60cd5">m_source_</a></td></tr>
+<tr class="memdesc:a56d1bd5a5dce105c4e5770b257f60cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A weak pointer to the source node from which this action originates.  <br /></td></tr>
+<tr class="separator:a56d1bd5a5dce105c4e5770b257f60cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5b4460a324d2e0d0761a9dd11da2d7" id="r_aee5b4460a324d2e0d0761a9dd11da2d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">sophia::monte_carlo::node_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#aee5b4460a324d2e0d0761a9dd11da2d7">m_target_</a></td></tr>
+<tr class="memdesc:aee5b4460a324d2e0d0761a9dd11da2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A shared pointer to the target node that results from this action.  <br /></td></tr>
+<tr class="separator:aee5b4460a324d2e0d0761a9dd11da2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da8508812df2144666eb5919f7bd3ef" id="r_a4da8508812df2144666eb5919f7bd3ef"><td class="memItemLeft" align="right" valign="top">TChange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a4da8508812df2144666eb5919f7bd3ef">m_change_</a></td></tr>
 <tr class="memdesc:a4da8508812df2144666eb5919f7bd3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">The change in state that this action represents.  <br /></td></tr>
 <tr class="separator:a4da8508812df2144666eb5919f7bd3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a>&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename TState, typename TChange&gt;<br />
 class sophia::monte_carlo::models::ActionBase&lt; TState, TChange &gt;</div><p>A template base class for implementing the <code><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html" title="Represents an action that can be taken from a specific state (Node) in the search tree.">Action</a></code> interface. </p>
 <p>This class provides a generic implementation of an action, using templates to allow for different types of states and changes. It handles the connection between a source and a target node.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -180,110 +167,37 @@ class sophia::monte_carlo::models::ActionBase&lt; TState, TChange &gt;</div><p>A
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ad5bfc872c5d437e27d73f1e57535e0b1" name="ad5bfc872c5d437e27d73f1e57535e0b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5bfc872c5d437e27d73f1e57535e0b1">&#9670;&#160;</a></span>const_factory_ptr</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a03b8207a9efb3b9d9384ea592763f1e8" name="a03b8207a9efb3b9d9384ea592763f1e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b8207a9efb3b9d9384ea592763f1e8">&#9670;&#160;</a></span>ActionBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename TState , typename TChange &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::const_factory_ptr =  std::shared_ptr&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1factories_1_1TreeFactoryBase.html">factories::TreeFactoryBase</a>&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a>&gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac23a86ce906eb00affa971a53a9dce72" name="ac23a86ce906eb00affa971a53a9dce72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac23a86ce906eb00affa971a53a9dce72">&#9670;&#160;</a></span>node_base_ptr</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::node_base_ptr =  std::shared_ptr&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">NodeBase</a>&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a>&gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4fdbd67b8a9ad98d8a07d730c04ad099" name="a4fdbd67b8a9ad98d8a07d730c04ad099"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fdbd67b8a9ad98d8a07d730c04ad099">&#9670;&#160;</a></span>node_base_ref</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">using</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::node_base_ref =  std::weak_ptr&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">NodeBase</a>&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a>&gt; &gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4208059e099694922aef1c403e7f36e6" name="a4208059e099694922aef1c403e7f36e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4208059e099694922aef1c403e7f36e6">&#9670;&#160;</a></span>ActionBase()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::ActionBase </td>
+          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; TState, TChange &gt;::ActionBase </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ac23a86ce906eb00affa971a53a9dce72">node_base_ptr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacesophia_1_1monte__carlo.html#a35bc3fd4811a61909c8823d8cfb31cdb">sophia::monte_carlo::node_base_ptr</a>&lt; TState, TChange &gt; &amp;&#160;</td>
           <td class="paramname"><em>state</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a>&#160;</td>
+          <td class="paramtype">TChange&#160;</td>
           <td class="paramname"><em>change</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ad5bfc872c5d437e27d73f1e57535e0b1">const_factory_ptr</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">sophia::monte_carlo::const_factory_ptr</a>&lt; TState, TChange &gt;&#160;</td>
           <td class="paramname"><em>factory</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">const</a> logger_ptr &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">sophia::monte_carlo::logger_ptr</a> &amp;&#160;</td>
           <td class="paramname"><em>logger</em>&#160;</td>
         </tr>
         <tr>
@@ -297,19 +211,19 @@ template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBas
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a37f9b1783835e369fa02430468956ea8" name="a37f9b1783835e369fa02430468956ea8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37f9b1783835e369fa02430468956ea8">&#9670;&#160;</a></span>Source()</h2>
+<a id="ae5948c64be535af2c459d96de73979ce" name="ae5948c64be535af2c459d96de73979ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5948c64be535af2c459d96de73979ce">&#9670;&#160;</a></span>Source()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
+template&lt;typename TState , typename TChange &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a0069c948a86d801f31342244ddbc632b">node_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::Source </td>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">sophia::monte_carlo::node_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; TState, TChange &gt;::Source </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -328,19 +242,19 @@ template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBas
 
 </div>
 </div>
-<a id="a2db0ae7c3921d6cc9f2f1b4903104915" name="a2db0ae7c3921d6cc9f2f1b4903104915"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2db0ae7c3921d6cc9f2f1b4903104915">&#9670;&#160;</a></span>Target()</h2>
+<a id="a601d922eca84b369c428b087ca68c88d" name="a601d922eca84b369c428b087ca68c88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601d922eca84b369c428b087ca68c88d">&#9670;&#160;</a></span>Target()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
+template&lt;typename TState , typename TChange &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a0069c948a86d801f31342244ddbc632b">node_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::Target </td>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">sophia::monte_carlo::node_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; TState, TChange &gt;::Target </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -366,13 +280,13 @@ template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBas
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
+template&lt;typename TState , typename TChange &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::m_change_</td>
+          <td class="memname">TChange <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; TState, TChange &gt;::m_change_</td>
         </tr>
       </table>
   </td>
@@ -386,19 +300,19 @@ template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBas
 
 </div>
 </div>
-<a id="a842c231b04df89b33d2a703e7f66f260" name="a842c231b04df89b33d2a703e7f66f260"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a842c231b04df89b33d2a703e7f66f260">&#9670;&#160;</a></span>m_factory_</h2>
+<a id="a72e5eee90fcc6ca607924bdf33928b77" name="a72e5eee90fcc6ca607924bdf33928b77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e5eee90fcc6ca607924bdf33928b77">&#9670;&#160;</a></span>m_factory_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
+template&lt;typename TState , typename TChange &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#ad5bfc872c5d437e27d73f1e57535e0b1">const_factory_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::m_factory_</td>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#a1f2359b04e07d52d001434b7c58e5c2c">sophia::monte_carlo::const_factory_ptr</a>&lt;TState, TChange&gt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; TState, TChange &gt;::m_factory_</td>
         </tr>
       </table>
   </td>
@@ -412,19 +326,19 @@ template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBas
 
 </div>
 </div>
-<a id="a1c259fe7400a22d14629ba06fb4f052d" name="a1c259fe7400a22d14629ba06fb4f052d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c259fe7400a22d14629ba06fb4f052d">&#9670;&#160;</a></span>m_logger_</h2>
+<a id="a267111fa7200f8a709268a2457847660" name="a267111fa7200f8a709268a2457847660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a267111fa7200f8a709268a2457847660">&#9670;&#160;</a></span>m_logger_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
+template&lt;typename TState , typename TChange &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">logger_ptr <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::m_logger_</td>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#a538cd21762bd4484338b7d8bb24d0ee5">sophia::monte_carlo::logger_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; TState, TChange &gt;::m_logger_</td>
         </tr>
       </table>
   </td>
@@ -438,19 +352,19 @@ template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBas
 
 </div>
 </div>
-<a id="a40c4ff890160e24a6b5284665aa56dcc" name="a40c4ff890160e24a6b5284665aa56dcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40c4ff890160e24a6b5284665aa56dcc">&#9670;&#160;</a></span>m_source_</h2>
+<a id="a56d1bd5a5dce105c4e5770b257f60cd5" name="a56d1bd5a5dce105c4e5770b257f60cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d1bd5a5dce105c4e5770b257f60cd5">&#9670;&#160;</a></span>m_source_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
+template&lt;typename TState , typename TChange &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html#a4fdbd67b8a9ad98d8a07d730c04ad099">node_base_ref</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::m_source_</td>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#aad61556d1f87078251b04696f8075c63">sophia::monte_carlo::node_base_ref</a>&lt;TState, TChange&gt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; TState, TChange &gt;::m_source_</td>
         </tr>
       </table>
   </td>
@@ -464,19 +378,19 @@ template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBas
 
 </div>
 </div>
-<a id="aaea9315ff9798302c0140beefdc8e06a" name="aaea9315ff9798302c0140beefdc8e06a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaea9315ff9798302c0140beefdc8e06a">&#9670;&#160;</a></span>m_target_</h2>
+<a id="aee5b4460a324d2e0d0761a9dd11da2d7" name="aee5b4460a324d2e0d0761a9dd11da2d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5b4460a324d2e0d0761a9dd11da2d7">&#9670;&#160;</a></span>m_target_</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a> , <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">typename</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt; </div>
+template&lt;typename TState , typename TChange &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1Action.html#a0069c948a86d801f31342244ddbc632b">node_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TState</a>, <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1NodeBase.html">TChange</a> &gt;::m_target_</td>
+          <td class="memname"><a class="el" href="namespacesophia_1_1monte__carlo.html#a8126db1f4d34b356315583cd052fedf5">sophia::monte_carlo::node_ptr</a> <a class="el" href="classsophia_1_1monte__carlo_1_1models_1_1ActionBase.html">sophia::monte_carlo::models::ActionBase</a>&lt; TState, TChange &gt;::m_target_</td>
         </tr>
       </table>
   </td>
