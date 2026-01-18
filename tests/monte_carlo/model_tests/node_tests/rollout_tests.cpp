@@ -11,7 +11,13 @@ namespace sophia::monte_carlo::model_tests
     TEST_F(MonteCarloModelsFixture, node_rollout_test)
     {
         const auto factory = std::make_shared<MockTreeFactory>();
-        const auto s1 = factory->CreateNode("S1");
+        const auto s1_base = factory->CreateNode("S1");
+        auto s1 = std::dynamic_pointer_cast<MockNode>(s1_base); // Cast to MockNode
+
+        EXPECT_CALL(*s1, IsTerminalState())
+            .WillRepeatedly(::testing::Return(true));
+        EXPECT_CALL(*s1, Value())
+            .WillRepeatedly(::testing::Return(-1.0));
 
         const auto name = s1->Rollout();
 

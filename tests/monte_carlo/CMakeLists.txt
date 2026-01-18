@@ -7,6 +7,7 @@ FetchContent_Declare(
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
+include(GoogleTest)
 
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(sophia_monte_carlo_tests)
@@ -16,6 +17,7 @@ target_link_libraries(sophia_monte_carlo_tests
         sophia_monte_carlo
         sophia_monte_carlo_mocks)
 target_include_directories(sophia_monte_carlo_tests PUBLIC ../../../include)
+gtest_discover_tests(sophia_monte_carlo_tests)
 
 add_subdirectory(mocks)
 add_subdirectory(tree_search_algorithm_tests)
