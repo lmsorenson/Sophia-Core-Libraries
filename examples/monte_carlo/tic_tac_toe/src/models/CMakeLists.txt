@@ -8,4 +8,5 @@ target_sources(sophia_monte_carlo_examples_tic_tac_toe
         player.cpp
         bot.cpp
         human.cpp
+        heuristic_rollout_strategy.cpp
 )

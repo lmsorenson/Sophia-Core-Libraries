@@ -87,22 +87,35 @@ Node::action_ptr State::SelectAction(const std::string action_name)
         c = static_cast<char>(std::toupper(c));
     }
 
-    const vector<action_ptr> actions = GetAvailableActions();
-
-    std::vector<action_ptr> matching_actions;
-    for (const auto& action : actions)
+    // 1. First, check if the action exists in already expanded children (m_child_action_)
+    for (const auto& existing_child_action : m_child_action_)
     {
-        if (action->Name() == desired_name)
+        if (existing_child_action->Name() == desired_name)
         {
-            matching_actions.push_back(action);
+            if (m_logger_) m_logger_->debug("SelectAction: Found existing child action '{}'. Reusing.", desired_name);
+            return existing_child_action;
         }
     }
 
-    if (matching_actions.size() == 1)
+    // 2. If not found in existing children, generate all possible actions for the current state.
+    //    These will be new action/node pairs.
+    const vector<action_ptr> newly_generated_actions = GetAvailableActions();
+
+    for (const auto& new_action : newly_generated_actions)
     {
-        return matching_actions.front();
+        if (new_action->Name() == desired_name)
+        {
+            if (m_logger_) m_logger_->debug("SelectAction: Generated new action '{}'. Adding to children and returning.", desired_name);
+            // Add this newly generated action to our m_child_action_ list for future reuse
+            m_child_action_.push_back(new_action);
+            if (new_action->Target()) {
+                new_action->Target()->SetParent(new_action);
+            }
+            return new_action;
+        }
     }
 
+    if (m_logger_) m_logger_->warn("SelectAction: No matching action found for name '{}'.", desired_name);
     return nullptr;
 }
 
