@@ -26,7 +26,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Creates a default Tic Tac Toe board.
          * @param logger The logger instance for the board to use.
          */
-        explicit Board(const sophia::monte_carlo::logger_ptr& logger);
+        explicit Board(const logger_ptr& logger);
 
         /**
          * @brief creates a copy of a Tic Tac Toe board.
@@ -106,7 +106,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     private:
         std::vector<std::vector<std::shared_ptr<const Position>>> m_tiles_;
         enums::Symbol last_placed_ = enums::Symbol::None;
-        sophia::monte_carlo::logger_ptr m_logger_; // Member to hold the logger instance
+        logger_ptr m_logger_; // Member to hold the logger instance
     };
 }
 

@@ -51,7 +51,7 @@ namespace sophia::monte_carlo::tic_tac_toe::factories
          * @param change the change being applied to the source node.
          * @returns a shared pointer to a Node
          */
-        [[nodiscard]] action_ptr CreateAction(std::shared_ptr<monte_carlo::models::NodeBase<models::GameState, models::Position>> node, models::Position change) const override;
+        [[nodiscard]] action_ptr CreateAction(node_base_ptr<models::GameState, models::Position> node, models::Position change) const override;
 
         /**
          * @brief Creates a new Strategy.

@@ -11,7 +11,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
 {
     using monte_carlo::factories::TreeFactoryBase;
     using monte_carlo::models::Action;
-    using sophia::monte_carlo::models::NodeBase; // Import NodeBase into current namespace
+    using monte_carlo::models::NodeBase; // Import NodeBase into current namespace
 
     /**
      * @class State
@@ -19,9 +19,6 @@ namespace sophia::monte_carlo::tic_tac_toe::models
      */
     class State : public NodeBase<GameState, Position>
     {
-    protected:
-        // Removed using NodeBase<GameState, Position>::const_factory_ptr;
-
     public:
         /**
          * Creates an instance of a Tic Tac Toe State.
@@ -30,7 +27,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * be used to create the following states.
          * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, const sophia::monte_carlo::const_factory_ptr<GameState, Position>& tree_factory, const sophia::monte_carlo::logger_ptr& logger);
+        explicit State(const std::string& name, const const_factory_ptr<GameState, Position>& tree_factory, const logger_ptr& logger);
 
         /**
          * Creates an instance of a Tic Tac Toe State.
@@ -40,7 +37,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * be used to create the following states.
          * @param logger The logger to be used by this node.
          */
-        explicit State(const std::string& name, GameState game_state, const sophia::monte_carlo::const_factory_ptr<GameState, Position>& tree_factory, const sophia::monte_carlo::logger_ptr& logger);
+        explicit State(const std::string& name, GameState game_state, const const_factory_ptr<GameState, Position>& tree_factory, const logger_ptr& logger);
 
         /**
          * @brief Gets all available actions that can be
@@ -48,7 +45,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @return A vector of shared pointers to Actions
          * that can be applied at this given state of play.
          */
-        [[nodiscard]] std::vector<sophia::monte_carlo::action_ptr> GetAvailableActions() override;
+        [[nodiscard]] std::vector<action_ptr> GetAvailableActions() override;
 
         /**
          * @brief Determines if this state is the end of the Game.
@@ -70,7 +67,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param action_name A 2-letter name for a move.
          * @return The action represented by the action name.
          */
-        sophia::monte_carlo::action_ptr SelectAction(std::string action_name) override;
+        action_ptr SelectAction(std::string action_name) override;
 
         /**
          * Prints the board at this state of the Game to the

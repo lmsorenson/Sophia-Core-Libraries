@@ -15,7 +15,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
     class Player : public std::enable_shared_from_this<Player>, public observer::Observer
     {
     public:
-        explicit Player(enums::Symbol symbol, const sophia::monte_carlo::logger_ptr& logger);
+        explicit Player(enums::Symbol symbol, const logger_ptr& logger);
         virtual ~Player() = default;
 
         /**
@@ -40,7 +40,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
 
     protected:
         enums::Symbol m_player_symbol_ = enums::Symbol::None;
-        sophia::monte_carlo::logger_ptr m_logger_; // Member to hold the logger instance
+        logger_ptr m_logger_;
     };
 }
 

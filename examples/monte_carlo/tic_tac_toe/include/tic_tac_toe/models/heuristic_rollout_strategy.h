@@ -18,7 +18,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
      * This strategy attempts to select the best action based on simple heuristic rules
      * to guide the Monte Carlo simulations towards more promising outcomes.
      */
-    class HeuristicRolloutStrategy : public sophia::monte_carlo::models::RolloutStrategyInterface
+    class HeuristicRolloutStrategy : public monte_carlo::models::RolloutStrategyInterface
     {
     public:
         /**
@@ -26,7 +26,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @param current_game_state The current game state from which the rollout will start.
          * @param logger The logger instance.
          */
-        explicit HeuristicRolloutStrategy(GameState current_game_state, const sophia::monte_carlo::logger_ptr& logger);
+        explicit HeuristicRolloutStrategy(GameState current_game_state, const logger_ptr& logger);
 
         /**
          * @brief Selects an action from a vector of available actions based on heuristic rules.
@@ -38,7 +38,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
 
     private:
         GameState m_current_game_state_;
-        sophia::monte_carlo::logger_ptr m_logger_;
+        logger_ptr m_logger_;
     };
 } // namespace sophia::monte_carlo::tic_tac_toe::models
 

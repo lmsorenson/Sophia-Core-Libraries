@@ -19,7 +19,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
          * @brief Constructs a new Game with default settings.
          * @param logger The logger instance for the game to use.
          */
-        explicit Game(const sophia::monte_carlo::logger_ptr& logger);
+        explicit Game(const logger_ptr& logger);
         ~Game();
 
         /**
@@ -75,7 +75,7 @@ namespace sophia::monte_carlo::tic_tac_toe::models
         /**
          * @brief The logger instance for the game.
          */
-        sophia::monte_carlo::logger_ptr m_logger_;
+        logger_ptr m_logger_;
     };
 
     template<class TPlayer, typename... Args>
