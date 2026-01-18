@@ -38,26 +38,8 @@ namespace sophia::monte_carlo::tic_tac_toe::models
             std::vector<action_ptr> actions) const override;
 
     private:
-        /**
-         * @brief Evaluates a given move (position) on the board.
-         * @param board The board to evaluate the move on.
-         * @param move The position of the move.
-         * @param player_symbol The symbol of the player making the move.
-         * @return A score representing the desirability of the move. Higher is better.
-         */
-        [[nodiscard]] int evaluate_move(const Board& board, const Position& move, enums::Symbol player_symbol) const;
-
-        /**
-         * @brief Checks if a given move results in a win for the specified player.
-         * @param board The board to check.
-         * @param move The move to test.
-         * @param player_symbol The symbol of the player.
-         * @return True if the move results in a win, false otherwise.
-         */
-        [[nodiscard]] bool check_for_win(const Board& board, const Position& move, enums::Symbol player_symbol) const;
-
-        GameState m_current_game_state;
-        logger_ptr m_logger;
+        GameState m_current_game_state_;
+        logger_ptr m_logger_;
     };
 } // namespace sophia::monte_carlo::tic_tac_toe::models
 
